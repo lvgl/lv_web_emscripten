@@ -1,0 +1,19 @@
+<html>
+	<body>
+		<p id="output" />
+		<canvas id="canvas" width="800" height="320"></canvas>
+		<script>
+			var Module = {
+				print: function() {
+				},
+				printErr: function(text) {
+				},
+				canvas: (function() {
+					var canvas = document.getElementById('canvas');
+					return canvas;
+				})()
+			};
+		</script>
+		{{{ SCRIPT }}}
+	</body>
+</html>
