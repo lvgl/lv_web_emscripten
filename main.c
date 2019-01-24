@@ -72,21 +72,19 @@ int main(int argc, char ** argv)
     hal_init();
 
     /*Load a demo*/
-//    demo_create();
+    demo_create();
 
     /*Try the benchmark to see how fast your GUI is*/
 //    benchmark_create();
-#if TEST_CPICKER
-test_cpicker();
+
     /*Check the themes too*/
-#elif 0
-    lv_test_theme_1(lv_theme_night_init(210, NULL));
-#else
+ //   lv_test_theme_1(lv_theme_night_init(210, NULL));
+    lv_test_theme_1(lv_theme_material_init(10, NULL));
+
     /* A keyboard and encoder (mouse wheel) control example*/
    // lv_test_group_1();
-#endif
    
-    lv_test_stress_1();
+//    lv_test_stress_1();
     
     emscripten_set_main_loop_arg(do_loop, NULL, -1, true);
 }

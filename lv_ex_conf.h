@@ -39,7 +39,7 @@
 
 /*A demo application with Keyboard, Text area, List and Chart
  * placed on Tab view */
-#define USE_LV_DEMO        0
+#define USE_LV_DEMO        1
 #if USE_LV_DEMO
 #define LV_DEMO_WALLPAPER  1    /*Create a wallpaper too*/
 #define LV_DEMO_SLIDE_SHOW 0    /*Automatically switch between tabs*/

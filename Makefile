@@ -19,10 +19,7 @@ SRCS += lvgl/lv_fonts/lv_font_dejavu_20_latin_sup.c
 SRCS += lvgl/lv_fonts/lv_font_dejavu_40_latin_sup.c lvgl/lv_fonts/lv_font_symbol_30.c
 SRCS += lvgl/lv_fonts/lv_font_symbol_20.c lvgl/lv_fonts/lv_font_dejavu_30.c
 SRCS += lvgl/lv_objx/lv_cont.c lvgl/lv_objx/lv_img.c lvgl/lv_objx/lv_kb.c
-
-# Uncomment when v5.3 is released
-#SRCS += lvgl/lv_objx/lv_table.c
-
+SRCS += lvgl/lv_objx/lv_table.c
 SRCS += lvgl/lv_objx/lv_roller.c lvgl/lv_objx/lv_cb.c lvgl/lv_objx/lv_led.c
 SRCS += lvgl/lv_objx/lv_calendar.c lvgl/lv_objx/lv_gauge.c lvgl/lv_objx/lv_page.c
 SRCS += lvgl/lv_objx/lv_list.c lvgl/lv_objx/lv_bar.c lvgl/lv_objx/lv_tabview.c
@@ -36,6 +33,7 @@ SRCS += lvgl/lv_misc/lv_task.c lvgl/lv_misc/lv_circ.c lvgl/lv_misc/lv_anim.c
 SRCS += lvgl/lv_misc/lv_color.c lvgl/lv_misc/lv_txt.c lvgl/lv_misc/lv_math.c
 SRCS += lvgl/lv_misc/lv_mem.c lvgl/lv_misc/lv_font.c lvgl/lv_misc/lv_ll.c
 SRCS += lvgl/lv_misc/lv_area.c lvgl/lv_misc/lv_templ.c lvgl/lv_misc/lv_ufs.c
+SRCS += lvgl/lv_misc/lv_area.c lvgl/lv_misc/lv_templ.c lvgl/lv_misc/lv_gc.c
 SRCS += lvgl/lv_hal/lv_hal_tick.c lvgl/lv_hal/lv_hal_indev.c lvgl/lv_hal/lv_hal_disp.c
 SRCS += lvgl/lv_themes/lv_theme_mono.c lvgl/lv_themes/lv_theme_templ.c
 SRCS += lvgl/lv_themes/lv_theme_material.c lvgl/lv_themes/lv_theme.c
@@ -48,6 +46,9 @@ SRCS += lv_examples/lv_tests/lv_test_theme/lv_test_theme_2.c
 SRCS += lv_examples/lv_tests/lv_test_stress/lv_test_stress.c
 SRCS += lv_examples/lv_tests/lv_test_objx/lv_test_img/img_flower_icon.c
 SRCS += lv_examples/lv_tests/lv_test_objx/lv_test_arc/lv_test_arc.c
+
+SRCS += lv_examples/lv_apps/demo/demo.c
+SRCS += lv_examples/lv_apps/demo/img_bubble_pattern.c
 
 SRCS += lv_drivers/display/monitor.c lv_drivers/indev/mouse.c
 
