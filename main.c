@@ -15,13 +15,14 @@
 #include "lvgl/lvgl.h"
 #include "lv_drivers/display/monitor.h"
 #include "lv_drivers/indev/mouse.h"
-#if LVGL_MAJOR_VERSION > 5 || (LVGL_MAJOR_VERSION == 5 && LVGL_MINOR_VERSION >= 3)
-#include "lv_drivers/indev/encoder.h"
+#if LVGL_VERSION_MAJOR > 5 || (LVGL_VERSION_MAJOR == 5 && LVGL_VERSION_MINOR >= 3)
+#include "lv_drivers/indev/mousewheel.h"
 #endif
 #include "lv_drivers/indev/keyboard.h"
 #include "lv_examples/lv_apps/demo/demo.h"
 #include "lv_examples/lv_apps/benchmark/benchmark.h"
 #include "lv_examples/lv_tests/lv_test_theme/lv_test_theme_1.h"
+#include "lv_examples/lv_tests/lv_test_theme/lv_test_theme_2.h"
 #include "lv_examples/lv_tests/lv_test_group/lv_test_group.h"
 #include "lv_examples/lv_tests/lv_test_stress/lv_test_stress.h"
 
@@ -72,17 +73,20 @@ int main(int argc, char ** argv)
     hal_init();
 
     /*Load a demo*/
-    demo_create();
+  //  demo_create();
 
     /*Try the benchmark to see how fast your GUI is*/
 //    benchmark_create();
 
     /*Check the themes too*/
- //   lv_test_theme_1(lv_theme_night_init(210, NULL));
-    lv_test_theme_1(lv_theme_material_init(10, NULL));
+  //  lv_test_theme_1(lv_theme_night_init(210, NULL));
+  //  lv_test_theme_1(lv_theme_material_init(10, NULL));
+  
+  
+  //  lv_test_theme_2();
 
     /* A keyboard and encoder (mouse wheel) control example*/
-   // lv_test_group_1();
+    lv_test_group_1();
    
 //    lv_test_stress_1();
     
@@ -107,9 +111,9 @@ void do_loop(void *arg)
         #if USE_KEYBOARD
             keyboard_handler(&event);
         #endif
-#if LVGL_MAJOR_VERSION > 5 || (LVGL_MAJOR_VERSION == 5 && LVGL_MINOR_VERSION >= 3)
-        #if USE_ENCODER != 0
-            encoder_handler(&event);
+#if LVGL_VERSION_MAJOR > 5 || (LVGL_VERSION_MAJOR == 5 && LVGL_VERSION_MINOR >= 3)
+        #if USE_MOUSEWHEEL
+            mousewheel_handler(&event);
         #endif
 #endif
     }

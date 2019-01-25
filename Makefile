@@ -37,7 +37,7 @@ SRCS += lvgl/lv_misc/lv_area.c lvgl/lv_misc/lv_templ.c lvgl/lv_misc/lv_gc.c
 SRCS += lvgl/lv_hal/lv_hal_tick.c lvgl/lv_hal/lv_hal_indev.c lvgl/lv_hal/lv_hal_disp.c
 SRCS += lvgl/lv_themes/lv_theme_mono.c lvgl/lv_themes/lv_theme_templ.c
 SRCS += lvgl/lv_themes/lv_theme_material.c lvgl/lv_themes/lv_theme.c
-SRCS += lvgl/lv_themes/lv_theme_night.c lvgl/lv_themes/lv_theme_zen.c
+SRCS += lvgl/lv_themes/lv_theme_night.c lvgl/lv_themes/lv_theme_zen.c lvgl/lv_themes/lv_theme_nemo.c
 SRCS += lvgl/lv_themes/lv_theme_alien.c lvgl/lv_themes/lv_theme_default.c
 SRCS += lvgl/lv_core/lv_group.c lvgl/lv_core/lv_style.c lvgl/lv_core/lv_indev.c
 SRCS += lvgl/lv_core/lv_vdb.c lvgl/lv_core/lv_obj.c lvgl/lv_core/lv_refr.c
@@ -46,11 +46,13 @@ SRCS += lv_examples/lv_tests/lv_test_theme/lv_test_theme_2.c
 SRCS += lv_examples/lv_tests/lv_test_stress/lv_test_stress.c
 SRCS += lv_examples/lv_tests/lv_test_objx/lv_test_img/img_flower_icon.c
 SRCS += lv_examples/lv_tests/lv_test_objx/lv_test_arc/lv_test_arc.c
-
+SRCS += lv_examples/lv_tests/lv_test_group/lv_test_group.c
 SRCS += lv_examples/lv_apps/demo/demo.c
 SRCS += lv_examples/lv_apps/demo/img_bubble_pattern.c
 
 SRCS += lv_drivers/display/monitor.c lv_drivers/indev/mouse.c
+SRCS += lv_drivers/display/monitor.c lv_drivers/indev/keyboard.c
+SRCS += lv_drivers/display/monitor.c lv_drivers/indev/mousewheel.c
 
 # (v5.3) SRCS += lv_drivers/indev/encoder.c
 
