@@ -29,7 +29,7 @@ More info here: https://kripken.github.io/emscripten-site/docs/getting_started/d
 
 ## Get the Emscripten-LittlevGL project
 1. Be sure you ran `. <path-to-emsdk>/emsdk_env.sh` to add EMSDK to `PATH`
-2. In any dircetoy: `git clone --recursive https://github.com/littlevgl/emscripten.git`
+2. In any directoy: `git clone --recursive https://github.com/littlevgl/emscripten.git`
 3. `cd <path-to-emscripten>` 
 4. `make`
 5. A file called `lvgl.html` will be generated. Run this in your browser.
