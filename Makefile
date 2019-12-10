@@ -29,7 +29,7 @@ SRCS += lvgl/src/lv_misc/lv_mem.c
 
 SRCS += lvgl/src/lv_misc/lv_ll.c lvgl/src/lv_misc/lv_area.c lvgl/src/lv_misc/lv_templ.c lvgl/src/lv_misc/lv_utils.c
 SRCS += lvgl/src/lv_hal/lv_hal_tick.c lvgl/src/lv_hal/lv_hal_indev.c lvgl/src/lv_hal/lv_hal_disp.c
-SRCS += lvgl/src/lv_core/lv_disp.c
+SRCS += lvgl/src/lv_core/lv_disp.c lvgl/src/lv_core/lv_debug.c
 SRCS += lvgl/src/lv_themes/lv_theme_mono.c lvgl/src/lv_themes/lv_theme_templ.c
 SRCS += lvgl/src/lv_themes/lv_theme_material.c lvgl/src/lv_themes/lv_theme.c
 SRCS += lvgl/src/lv_themes/lv_theme_night.c lvgl/src/lv_themes/lv_theme_zen.c

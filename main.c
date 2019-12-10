@@ -129,14 +129,16 @@ static void hal_init(void)
 
     /*Create a display buffer*/
     static lv_disp_buf_t disp_buf1;
-    static lv_color_t buf1_1[480*400];
-    lv_disp_buf_init(&disp_buf1, buf1_1, NULL, 480*400);
+    static lv_color_t buf1_1[LV_HOR_RES_MAX*LV_VER_RES_MAX];
+    lv_disp_buf_init(&disp_buf1, buf1_1, NULL, LV_HOR_RES_MAX*LV_VER_RES_MAX);
 
     /*Create a display*/
     lv_disp_drv_t disp_drv;
     lv_disp_drv_init(&disp_drv);            /*Basic initialization*/
     disp_drv.buffer = &disp_buf1;
     disp_drv.flush_cb = monitor_flush;    /*Used when `LV_VDB_SIZE != 0` in lv_conf.h (buffered drawing)*/
+    disp_drv.hor_res = LV_HOR_RES_MAX;
+    disp_drv.ver_res = LV_VER_RES_MAX;
     disp1 = lv_disp_drv_register(&disp_drv);
 
     /* Add the mouse as input device
