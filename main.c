@@ -150,11 +150,13 @@ static void hal_init(void)
     indev_drv.read_cb = mouse_read;         /*This function will be called periodically (by the library) to get the mouse position and state*/
     lv_indev_t * mouse_indev = lv_indev_drv_register(&indev_drv);
 
+#ifndef __EMSCRIPTEN__ /* Using a cursor with Emscripten makes no sense */
     /*Set a cursor for the mouse*/
     LV_IMG_DECLARE(mouse_cursor_icon);                          /*Declare the image file.*/
     lv_obj_t * cursor_obj =  lv_img_create(lv_disp_get_scr_act(NULL), NULL); /*Create an image object for the cursor */
     lv_img_set_src(cursor_obj, &mouse_cursor_icon);             /*Set the image source*/
     lv_indev_set_cursor(mouse_indev, cursor_obj);               /*Connect the image  object to the driver*/
+#endif
 
     /* Optional:
      * Create a memory monitor task which prints the memory usage in periodically.*/

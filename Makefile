@@ -55,8 +55,8 @@ SRCS += lvgl/src/lv_objx/lv_tileview.c
 
 
 SRCS += lv_drivers/display/monitor.c lv_drivers/indev/mouse.c
-SRCS += lv_drivers/display/monitor.c lv_drivers/indev/keyboard.c
-SRCS += lv_drivers/display/monitor.c lv_drivers/indev/mousewheel.c
+SRCS += lv_drivers/indev/keyboard.c
+SRCS += lv_drivers/indev/mousewheel.c
 
 # (v5.3) SRCS += lv_drivers/indev/encoder.c
 
