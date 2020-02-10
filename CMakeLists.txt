@@ -17,4 +17,4 @@ set(SOURCES ${SOURCES1} ${SOURCES2})
 add_executable(lvgl ${SOURCES} ${INCLUDES})
 
 set(CMAKE_EXECUTABLE_SUFFIX ".html")
-set_target_properties(lvgl PROPERTIES LINK_FLAGS "--shell-file ../lvgl_shell.html")
+set_target_properties(lvgl PROPERTIES LINK_FLAGS "--shell-file ${PROJECT_SOURCE_DIR}/lvgl_shell.html")
