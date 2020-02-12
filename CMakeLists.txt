@@ -5,14 +5,8 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O2 -s USE_SDL=2")
 
 include_directories(${PROJECT_SOURCE_DIR})
 
-file(GLOB INCLUDES1 "./*.h")
-file(GLOB_RECURSE INCLUDES2 "lv_drivers/*.h" "lv_examples/*.h" "lvgl/*.h")
-
-file(GLOB SOURCES1  "./*.c")
-file(GLOB_RECURSE SOURCES2  "lv_drivers/*.c" "lv_examples/*.c" "lvgl/*.c")
-
-set(INCLUDES ${INCLUDES1} ${INCLUDES2})
-set(SOURCES ${SOURCES1} ${SOURCES2})
+file(GLOB_RECURSE INCLUDES "./*.h")
+file(GLOB_RECURSE SOURCES "./*.c")
 
 add_executable(lvgl ${SOURCES} ${INCLUDES})
 
