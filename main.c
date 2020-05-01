@@ -17,12 +17,8 @@
 #include "lv_drivers/indev/mouse.h"
 #include "lv_drivers/indev/mousewheel.h"
 #include "lv_drivers/indev/keyboard.h"
-#include "lv_examples/lv_apps/demo/demo.h"
-#include "lv_examples/lv_apps/benchmark/benchmark.h"
-#include "lv_examples/lv_tests/lv_test_theme/lv_test_theme_1.h"
-#include "lv_examples/lv_tests/lv_test_theme/lv_test_theme_2.h"
-#include "lv_examples/lv_tests/lv_test_group/lv_test_group.h"
-#include "lv_examples/lv_tests/lv_test_stress/lv_test_stress.h"
+
+#include "lv_examples/src/lv_demo_widgets/lv_demo_widgets.h"
 
 /*********************
  *      DEFINES
@@ -72,19 +68,8 @@ int main(int argc, char ** argv)
     hal_init();
 
     /*Load a demo*/
-    demo_create();
+    lv_demo_widgets();
 
-    /*Try the benchmark to see how fast your GUI is*/
-//    benchmark_create();
-
-    /*Check the themes too*/
-//    lv_test_theme_1(lv_theme_night_init(15, NULL));
-
-    /* A keyboard and encoder (mouse wheel) control example*/
-//    lv_test_group_1();
-   
-//    lv_test_stress_1();
-    
     emscripten_set_main_loop_arg(do_loop, NULL, -1, true);
 }
 
@@ -92,8 +77,6 @@ void do_loop(void *arg)
 {
     /* Periodically call the lv_task handler.
      * It could be done in a timer interrupt or an OS task too.*/
-	extern void monitor_sdl_refr_core(void);
-	monitor_sdl_refr_core();
     lv_task_handler();
 
     SDL_Event event;

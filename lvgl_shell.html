@@ -4,9 +4,11 @@
 		<canvas id="canvas" width="800" height="320"></canvas>
 		<script>
 			var Module = {
-				print: function() {
+				print: function(text) {
+					console.log(text);
 				},
 				printErr: function(text) {
+					console.error(text);
 				},
 				canvas: (function() {
 					var canvas = document.getElementById('canvas');
