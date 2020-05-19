@@ -54,3 +54,6 @@ dkms.conf
 lvgl.html
 lvgl.js
 lvgl.wasm
+
+# CMake output
+build
