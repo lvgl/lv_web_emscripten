@@ -19,6 +19,7 @@
 #include "lv_drivers/indev/keyboard.h"
 
 #include "lv_examples/src/lv_demo_widgets/lv_demo_widgets.h"
+#include "lv_examples/src/lv_demo_printer/lv_demo_printer.h"
 
 /*********************
  *      DEFINES
