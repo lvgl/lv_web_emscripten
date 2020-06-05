@@ -4,6 +4,11 @@
 
 The result looks like this https://littlevgl.com/live-demo
 
+**This branch is for LVGL's C online C simulator (under development).**
+- `make lib` creates `proj.bc` a compiled and linked lvgl code
+- `make build` build `sim.c` and links it with proj.bc
+- The result `sim.js` and `proj.wasm` can be used in a html file as usual
+
 # How to get started
 
 ## Install SDL
@@ -33,6 +38,7 @@ More info here: https://kripken.github.io/emscripten-site/docs/getting_started/d
 3. `cd <path-to-emscripten>` 
 4. `make` or `emconfigure cmake -DCMAKE_TOOLCHAIN_FILE="${EMSDK}/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake" -S . -B build && cmake --build build -j $(nproc)`
 5. A file called `lvgl.html` or `build/lvgl.html` will be generated. Run this in your browser.
+
 
 ### Known issue with Google Chrome browser
 Chrome can't open the generated html file offline. It works if you copy the files to a server. Use Firefox or other browser for offline testing.
