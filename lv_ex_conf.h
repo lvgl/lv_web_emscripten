@@ -29,7 +29,7 @@
 #endif
 
 /*Printer demo, optimized for 800x480*/
-#define LV_USE_DEMO_PRINTER     0
+#define LV_USE_DEMO_PRINTER    1
 
 /*Demonstrate the usage of encoder and keyboard*/
 #define LV_USE_DEMO_KEYPAD_AND_ENCODER     0

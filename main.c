@@ -69,7 +69,7 @@ int main(int argc, char ** argv)
     hal_init();
 
     /*Load a demo*/
-    lv_demo_widgets();
+    lv_demo_printer();
 
     emscripten_set_main_loop_arg(do_loop, NULL, -1, true);
 }
