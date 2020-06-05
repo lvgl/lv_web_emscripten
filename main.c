@@ -18,9 +18,6 @@
 #include "lv_drivers/indev/mousewheel.h"
 #include "lv_drivers/indev/keyboard.h"
 
-#include "lv_examples/src/lv_demo_widgets/lv_demo_widgets.h"
-#include "lv_examples/src/lv_demo_printer/lv_demo_printer.h"
-
 /*********************
  *      DEFINES
  *********************/
@@ -56,6 +53,8 @@ static lv_disp_t  * disp1;
  *   GLOBAL FUNCTIONS
  **********************/
 void do_loop(void *arg);
+void sim_init(void);
+
 
 int main(int argc, char ** argv)
 {
@@ -68,8 +67,7 @@ int main(int argc, char ** argv)
     /*Initialize the HAL (display, input devices, tick) for LittlevGL*/
     hal_init();
 
-    /*Load a demo*/
-    lv_demo_printer();
+		sim_init();
 
     emscripten_set_main_loop_arg(do_loop, NULL, -1, true);
 }
