@@ -2,7 +2,7 @@
 
 **LittlevGL ported to Emscripten to be converted to JavaScript**
 
-The result looks like this https://littlevgl.com/live-demo
+The result looks like this https://lvgl.io/demos
 
 **This branch is for LVGL's C online C simulator (under development).**
 - `make lib` creates `proj.bc` a compiled and linked lvgl code
