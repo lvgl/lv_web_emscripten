@@ -35,7 +35,7 @@ lib: $(COBJS)
 	$(Q)$(CC) $(CFLAGS) -s USE_SDL=2 -o proj.bc $(COBJS)
 	
 build: 
-	$(Q)$(CC) $(CFLAGS) -O3 -s USE_SDL=2 -s proj.bc sim.c -o sim.js
+	$(Q)$(CC) $(CFLAGS) -O0  -s USE_SDL=2 -s WASM=0 -s proj.bc sim.c -o sim.js
 
 
 clean:
