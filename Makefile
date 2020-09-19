@@ -1,6 +1,6 @@
 CC = emcc
 
-TARGET := lvgl.html
+TARGET := build/index.html
 
 SRCS += $(shell find -L lvgl -name \*.c)
 SRCS += $(shell find -L lv_examples -name \*.c)
@@ -32,15 +32,21 @@ CFLAGS += -DLV_CONF_INCLUDE_SIMPLE=1 -I. -Ilvgl -O2
 # debug flags
 # CFLAGS += -g4 --source-map-base http://127.0.0.1:8080/ -frtti -s DEMANGLE_SUPPORT=1
 
+.PHONY: build
+
+all: $(TARGET)
+
 %.o: %.c Makefile
 	@echo " CC " $<
 	$(Q)$(CC) -c $(CFLAGS) -s USE_SDL=2 -o $@ $<
 
-all: $(TARGET)
-
-$(TARGET): $(COBJS) lvgl_shell.html
+$(TARGET): build $(COBJS) lvgl_shell.html
 	@echo " LINK " $@
-	$(Q)$(CC) $(CFLAGS) -s USE_SDL=2 -o lvgl.html --shell-file lvgl_shell.html $(COBJS)
+	$(Q)$(CC) $(CFLAGS) -s USE_SDL=2 -o $(TARGET) --shell-file lvgl_shell.html $(COBJS)
 
 clean:
-	@rm -f lvgl.html lvgl.js lvgl.wasm lvgl.wasm.* lvgl.wast lvgl.asm.js $(COBJS)
+	@rm -f $(TARGET) $(addprefix build/, lvgl.js lvgl.wasm lvgl.wasm.* lvgl.wast lvgl.asm.js) $(COBJS)
+
+build:
+	$(Q)mkdir -p build
+
