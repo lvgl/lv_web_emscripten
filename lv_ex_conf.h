@@ -1,5 +1,6 @@
 /**
  * @file lv_ex_conf.h
+ * Configuration file for v7.5.0
  *
  */
 /*
@@ -10,6 +11,7 @@
 
 #ifndef LV_EX_CONF_H
 #define LV_EX_CONF_H
+
 
 /*******************
  * GENERAL SETTING
@@ -25,7 +27,7 @@
 /*Show some widget*/
 #define LV_USE_DEMO_WIDGETS        1
 #if LV_USE_DEMO_WIDGETS
-#define LV_DEMO_WIDGETS_SLIDESHOW  1
+#define LV_DEMO_WIDGETS_SLIDESHOW  0
 #endif
 
 /*Printer demo, optimized for 800x480*/
