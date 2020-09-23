@@ -51,6 +51,7 @@ main.o: build
 $(TARGET): build $(COBJS) lvgl_shell.html
 	@echo " LINK " $@
 	$(Q)$(CC) $(CFLAGS) -s USE_SDL=2 -o $(TARGET) --shell-file lvgl_shell.html $(COBJS)
+	$(Q)rm -f build/gitrev.js
 ifneq ($(NO_GIT_HASH),1)
 	$(Q)echo "window.git_hash = \"$(shell ./findtag.sh)\";" > build/gitrev.js
 endif
