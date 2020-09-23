@@ -12,14 +12,18 @@
 
 			body {
 			  display: flex;
+			  flex-direction: column;
 			  align-items: center;
 			  justify-content: center;
 			}
 		</style>
 	</head>
 	<body>
-		<p id="output" />
-		<canvas id="canvas" width="800" height="480"></canvas>
+		<div id="git-hash"></div>
+		<p id="output">
+			<canvas id="canvas" width="800" height="480"></canvas>
+		</p>
+        <script src="gitrev.js"></script>
 		<script>
 			var Module = {
 				print: function(text) {
@@ -33,6 +37,14 @@
 					return canvas;
 				})()
 			};
+			if(typeof window.git_hash != 'undefined') {
+				var gitHashDiv = document.querySelector("#git-hash");
+				var gitLink = document.createElement("a");
+				gitLink.href = "https://github.com/lvgl/lv_sim_emscripten/commit/" + window.git_hash;
+				gitLink.textContent = window.git_hash;
+				gitHashDiv.textContent = "LVGL compiled to Emscripten, commit ";
+				gitHashDiv.appendChild(gitLink);	
+			}
 		</script>
 		{{{ SCRIPT }}}
 	</body>

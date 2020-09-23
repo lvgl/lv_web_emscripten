@@ -27,6 +27,10 @@ COBJS := $(CSRCS:.c=.o)
 # Try this if you experience problems:
 # CFLAGS += -s EMULATE_FUNCTION_POINTER_CASTS=1
 
+ifneq ($(NO_GIT_HASH),1)
+GIT_HASH := $(shell git describe --match="" --always --abbrev=40 --dirty)
+endif
+
 CFLAGS += -DLV_CONF_INCLUDE_SIMPLE=1 -I. -Ilvgl -O2
 
 # debug flags
@@ -43,9 +47,12 @@ all: $(TARGET)
 $(TARGET): build $(COBJS) lvgl_shell.html
 	@echo " LINK " $@
 	$(Q)$(CC) $(CFLAGS) -s USE_SDL=2 -o $(TARGET) --shell-file lvgl_shell.html $(COBJS)
+ifneq ($(GIT_HASH),)
+	$(Q)echo "window.git_hash = '$(GIT_HASH)';" > build/gitrev.js
+endif
 
 clean:
-	@rm -f $(TARGET) $(addprefix build/, lvgl.js lvgl.wasm lvgl.wasm.* lvgl.wast lvgl.asm.js) $(COBJS)
+	@rm -f $(TARGET) $(addprefix build/, lvgl.js lvgl.wasm lvgl.wasm.* lvgl.wast lvgl.asm.js gitrev.js) $(COBJS)
 
 build:
 	$(Q)mkdir -p build
