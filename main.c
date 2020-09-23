@@ -47,6 +47,8 @@ static void memory_monitor(lv_task_t * param);
  **********************/
 static lv_disp_t  * disp1;
 
+int monitor_hor_res, monitor_ver_res;
+
 /**********************
  *      MACROS
  **********************/
@@ -59,6 +61,9 @@ void do_loop(void *arg);
 int main(int argc, char ** argv)
 {
     (void) argc;    /*Unused*/
+    monitor_hor_res = atoi(argv[1]);
+    monitor_ver_res = atoi(argv[2]);
+    printf("Starting with screen resolution of %dx%d px\n", monitor_hor_res, monitor_ver_res);
     (void) argv;    /*Unused*/
 
     /*Initialize LittlevGL*/
@@ -120,8 +125,8 @@ static void hal_init(void)
     lv_disp_drv_init(&disp_drv);            /*Basic initialization*/
     disp_drv.buffer = &disp_buf1;
     disp_drv.flush_cb = monitor_flush;    /*Used when `LV_VDB_SIZE != 0` in lv_conf.h (buffered drawing)*/
-    disp_drv.hor_res = LV_HOR_RES_MAX;
-    disp_drv.ver_res = LV_VER_RES_MAX;
+    disp_drv.hor_res = monitor_hor_res;
+    disp_drv.ver_res = monitor_ver_res;
     disp1 = lv_disp_drv_register(&disp_drv);
 
     /* Add the mouse as input device

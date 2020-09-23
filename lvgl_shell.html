@@ -1,5 +1,6 @@
 <html>
 	<head>
+		<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'/>
 		<style type="text/css">
 			html, body {
 			  margin: 0;
@@ -26,15 +27,26 @@
 			#git-hash {
 				text-align: center;
 			}
+			#output {
+				margin: 0;
+				padding: 0;
+			}
 		</style>
 	</head>
 	<body>
 		<div id="git-hash"></div>
 		<p id="output">
-			<canvas id="canvas" width="800" height="480"></canvas>
+			<canvas id="canvas"></canvas>
 		</p>
         <script src="gitrev.js"></script>
 		<script>
+			var siteURL = new URL(window.location.href);
+			var w = siteURL.searchParams.get("w") || "800";
+			var h = siteURL.searchParams.get("h") || "480";
+			var canvas = document.getElementById('canvas');
+			canvas.setAttribute("width", w);
+			canvas.setAttribute("height", h);
+			console.log("Requested " + w + "x" + h + " px");
 			var Module = {
 				print: function(text) {
 					console.log(text);
@@ -43,9 +55,9 @@
 					console.error(text);
 				},
 				canvas: (function() {
-					var canvas = document.getElementById('canvas');
 					return canvas;
-				})()
+				})(),
+                arguments: [ siteURL.searchParams.get("w") || "800", siteURL.searchParams.get("h") || "480" ]
 			};
 			if(typeof window.git_hash != 'undefined') {
 				var gitHashDiv = document.querySelector("#git-hash");
