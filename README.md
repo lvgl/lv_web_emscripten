@@ -1,6 +1,6 @@
 # Emscripten port
 
-**LittlevGL ported to Emscripten to be converted to JavaScript**
+**LittlevGL ported to Emscripten**
 
 The result looks like this https://lvgl.io/demos
 
