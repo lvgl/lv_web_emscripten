@@ -24,7 +24,7 @@ jobs:
           version: ${{env.EM_VERSION}}
           actions-cache-folder: ${{env.EM_CACHE_FOLDER}}
       - name: Build demo
-        run: make -j2
+        run: make -j $(nproc)
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@3.6.1
         with:
