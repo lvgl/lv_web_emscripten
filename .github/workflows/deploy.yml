@@ -2,7 +2,14 @@ name: Build and Deploy
 env:
   EM_VERSION: 1.39.18
   EM_CACHE_FOLDER: 'emsdk-cache'
-on: [push]
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '*/15 * * * *'
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
