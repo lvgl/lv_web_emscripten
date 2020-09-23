@@ -18,8 +18,7 @@
 #include "lv_drivers/indev/mousewheel.h"
 #include "lv_drivers/indev/keyboard.h"
 
-#include "lv_examples/src/lv_demo_widgets/lv_demo_widgets.h"
-#include "lv_examples/src/lv_demo_printer/lv_demo_printer.h"
+#include "lv_examples/lv_examples.h"
 
 /*********************
  *      DEFINES
@@ -69,7 +68,7 @@ int main(int argc, char ** argv)
     hal_init();
 
     /*Load a demo*/
-    lv_demo_widgets();
+    CHOSEN_DEMO();
 
     emscripten_set_main_loop_arg(do_loop, NULL, -1, true);
 }

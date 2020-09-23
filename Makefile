@@ -28,9 +28,12 @@ COBJS := $(CSRCS:.c=.o)
 # Try this if you experience problems:
 # CFLAGS += -s EMULATE_FUNCTION_POINTER_CASTS=1
 
-CFLAGS += -DLV_CONF_INCLUDE_SIMPLE=1 -I. -Ilvgl -O2
+CHOSEN_DEMO ?= lv_demo_widgets
+
+CFLAGS += -DLV_CONF_INCLUDE_SIMPLE=1 -I. -Ilvgl -O2 -DCHOSEN_DEMO=$(CHOSEN_DEMO)
 
 MAKEFILE_DEP ?= Makefile
+
 
 # debug flags
 # CFLAGS += -g4 --source-map-base http://127.0.0.1:8080/ -frtti -s DEMANGLE_SUPPORT=1
@@ -38,6 +41,8 @@ MAKEFILE_DEP ?= Makefile
 .PHONY: build
 
 all: $(TARGET)
+
+main.o: build
 
 %.o: %.c $(MAKEFILE_DEP)
 	@echo " CC " $<
