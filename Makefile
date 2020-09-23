@@ -32,7 +32,7 @@ CHOSEN_DEMO ?= lv_demo_widgets
 
 CFLAGS += -DLV_CONF_INCLUDE_SIMPLE=1 -I. -Ilvgl -O2 -DCHOSEN_DEMO=$(CHOSEN_DEMO)
 
-MAKEFILE_DEP ?= Makefile
+MAKEFILE_DEP ?= Makefile lv_conf.h lv_ex_conf.h lv_drv_conf.h
 
 
 # debug flags
