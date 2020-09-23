@@ -1,3 +1,4 @@
+SHELL := /bin/bash
 CC = emcc
 
 TARGET := build/index.html
@@ -27,11 +28,9 @@ COBJS := $(CSRCS:.c=.o)
 # Try this if you experience problems:
 # CFLAGS += -s EMULATE_FUNCTION_POINTER_CASTS=1
 
-ifneq ($(NO_GIT_HASH),1)
-GIT_HASH := $(shell git describe --match="" --always --abbrev=40 --dirty)
-endif
-
 CFLAGS += -DLV_CONF_INCLUDE_SIMPLE=1 -I. -Ilvgl -O2
+
+MAKEFILE_DEP ?= Makefile
 
 # debug flags
 # CFLAGS += -g4 --source-map-base http://127.0.0.1:8080/ -frtti -s DEMANGLE_SUPPORT=1
@@ -40,15 +39,15 @@ CFLAGS += -DLV_CONF_INCLUDE_SIMPLE=1 -I. -Ilvgl -O2
 
 all: $(TARGET)
 
-%.o: %.c Makefile
+%.o: %.c $(MAKEFILE_DEP)
 	@echo " CC " $<
 	$(Q)$(CC) -c $(CFLAGS) -s USE_SDL=2 -o $@ $<
 
 $(TARGET): build $(COBJS) lvgl_shell.html
 	@echo " LINK " $@
 	$(Q)$(CC) $(CFLAGS) -s USE_SDL=2 -o $(TARGET) --shell-file lvgl_shell.html $(COBJS)
-ifneq ($(GIT_HASH),)
-	$(Q)echo "window.git_hash = '$(GIT_HASH)';" > build/gitrev.js
+ifneq ($(NO_GIT_HASH),1)
+	$(Q)echo "window.git_hash = \"$(shell ./findtag.sh)\";" > build/gitrev.js
 endif
 
 clean:

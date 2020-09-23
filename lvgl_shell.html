@@ -16,6 +16,16 @@
 			  align-items: center;
 			  justify-content: center;
 			}
+
+			.git-commit-info {
+				font-family: Consolas, 'Courier New', Courier, monospace;
+				background-color: #f1f1f1;
+				padding: 2px;
+				text-align: left;
+			}
+			#git-hash {
+				text-align: center;
+			}
 		</style>
 	</head>
 	<body>
@@ -39,10 +49,21 @@
 			};
 			if(typeof window.git_hash != 'undefined') {
 				var gitHashDiv = document.querySelector("#git-hash");
-				var gitLink = document.createElement("a");
-				gitLink.href = "https://github.com/lvgl/lv_sim_emscripten/commit/" + window.git_hash;
-				gitLink.textContent = window.git_hash;
-				gitHashDiv.textContent = "LVGL compiled to Emscripten, commit ";
+				var gitLink = document.createElement("div");
+				var gitHashComponents = window.git_hash.split(" ").filter(component => component.trim().length > 0);
+				for(var i = 0; i < gitHashComponents.length; i++) {
+					console.log(gitHashComponents[i], gitHashComponents[i].length);
+					/* This is an extremely lazy way of checking for a Git hash, but it works */
+					if(gitHashComponents[i].length == 40) {
+						gitHashComponents[i] = `<a href="https://github.com/lvgl/${gitHashComponents[i+1]}/commit/${gitHashComponents[i]}">${gitHashComponents[i]}</a>`;
+					} else {
+						/* Repository name */
+						gitHashComponents[i] += "<br/>";
+					}
+				}
+				gitLink.classList.add("git-commit-info");
+				gitLink.innerHTML = gitHashComponents.join(" ");
+				gitHashDiv.textContent = "LVGL compiled to Emscripten. Git commit information:";
 				gitHashDiv.appendChild(gitLink);	
 			}
 		</script>
