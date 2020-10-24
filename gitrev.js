@@ -1,1 +1,1 @@
-window.git_hash = "2a3bf02923ae4526e00eb138d183cc3f58e8a400 lv_drivers 180b9a7ee6584b526b81543729f9f46e6cf27969 lv_examples 51a522c8d34fa2e552b648437411fee749bc3f0a lvgl ";
+window.git_hash = "2a3bf02923ae4526e00eb138d183cc3f58e8a400 lv_drivers 180b9a7ee6584b526b81543729f9f46e6cf27969 lv_examples d6c87cb753ba1eaa5708f9f86b32bde0e384a27c lvgl ";
