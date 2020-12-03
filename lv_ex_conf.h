@@ -1,6 +1,6 @@
 /**
  * @file lv_ex_conf.h
- * Configuration file for v7.5.0
+ * Configuration file for v7.6.1
  *
  */
 /*
@@ -41,6 +41,8 @@
 
 /*Stress test for LVGL*/
 #define LV_USE_DEMO_STRESS      1
+
+#define LV_USE_DEMO_MUSIC      1
 
 #endif /*LV_EX_CONF_H*/
 
