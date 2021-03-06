@@ -1,6 +1,12 @@
 SHELL := /bin/bash
 CC = emcc
 
+CCACHE ?=
+
+ifneq ($(CCACHE),)
+CC:= $(CCACHE) $(CC)
+endif
+
 TARGET := build/index.html
 
 SRCS += $(shell find -L lvgl -name \*.c)
