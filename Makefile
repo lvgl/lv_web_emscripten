@@ -36,7 +36,7 @@ COBJS := $(CSRCS:.c=.o)
 
 CHOSEN_DEMO ?= lv_demo_widgets
 
-CFLAGS += -DLV_CONF_INCLUDE_SIMPLE=1 -I. -Ilvgl -O2 -DCHOSEN_DEMO=$(CHOSEN_DEMO)
+CFLAGS += -DLV_CONF_INCLUDE_SIMPLE=1 -I. -Ilvgl -DCHOSEN_DEMO=$(CHOSEN_DEMO)
 
 MAKEFILE_DEP ?= Makefile lv_conf.h lv_ex_conf.h lv_drv_conf.h
 
@@ -52,11 +52,11 @@ main.o: build
 
 %.o: %.c $(MAKEFILE_DEP)
 	@echo " CC " $<
-	$(Q)$(CC) -c $(CFLAGS) -s USE_SDL=2 -o $@ $<
+	$(Q)$(CC) -c $(CFLAGS) -O2 -s USE_SDL=2 -o $@ $<
 
 $(TARGET): build $(COBJS) lvgl_shell.html
 	@echo " LINK " $@
-	$(Q)$(CC) $(CFLAGS) -s USE_SDL=2 -o $(TARGET) --shell-file lvgl_shell.html $(COBJS)
+	$(Q)$(CC) $(CFLAGS) -O0 -s USE_SDL=2 -o $(TARGET) --shell-file lvgl_shell.html $(COBJS)
 	$(Q)rm -f build/gitrev.js
 ifneq ($(NO_GIT_HASH),1)
 	$(Q)echo "window.git_hash = \"$(shell ./findtag.sh)\";" > build/gitrev.js
