@@ -1,10 +1,10 @@
 /**
- * @file lv_ex_conf.h
- * Configuration file for v7.6.1
+ * @file lv_example_conf.h
+ * Configuration file for v7.8.0
  *
  */
 /*
- * COPY THIS FILE AS lv_ex_conf.h
+ * COPY THIS FILE AS lv_example_conf.h
  */
 
 #if 1 /*Set it to "1" to enable the content*/
@@ -31,10 +31,10 @@
 #endif
 
 /*Printer demo, optimized for 800x480*/
-#define LV_USE_DEMO_PRINTER     1
+#define LV_USE_DEMO_PRINTER     0
 
 /*Demonstrate the usage of encoder and keyboard*/
-#define LV_USE_DEMO_KEYPAD_AND_ENCODER     1
+#define LV_USE_DEMO_KEYPAD_AND_ENCODER     0
 
 /*Benchmark your system*/
 #define LV_USE_DEMO_BENCHMARK   1
@@ -42,7 +42,10 @@
 /*Stress test for LVGL*/
 #define LV_USE_DEMO_STRESS      1
 
-#define LV_USE_DEMO_MUSIC      1
+/*********************
+ * COMPONENT USAGE
+ *********************/
+#define LV_USE_COMPONENT_EXAMPLES   1
 
 #endif /*LV_EX_CONF_H*/
 

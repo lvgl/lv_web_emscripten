@@ -18,7 +18,7 @@
 #include "lv_drivers/indev/mousewheel.h"
 #include "lv_drivers/indev/keyboard.h"
 
-#include "lv_examples/lv_examples.h"
+#include "lv_examples/lv_demo.h"
 
 /*********************
  *      DEFINES
@@ -40,7 +40,7 @@
  **********************/
 static void hal_init(void);
 static int tick_thread(void * data);
-static void memory_monitor(lv_task_t * param);
+static void memory_monitor(lv_timer_t * param);
 
 /**********************
  *  STATIC VARIABLES
@@ -116,14 +116,14 @@ static void hal_init(void)
     monitor_init();
 
     /*Create a display buffer*/
-    static lv_disp_buf_t disp_buf1;
-    static lv_color_t buf1_1[LV_HOR_RES_MAX*LV_VER_RES_MAX];
-    lv_disp_buf_init(&disp_buf1, buf1_1, NULL, LV_HOR_RES_MAX*LV_VER_RES_MAX);
+    static lv_disp_draw_buf_t disp_buf1;
+    lv_color_t * buf1_1 = malloc(sizeof(lv_color_t) * monitor_hor_res * monitor_ver_res);
+    lv_disp_draw_buf_init(&disp_buf1, buf1_1, NULL, monitor_hor_res * monitor_ver_res);
 
     /*Create a display*/
-    lv_disp_drv_t disp_drv;
+    static lv_disp_drv_t disp_drv;
     lv_disp_drv_init(&disp_drv);            /*Basic initialization*/
-    disp_drv.buffer = &disp_buf1;
+    disp_drv.draw_buf = &disp_buf1;
     disp_drv.flush_cb = monitor_flush;    /*Used when `LV_VDB_SIZE != 0` in lv_conf.h (buffered drawing)*/
     disp_drv.hor_res = monitor_hor_res;
     disp_drv.ver_res = monitor_ver_res;
@@ -132,7 +132,7 @@ static void hal_init(void)
     /* Add the mouse as input device
      * Use the 'mouse' driver which reads the PC's mouse*/
     mouse_init();
-    lv_indev_drv_t indev_drv;
+    static lv_indev_drv_t indev_drv;
     lv_indev_drv_init(&indev_drv);          /*Basic initialization*/
     indev_drv.type = LV_INDEV_TYPE_POINTER;
     indev_drv.read_cb = mouse_read;         /*This function will be called periodically (by the library) to get the mouse position and state*/
@@ -148,21 +148,14 @@ static void hal_init(void)
 
     /* Optional:
      * Create a memory monitor task which prints the memory usage in periodically.*/
-    lv_task_create(memory_monitor, 3000, LV_TASK_PRIO_MID, NULL);
+    lv_timer_create(memory_monitor, 3000, NULL);
 }
 
 /**
  * Print the memory usage periodically
  * @param param
  */
-static void memory_monitor(lv_task_t * param)
+static void memory_monitor(lv_timer_t * param)
 {
     (void) param; /*Unused*/
-
-    lv_mem_monitor_t mon;
-    lv_mem_monitor(&mon);
-    printf("used: %6d (%3d %%), frag: %3d %%, biggest free: %6d\n", (int)mon.total_size - mon.free_size,
-           mon.used_pct,
-           mon.frag_pct,
-           (int)mon.free_biggest_size);
 }
