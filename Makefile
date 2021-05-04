@@ -65,16 +65,6 @@ CMAKE_BINARY_DIR = /home/runner/work/lv_sim_emscripten/lv_sim_emscripten/cmbuild
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/home/runner/work/_temp/773599641/cmake-3.20.1-linux-x86_64/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -84,6 +74,16 @@ rebuild_cache:
 # Special rule for the target rebuild_cache
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/home/runner/work/_temp/773599641/cmake-3.20.1-linux-x86_64/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named lvgl
+# Target rules for targets named index
 
 # Build rule for target.
-lvgl: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lvgl
-.PHONY : lvgl
+index: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 index
+.PHONY : index
 
 # fast build rule for target.
-lvgl/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/build
-.PHONY : lvgl/fast
+index/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/build
+.PHONY : index/fast
 
 examplelist.o: examplelist.c.o
 .PHONY : examplelist.o
 
 # target to build an object file
 examplelist.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/examplelist.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/examplelist.c.o
 .PHONY : examplelist.c.o
 
 examplelist.i: examplelist.c.i
@@ -142,7 +142,7 @@ examplelist.i: examplelist.c.i
 
 # target to preprocess a source file
 examplelist.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/examplelist.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/examplelist.c.i
 .PHONY : examplelist.c.i
 
 examplelist.s: examplelist.c.s
@@ -150,7 +150,7 @@ examplelist.s: examplelist.c.s
 
 # target to generate assembly for a file
 examplelist.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/examplelist.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/examplelist.c.s
 .PHONY : examplelist.c.s
 
 lv_drivers/display/GC9A01.o: lv_drivers/display/GC9A01.c.o
@@ -158,7 +158,7 @@ lv_drivers/display/GC9A01.o: lv_drivers/display/GC9A01.c.o
 
 # target to build an object file
 lv_drivers/display/GC9A01.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/display/GC9A01.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/display/GC9A01.c.o
 .PHONY : lv_drivers/display/GC9A01.c.o
 
 lv_drivers/display/GC9A01.i: lv_drivers/display/GC9A01.c.i
@@ -166,7 +166,7 @@ lv_drivers/display/GC9A01.i: lv_drivers/display/GC9A01.c.i
 
 # target to preprocess a source file
 lv_drivers/display/GC9A01.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/display/GC9A01.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/display/GC9A01.c.i
 .PHONY : lv_drivers/display/GC9A01.c.i
 
 lv_drivers/display/GC9A01.s: lv_drivers/display/GC9A01.c.s
@@ -174,7 +174,7 @@ lv_drivers/display/GC9A01.s: lv_drivers/display/GC9A01.c.s
 
 # target to generate assembly for a file
 lv_drivers/display/GC9A01.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/display/GC9A01.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/display/GC9A01.c.s
 .PHONY : lv_drivers/display/GC9A01.c.s
 
 lv_drivers/display/ILI9341.o: lv_drivers/display/ILI9341.c.o
@@ -182,7 +182,7 @@ lv_drivers/display/ILI9341.o: lv_drivers/display/ILI9341.c.o
 
 # target to build an object file
 lv_drivers/display/ILI9341.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/display/ILI9341.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/display/ILI9341.c.o
 .PHONY : lv_drivers/display/ILI9341.c.o
 
 lv_drivers/display/ILI9341.i: lv_drivers/display/ILI9341.c.i
@@ -190,7 +190,7 @@ lv_drivers/display/ILI9341.i: lv_drivers/display/ILI9341.c.i
 
 # target to preprocess a source file
 lv_drivers/display/ILI9341.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/display/ILI9341.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/display/ILI9341.c.i
 .PHONY : lv_drivers/display/ILI9341.c.i
 
 lv_drivers/display/ILI9341.s: lv_drivers/display/ILI9341.c.s
@@ -198,7 +198,7 @@ lv_drivers/display/ILI9341.s: lv_drivers/display/ILI9341.c.s
 
 # target to generate assembly for a file
 lv_drivers/display/ILI9341.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/display/ILI9341.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/display/ILI9341.c.s
 .PHONY : lv_drivers/display/ILI9341.c.s
 
 lv_drivers/display/R61581.o: lv_drivers/display/R61581.c.o
@@ -206,7 +206,7 @@ lv_drivers/display/R61581.o: lv_drivers/display/R61581.c.o
 
 # target to build an object file
 lv_drivers/display/R61581.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/display/R61581.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/display/R61581.c.o
 .PHONY : lv_drivers/display/R61581.c.o
 
 lv_drivers/display/R61581.i: lv_drivers/display/R61581.c.i
@@ -214,7 +214,7 @@ lv_drivers/display/R61581.i: lv_drivers/display/R61581.c.i
 
 # target to preprocess a source file
 lv_drivers/display/R61581.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/display/R61581.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/display/R61581.c.i
 .PHONY : lv_drivers/display/R61581.c.i
 
 lv_drivers/display/R61581.s: lv_drivers/display/R61581.c.s
@@ -222,7 +222,7 @@ lv_drivers/display/R61581.s: lv_drivers/display/R61581.c.s
 
 # target to generate assembly for a file
 lv_drivers/display/R61581.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/display/R61581.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/display/R61581.c.s
 .PHONY : lv_drivers/display/R61581.c.s
 
 lv_drivers/display/SHARP_MIP.o: lv_drivers/display/SHARP_MIP.c.o
@@ -230,7 +230,7 @@ lv_drivers/display/SHARP_MIP.o: lv_drivers/display/SHARP_MIP.c.o
 
 # target to build an object file
 lv_drivers/display/SHARP_MIP.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/display/SHARP_MIP.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/display/SHARP_MIP.c.o
 .PHONY : lv_drivers/display/SHARP_MIP.c.o
 
 lv_drivers/display/SHARP_MIP.i: lv_drivers/display/SHARP_MIP.c.i
@@ -238,7 +238,7 @@ lv_drivers/display/SHARP_MIP.i: lv_drivers/display/SHARP_MIP.c.i
 
 # target to preprocess a source file
 lv_drivers/display/SHARP_MIP.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/display/SHARP_MIP.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/display/SHARP_MIP.c.i
 .PHONY : lv_drivers/display/SHARP_MIP.c.i
 
 lv_drivers/display/SHARP_MIP.s: lv_drivers/display/SHARP_MIP.c.s
@@ -246,7 +246,7 @@ lv_drivers/display/SHARP_MIP.s: lv_drivers/display/SHARP_MIP.c.s
 
 # target to generate assembly for a file
 lv_drivers/display/SHARP_MIP.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/display/SHARP_MIP.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/display/SHARP_MIP.c.s
 .PHONY : lv_drivers/display/SHARP_MIP.c.s
 
 lv_drivers/display/SSD1963.o: lv_drivers/display/SSD1963.c.o
@@ -254,7 +254,7 @@ lv_drivers/display/SSD1963.o: lv_drivers/display/SSD1963.c.o
 
 # target to build an object file
 lv_drivers/display/SSD1963.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/display/SSD1963.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/display/SSD1963.c.o
 .PHONY : lv_drivers/display/SSD1963.c.o
 
 lv_drivers/display/SSD1963.i: lv_drivers/display/SSD1963.c.i
@@ -262,7 +262,7 @@ lv_drivers/display/SSD1963.i: lv_drivers/display/SSD1963.c.i
 
 # target to preprocess a source file
 lv_drivers/display/SSD1963.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/display/SSD1963.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/display/SSD1963.c.i
 .PHONY : lv_drivers/display/SSD1963.c.i
 
 lv_drivers/display/SSD1963.s: lv_drivers/display/SSD1963.c.s
@@ -270,7 +270,7 @@ lv_drivers/display/SSD1963.s: lv_drivers/display/SSD1963.c.s
 
 # target to generate assembly for a file
 lv_drivers/display/SSD1963.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/display/SSD1963.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/display/SSD1963.c.s
 .PHONY : lv_drivers/display/SSD1963.c.s
 
 lv_drivers/display/ST7565.o: lv_drivers/display/ST7565.c.o
@@ -278,7 +278,7 @@ lv_drivers/display/ST7565.o: lv_drivers/display/ST7565.c.o
 
 # target to build an object file
 lv_drivers/display/ST7565.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/display/ST7565.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/display/ST7565.c.o
 .PHONY : lv_drivers/display/ST7565.c.o
 
 lv_drivers/display/ST7565.i: lv_drivers/display/ST7565.c.i
@@ -286,7 +286,7 @@ lv_drivers/display/ST7565.i: lv_drivers/display/ST7565.c.i
 
 # target to preprocess a source file
 lv_drivers/display/ST7565.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/display/ST7565.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/display/ST7565.c.i
 .PHONY : lv_drivers/display/ST7565.c.i
 
 lv_drivers/display/ST7565.s: lv_drivers/display/ST7565.c.s
@@ -294,7 +294,7 @@ lv_drivers/display/ST7565.s: lv_drivers/display/ST7565.c.s
 
 # target to generate assembly for a file
 lv_drivers/display/ST7565.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/display/ST7565.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/display/ST7565.c.s
 .PHONY : lv_drivers/display/ST7565.c.s
 
 lv_drivers/display/UC1610.o: lv_drivers/display/UC1610.c.o
@@ -302,7 +302,7 @@ lv_drivers/display/UC1610.o: lv_drivers/display/UC1610.c.o
 
 # target to build an object file
 lv_drivers/display/UC1610.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/display/UC1610.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/display/UC1610.c.o
 .PHONY : lv_drivers/display/UC1610.c.o
 
 lv_drivers/display/UC1610.i: lv_drivers/display/UC1610.c.i
@@ -310,7 +310,7 @@ lv_drivers/display/UC1610.i: lv_drivers/display/UC1610.c.i
 
 # target to preprocess a source file
 lv_drivers/display/UC1610.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/display/UC1610.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/display/UC1610.c.i
 .PHONY : lv_drivers/display/UC1610.c.i
 
 lv_drivers/display/UC1610.s: lv_drivers/display/UC1610.c.s
@@ -318,7 +318,7 @@ lv_drivers/display/UC1610.s: lv_drivers/display/UC1610.c.s
 
 # target to generate assembly for a file
 lv_drivers/display/UC1610.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/display/UC1610.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/display/UC1610.c.s
 .PHONY : lv_drivers/display/UC1610.c.s
 
 lv_drivers/display/drm.o: lv_drivers/display/drm.c.o
@@ -326,7 +326,7 @@ lv_drivers/display/drm.o: lv_drivers/display/drm.c.o
 
 # target to build an object file
 lv_drivers/display/drm.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/display/drm.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/display/drm.c.o
 .PHONY : lv_drivers/display/drm.c.o
 
 lv_drivers/display/drm.i: lv_drivers/display/drm.c.i
@@ -334,7 +334,7 @@ lv_drivers/display/drm.i: lv_drivers/display/drm.c.i
 
 # target to preprocess a source file
 lv_drivers/display/drm.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/display/drm.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/display/drm.c.i
 .PHONY : lv_drivers/display/drm.c.i
 
 lv_drivers/display/drm.s: lv_drivers/display/drm.c.s
@@ -342,7 +342,7 @@ lv_drivers/display/drm.s: lv_drivers/display/drm.c.s
 
 # target to generate assembly for a file
 lv_drivers/display/drm.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/display/drm.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/display/drm.c.s
 .PHONY : lv_drivers/display/drm.c.s
 
 lv_drivers/display/fbdev.o: lv_drivers/display/fbdev.c.o
@@ -350,7 +350,7 @@ lv_drivers/display/fbdev.o: lv_drivers/display/fbdev.c.o
 
 # target to build an object file
 lv_drivers/display/fbdev.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/display/fbdev.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/display/fbdev.c.o
 .PHONY : lv_drivers/display/fbdev.c.o
 
 lv_drivers/display/fbdev.i: lv_drivers/display/fbdev.c.i
@@ -358,7 +358,7 @@ lv_drivers/display/fbdev.i: lv_drivers/display/fbdev.c.i
 
 # target to preprocess a source file
 lv_drivers/display/fbdev.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/display/fbdev.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/display/fbdev.c.i
 .PHONY : lv_drivers/display/fbdev.c.i
 
 lv_drivers/display/fbdev.s: lv_drivers/display/fbdev.c.s
@@ -366,7 +366,7 @@ lv_drivers/display/fbdev.s: lv_drivers/display/fbdev.c.s
 
 # target to generate assembly for a file
 lv_drivers/display/fbdev.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/display/fbdev.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/display/fbdev.c.s
 .PHONY : lv_drivers/display/fbdev.c.s
 
 lv_drivers/display/monitor.o: lv_drivers/display/monitor.c.o
@@ -374,7 +374,7 @@ lv_drivers/display/monitor.o: lv_drivers/display/monitor.c.o
 
 # target to build an object file
 lv_drivers/display/monitor.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/display/monitor.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/display/monitor.c.o
 .PHONY : lv_drivers/display/monitor.c.o
 
 lv_drivers/display/monitor.i: lv_drivers/display/monitor.c.i
@@ -382,7 +382,7 @@ lv_drivers/display/monitor.i: lv_drivers/display/monitor.c.i
 
 # target to preprocess a source file
 lv_drivers/display/monitor.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/display/monitor.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/display/monitor.c.i
 .PHONY : lv_drivers/display/monitor.c.i
 
 lv_drivers/display/monitor.s: lv_drivers/display/monitor.c.s
@@ -390,7 +390,7 @@ lv_drivers/display/monitor.s: lv_drivers/display/monitor.c.s
 
 # target to generate assembly for a file
 lv_drivers/display/monitor.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/display/monitor.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/display/monitor.c.s
 .PHONY : lv_drivers/display/monitor.c.s
 
 lv_drivers/gtkdrv/gtkdrv.o: lv_drivers/gtkdrv/gtkdrv.c.o
@@ -398,7 +398,7 @@ lv_drivers/gtkdrv/gtkdrv.o: lv_drivers/gtkdrv/gtkdrv.c.o
 
 # target to build an object file
 lv_drivers/gtkdrv/gtkdrv.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/gtkdrv/gtkdrv.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/gtkdrv/gtkdrv.c.o
 .PHONY : lv_drivers/gtkdrv/gtkdrv.c.o
 
 lv_drivers/gtkdrv/gtkdrv.i: lv_drivers/gtkdrv/gtkdrv.c.i
@@ -406,7 +406,7 @@ lv_drivers/gtkdrv/gtkdrv.i: lv_drivers/gtkdrv/gtkdrv.c.i
 
 # target to preprocess a source file
 lv_drivers/gtkdrv/gtkdrv.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/gtkdrv/gtkdrv.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/gtkdrv/gtkdrv.c.i
 .PHONY : lv_drivers/gtkdrv/gtkdrv.c.i
 
 lv_drivers/gtkdrv/gtkdrv.s: lv_drivers/gtkdrv/gtkdrv.c.s
@@ -414,7 +414,7 @@ lv_drivers/gtkdrv/gtkdrv.s: lv_drivers/gtkdrv/gtkdrv.c.s
 
 # target to generate assembly for a file
 lv_drivers/gtkdrv/gtkdrv.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/gtkdrv/gtkdrv.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/gtkdrv/gtkdrv.c.s
 .PHONY : lv_drivers/gtkdrv/gtkdrv.c.s
 
 lv_drivers/indev/AD_touch.o: lv_drivers/indev/AD_touch.c.o
@@ -422,7 +422,7 @@ lv_drivers/indev/AD_touch.o: lv_drivers/indev/AD_touch.c.o
 
 # target to build an object file
 lv_drivers/indev/AD_touch.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/indev/AD_touch.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/indev/AD_touch.c.o
 .PHONY : lv_drivers/indev/AD_touch.c.o
 
 lv_drivers/indev/AD_touch.i: lv_drivers/indev/AD_touch.c.i
@@ -430,7 +430,7 @@ lv_drivers/indev/AD_touch.i: lv_drivers/indev/AD_touch.c.i
 
 # target to preprocess a source file
 lv_drivers/indev/AD_touch.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/indev/AD_touch.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/indev/AD_touch.c.i
 .PHONY : lv_drivers/indev/AD_touch.c.i
 
 lv_drivers/indev/AD_touch.s: lv_drivers/indev/AD_touch.c.s
@@ -438,7 +438,7 @@ lv_drivers/indev/AD_touch.s: lv_drivers/indev/AD_touch.c.s
 
 # target to generate assembly for a file
 lv_drivers/indev/AD_touch.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/indev/AD_touch.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/indev/AD_touch.c.s
 .PHONY : lv_drivers/indev/AD_touch.c.s
 
 lv_drivers/indev/FT5406EE8.o: lv_drivers/indev/FT5406EE8.c.o
@@ -446,7 +446,7 @@ lv_drivers/indev/FT5406EE8.o: lv_drivers/indev/FT5406EE8.c.o
 
 # target to build an object file
 lv_drivers/indev/FT5406EE8.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/indev/FT5406EE8.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/indev/FT5406EE8.c.o
 .PHONY : lv_drivers/indev/FT5406EE8.c.o
 
 lv_drivers/indev/FT5406EE8.i: lv_drivers/indev/FT5406EE8.c.i
@@ -454,7 +454,7 @@ lv_drivers/indev/FT5406EE8.i: lv_drivers/indev/FT5406EE8.c.i
 
 # target to preprocess a source file
 lv_drivers/indev/FT5406EE8.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/indev/FT5406EE8.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/indev/FT5406EE8.c.i
 .PHONY : lv_drivers/indev/FT5406EE8.c.i
 
 lv_drivers/indev/FT5406EE8.s: lv_drivers/indev/FT5406EE8.c.s
@@ -462,7 +462,7 @@ lv_drivers/indev/FT5406EE8.s: lv_drivers/indev/FT5406EE8.c.s
 
 # target to generate assembly for a file
 lv_drivers/indev/FT5406EE8.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/indev/FT5406EE8.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/indev/FT5406EE8.c.s
 .PHONY : lv_drivers/indev/FT5406EE8.c.s
 
 lv_drivers/indev/XPT2046.o: lv_drivers/indev/XPT2046.c.o
@@ -470,7 +470,7 @@ lv_drivers/indev/XPT2046.o: lv_drivers/indev/XPT2046.c.o
 
 # target to build an object file
 lv_drivers/indev/XPT2046.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/indev/XPT2046.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/indev/XPT2046.c.o
 .PHONY : lv_drivers/indev/XPT2046.c.o
 
 lv_drivers/indev/XPT2046.i: lv_drivers/indev/XPT2046.c.i
@@ -478,7 +478,7 @@ lv_drivers/indev/XPT2046.i: lv_drivers/indev/XPT2046.c.i
 
 # target to preprocess a source file
 lv_drivers/indev/XPT2046.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/indev/XPT2046.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/indev/XPT2046.c.i
 .PHONY : lv_drivers/indev/XPT2046.c.i
 
 lv_drivers/indev/XPT2046.s: lv_drivers/indev/XPT2046.c.s
@@ -486,7 +486,7 @@ lv_drivers/indev/XPT2046.s: lv_drivers/indev/XPT2046.c.s
 
 # target to generate assembly for a file
 lv_drivers/indev/XPT2046.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/indev/XPT2046.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/indev/XPT2046.c.s
 .PHONY : lv_drivers/indev/XPT2046.c.s
 
 lv_drivers/indev/evdev.o: lv_drivers/indev/evdev.c.o
@@ -494,7 +494,7 @@ lv_drivers/indev/evdev.o: lv_drivers/indev/evdev.c.o
 
 # target to build an object file
 lv_drivers/indev/evdev.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/indev/evdev.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/indev/evdev.c.o
 .PHONY : lv_drivers/indev/evdev.c.o
 
 lv_drivers/indev/evdev.i: lv_drivers/indev/evdev.c.i
@@ -502,7 +502,7 @@ lv_drivers/indev/evdev.i: lv_drivers/indev/evdev.c.i
 
 # target to preprocess a source file
 lv_drivers/indev/evdev.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/indev/evdev.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/indev/evdev.c.i
 .PHONY : lv_drivers/indev/evdev.c.i
 
 lv_drivers/indev/evdev.s: lv_drivers/indev/evdev.c.s
@@ -510,7 +510,7 @@ lv_drivers/indev/evdev.s: lv_drivers/indev/evdev.c.s
 
 # target to generate assembly for a file
 lv_drivers/indev/evdev.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/indev/evdev.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/indev/evdev.c.s
 .PHONY : lv_drivers/indev/evdev.c.s
 
 lv_drivers/indev/keyboard.o: lv_drivers/indev/keyboard.c.o
@@ -518,7 +518,7 @@ lv_drivers/indev/keyboard.o: lv_drivers/indev/keyboard.c.o
 
 # target to build an object file
 lv_drivers/indev/keyboard.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/indev/keyboard.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/indev/keyboard.c.o
 .PHONY : lv_drivers/indev/keyboard.c.o
 
 lv_drivers/indev/keyboard.i: lv_drivers/indev/keyboard.c.i
@@ -526,7 +526,7 @@ lv_drivers/indev/keyboard.i: lv_drivers/indev/keyboard.c.i
 
 # target to preprocess a source file
 lv_drivers/indev/keyboard.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/indev/keyboard.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/indev/keyboard.c.i
 .PHONY : lv_drivers/indev/keyboard.c.i
 
 lv_drivers/indev/keyboard.s: lv_drivers/indev/keyboard.c.s
@@ -534,7 +534,7 @@ lv_drivers/indev/keyboard.s: lv_drivers/indev/keyboard.c.s
 
 # target to generate assembly for a file
 lv_drivers/indev/keyboard.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/indev/keyboard.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/indev/keyboard.c.s
 .PHONY : lv_drivers/indev/keyboard.c.s
 
 lv_drivers/indev/libinput.o: lv_drivers/indev/libinput.c.o
@@ -542,7 +542,7 @@ lv_drivers/indev/libinput.o: lv_drivers/indev/libinput.c.o
 
 # target to build an object file
 lv_drivers/indev/libinput.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/indev/libinput.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/indev/libinput.c.o
 .PHONY : lv_drivers/indev/libinput.c.o
 
 lv_drivers/indev/libinput.i: lv_drivers/indev/libinput.c.i
@@ -550,7 +550,7 @@ lv_drivers/indev/libinput.i: lv_drivers/indev/libinput.c.i
 
 # target to preprocess a source file
 lv_drivers/indev/libinput.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/indev/libinput.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/indev/libinput.c.i
 .PHONY : lv_drivers/indev/libinput.c.i
 
 lv_drivers/indev/libinput.s: lv_drivers/indev/libinput.c.s
@@ -558,7 +558,7 @@ lv_drivers/indev/libinput.s: lv_drivers/indev/libinput.c.s
 
 # target to generate assembly for a file
 lv_drivers/indev/libinput.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/indev/libinput.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/indev/libinput.c.s
 .PHONY : lv_drivers/indev/libinput.c.s
 
 lv_drivers/indev/mouse.o: lv_drivers/indev/mouse.c.o
@@ -566,7 +566,7 @@ lv_drivers/indev/mouse.o: lv_drivers/indev/mouse.c.o
 
 # target to build an object file
 lv_drivers/indev/mouse.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/indev/mouse.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/indev/mouse.c.o
 .PHONY : lv_drivers/indev/mouse.c.o
 
 lv_drivers/indev/mouse.i: lv_drivers/indev/mouse.c.i
@@ -574,7 +574,7 @@ lv_drivers/indev/mouse.i: lv_drivers/indev/mouse.c.i
 
 # target to preprocess a source file
 lv_drivers/indev/mouse.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/indev/mouse.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/indev/mouse.c.i
 .PHONY : lv_drivers/indev/mouse.c.i
 
 lv_drivers/indev/mouse.s: lv_drivers/indev/mouse.c.s
@@ -582,7 +582,7 @@ lv_drivers/indev/mouse.s: lv_drivers/indev/mouse.c.s
 
 # target to generate assembly for a file
 lv_drivers/indev/mouse.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/indev/mouse.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/indev/mouse.c.s
 .PHONY : lv_drivers/indev/mouse.c.s
 
 lv_drivers/indev/mousewheel.o: lv_drivers/indev/mousewheel.c.o
@@ -590,7 +590,7 @@ lv_drivers/indev/mousewheel.o: lv_drivers/indev/mousewheel.c.o
 
 # target to build an object file
 lv_drivers/indev/mousewheel.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/indev/mousewheel.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/indev/mousewheel.c.o
 .PHONY : lv_drivers/indev/mousewheel.c.o
 
 lv_drivers/indev/mousewheel.i: lv_drivers/indev/mousewheel.c.i
@@ -598,7 +598,7 @@ lv_drivers/indev/mousewheel.i: lv_drivers/indev/mousewheel.c.i
 
 # target to preprocess a source file
 lv_drivers/indev/mousewheel.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/indev/mousewheel.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/indev/mousewheel.c.i
 .PHONY : lv_drivers/indev/mousewheel.c.i
 
 lv_drivers/indev/mousewheel.s: lv_drivers/indev/mousewheel.c.s
@@ -606,7 +606,7 @@ lv_drivers/indev/mousewheel.s: lv_drivers/indev/mousewheel.c.s
 
 # target to generate assembly for a file
 lv_drivers/indev/mousewheel.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/indev/mousewheel.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/indev/mousewheel.c.s
 .PHONY : lv_drivers/indev/mousewheel.c.s
 
 lv_drivers/wayland/wayland.o: lv_drivers/wayland/wayland.c.o
@@ -614,7 +614,7 @@ lv_drivers/wayland/wayland.o: lv_drivers/wayland/wayland.c.o
 
 # target to build an object file
 lv_drivers/wayland/wayland.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/wayland/wayland.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/wayland/wayland.c.o
 .PHONY : lv_drivers/wayland/wayland.c.o
 
 lv_drivers/wayland/wayland.i: lv_drivers/wayland/wayland.c.i
@@ -622,7 +622,7 @@ lv_drivers/wayland/wayland.i: lv_drivers/wayland/wayland.c.i
 
 # target to preprocess a source file
 lv_drivers/wayland/wayland.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/wayland/wayland.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/wayland/wayland.c.i
 .PHONY : lv_drivers/wayland/wayland.c.i
 
 lv_drivers/wayland/wayland.s: lv_drivers/wayland/wayland.c.s
@@ -630,7 +630,7 @@ lv_drivers/wayland/wayland.s: lv_drivers/wayland/wayland.c.s
 
 # target to generate assembly for a file
 lv_drivers/wayland/wayland.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/wayland/wayland.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/wayland/wayland.c.s
 .PHONY : lv_drivers/wayland/wayland.c.s
 
 lv_drivers/win32drv/win32drv.o: lv_drivers/win32drv/win32drv.c.o
@@ -638,7 +638,7 @@ lv_drivers/win32drv/win32drv.o: lv_drivers/win32drv/win32drv.c.o
 
 # target to build an object file
 lv_drivers/win32drv/win32drv.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/win32drv/win32drv.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/win32drv/win32drv.c.o
 .PHONY : lv_drivers/win32drv/win32drv.c.o
 
 lv_drivers/win32drv/win32drv.i: lv_drivers/win32drv/win32drv.c.i
@@ -646,7 +646,7 @@ lv_drivers/win32drv/win32drv.i: lv_drivers/win32drv/win32drv.c.i
 
 # target to preprocess a source file
 lv_drivers/win32drv/win32drv.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/win32drv/win32drv.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/win32drv/win32drv.c.i
 .PHONY : lv_drivers/win32drv/win32drv.c.i
 
 lv_drivers/win32drv/win32drv.s: lv_drivers/win32drv/win32drv.c.s
@@ -654,7 +654,7 @@ lv_drivers/win32drv/win32drv.s: lv_drivers/win32drv/win32drv.c.s
 
 # target to generate assembly for a file
 lv_drivers/win32drv/win32drv.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/win32drv/win32drv.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/win32drv/win32drv.c.s
 .PHONY : lv_drivers/win32drv/win32drv.c.s
 
 lv_drivers/win_drv.o: lv_drivers/win_drv.c.o
@@ -662,7 +662,7 @@ lv_drivers/win_drv.o: lv_drivers/win_drv.c.o
 
 # target to build an object file
 lv_drivers/win_drv.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/win_drv.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/win_drv.c.o
 .PHONY : lv_drivers/win_drv.c.o
 
 lv_drivers/win_drv.i: lv_drivers/win_drv.c.i
@@ -670,7 +670,7 @@ lv_drivers/win_drv.i: lv_drivers/win_drv.c.i
 
 # target to preprocess a source file
 lv_drivers/win_drv.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/win_drv.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/win_drv.c.i
 .PHONY : lv_drivers/win_drv.c.i
 
 lv_drivers/win_drv.s: lv_drivers/win_drv.c.s
@@ -678,7 +678,7 @@ lv_drivers/win_drv.s: lv_drivers/win_drv.c.s
 
 # target to generate assembly for a file
 lv_drivers/win_drv.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_drivers/win_drv.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/win_drv.c.s
 .PHONY : lv_drivers/win_drv.c.s
 
 lv_examples/src/lv_demo_benchmark/lv_demo_benchmark.o: lv_examples/src/lv_demo_benchmark/lv_demo_benchmark.c.o
@@ -686,7 +686,7 @@ lv_examples/src/lv_demo_benchmark/lv_demo_benchmark.o: lv_examples/src/lv_demo_b
 
 # target to build an object file
 lv_examples/src/lv_demo_benchmark/lv_demo_benchmark.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_benchmark/lv_demo_benchmark.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_benchmark/lv_demo_benchmark.c.o
 .PHONY : lv_examples/src/lv_demo_benchmark/lv_demo_benchmark.c.o
 
 lv_examples/src/lv_demo_benchmark/lv_demo_benchmark.i: lv_examples/src/lv_demo_benchmark/lv_demo_benchmark.c.i
@@ -694,7 +694,7 @@ lv_examples/src/lv_demo_benchmark/lv_demo_benchmark.i: lv_examples/src/lv_demo_b
 
 # target to preprocess a source file
 lv_examples/src/lv_demo_benchmark/lv_demo_benchmark.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_benchmark/lv_demo_benchmark.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_benchmark/lv_demo_benchmark.c.i
 .PHONY : lv_examples/src/lv_demo_benchmark/lv_demo_benchmark.c.i
 
 lv_examples/src/lv_demo_benchmark/lv_demo_benchmark.s: lv_examples/src/lv_demo_benchmark/lv_demo_benchmark.c.s
@@ -702,7 +702,7 @@ lv_examples/src/lv_demo_benchmark/lv_demo_benchmark.s: lv_examples/src/lv_demo_b
 
 # target to generate assembly for a file
 lv_examples/src/lv_demo_benchmark/lv_demo_benchmark.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_benchmark/lv_demo_benchmark.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_benchmark/lv_demo_benchmark.c.s
 .PHONY : lv_examples/src/lv_demo_benchmark/lv_demo_benchmark.c.s
 
 lv_examples/src/lv_demo_keypad_encoder/lv_demo_keypad_encoder.o: lv_examples/src/lv_demo_keypad_encoder/lv_demo_keypad_encoder.c.o
@@ -710,7 +710,7 @@ lv_examples/src/lv_demo_keypad_encoder/lv_demo_keypad_encoder.o: lv_examples/src
 
 # target to build an object file
 lv_examples/src/lv_demo_keypad_encoder/lv_demo_keypad_encoder.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_keypad_encoder/lv_demo_keypad_encoder.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_keypad_encoder/lv_demo_keypad_encoder.c.o
 .PHONY : lv_examples/src/lv_demo_keypad_encoder/lv_demo_keypad_encoder.c.o
 
 lv_examples/src/lv_demo_keypad_encoder/lv_demo_keypad_encoder.i: lv_examples/src/lv_demo_keypad_encoder/lv_demo_keypad_encoder.c.i
@@ -718,7 +718,7 @@ lv_examples/src/lv_demo_keypad_encoder/lv_demo_keypad_encoder.i: lv_examples/src
 
 # target to preprocess a source file
 lv_examples/src/lv_demo_keypad_encoder/lv_demo_keypad_encoder.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_keypad_encoder/lv_demo_keypad_encoder.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_keypad_encoder/lv_demo_keypad_encoder.c.i
 .PHONY : lv_examples/src/lv_demo_keypad_encoder/lv_demo_keypad_encoder.c.i
 
 lv_examples/src/lv_demo_keypad_encoder/lv_demo_keypad_encoder.s: lv_examples/src/lv_demo_keypad_encoder/lv_demo_keypad_encoder.c.s
@@ -726,7 +726,7 @@ lv_examples/src/lv_demo_keypad_encoder/lv_demo_keypad_encoder.s: lv_examples/src
 
 # target to generate assembly for a file
 lv_examples/src/lv_demo_keypad_encoder/lv_demo_keypad_encoder.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_keypad_encoder/lv_demo_keypad_encoder.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_keypad_encoder/lv_demo_keypad_encoder.c.s
 .PHONY : lv_examples/src/lv_demo_keypad_encoder/lv_demo_keypad_encoder.c.s
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause.c.o
@@ -734,7 +734,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause.o: lv_exam
 
 # target to build an object file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause.c.o
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause.c.o
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause.i: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause.c.i
@@ -742,7 +742,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause.i: lv_exam
 
 # target to preprocess a source file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause.c.i
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause.c.i
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause.s: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause.c.s
@@ -750,7 +750,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause.s: lv_exam
 
 # target to generate assembly for a file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause.c.s
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause.c.s
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_play.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_play.c.o
@@ -758,7 +758,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_play.o: lv_examp
 
 # target to build an object file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_play.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_play.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_play.c.o
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_play.c.o
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_play.i: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_play.c.i
@@ -766,7 +766,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_play.i: lv_examp
 
 # target to preprocess a source file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_play.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_play.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_play.c.i
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_play.c.i
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_play.s: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_play.c.s
@@ -774,7 +774,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_play.s: lv_examp
 
 # target to generate assembly for a file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_play.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_play.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_play.c.s
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_play.c.s
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop.c.o
@@ -782,7 +782,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop.o: lv_examples/s
 
 # target to build an object file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop.c.o
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop.c.o
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop.i: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop.c.i
@@ -790,7 +790,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop.i: lv_examples/s
 
 # target to preprocess a source file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop.c.i
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop.c.i
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop.s: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop.c.s
@@ -798,7 +798,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop.s: lv_examples/s
 
 # target to generate assembly for a file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop.c.s
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop.c.s
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_next.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_next.c.o
@@ -806,7 +806,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_next.o: lv_examples/s
 
 # target to build an object file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_next.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_next.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_next.c.o
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_next.c.o
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_next.i: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_next.c.i
@@ -814,7 +814,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_next.i: lv_examples/s
 
 # target to preprocess a source file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_next.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_next.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_next.c.i
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_next.c.i
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_next.s: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_next.c.s
@@ -822,7 +822,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_next.s: lv_examples/s
 
 # target to generate assembly for a file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_next.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_next.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_next.c.s
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_next.c.s
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause.c.o
@@ -830,7 +830,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause.o: lv_examples/
 
 # target to build an object file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause.c.o
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause.c.o
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause.i: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause.c.i
@@ -838,7 +838,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause.i: lv_examples/
 
 # target to preprocess a source file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause.c.i
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause.c.i
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause.s: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause.c.s
@@ -846,7 +846,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause.s: lv_examples/
 
 # target to generate assembly for a file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause.c.s
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause.c.s
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_play.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_play.c.o
@@ -854,7 +854,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_play.o: lv_examples/s
 
 # target to build an object file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_play.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_play.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_play.c.o
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_play.c.o
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_play.i: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_play.c.i
@@ -862,7 +862,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_play.i: lv_examples/s
 
 # target to preprocess a source file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_play.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_play.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_play.c.i
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_play.c.i
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_play.s: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_play.c.s
@@ -870,7 +870,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_play.s: lv_examples/s
 
 # target to generate assembly for a file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_play.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_play.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_play.c.s
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_play.c.s
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev.c.o
@@ -878,7 +878,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev.o: lv_examples/s
 
 # target to build an object file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev.c.o
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev.c.o
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev.i: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev.c.i
@@ -886,7 +886,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev.i: lv_examples/s
 
 # target to preprocess a source file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev.c.i
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev.c.i
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev.s: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev.c.s
@@ -894,7 +894,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev.s: lv_examples/s
 
 # target to generate assembly for a file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev.c.s
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev.c.s
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_rnd.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_rnd.c.o
@@ -902,7 +902,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_rnd.o: lv_examples/sr
 
 # target to build an object file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_rnd.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_rnd.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_rnd.c.o
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_rnd.c.o
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_rnd.i: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_rnd.c.i
@@ -910,7 +910,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_rnd.i: lv_examples/sr
 
 # target to preprocess a source file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_rnd.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_rnd.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_rnd.c.i
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_rnd.c.i
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_rnd.s: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_rnd.c.s
@@ -918,7 +918,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_rnd.s: lv_examples/sr
 
 # target to generate assembly for a file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_rnd.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_rnd.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_rnd.c.s
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_rnd.c.s
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left.c.o
@@ -926,7 +926,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left.o: lv_example
 
 # target to build an object file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left.c.o
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left.c.o
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left.i: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left.c.i
@@ -934,7 +934,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left.i: lv_example
 
 # target to preprocess a source file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left.c.i
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left.c.i
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left.s: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left.c.s
@@ -942,7 +942,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left.s: lv_example
 
 # target to generate assembly for a file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left.c.s
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left.c.s
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_right.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_right.c.o
@@ -950,7 +950,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_right.o: lv_exampl
 
 # target to build an object file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_right.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_right.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_right.c.o
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_right.c.o
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_right.i: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_right.c.i
@@ -958,7 +958,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_right.i: lv_exampl
 
 # target to preprocess a source file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_right.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_right.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_right.c.i
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_right.c.i
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_right.s: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_right.c.s
@@ -966,7 +966,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_right.s: lv_exampl
 
 # target to generate assembly for a file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_right.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_right.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_right.c.s
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_right.c.s
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1.c.o
@@ -974,7 +974,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1.o: lv_examples/sr
 
 # target to build an object file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1.c.o
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1.c.o
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1.i: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1.c.i
@@ -982,7 +982,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1.i: lv_examples/sr
 
 # target to preprocess a source file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1.c.i
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1.c.i
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1.s: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1.c.s
@@ -990,7 +990,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1.s: lv_examples/sr
 
 # target to generate assembly for a file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1.c.s
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1.c.s
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_2.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_2.c.o
@@ -998,7 +998,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_2.o: lv_examples/sr
 
 # target to build an object file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_2.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_2.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_2.c.o
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_2.c.o
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_2.i: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_2.c.i
@@ -1006,7 +1006,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_2.i: lv_examples/sr
 
 # target to preprocess a source file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_2.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_2.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_2.c.i
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_2.c.i
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_2.s: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_2.c.s
@@ -1014,7 +1014,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_2.s: lv_examples/sr
 
 # target to generate assembly for a file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_2.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_2.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_2.c.s
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_2.c.s
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3.c.o
@@ -1022,7 +1022,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3.o: lv_examples/sr
 
 # target to build an object file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3.c.o
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3.c.o
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3.i: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3.c.i
@@ -1030,7 +1030,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3.i: lv_examples/sr
 
 # target to preprocess a source file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3.c.i
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3.c.i
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3.s: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3.c.s
@@ -1038,7 +1038,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3.s: lv_examples/sr
 
 # target to generate assembly for a file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3.c.s
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3.c.s
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_1.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_1.c.o
@@ -1046,7 +1046,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_1.o: lv_examples/src
 
 # target to build an object file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_1.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_1.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_1.c.o
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_1.c.o
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_1.i: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_1.c.i
@@ -1054,7 +1054,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_1.i: lv_examples/src
 
 # target to preprocess a source file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_1.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_1.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_1.c.i
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_1.c.i
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_1.s: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_1.c.s
@@ -1062,7 +1062,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_1.s: lv_examples/src
 
 # target to generate assembly for a file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_1.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_1.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_1.c.s
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_1.c.s
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2.c.o
@@ -1070,7 +1070,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2.o: lv_examples/src
 
 # target to build an object file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2.c.o
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2.c.o
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2.i: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2.c.i
@@ -1078,7 +1078,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2.i: lv_examples/src
 
 # target to preprocess a source file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2.c.i
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2.c.i
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2.s: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2.c.s
@@ -1086,7 +1086,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2.s: lv_examples/src
 
 # target to generate assembly for a file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2.c.s
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2.c.s
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_3.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_3.c.o
@@ -1094,7 +1094,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_3.o: lv_examples/src
 
 # target to build an object file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_3.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_3.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_3.c.o
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_3.c.o
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_3.i: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_3.c.i
@@ -1102,7 +1102,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_3.i: lv_examples/src
 
 # target to preprocess a source file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_3.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_3.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_3.c.i
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_3.c.i
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_3.s: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_3.c.s
@@ -1110,7 +1110,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_3.s: lv_examples/src
 
 # target to generate assembly for a file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_3.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_3.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_3.c.s
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_3.c.s
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_4.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_4.c.o
@@ -1118,7 +1118,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_4.o: lv_examples/src
 
 # target to build an object file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_4.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_4.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_4.c.o
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_4.c.o
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_4.i: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_4.c.i
@@ -1126,7 +1126,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_4.i: lv_examples/src
 
 # target to preprocess a source file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_4.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_4.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_4.c.i
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_4.c.i
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_4.s: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_4.c.s
@@ -1134,7 +1134,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_4.s: lv_examples/src
 
 # target to generate assembly for a file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_4.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_4.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_4.c.s
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_4.c.s
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border.c.o
@@ -1142,7 +1142,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border.o: lv_example
 
 # target to build an object file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border.c.o
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border.c.o
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border.i: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border.c.i
@@ -1150,7 +1150,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border.i: lv_example
 
 # target to preprocess a source file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border.c.i
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border.c.i
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border.s: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border.c.s
@@ -1158,7 +1158,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border.s: lv_example
 
 # target to generate assembly for a file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border.c.s
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border.c.s
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_logo.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_logo.c.o
@@ -1166,7 +1166,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_logo.o: lv_examples/src/l
 
 # target to build an object file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_logo.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_logo.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_logo.c.o
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_logo.c.o
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_logo.i: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_logo.c.i
@@ -1174,7 +1174,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_logo.i: lv_examples/src/l
 
 # target to preprocess a source file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_logo.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_logo.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_logo.c.i
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_logo.c.i
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_logo.s: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_logo.c.s
@@ -1182,7 +1182,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_logo.s: lv_examples/src/l
 
 # target to generate assembly for a file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_logo.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_logo.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_logo.c.s
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_logo.c.s
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_slider_knob.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_slider_knob.c.o
@@ -1190,7 +1190,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_slider_knob.o: lv_example
 
 # target to build an object file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_slider_knob.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_slider_knob.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_slider_knob.c.o
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_slider_knob.c.o
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_slider_knob.i: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_slider_knob.c.i
@@ -1198,7 +1198,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_slider_knob.i: lv_example
 
 # target to preprocess a source file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_slider_knob.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_slider_knob.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_slider_knob.c.i
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_slider_knob.c.i
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_slider_knob.s: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_slider_knob.c.s
@@ -1206,7 +1206,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_slider_knob.s: lv_example
 
 # target to generate assembly for a file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_slider_knob.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_slider_knob.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_slider_knob.c.s
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_slider_knob.c.s
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_bottom.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_bottom.c.o
@@ -1214,7 +1214,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_bottom.o: lv_example
 
 # target to build an object file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_bottom.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_bottom.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_bottom.c.o
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_bottom.c.o
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_bottom.i: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_bottom.c.i
@@ -1222,7 +1222,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_bottom.i: lv_example
 
 # target to preprocess a source file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_bottom.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_bottom.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_bottom.c.i
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_bottom.c.i
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_bottom.s: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_bottom.c.s
@@ -1230,7 +1230,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_bottom.s: lv_example
 
 # target to generate assembly for a file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_bottom.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_bottom.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_bottom.c.s
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_bottom.c.s
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top.c.o
@@ -1238,7 +1238,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top.o: lv_examples/s
 
 # target to build an object file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top.c.o
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top.c.o
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top.i: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top.c.i
@@ -1246,7 +1246,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top.i: lv_examples/s
 
 # target to preprocess a source file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top.c.i
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top.c.i
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top.s: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top.c.s
@@ -1254,7 +1254,7 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top.s: lv_examples/s
 
 # target to generate assembly for a file
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top.c.s
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top.c.s
 
 lv_examples/src/lv_demo_music/assets/lv_demo_music_font_16_bold.o: lv_examples/src/lv_demo_music/assets/lv_demo_music_font_16_bold.c.o
@@ -1262,7 +1262,7 @@ lv_examples/src/lv_demo_music/assets/lv_demo_music_font_16_bold.o: lv_examples/s
 
 # target to build an object file
 lv_examples/src/lv_demo_music/assets/lv_demo_music_font_16_bold.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/lv_demo_music_font_16_bold.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/lv_demo_music_font_16_bold.c.o
 .PHONY : lv_examples/src/lv_demo_music/assets/lv_demo_music_font_16_bold.c.o
 
 lv_examples/src/lv_demo_music/assets/lv_demo_music_font_16_bold.i: lv_examples/src/lv_demo_music/assets/lv_demo_music_font_16_bold.c.i
@@ -1270,7 +1270,7 @@ lv_examples/src/lv_demo_music/assets/lv_demo_music_font_16_bold.i: lv_examples/s
 
 # target to preprocess a source file
 lv_examples/src/lv_demo_music/assets/lv_demo_music_font_16_bold.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/lv_demo_music_font_16_bold.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/lv_demo_music_font_16_bold.c.i
 .PHONY : lv_examples/src/lv_demo_music/assets/lv_demo_music_font_16_bold.c.i
 
 lv_examples/src/lv_demo_music/assets/lv_demo_music_font_16_bold.s: lv_examples/src/lv_demo_music/assets/lv_demo_music_font_16_bold.c.s
@@ -1278,7 +1278,7 @@ lv_examples/src/lv_demo_music/assets/lv_demo_music_font_16_bold.s: lv_examples/s
 
 # target to generate assembly for a file
 lv_examples/src/lv_demo_music/assets/lv_demo_music_font_16_bold.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/assets/lv_demo_music_font_16_bold.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/lv_demo_music_font_16_bold.c.s
 .PHONY : lv_examples/src/lv_demo_music/assets/lv_demo_music_font_16_bold.c.s
 
 lv_examples/src/lv_demo_music/lv_demo_music.o: lv_examples/src/lv_demo_music/lv_demo_music.c.o
@@ -1286,7 +1286,7 @@ lv_examples/src/lv_demo_music/lv_demo_music.o: lv_examples/src/lv_demo_music/lv_
 
 # target to build an object file
 lv_examples/src/lv_demo_music/lv_demo_music.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/lv_demo_music.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/lv_demo_music.c.o
 .PHONY : lv_examples/src/lv_demo_music/lv_demo_music.c.o
 
 lv_examples/src/lv_demo_music/lv_demo_music.i: lv_examples/src/lv_demo_music/lv_demo_music.c.i
@@ -1294,7 +1294,7 @@ lv_examples/src/lv_demo_music/lv_demo_music.i: lv_examples/src/lv_demo_music/lv_
 
 # target to preprocess a source file
 lv_examples/src/lv_demo_music/lv_demo_music.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/lv_demo_music.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/lv_demo_music.c.i
 .PHONY : lv_examples/src/lv_demo_music/lv_demo_music.c.i
 
 lv_examples/src/lv_demo_music/lv_demo_music.s: lv_examples/src/lv_demo_music/lv_demo_music.c.s
@@ -1302,7 +1302,7 @@ lv_examples/src/lv_demo_music/lv_demo_music.s: lv_examples/src/lv_demo_music/lv_
 
 # target to generate assembly for a file
 lv_examples/src/lv_demo_music/lv_demo_music.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/lv_demo_music.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/lv_demo_music.c.s
 .PHONY : lv_examples/src/lv_demo_music/lv_demo_music.c.s
 
 lv_examples/src/lv_demo_music/lv_demo_music_list.o: lv_examples/src/lv_demo_music/lv_demo_music_list.c.o
@@ -1310,7 +1310,7 @@ lv_examples/src/lv_demo_music/lv_demo_music_list.o: lv_examples/src/lv_demo_musi
 
 # target to build an object file
 lv_examples/src/lv_demo_music/lv_demo_music_list.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/lv_demo_music_list.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/lv_demo_music_list.c.o
 .PHONY : lv_examples/src/lv_demo_music/lv_demo_music_list.c.o
 
 lv_examples/src/lv_demo_music/lv_demo_music_list.i: lv_examples/src/lv_demo_music/lv_demo_music_list.c.i
@@ -1318,7 +1318,7 @@ lv_examples/src/lv_demo_music/lv_demo_music_list.i: lv_examples/src/lv_demo_musi
 
 # target to preprocess a source file
 lv_examples/src/lv_demo_music/lv_demo_music_list.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/lv_demo_music_list.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/lv_demo_music_list.c.i
 .PHONY : lv_examples/src/lv_demo_music/lv_demo_music_list.c.i
 
 lv_examples/src/lv_demo_music/lv_demo_music_list.s: lv_examples/src/lv_demo_music/lv_demo_music_list.c.s
@@ -1326,7 +1326,7 @@ lv_examples/src/lv_demo_music/lv_demo_music_list.s: lv_examples/src/lv_demo_musi
 
 # target to generate assembly for a file
 lv_examples/src/lv_demo_music/lv_demo_music_list.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/lv_demo_music_list.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/lv_demo_music_list.c.s
 .PHONY : lv_examples/src/lv_demo_music/lv_demo_music_list.c.s
 
 lv_examples/src/lv_demo_music/lv_demo_music_main.o: lv_examples/src/lv_demo_music/lv_demo_music_main.c.o
@@ -1334,7 +1334,7 @@ lv_examples/src/lv_demo_music/lv_demo_music_main.o: lv_examples/src/lv_demo_musi
 
 # target to build an object file
 lv_examples/src/lv_demo_music/lv_demo_music_main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/lv_demo_music_main.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/lv_demo_music_main.c.o
 .PHONY : lv_examples/src/lv_demo_music/lv_demo_music_main.c.o
 
 lv_examples/src/lv_demo_music/lv_demo_music_main.i: lv_examples/src/lv_demo_music/lv_demo_music_main.c.i
@@ -1342,7 +1342,7 @@ lv_examples/src/lv_demo_music/lv_demo_music_main.i: lv_examples/src/lv_demo_musi
 
 # target to preprocess a source file
 lv_examples/src/lv_demo_music/lv_demo_music_main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/lv_demo_music_main.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/lv_demo_music_main.c.i
 .PHONY : lv_examples/src/lv_demo_music/lv_demo_music_main.c.i
 
 lv_examples/src/lv_demo_music/lv_demo_music_main.s: lv_examples/src/lv_demo_music/lv_demo_music_main.c.s
@@ -1350,7 +1350,7 @@ lv_examples/src/lv_demo_music/lv_demo_music_main.s: lv_examples/src/lv_demo_musi
 
 # target to generate assembly for a file
 lv_examples/src/lv_demo_music/lv_demo_music_main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_music/lv_demo_music_main.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/lv_demo_music_main.c.s
 .PHONY : lv_examples/src/lv_demo_music/lv_demo_music_main.c.s
 
 lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_12_compr_az.o: lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_12_compr_az.c.o
@@ -1358,7 +1358,7 @@ lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_12_compr_az.o: lv_examp
 
 # target to build an object file
 lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_12_compr_az.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_12_compr_az.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_12_compr_az.c.o
 .PHONY : lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_12_compr_az.c.o
 
 lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_12_compr_az.i: lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_12_compr_az.c.i
@@ -1366,7 +1366,7 @@ lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_12_compr_az.i: lv_examp
 
 # target to preprocess a source file
 lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_12_compr_az.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_12_compr_az.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_12_compr_az.c.i
 .PHONY : lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_12_compr_az.c.i
 
 lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_12_compr_az.s: lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_12_compr_az.c.s
@@ -1374,7 +1374,7 @@ lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_12_compr_az.s: lv_examp
 
 # target to generate assembly for a file
 lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_12_compr_az.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_12_compr_az.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_12_compr_az.c.s
 .PHONY : lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_12_compr_az.c.s
 
 lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_16_compr_az.o: lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_16_compr_az.c.o
@@ -1382,7 +1382,7 @@ lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_16_compr_az.o: lv_examp
 
 # target to build an object file
 lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_16_compr_az.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_16_compr_az.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_16_compr_az.c.o
 .PHONY : lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_16_compr_az.c.o
 
 lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_16_compr_az.i: lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_16_compr_az.c.i
@@ -1390,7 +1390,7 @@ lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_16_compr_az.i: lv_examp
 
 # target to preprocess a source file
 lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_16_compr_az.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_16_compr_az.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_16_compr_az.c.i
 .PHONY : lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_16_compr_az.c.i
 
 lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_16_compr_az.s: lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_16_compr_az.c.s
@@ -1398,7 +1398,7 @@ lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_16_compr_az.s: lv_examp
 
 # target to generate assembly for a file
 lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_16_compr_az.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_16_compr_az.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_16_compr_az.c.s
 .PHONY : lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_16_compr_az.c.s
 
 lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_28_compr_az.o: lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_28_compr_az.c.o
@@ -1406,7 +1406,7 @@ lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_28_compr_az.o: lv_examp
 
 # target to build an object file
 lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_28_compr_az.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_28_compr_az.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_28_compr_az.c.o
 .PHONY : lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_28_compr_az.c.o
 
 lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_28_compr_az.i: lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_28_compr_az.c.i
@@ -1414,7 +1414,7 @@ lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_28_compr_az.i: lv_examp
 
 # target to preprocess a source file
 lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_28_compr_az.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_28_compr_az.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_28_compr_az.c.i
 .PHONY : lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_28_compr_az.c.i
 
 lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_28_compr_az.s: lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_28_compr_az.c.s
@@ -1422,7 +1422,7 @@ lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_28_compr_az.s: lv_examp
 
 # target to generate assembly for a file
 lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_28_compr_az.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_28_compr_az.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_28_compr_az.c.s
 .PHONY : lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_28_compr_az.c.s
 
 lv_examples/src/lv_demo_stress/lv_demo_stress.o: lv_examples/src/lv_demo_stress/lv_demo_stress.c.o
@@ -1430,7 +1430,7 @@ lv_examples/src/lv_demo_stress/lv_demo_stress.o: lv_examples/src/lv_demo_stress/
 
 # target to build an object file
 lv_examples/src/lv_demo_stress/lv_demo_stress.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_stress/lv_demo_stress.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_stress/lv_demo_stress.c.o
 .PHONY : lv_examples/src/lv_demo_stress/lv_demo_stress.c.o
 
 lv_examples/src/lv_demo_stress/lv_demo_stress.i: lv_examples/src/lv_demo_stress/lv_demo_stress.c.i
@@ -1438,7 +1438,7 @@ lv_examples/src/lv_demo_stress/lv_demo_stress.i: lv_examples/src/lv_demo_stress/
 
 # target to preprocess a source file
 lv_examples/src/lv_demo_stress/lv_demo_stress.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_stress/lv_demo_stress.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_stress/lv_demo_stress.c.i
 .PHONY : lv_examples/src/lv_demo_stress/lv_demo_stress.c.i
 
 lv_examples/src/lv_demo_stress/lv_demo_stress.s: lv_examples/src/lv_demo_stress/lv_demo_stress.c.s
@@ -1446,7 +1446,7 @@ lv_examples/src/lv_demo_stress/lv_demo_stress.s: lv_examples/src/lv_demo_stress/
 
 # target to generate assembly for a file
 lv_examples/src/lv_demo_stress/lv_demo_stress.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_stress/lv_demo_stress.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_stress/lv_demo_stress.c.s
 .PHONY : lv_examples/src/lv_demo_stress/lv_demo_stress.c.s
 
 lv_examples/src/lv_demo_widgets/assets/img_clothes.o: lv_examples/src/lv_demo_widgets/assets/img_clothes.c.o
@@ -1454,7 +1454,7 @@ lv_examples/src/lv_demo_widgets/assets/img_clothes.o: lv_examples/src/lv_demo_wi
 
 # target to build an object file
 lv_examples/src/lv_demo_widgets/assets/img_clothes.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_widgets/assets/img_clothes.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_widgets/assets/img_clothes.c.o
 .PHONY : lv_examples/src/lv_demo_widgets/assets/img_clothes.c.o
 
 lv_examples/src/lv_demo_widgets/assets/img_clothes.i: lv_examples/src/lv_demo_widgets/assets/img_clothes.c.i
@@ -1462,7 +1462,7 @@ lv_examples/src/lv_demo_widgets/assets/img_clothes.i: lv_examples/src/lv_demo_wi
 
 # target to preprocess a source file
 lv_examples/src/lv_demo_widgets/assets/img_clothes.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_widgets/assets/img_clothes.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_widgets/assets/img_clothes.c.i
 .PHONY : lv_examples/src/lv_demo_widgets/assets/img_clothes.c.i
 
 lv_examples/src/lv_demo_widgets/assets/img_clothes.s: lv_examples/src/lv_demo_widgets/assets/img_clothes.c.s
@@ -1470,7 +1470,7 @@ lv_examples/src/lv_demo_widgets/assets/img_clothes.s: lv_examples/src/lv_demo_wi
 
 # target to generate assembly for a file
 lv_examples/src/lv_demo_widgets/assets/img_clothes.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_widgets/assets/img_clothes.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_widgets/assets/img_clothes.c.s
 .PHONY : lv_examples/src/lv_demo_widgets/assets/img_clothes.c.s
 
 lv_examples/src/lv_demo_widgets/assets/img_demo_widgets_avatar.o: lv_examples/src/lv_demo_widgets/assets/img_demo_widgets_avatar.c.o
@@ -1478,7 +1478,7 @@ lv_examples/src/lv_demo_widgets/assets/img_demo_widgets_avatar.o: lv_examples/sr
 
 # target to build an object file
 lv_examples/src/lv_demo_widgets/assets/img_demo_widgets_avatar.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_widgets/assets/img_demo_widgets_avatar.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_widgets/assets/img_demo_widgets_avatar.c.o
 .PHONY : lv_examples/src/lv_demo_widgets/assets/img_demo_widgets_avatar.c.o
 
 lv_examples/src/lv_demo_widgets/assets/img_demo_widgets_avatar.i: lv_examples/src/lv_demo_widgets/assets/img_demo_widgets_avatar.c.i
@@ -1486,7 +1486,7 @@ lv_examples/src/lv_demo_widgets/assets/img_demo_widgets_avatar.i: lv_examples/sr
 
 # target to preprocess a source file
 lv_examples/src/lv_demo_widgets/assets/img_demo_widgets_avatar.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_widgets/assets/img_demo_widgets_avatar.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_widgets/assets/img_demo_widgets_avatar.c.i
 .PHONY : lv_examples/src/lv_demo_widgets/assets/img_demo_widgets_avatar.c.i
 
 lv_examples/src/lv_demo_widgets/assets/img_demo_widgets_avatar.s: lv_examples/src/lv_demo_widgets/assets/img_demo_widgets_avatar.c.s
@@ -1494,7 +1494,7 @@ lv_examples/src/lv_demo_widgets/assets/img_demo_widgets_avatar.s: lv_examples/sr
 
 # target to generate assembly for a file
 lv_examples/src/lv_demo_widgets/assets/img_demo_widgets_avatar.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_widgets/assets/img_demo_widgets_avatar.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_widgets/assets/img_demo_widgets_avatar.c.s
 .PHONY : lv_examples/src/lv_demo_widgets/assets/img_demo_widgets_avatar.c.s
 
 lv_examples/src/lv_demo_widgets/assets/img_lvgl_logo.o: lv_examples/src/lv_demo_widgets/assets/img_lvgl_logo.c.o
@@ -1502,7 +1502,7 @@ lv_examples/src/lv_demo_widgets/assets/img_lvgl_logo.o: lv_examples/src/lv_demo_
 
 # target to build an object file
 lv_examples/src/lv_demo_widgets/assets/img_lvgl_logo.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_widgets/assets/img_lvgl_logo.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_widgets/assets/img_lvgl_logo.c.o
 .PHONY : lv_examples/src/lv_demo_widgets/assets/img_lvgl_logo.c.o
 
 lv_examples/src/lv_demo_widgets/assets/img_lvgl_logo.i: lv_examples/src/lv_demo_widgets/assets/img_lvgl_logo.c.i
@@ -1510,7 +1510,7 @@ lv_examples/src/lv_demo_widgets/assets/img_lvgl_logo.i: lv_examples/src/lv_demo_
 
 # target to preprocess a source file
 lv_examples/src/lv_demo_widgets/assets/img_lvgl_logo.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_widgets/assets/img_lvgl_logo.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_widgets/assets/img_lvgl_logo.c.i
 .PHONY : lv_examples/src/lv_demo_widgets/assets/img_lvgl_logo.c.i
 
 lv_examples/src/lv_demo_widgets/assets/img_lvgl_logo.s: lv_examples/src/lv_demo_widgets/assets/img_lvgl_logo.c.s
@@ -1518,7 +1518,7 @@ lv_examples/src/lv_demo_widgets/assets/img_lvgl_logo.s: lv_examples/src/lv_demo_
 
 # target to generate assembly for a file
 lv_examples/src/lv_demo_widgets/assets/img_lvgl_logo.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_widgets/assets/img_lvgl_logo.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_widgets/assets/img_lvgl_logo.c.s
 .PHONY : lv_examples/src/lv_demo_widgets/assets/img_lvgl_logo.c.s
 
 lv_examples/src/lv_demo_widgets/lv_demo_widgets.o: lv_examples/src/lv_demo_widgets/lv_demo_widgets.c.o
@@ -1526,7 +1526,7 @@ lv_examples/src/lv_demo_widgets/lv_demo_widgets.o: lv_examples/src/lv_demo_widge
 
 # target to build an object file
 lv_examples/src/lv_demo_widgets/lv_demo_widgets.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_widgets/lv_demo_widgets.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_widgets/lv_demo_widgets.c.o
 .PHONY : lv_examples/src/lv_demo_widgets/lv_demo_widgets.c.o
 
 lv_examples/src/lv_demo_widgets/lv_demo_widgets.i: lv_examples/src/lv_demo_widgets/lv_demo_widgets.c.i
@@ -1534,7 +1534,7 @@ lv_examples/src/lv_demo_widgets/lv_demo_widgets.i: lv_examples/src/lv_demo_widge
 
 # target to preprocess a source file
 lv_examples/src/lv_demo_widgets/lv_demo_widgets.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_widgets/lv_demo_widgets.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_widgets/lv_demo_widgets.c.i
 .PHONY : lv_examples/src/lv_demo_widgets/lv_demo_widgets.c.i
 
 lv_examples/src/lv_demo_widgets/lv_demo_widgets.s: lv_examples/src/lv_demo_widgets/lv_demo_widgets.c.s
@@ -1542,7 +1542,7 @@ lv_examples/src/lv_demo_widgets/lv_demo_widgets.s: lv_examples/src/lv_demo_widge
 
 # target to generate assembly for a file
 lv_examples/src/lv_demo_widgets/lv_demo_widgets.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lv_examples/src/lv_demo_widgets/lv_demo_widgets.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_widgets/lv_demo_widgets.c.s
 .PHONY : lv_examples/src/lv_demo_widgets/lv_demo_widgets.c.s
 
 lvgl/examples/assets/img_caret_down.o: lvgl/examples/assets/img_caret_down.c.o
@@ -1550,7 +1550,7 @@ lvgl/examples/assets/img_caret_down.o: lvgl/examples/assets/img_caret_down.c.o
 
 # target to build an object file
 lvgl/examples/assets/img_caret_down.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/assets/img_caret_down.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/assets/img_caret_down.c.o
 .PHONY : lvgl/examples/assets/img_caret_down.c.o
 
 lvgl/examples/assets/img_caret_down.i: lvgl/examples/assets/img_caret_down.c.i
@@ -1558,7 +1558,7 @@ lvgl/examples/assets/img_caret_down.i: lvgl/examples/assets/img_caret_down.c.i
 
 # target to preprocess a source file
 lvgl/examples/assets/img_caret_down.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/assets/img_caret_down.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/assets/img_caret_down.c.i
 .PHONY : lvgl/examples/assets/img_caret_down.c.i
 
 lvgl/examples/assets/img_caret_down.s: lvgl/examples/assets/img_caret_down.c.s
@@ -1566,7 +1566,7 @@ lvgl/examples/assets/img_caret_down.s: lvgl/examples/assets/img_caret_down.c.s
 
 # target to generate assembly for a file
 lvgl/examples/assets/img_caret_down.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/assets/img_caret_down.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/assets/img_caret_down.c.s
 .PHONY : lvgl/examples/assets/img_caret_down.c.s
 
 lvgl/examples/assets/img_cogwheel_alpha16.o: lvgl/examples/assets/img_cogwheel_alpha16.c.o
@@ -1574,7 +1574,7 @@ lvgl/examples/assets/img_cogwheel_alpha16.o: lvgl/examples/assets/img_cogwheel_a
 
 # target to build an object file
 lvgl/examples/assets/img_cogwheel_alpha16.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/assets/img_cogwheel_alpha16.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/assets/img_cogwheel_alpha16.c.o
 .PHONY : lvgl/examples/assets/img_cogwheel_alpha16.c.o
 
 lvgl/examples/assets/img_cogwheel_alpha16.i: lvgl/examples/assets/img_cogwheel_alpha16.c.i
@@ -1582,7 +1582,7 @@ lvgl/examples/assets/img_cogwheel_alpha16.i: lvgl/examples/assets/img_cogwheel_a
 
 # target to preprocess a source file
 lvgl/examples/assets/img_cogwheel_alpha16.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/assets/img_cogwheel_alpha16.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/assets/img_cogwheel_alpha16.c.i
 .PHONY : lvgl/examples/assets/img_cogwheel_alpha16.c.i
 
 lvgl/examples/assets/img_cogwheel_alpha16.s: lvgl/examples/assets/img_cogwheel_alpha16.c.s
@@ -1590,7 +1590,7 @@ lvgl/examples/assets/img_cogwheel_alpha16.s: lvgl/examples/assets/img_cogwheel_a
 
 # target to generate assembly for a file
 lvgl/examples/assets/img_cogwheel_alpha16.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/assets/img_cogwheel_alpha16.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/assets/img_cogwheel_alpha16.c.s
 .PHONY : lvgl/examples/assets/img_cogwheel_alpha16.c.s
 
 lvgl/examples/assets/img_cogwheel_argb.o: lvgl/examples/assets/img_cogwheel_argb.c.o
@@ -1598,7 +1598,7 @@ lvgl/examples/assets/img_cogwheel_argb.o: lvgl/examples/assets/img_cogwheel_argb
 
 # target to build an object file
 lvgl/examples/assets/img_cogwheel_argb.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/assets/img_cogwheel_argb.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/assets/img_cogwheel_argb.c.o
 .PHONY : lvgl/examples/assets/img_cogwheel_argb.c.o
 
 lvgl/examples/assets/img_cogwheel_argb.i: lvgl/examples/assets/img_cogwheel_argb.c.i
@@ -1606,7 +1606,7 @@ lvgl/examples/assets/img_cogwheel_argb.i: lvgl/examples/assets/img_cogwheel_argb
 
 # target to preprocess a source file
 lvgl/examples/assets/img_cogwheel_argb.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/assets/img_cogwheel_argb.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/assets/img_cogwheel_argb.c.i
 .PHONY : lvgl/examples/assets/img_cogwheel_argb.c.i
 
 lvgl/examples/assets/img_cogwheel_argb.s: lvgl/examples/assets/img_cogwheel_argb.c.s
@@ -1614,7 +1614,7 @@ lvgl/examples/assets/img_cogwheel_argb.s: lvgl/examples/assets/img_cogwheel_argb
 
 # target to generate assembly for a file
 lvgl/examples/assets/img_cogwheel_argb.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/assets/img_cogwheel_argb.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/assets/img_cogwheel_argb.c.s
 .PHONY : lvgl/examples/assets/img_cogwheel_argb.c.s
 
 lvgl/examples/assets/img_cogwheel_chroma_keyed.o: lvgl/examples/assets/img_cogwheel_chroma_keyed.c.o
@@ -1622,7 +1622,7 @@ lvgl/examples/assets/img_cogwheel_chroma_keyed.o: lvgl/examples/assets/img_cogwh
 
 # target to build an object file
 lvgl/examples/assets/img_cogwheel_chroma_keyed.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/assets/img_cogwheel_chroma_keyed.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/assets/img_cogwheel_chroma_keyed.c.o
 .PHONY : lvgl/examples/assets/img_cogwheel_chroma_keyed.c.o
 
 lvgl/examples/assets/img_cogwheel_chroma_keyed.i: lvgl/examples/assets/img_cogwheel_chroma_keyed.c.i
@@ -1630,7 +1630,7 @@ lvgl/examples/assets/img_cogwheel_chroma_keyed.i: lvgl/examples/assets/img_cogwh
 
 # target to preprocess a source file
 lvgl/examples/assets/img_cogwheel_chroma_keyed.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/assets/img_cogwheel_chroma_keyed.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/assets/img_cogwheel_chroma_keyed.c.i
 .PHONY : lvgl/examples/assets/img_cogwheel_chroma_keyed.c.i
 
 lvgl/examples/assets/img_cogwheel_chroma_keyed.s: lvgl/examples/assets/img_cogwheel_chroma_keyed.c.s
@@ -1638,7 +1638,7 @@ lvgl/examples/assets/img_cogwheel_chroma_keyed.s: lvgl/examples/assets/img_cogwh
 
 # target to generate assembly for a file
 lvgl/examples/assets/img_cogwheel_chroma_keyed.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/assets/img_cogwheel_chroma_keyed.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/assets/img_cogwheel_chroma_keyed.c.s
 .PHONY : lvgl/examples/assets/img_cogwheel_chroma_keyed.c.s
 
 lvgl/examples/assets/img_cogwheel_indexed16.o: lvgl/examples/assets/img_cogwheel_indexed16.c.o
@@ -1646,7 +1646,7 @@ lvgl/examples/assets/img_cogwheel_indexed16.o: lvgl/examples/assets/img_cogwheel
 
 # target to build an object file
 lvgl/examples/assets/img_cogwheel_indexed16.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/assets/img_cogwheel_indexed16.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/assets/img_cogwheel_indexed16.c.o
 .PHONY : lvgl/examples/assets/img_cogwheel_indexed16.c.o
 
 lvgl/examples/assets/img_cogwheel_indexed16.i: lvgl/examples/assets/img_cogwheel_indexed16.c.i
@@ -1654,7 +1654,7 @@ lvgl/examples/assets/img_cogwheel_indexed16.i: lvgl/examples/assets/img_cogwheel
 
 # target to preprocess a source file
 lvgl/examples/assets/img_cogwheel_indexed16.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/assets/img_cogwheel_indexed16.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/assets/img_cogwheel_indexed16.c.i
 .PHONY : lvgl/examples/assets/img_cogwheel_indexed16.c.i
 
 lvgl/examples/assets/img_cogwheel_indexed16.s: lvgl/examples/assets/img_cogwheel_indexed16.c.s
@@ -1662,7 +1662,7 @@ lvgl/examples/assets/img_cogwheel_indexed16.s: lvgl/examples/assets/img_cogwheel
 
 # target to generate assembly for a file
 lvgl/examples/assets/img_cogwheel_indexed16.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/assets/img_cogwheel_indexed16.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/assets/img_cogwheel_indexed16.c.s
 .PHONY : lvgl/examples/assets/img_cogwheel_indexed16.c.s
 
 lvgl/examples/assets/img_cogwheel_rgb.o: lvgl/examples/assets/img_cogwheel_rgb.c.o
@@ -1670,7 +1670,7 @@ lvgl/examples/assets/img_cogwheel_rgb.o: lvgl/examples/assets/img_cogwheel_rgb.c
 
 # target to build an object file
 lvgl/examples/assets/img_cogwheel_rgb.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/assets/img_cogwheel_rgb.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/assets/img_cogwheel_rgb.c.o
 .PHONY : lvgl/examples/assets/img_cogwheel_rgb.c.o
 
 lvgl/examples/assets/img_cogwheel_rgb.i: lvgl/examples/assets/img_cogwheel_rgb.c.i
@@ -1678,7 +1678,7 @@ lvgl/examples/assets/img_cogwheel_rgb.i: lvgl/examples/assets/img_cogwheel_rgb.c
 
 # target to preprocess a source file
 lvgl/examples/assets/img_cogwheel_rgb.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/assets/img_cogwheel_rgb.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/assets/img_cogwheel_rgb.c.i
 .PHONY : lvgl/examples/assets/img_cogwheel_rgb.c.i
 
 lvgl/examples/assets/img_cogwheel_rgb.s: lvgl/examples/assets/img_cogwheel_rgb.c.s
@@ -1686,7 +1686,7 @@ lvgl/examples/assets/img_cogwheel_rgb.s: lvgl/examples/assets/img_cogwheel_rgb.c
 
 # target to generate assembly for a file
 lvgl/examples/assets/img_cogwheel_rgb.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/assets/img_cogwheel_rgb.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/assets/img_cogwheel_rgb.c.s
 .PHONY : lvgl/examples/assets/img_cogwheel_rgb.c.s
 
 lvgl/examples/assets/img_hand.o: lvgl/examples/assets/img_hand.c.o
@@ -1694,7 +1694,7 @@ lvgl/examples/assets/img_hand.o: lvgl/examples/assets/img_hand.c.o
 
 # target to build an object file
 lvgl/examples/assets/img_hand.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/assets/img_hand.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/assets/img_hand.c.o
 .PHONY : lvgl/examples/assets/img_hand.c.o
 
 lvgl/examples/assets/img_hand.i: lvgl/examples/assets/img_hand.c.i
@@ -1702,7 +1702,7 @@ lvgl/examples/assets/img_hand.i: lvgl/examples/assets/img_hand.c.i
 
 # target to preprocess a source file
 lvgl/examples/assets/img_hand.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/assets/img_hand.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/assets/img_hand.c.i
 .PHONY : lvgl/examples/assets/img_hand.c.i
 
 lvgl/examples/assets/img_hand.s: lvgl/examples/assets/img_hand.c.s
@@ -1710,7 +1710,7 @@ lvgl/examples/assets/img_hand.s: lvgl/examples/assets/img_hand.c.s
 
 # target to generate assembly for a file
 lvgl/examples/assets/img_hand.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/assets/img_hand.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/assets/img_hand.c.s
 .PHONY : lvgl/examples/assets/img_hand.c.s
 
 lvgl/examples/assets/img_skew_strip.o: lvgl/examples/assets/img_skew_strip.c.o
@@ -1718,7 +1718,7 @@ lvgl/examples/assets/img_skew_strip.o: lvgl/examples/assets/img_skew_strip.c.o
 
 # target to build an object file
 lvgl/examples/assets/img_skew_strip.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/assets/img_skew_strip.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/assets/img_skew_strip.c.o
 .PHONY : lvgl/examples/assets/img_skew_strip.c.o
 
 lvgl/examples/assets/img_skew_strip.i: lvgl/examples/assets/img_skew_strip.c.i
@@ -1726,7 +1726,7 @@ lvgl/examples/assets/img_skew_strip.i: lvgl/examples/assets/img_skew_strip.c.i
 
 # target to preprocess a source file
 lvgl/examples/assets/img_skew_strip.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/assets/img_skew_strip.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/assets/img_skew_strip.c.i
 .PHONY : lvgl/examples/assets/img_skew_strip.c.i
 
 lvgl/examples/assets/img_skew_strip.s: lvgl/examples/assets/img_skew_strip.c.s
@@ -1734,7 +1734,7 @@ lvgl/examples/assets/img_skew_strip.s: lvgl/examples/assets/img_skew_strip.c.s
 
 # target to generate assembly for a file
 lvgl/examples/assets/img_skew_strip.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/assets/img_skew_strip.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/assets/img_skew_strip.c.s
 .PHONY : lvgl/examples/assets/img_skew_strip.c.s
 
 lvgl/examples/assets/img_star.o: lvgl/examples/assets/img_star.c.o
@@ -1742,7 +1742,7 @@ lvgl/examples/assets/img_star.o: lvgl/examples/assets/img_star.c.o
 
 # target to build an object file
 lvgl/examples/assets/img_star.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/assets/img_star.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/assets/img_star.c.o
 .PHONY : lvgl/examples/assets/img_star.c.o
 
 lvgl/examples/assets/img_star.i: lvgl/examples/assets/img_star.c.i
@@ -1750,7 +1750,7 @@ lvgl/examples/assets/img_star.i: lvgl/examples/assets/img_star.c.i
 
 # target to preprocess a source file
 lvgl/examples/assets/img_star.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/assets/img_star.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/assets/img_star.c.i
 .PHONY : lvgl/examples/assets/img_star.c.i
 
 lvgl/examples/assets/img_star.s: lvgl/examples/assets/img_star.c.s
@@ -1758,7 +1758,7 @@ lvgl/examples/assets/img_star.s: lvgl/examples/assets/img_star.c.s
 
 # target to generate assembly for a file
 lvgl/examples/assets/img_star.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/assets/img_star.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/assets/img_star.c.s
 .PHONY : lvgl/examples/assets/img_star.c.s
 
 lvgl/examples/assets/imgbtn_left.o: lvgl/examples/assets/imgbtn_left.c.o
@@ -1766,7 +1766,7 @@ lvgl/examples/assets/imgbtn_left.o: lvgl/examples/assets/imgbtn_left.c.o
 
 # target to build an object file
 lvgl/examples/assets/imgbtn_left.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/assets/imgbtn_left.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/assets/imgbtn_left.c.o
 .PHONY : lvgl/examples/assets/imgbtn_left.c.o
 
 lvgl/examples/assets/imgbtn_left.i: lvgl/examples/assets/imgbtn_left.c.i
@@ -1774,7 +1774,7 @@ lvgl/examples/assets/imgbtn_left.i: lvgl/examples/assets/imgbtn_left.c.i
 
 # target to preprocess a source file
 lvgl/examples/assets/imgbtn_left.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/assets/imgbtn_left.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/assets/imgbtn_left.c.i
 .PHONY : lvgl/examples/assets/imgbtn_left.c.i
 
 lvgl/examples/assets/imgbtn_left.s: lvgl/examples/assets/imgbtn_left.c.s
@@ -1782,7 +1782,7 @@ lvgl/examples/assets/imgbtn_left.s: lvgl/examples/assets/imgbtn_left.c.s
 
 # target to generate assembly for a file
 lvgl/examples/assets/imgbtn_left.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/assets/imgbtn_left.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/assets/imgbtn_left.c.s
 .PHONY : lvgl/examples/assets/imgbtn_left.c.s
 
 lvgl/examples/assets/imgbtn_mid.o: lvgl/examples/assets/imgbtn_mid.c.o
@@ -1790,7 +1790,7 @@ lvgl/examples/assets/imgbtn_mid.o: lvgl/examples/assets/imgbtn_mid.c.o
 
 # target to build an object file
 lvgl/examples/assets/imgbtn_mid.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/assets/imgbtn_mid.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/assets/imgbtn_mid.c.o
 .PHONY : lvgl/examples/assets/imgbtn_mid.c.o
 
 lvgl/examples/assets/imgbtn_mid.i: lvgl/examples/assets/imgbtn_mid.c.i
@@ -1798,7 +1798,7 @@ lvgl/examples/assets/imgbtn_mid.i: lvgl/examples/assets/imgbtn_mid.c.i
 
 # target to preprocess a source file
 lvgl/examples/assets/imgbtn_mid.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/assets/imgbtn_mid.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/assets/imgbtn_mid.c.i
 .PHONY : lvgl/examples/assets/imgbtn_mid.c.i
 
 lvgl/examples/assets/imgbtn_mid.s: lvgl/examples/assets/imgbtn_mid.c.s
@@ -1806,7 +1806,7 @@ lvgl/examples/assets/imgbtn_mid.s: lvgl/examples/assets/imgbtn_mid.c.s
 
 # target to generate assembly for a file
 lvgl/examples/assets/imgbtn_mid.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/assets/imgbtn_mid.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/assets/imgbtn_mid.c.s
 .PHONY : lvgl/examples/assets/imgbtn_mid.c.s
 
 lvgl/examples/assets/imgbtn_right.o: lvgl/examples/assets/imgbtn_right.c.o
@@ -1814,7 +1814,7 @@ lvgl/examples/assets/imgbtn_right.o: lvgl/examples/assets/imgbtn_right.c.o
 
 # target to build an object file
 lvgl/examples/assets/imgbtn_right.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/assets/imgbtn_right.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/assets/imgbtn_right.c.o
 .PHONY : lvgl/examples/assets/imgbtn_right.c.o
 
 lvgl/examples/assets/imgbtn_right.i: lvgl/examples/assets/imgbtn_right.c.i
@@ -1822,7 +1822,7 @@ lvgl/examples/assets/imgbtn_right.i: lvgl/examples/assets/imgbtn_right.c.i
 
 # target to preprocess a source file
 lvgl/examples/assets/imgbtn_right.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/assets/imgbtn_right.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/assets/imgbtn_right.c.i
 .PHONY : lvgl/examples/assets/imgbtn_right.c.i
 
 lvgl/examples/assets/imgbtn_right.s: lvgl/examples/assets/imgbtn_right.c.s
@@ -1830,7 +1830,7 @@ lvgl/examples/assets/imgbtn_right.s: lvgl/examples/assets/imgbtn_right.c.s
 
 # target to generate assembly for a file
 lvgl/examples/assets/imgbtn_right.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/assets/imgbtn_right.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/assets/imgbtn_right.c.s
 .PHONY : lvgl/examples/assets/imgbtn_right.c.s
 
 lvgl/examples/get_started/lv_example_get_started_1.o: lvgl/examples/get_started/lv_example_get_started_1.c.o
@@ -1838,7 +1838,7 @@ lvgl/examples/get_started/lv_example_get_started_1.o: lvgl/examples/get_started/
 
 # target to build an object file
 lvgl/examples/get_started/lv_example_get_started_1.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/get_started/lv_example_get_started_1.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/get_started/lv_example_get_started_1.c.o
 .PHONY : lvgl/examples/get_started/lv_example_get_started_1.c.o
 
 lvgl/examples/get_started/lv_example_get_started_1.i: lvgl/examples/get_started/lv_example_get_started_1.c.i
@@ -1846,7 +1846,7 @@ lvgl/examples/get_started/lv_example_get_started_1.i: lvgl/examples/get_started/
 
 # target to preprocess a source file
 lvgl/examples/get_started/lv_example_get_started_1.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/get_started/lv_example_get_started_1.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/get_started/lv_example_get_started_1.c.i
 .PHONY : lvgl/examples/get_started/lv_example_get_started_1.c.i
 
 lvgl/examples/get_started/lv_example_get_started_1.s: lvgl/examples/get_started/lv_example_get_started_1.c.s
@@ -1854,7 +1854,7 @@ lvgl/examples/get_started/lv_example_get_started_1.s: lvgl/examples/get_started/
 
 # target to generate assembly for a file
 lvgl/examples/get_started/lv_example_get_started_1.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/get_started/lv_example_get_started_1.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/get_started/lv_example_get_started_1.c.s
 .PHONY : lvgl/examples/get_started/lv_example_get_started_1.c.s
 
 lvgl/examples/get_started/lv_example_get_started_2.o: lvgl/examples/get_started/lv_example_get_started_2.c.o
@@ -1862,7 +1862,7 @@ lvgl/examples/get_started/lv_example_get_started_2.o: lvgl/examples/get_started/
 
 # target to build an object file
 lvgl/examples/get_started/lv_example_get_started_2.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/get_started/lv_example_get_started_2.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/get_started/lv_example_get_started_2.c.o
 .PHONY : lvgl/examples/get_started/lv_example_get_started_2.c.o
 
 lvgl/examples/get_started/lv_example_get_started_2.i: lvgl/examples/get_started/lv_example_get_started_2.c.i
@@ -1870,7 +1870,7 @@ lvgl/examples/get_started/lv_example_get_started_2.i: lvgl/examples/get_started/
 
 # target to preprocess a source file
 lvgl/examples/get_started/lv_example_get_started_2.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/get_started/lv_example_get_started_2.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/get_started/lv_example_get_started_2.c.i
 .PHONY : lvgl/examples/get_started/lv_example_get_started_2.c.i
 
 lvgl/examples/get_started/lv_example_get_started_2.s: lvgl/examples/get_started/lv_example_get_started_2.c.s
@@ -1878,7 +1878,7 @@ lvgl/examples/get_started/lv_example_get_started_2.s: lvgl/examples/get_started/
 
 # target to generate assembly for a file
 lvgl/examples/get_started/lv_example_get_started_2.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/get_started/lv_example_get_started_2.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/get_started/lv_example_get_started_2.c.s
 .PHONY : lvgl/examples/get_started/lv_example_get_started_2.c.s
 
 lvgl/examples/get_started/lv_example_get_started_3.o: lvgl/examples/get_started/lv_example_get_started_3.c.o
@@ -1886,7 +1886,7 @@ lvgl/examples/get_started/lv_example_get_started_3.o: lvgl/examples/get_started/
 
 # target to build an object file
 lvgl/examples/get_started/lv_example_get_started_3.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/get_started/lv_example_get_started_3.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/get_started/lv_example_get_started_3.c.o
 .PHONY : lvgl/examples/get_started/lv_example_get_started_3.c.o
 
 lvgl/examples/get_started/lv_example_get_started_3.i: lvgl/examples/get_started/lv_example_get_started_3.c.i
@@ -1894,7 +1894,7 @@ lvgl/examples/get_started/lv_example_get_started_3.i: lvgl/examples/get_started/
 
 # target to preprocess a source file
 lvgl/examples/get_started/lv_example_get_started_3.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/get_started/lv_example_get_started_3.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/get_started/lv_example_get_started_3.c.i
 .PHONY : lvgl/examples/get_started/lv_example_get_started_3.c.i
 
 lvgl/examples/get_started/lv_example_get_started_3.s: lvgl/examples/get_started/lv_example_get_started_3.c.s
@@ -1902,7 +1902,7 @@ lvgl/examples/get_started/lv_example_get_started_3.s: lvgl/examples/get_started/
 
 # target to generate assembly for a file
 lvgl/examples/get_started/lv_example_get_started_3.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/get_started/lv_example_get_started_3.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/get_started/lv_example_get_started_3.c.s
 .PHONY : lvgl/examples/get_started/lv_example_get_started_3.c.s
 
 lvgl/examples/layouts/flex/lv_example_flex_1.o: lvgl/examples/layouts/flex/lv_example_flex_1.c.o
@@ -1910,7 +1910,7 @@ lvgl/examples/layouts/flex/lv_example_flex_1.o: lvgl/examples/layouts/flex/lv_ex
 
 # target to build an object file
 lvgl/examples/layouts/flex/lv_example_flex_1.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/layouts/flex/lv_example_flex_1.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/layouts/flex/lv_example_flex_1.c.o
 .PHONY : lvgl/examples/layouts/flex/lv_example_flex_1.c.o
 
 lvgl/examples/layouts/flex/lv_example_flex_1.i: lvgl/examples/layouts/flex/lv_example_flex_1.c.i
@@ -1918,7 +1918,7 @@ lvgl/examples/layouts/flex/lv_example_flex_1.i: lvgl/examples/layouts/flex/lv_ex
 
 # target to preprocess a source file
 lvgl/examples/layouts/flex/lv_example_flex_1.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/layouts/flex/lv_example_flex_1.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/layouts/flex/lv_example_flex_1.c.i
 .PHONY : lvgl/examples/layouts/flex/lv_example_flex_1.c.i
 
 lvgl/examples/layouts/flex/lv_example_flex_1.s: lvgl/examples/layouts/flex/lv_example_flex_1.c.s
@@ -1926,7 +1926,7 @@ lvgl/examples/layouts/flex/lv_example_flex_1.s: lvgl/examples/layouts/flex/lv_ex
 
 # target to generate assembly for a file
 lvgl/examples/layouts/flex/lv_example_flex_1.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/layouts/flex/lv_example_flex_1.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/layouts/flex/lv_example_flex_1.c.s
 .PHONY : lvgl/examples/layouts/flex/lv_example_flex_1.c.s
 
 lvgl/examples/layouts/flex/lv_example_flex_2.o: lvgl/examples/layouts/flex/lv_example_flex_2.c.o
@@ -1934,7 +1934,7 @@ lvgl/examples/layouts/flex/lv_example_flex_2.o: lvgl/examples/layouts/flex/lv_ex
 
 # target to build an object file
 lvgl/examples/layouts/flex/lv_example_flex_2.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/layouts/flex/lv_example_flex_2.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/layouts/flex/lv_example_flex_2.c.o
 .PHONY : lvgl/examples/layouts/flex/lv_example_flex_2.c.o
 
 lvgl/examples/layouts/flex/lv_example_flex_2.i: lvgl/examples/layouts/flex/lv_example_flex_2.c.i
@@ -1942,7 +1942,7 @@ lvgl/examples/layouts/flex/lv_example_flex_2.i: lvgl/examples/layouts/flex/lv_ex
 
 # target to preprocess a source file
 lvgl/examples/layouts/flex/lv_example_flex_2.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/layouts/flex/lv_example_flex_2.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/layouts/flex/lv_example_flex_2.c.i
 .PHONY : lvgl/examples/layouts/flex/lv_example_flex_2.c.i
 
 lvgl/examples/layouts/flex/lv_example_flex_2.s: lvgl/examples/layouts/flex/lv_example_flex_2.c.s
@@ -1950,7 +1950,7 @@ lvgl/examples/layouts/flex/lv_example_flex_2.s: lvgl/examples/layouts/flex/lv_ex
 
 # target to generate assembly for a file
 lvgl/examples/layouts/flex/lv_example_flex_2.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/layouts/flex/lv_example_flex_2.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/layouts/flex/lv_example_flex_2.c.s
 .PHONY : lvgl/examples/layouts/flex/lv_example_flex_2.c.s
 
 lvgl/examples/layouts/flex/lv_example_flex_3.o: lvgl/examples/layouts/flex/lv_example_flex_3.c.o
@@ -1958,7 +1958,7 @@ lvgl/examples/layouts/flex/lv_example_flex_3.o: lvgl/examples/layouts/flex/lv_ex
 
 # target to build an object file
 lvgl/examples/layouts/flex/lv_example_flex_3.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/layouts/flex/lv_example_flex_3.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/layouts/flex/lv_example_flex_3.c.o
 .PHONY : lvgl/examples/layouts/flex/lv_example_flex_3.c.o
 
 lvgl/examples/layouts/flex/lv_example_flex_3.i: lvgl/examples/layouts/flex/lv_example_flex_3.c.i
@@ -1966,7 +1966,7 @@ lvgl/examples/layouts/flex/lv_example_flex_3.i: lvgl/examples/layouts/flex/lv_ex
 
 # target to preprocess a source file
 lvgl/examples/layouts/flex/lv_example_flex_3.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/layouts/flex/lv_example_flex_3.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/layouts/flex/lv_example_flex_3.c.i
 .PHONY : lvgl/examples/layouts/flex/lv_example_flex_3.c.i
 
 lvgl/examples/layouts/flex/lv_example_flex_3.s: lvgl/examples/layouts/flex/lv_example_flex_3.c.s
@@ -1974,7 +1974,7 @@ lvgl/examples/layouts/flex/lv_example_flex_3.s: lvgl/examples/layouts/flex/lv_ex
 
 # target to generate assembly for a file
 lvgl/examples/layouts/flex/lv_example_flex_3.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/layouts/flex/lv_example_flex_3.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/layouts/flex/lv_example_flex_3.c.s
 .PHONY : lvgl/examples/layouts/flex/lv_example_flex_3.c.s
 
 lvgl/examples/layouts/flex/lv_example_flex_4.o: lvgl/examples/layouts/flex/lv_example_flex_4.c.o
@@ -1982,7 +1982,7 @@ lvgl/examples/layouts/flex/lv_example_flex_4.o: lvgl/examples/layouts/flex/lv_ex
 
 # target to build an object file
 lvgl/examples/layouts/flex/lv_example_flex_4.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/layouts/flex/lv_example_flex_4.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/layouts/flex/lv_example_flex_4.c.o
 .PHONY : lvgl/examples/layouts/flex/lv_example_flex_4.c.o
 
 lvgl/examples/layouts/flex/lv_example_flex_4.i: lvgl/examples/layouts/flex/lv_example_flex_4.c.i
@@ -1990,7 +1990,7 @@ lvgl/examples/layouts/flex/lv_example_flex_4.i: lvgl/examples/layouts/flex/lv_ex
 
 # target to preprocess a source file
 lvgl/examples/layouts/flex/lv_example_flex_4.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/layouts/flex/lv_example_flex_4.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/layouts/flex/lv_example_flex_4.c.i
 .PHONY : lvgl/examples/layouts/flex/lv_example_flex_4.c.i
 
 lvgl/examples/layouts/flex/lv_example_flex_4.s: lvgl/examples/layouts/flex/lv_example_flex_4.c.s
@@ -1998,7 +1998,7 @@ lvgl/examples/layouts/flex/lv_example_flex_4.s: lvgl/examples/layouts/flex/lv_ex
 
 # target to generate assembly for a file
 lvgl/examples/layouts/flex/lv_example_flex_4.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/layouts/flex/lv_example_flex_4.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/layouts/flex/lv_example_flex_4.c.s
 .PHONY : lvgl/examples/layouts/flex/lv_example_flex_4.c.s
 
 lvgl/examples/layouts/flex/lv_example_flex_5.o: lvgl/examples/layouts/flex/lv_example_flex_5.c.o
@@ -2006,7 +2006,7 @@ lvgl/examples/layouts/flex/lv_example_flex_5.o: lvgl/examples/layouts/flex/lv_ex
 
 # target to build an object file
 lvgl/examples/layouts/flex/lv_example_flex_5.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/layouts/flex/lv_example_flex_5.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/layouts/flex/lv_example_flex_5.c.o
 .PHONY : lvgl/examples/layouts/flex/lv_example_flex_5.c.o
 
 lvgl/examples/layouts/flex/lv_example_flex_5.i: lvgl/examples/layouts/flex/lv_example_flex_5.c.i
@@ -2014,7 +2014,7 @@ lvgl/examples/layouts/flex/lv_example_flex_5.i: lvgl/examples/layouts/flex/lv_ex
 
 # target to preprocess a source file
 lvgl/examples/layouts/flex/lv_example_flex_5.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/layouts/flex/lv_example_flex_5.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/layouts/flex/lv_example_flex_5.c.i
 .PHONY : lvgl/examples/layouts/flex/lv_example_flex_5.c.i
 
 lvgl/examples/layouts/flex/lv_example_flex_5.s: lvgl/examples/layouts/flex/lv_example_flex_5.c.s
@@ -2022,7 +2022,7 @@ lvgl/examples/layouts/flex/lv_example_flex_5.s: lvgl/examples/layouts/flex/lv_ex
 
 # target to generate assembly for a file
 lvgl/examples/layouts/flex/lv_example_flex_5.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/layouts/flex/lv_example_flex_5.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/layouts/flex/lv_example_flex_5.c.s
 .PHONY : lvgl/examples/layouts/flex/lv_example_flex_5.c.s
 
 lvgl/examples/layouts/flex/lv_example_flex_6.o: lvgl/examples/layouts/flex/lv_example_flex_6.c.o
@@ -2030,7 +2030,7 @@ lvgl/examples/layouts/flex/lv_example_flex_6.o: lvgl/examples/layouts/flex/lv_ex
 
 # target to build an object file
 lvgl/examples/layouts/flex/lv_example_flex_6.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/layouts/flex/lv_example_flex_6.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/layouts/flex/lv_example_flex_6.c.o
 .PHONY : lvgl/examples/layouts/flex/lv_example_flex_6.c.o
 
 lvgl/examples/layouts/flex/lv_example_flex_6.i: lvgl/examples/layouts/flex/lv_example_flex_6.c.i
@@ -2038,7 +2038,7 @@ lvgl/examples/layouts/flex/lv_example_flex_6.i: lvgl/examples/layouts/flex/lv_ex
 
 # target to preprocess a source file
 lvgl/examples/layouts/flex/lv_example_flex_6.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/layouts/flex/lv_example_flex_6.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/layouts/flex/lv_example_flex_6.c.i
 .PHONY : lvgl/examples/layouts/flex/lv_example_flex_6.c.i
 
 lvgl/examples/layouts/flex/lv_example_flex_6.s: lvgl/examples/layouts/flex/lv_example_flex_6.c.s
@@ -2046,7 +2046,7 @@ lvgl/examples/layouts/flex/lv_example_flex_6.s: lvgl/examples/layouts/flex/lv_ex
 
 # target to generate assembly for a file
 lvgl/examples/layouts/flex/lv_example_flex_6.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/layouts/flex/lv_example_flex_6.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/layouts/flex/lv_example_flex_6.c.s
 .PHONY : lvgl/examples/layouts/flex/lv_example_flex_6.c.s
 
 lvgl/examples/layouts/grid/lv_example_grid_1.o: lvgl/examples/layouts/grid/lv_example_grid_1.c.o
@@ -2054,7 +2054,7 @@ lvgl/examples/layouts/grid/lv_example_grid_1.o: lvgl/examples/layouts/grid/lv_ex
 
 # target to build an object file
 lvgl/examples/layouts/grid/lv_example_grid_1.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/layouts/grid/lv_example_grid_1.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/layouts/grid/lv_example_grid_1.c.o
 .PHONY : lvgl/examples/layouts/grid/lv_example_grid_1.c.o
 
 lvgl/examples/layouts/grid/lv_example_grid_1.i: lvgl/examples/layouts/grid/lv_example_grid_1.c.i
@@ -2062,7 +2062,7 @@ lvgl/examples/layouts/grid/lv_example_grid_1.i: lvgl/examples/layouts/grid/lv_ex
 
 # target to preprocess a source file
 lvgl/examples/layouts/grid/lv_example_grid_1.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/layouts/grid/lv_example_grid_1.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/layouts/grid/lv_example_grid_1.c.i
 .PHONY : lvgl/examples/layouts/grid/lv_example_grid_1.c.i
 
 lvgl/examples/layouts/grid/lv_example_grid_1.s: lvgl/examples/layouts/grid/lv_example_grid_1.c.s
@@ -2070,7 +2070,7 @@ lvgl/examples/layouts/grid/lv_example_grid_1.s: lvgl/examples/layouts/grid/lv_ex
 
 # target to generate assembly for a file
 lvgl/examples/layouts/grid/lv_example_grid_1.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/layouts/grid/lv_example_grid_1.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/layouts/grid/lv_example_grid_1.c.s
 .PHONY : lvgl/examples/layouts/grid/lv_example_grid_1.c.s
 
 lvgl/examples/layouts/grid/lv_example_grid_2.o: lvgl/examples/layouts/grid/lv_example_grid_2.c.o
@@ -2078,7 +2078,7 @@ lvgl/examples/layouts/grid/lv_example_grid_2.o: lvgl/examples/layouts/grid/lv_ex
 
 # target to build an object file
 lvgl/examples/layouts/grid/lv_example_grid_2.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/layouts/grid/lv_example_grid_2.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/layouts/grid/lv_example_grid_2.c.o
 .PHONY : lvgl/examples/layouts/grid/lv_example_grid_2.c.o
 
 lvgl/examples/layouts/grid/lv_example_grid_2.i: lvgl/examples/layouts/grid/lv_example_grid_2.c.i
@@ -2086,7 +2086,7 @@ lvgl/examples/layouts/grid/lv_example_grid_2.i: lvgl/examples/layouts/grid/lv_ex
 
 # target to preprocess a source file
 lvgl/examples/layouts/grid/lv_example_grid_2.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/layouts/grid/lv_example_grid_2.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/layouts/grid/lv_example_grid_2.c.i
 .PHONY : lvgl/examples/layouts/grid/lv_example_grid_2.c.i
 
 lvgl/examples/layouts/grid/lv_example_grid_2.s: lvgl/examples/layouts/grid/lv_example_grid_2.c.s
@@ -2094,7 +2094,7 @@ lvgl/examples/layouts/grid/lv_example_grid_2.s: lvgl/examples/layouts/grid/lv_ex
 
 # target to generate assembly for a file
 lvgl/examples/layouts/grid/lv_example_grid_2.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/layouts/grid/lv_example_grid_2.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/layouts/grid/lv_example_grid_2.c.s
 .PHONY : lvgl/examples/layouts/grid/lv_example_grid_2.c.s
 
 lvgl/examples/layouts/grid/lv_example_grid_3.o: lvgl/examples/layouts/grid/lv_example_grid_3.c.o
@@ -2102,7 +2102,7 @@ lvgl/examples/layouts/grid/lv_example_grid_3.o: lvgl/examples/layouts/grid/lv_ex
 
 # target to build an object file
 lvgl/examples/layouts/grid/lv_example_grid_3.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/layouts/grid/lv_example_grid_3.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/layouts/grid/lv_example_grid_3.c.o
 .PHONY : lvgl/examples/layouts/grid/lv_example_grid_3.c.o
 
 lvgl/examples/layouts/grid/lv_example_grid_3.i: lvgl/examples/layouts/grid/lv_example_grid_3.c.i
@@ -2110,7 +2110,7 @@ lvgl/examples/layouts/grid/lv_example_grid_3.i: lvgl/examples/layouts/grid/lv_ex
 
 # target to preprocess a source file
 lvgl/examples/layouts/grid/lv_example_grid_3.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/layouts/grid/lv_example_grid_3.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/layouts/grid/lv_example_grid_3.c.i
 .PHONY : lvgl/examples/layouts/grid/lv_example_grid_3.c.i
 
 lvgl/examples/layouts/grid/lv_example_grid_3.s: lvgl/examples/layouts/grid/lv_example_grid_3.c.s
@@ -2118,7 +2118,7 @@ lvgl/examples/layouts/grid/lv_example_grid_3.s: lvgl/examples/layouts/grid/lv_ex
 
 # target to generate assembly for a file
 lvgl/examples/layouts/grid/lv_example_grid_3.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/layouts/grid/lv_example_grid_3.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/layouts/grid/lv_example_grid_3.c.s
 .PHONY : lvgl/examples/layouts/grid/lv_example_grid_3.c.s
 
 lvgl/examples/layouts/grid/lv_example_grid_4.o: lvgl/examples/layouts/grid/lv_example_grid_4.c.o
@@ -2126,7 +2126,7 @@ lvgl/examples/layouts/grid/lv_example_grid_4.o: lvgl/examples/layouts/grid/lv_ex
 
 # target to build an object file
 lvgl/examples/layouts/grid/lv_example_grid_4.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/layouts/grid/lv_example_grid_4.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/layouts/grid/lv_example_grid_4.c.o
 .PHONY : lvgl/examples/layouts/grid/lv_example_grid_4.c.o
 
 lvgl/examples/layouts/grid/lv_example_grid_4.i: lvgl/examples/layouts/grid/lv_example_grid_4.c.i
@@ -2134,7 +2134,7 @@ lvgl/examples/layouts/grid/lv_example_grid_4.i: lvgl/examples/layouts/grid/lv_ex
 
 # target to preprocess a source file
 lvgl/examples/layouts/grid/lv_example_grid_4.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/layouts/grid/lv_example_grid_4.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/layouts/grid/lv_example_grid_4.c.i
 .PHONY : lvgl/examples/layouts/grid/lv_example_grid_4.c.i
 
 lvgl/examples/layouts/grid/lv_example_grid_4.s: lvgl/examples/layouts/grid/lv_example_grid_4.c.s
@@ -2142,7 +2142,7 @@ lvgl/examples/layouts/grid/lv_example_grid_4.s: lvgl/examples/layouts/grid/lv_ex
 
 # target to generate assembly for a file
 lvgl/examples/layouts/grid/lv_example_grid_4.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/layouts/grid/lv_example_grid_4.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/layouts/grid/lv_example_grid_4.c.s
 .PHONY : lvgl/examples/layouts/grid/lv_example_grid_4.c.s
 
 lvgl/examples/layouts/grid/lv_example_grid_5.o: lvgl/examples/layouts/grid/lv_example_grid_5.c.o
@@ -2150,7 +2150,7 @@ lvgl/examples/layouts/grid/lv_example_grid_5.o: lvgl/examples/layouts/grid/lv_ex
 
 # target to build an object file
 lvgl/examples/layouts/grid/lv_example_grid_5.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/layouts/grid/lv_example_grid_5.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/layouts/grid/lv_example_grid_5.c.o
 .PHONY : lvgl/examples/layouts/grid/lv_example_grid_5.c.o
 
 lvgl/examples/layouts/grid/lv_example_grid_5.i: lvgl/examples/layouts/grid/lv_example_grid_5.c.i
@@ -2158,7 +2158,7 @@ lvgl/examples/layouts/grid/lv_example_grid_5.i: lvgl/examples/layouts/grid/lv_ex
 
 # target to preprocess a source file
 lvgl/examples/layouts/grid/lv_example_grid_5.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/layouts/grid/lv_example_grid_5.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/layouts/grid/lv_example_grid_5.c.i
 .PHONY : lvgl/examples/layouts/grid/lv_example_grid_5.c.i
 
 lvgl/examples/layouts/grid/lv_example_grid_5.s: lvgl/examples/layouts/grid/lv_example_grid_5.c.s
@@ -2166,7 +2166,7 @@ lvgl/examples/layouts/grid/lv_example_grid_5.s: lvgl/examples/layouts/grid/lv_ex
 
 # target to generate assembly for a file
 lvgl/examples/layouts/grid/lv_example_grid_5.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/layouts/grid/lv_example_grid_5.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/layouts/grid/lv_example_grid_5.c.s
 .PHONY : lvgl/examples/layouts/grid/lv_example_grid_5.c.s
 
 lvgl/examples/layouts/grid/lv_example_grid_6.o: lvgl/examples/layouts/grid/lv_example_grid_6.c.o
@@ -2174,7 +2174,7 @@ lvgl/examples/layouts/grid/lv_example_grid_6.o: lvgl/examples/layouts/grid/lv_ex
 
 # target to build an object file
 lvgl/examples/layouts/grid/lv_example_grid_6.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/layouts/grid/lv_example_grid_6.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/layouts/grid/lv_example_grid_6.c.o
 .PHONY : lvgl/examples/layouts/grid/lv_example_grid_6.c.o
 
 lvgl/examples/layouts/grid/lv_example_grid_6.i: lvgl/examples/layouts/grid/lv_example_grid_6.c.i
@@ -2182,7 +2182,7 @@ lvgl/examples/layouts/grid/lv_example_grid_6.i: lvgl/examples/layouts/grid/lv_ex
 
 # target to preprocess a source file
 lvgl/examples/layouts/grid/lv_example_grid_6.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/layouts/grid/lv_example_grid_6.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/layouts/grid/lv_example_grid_6.c.i
 .PHONY : lvgl/examples/layouts/grid/lv_example_grid_6.c.i
 
 lvgl/examples/layouts/grid/lv_example_grid_6.s: lvgl/examples/layouts/grid/lv_example_grid_6.c.s
@@ -2190,7 +2190,7 @@ lvgl/examples/layouts/grid/lv_example_grid_6.s: lvgl/examples/layouts/grid/lv_ex
 
 # target to generate assembly for a file
 lvgl/examples/layouts/grid/lv_example_grid_6.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/layouts/grid/lv_example_grid_6.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/layouts/grid/lv_example_grid_6.c.s
 .PHONY : lvgl/examples/layouts/grid/lv_example_grid_6.c.s
 
 lvgl/examples/porting/lv_port_disp_template.o: lvgl/examples/porting/lv_port_disp_template.c.o
@@ -2198,7 +2198,7 @@ lvgl/examples/porting/lv_port_disp_template.o: lvgl/examples/porting/lv_port_dis
 
 # target to build an object file
 lvgl/examples/porting/lv_port_disp_template.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/porting/lv_port_disp_template.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/porting/lv_port_disp_template.c.o
 .PHONY : lvgl/examples/porting/lv_port_disp_template.c.o
 
 lvgl/examples/porting/lv_port_disp_template.i: lvgl/examples/porting/lv_port_disp_template.c.i
@@ -2206,7 +2206,7 @@ lvgl/examples/porting/lv_port_disp_template.i: lvgl/examples/porting/lv_port_dis
 
 # target to preprocess a source file
 lvgl/examples/porting/lv_port_disp_template.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/porting/lv_port_disp_template.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/porting/lv_port_disp_template.c.i
 .PHONY : lvgl/examples/porting/lv_port_disp_template.c.i
 
 lvgl/examples/porting/lv_port_disp_template.s: lvgl/examples/porting/lv_port_disp_template.c.s
@@ -2214,7 +2214,7 @@ lvgl/examples/porting/lv_port_disp_template.s: lvgl/examples/porting/lv_port_dis
 
 # target to generate assembly for a file
 lvgl/examples/porting/lv_port_disp_template.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/porting/lv_port_disp_template.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/porting/lv_port_disp_template.c.s
 .PHONY : lvgl/examples/porting/lv_port_disp_template.c.s
 
 lvgl/examples/porting/lv_port_fs_template.o: lvgl/examples/porting/lv_port_fs_template.c.o
@@ -2222,7 +2222,7 @@ lvgl/examples/porting/lv_port_fs_template.o: lvgl/examples/porting/lv_port_fs_te
 
 # target to build an object file
 lvgl/examples/porting/lv_port_fs_template.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/porting/lv_port_fs_template.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/porting/lv_port_fs_template.c.o
 .PHONY : lvgl/examples/porting/lv_port_fs_template.c.o
 
 lvgl/examples/porting/lv_port_fs_template.i: lvgl/examples/porting/lv_port_fs_template.c.i
@@ -2230,7 +2230,7 @@ lvgl/examples/porting/lv_port_fs_template.i: lvgl/examples/porting/lv_port_fs_te
 
 # target to preprocess a source file
 lvgl/examples/porting/lv_port_fs_template.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/porting/lv_port_fs_template.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/porting/lv_port_fs_template.c.i
 .PHONY : lvgl/examples/porting/lv_port_fs_template.c.i
 
 lvgl/examples/porting/lv_port_fs_template.s: lvgl/examples/porting/lv_port_fs_template.c.s
@@ -2238,7 +2238,7 @@ lvgl/examples/porting/lv_port_fs_template.s: lvgl/examples/porting/lv_port_fs_te
 
 # target to generate assembly for a file
 lvgl/examples/porting/lv_port_fs_template.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/porting/lv_port_fs_template.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/porting/lv_port_fs_template.c.s
 .PHONY : lvgl/examples/porting/lv_port_fs_template.c.s
 
 lvgl/examples/porting/lv_port_indev_template.o: lvgl/examples/porting/lv_port_indev_template.c.o
@@ -2246,7 +2246,7 @@ lvgl/examples/porting/lv_port_indev_template.o: lvgl/examples/porting/lv_port_in
 
 # target to build an object file
 lvgl/examples/porting/lv_port_indev_template.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/porting/lv_port_indev_template.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/porting/lv_port_indev_template.c.o
 .PHONY : lvgl/examples/porting/lv_port_indev_template.c.o
 
 lvgl/examples/porting/lv_port_indev_template.i: lvgl/examples/porting/lv_port_indev_template.c.i
@@ -2254,7 +2254,7 @@ lvgl/examples/porting/lv_port_indev_template.i: lvgl/examples/porting/lv_port_in
 
 # target to preprocess a source file
 lvgl/examples/porting/lv_port_indev_template.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/porting/lv_port_indev_template.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/porting/lv_port_indev_template.c.i
 .PHONY : lvgl/examples/porting/lv_port_indev_template.c.i
 
 lvgl/examples/porting/lv_port_indev_template.s: lvgl/examples/porting/lv_port_indev_template.c.s
@@ -2262,7 +2262,7 @@ lvgl/examples/porting/lv_port_indev_template.s: lvgl/examples/porting/lv_port_in
 
 # target to generate assembly for a file
 lvgl/examples/porting/lv_port_indev_template.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/porting/lv_port_indev_template.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/porting/lv_port_indev_template.c.s
 .PHONY : lvgl/examples/porting/lv_port_indev_template.c.s
 
 lvgl/examples/scroll/lv_example_scroll_1.o: lvgl/examples/scroll/lv_example_scroll_1.c.o
@@ -2270,7 +2270,7 @@ lvgl/examples/scroll/lv_example_scroll_1.o: lvgl/examples/scroll/lv_example_scro
 
 # target to build an object file
 lvgl/examples/scroll/lv_example_scroll_1.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/scroll/lv_example_scroll_1.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/scroll/lv_example_scroll_1.c.o
 .PHONY : lvgl/examples/scroll/lv_example_scroll_1.c.o
 
 lvgl/examples/scroll/lv_example_scroll_1.i: lvgl/examples/scroll/lv_example_scroll_1.c.i
@@ -2278,7 +2278,7 @@ lvgl/examples/scroll/lv_example_scroll_1.i: lvgl/examples/scroll/lv_example_scro
 
 # target to preprocess a source file
 lvgl/examples/scroll/lv_example_scroll_1.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/scroll/lv_example_scroll_1.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/scroll/lv_example_scroll_1.c.i
 .PHONY : lvgl/examples/scroll/lv_example_scroll_1.c.i
 
 lvgl/examples/scroll/lv_example_scroll_1.s: lvgl/examples/scroll/lv_example_scroll_1.c.s
@@ -2286,7 +2286,7 @@ lvgl/examples/scroll/lv_example_scroll_1.s: lvgl/examples/scroll/lv_example_scro
 
 # target to generate assembly for a file
 lvgl/examples/scroll/lv_example_scroll_1.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/scroll/lv_example_scroll_1.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/scroll/lv_example_scroll_1.c.s
 .PHONY : lvgl/examples/scroll/lv_example_scroll_1.c.s
 
 lvgl/examples/scroll/lv_example_scroll_2.o: lvgl/examples/scroll/lv_example_scroll_2.c.o
@@ -2294,7 +2294,7 @@ lvgl/examples/scroll/lv_example_scroll_2.o: lvgl/examples/scroll/lv_example_scro
 
 # target to build an object file
 lvgl/examples/scroll/lv_example_scroll_2.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/scroll/lv_example_scroll_2.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/scroll/lv_example_scroll_2.c.o
 .PHONY : lvgl/examples/scroll/lv_example_scroll_2.c.o
 
 lvgl/examples/scroll/lv_example_scroll_2.i: lvgl/examples/scroll/lv_example_scroll_2.c.i
@@ -2302,7 +2302,7 @@ lvgl/examples/scroll/lv_example_scroll_2.i: lvgl/examples/scroll/lv_example_scro
 
 # target to preprocess a source file
 lvgl/examples/scroll/lv_example_scroll_2.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/scroll/lv_example_scroll_2.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/scroll/lv_example_scroll_2.c.i
 .PHONY : lvgl/examples/scroll/lv_example_scroll_2.c.i
 
 lvgl/examples/scroll/lv_example_scroll_2.s: lvgl/examples/scroll/lv_example_scroll_2.c.s
@@ -2310,7 +2310,7 @@ lvgl/examples/scroll/lv_example_scroll_2.s: lvgl/examples/scroll/lv_example_scro
 
 # target to generate assembly for a file
 lvgl/examples/scroll/lv_example_scroll_2.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/scroll/lv_example_scroll_2.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/scroll/lv_example_scroll_2.c.s
 .PHONY : lvgl/examples/scroll/lv_example_scroll_2.c.s
 
 lvgl/examples/scroll/lv_example_scroll_3.o: lvgl/examples/scroll/lv_example_scroll_3.c.o
@@ -2318,7 +2318,7 @@ lvgl/examples/scroll/lv_example_scroll_3.o: lvgl/examples/scroll/lv_example_scro
 
 # target to build an object file
 lvgl/examples/scroll/lv_example_scroll_3.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/scroll/lv_example_scroll_3.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/scroll/lv_example_scroll_3.c.o
 .PHONY : lvgl/examples/scroll/lv_example_scroll_3.c.o
 
 lvgl/examples/scroll/lv_example_scroll_3.i: lvgl/examples/scroll/lv_example_scroll_3.c.i
@@ -2326,7 +2326,7 @@ lvgl/examples/scroll/lv_example_scroll_3.i: lvgl/examples/scroll/lv_example_scro
 
 # target to preprocess a source file
 lvgl/examples/scroll/lv_example_scroll_3.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/scroll/lv_example_scroll_3.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/scroll/lv_example_scroll_3.c.i
 .PHONY : lvgl/examples/scroll/lv_example_scroll_3.c.i
 
 lvgl/examples/scroll/lv_example_scroll_3.s: lvgl/examples/scroll/lv_example_scroll_3.c.s
@@ -2334,7 +2334,7 @@ lvgl/examples/scroll/lv_example_scroll_3.s: lvgl/examples/scroll/lv_example_scro
 
 # target to generate assembly for a file
 lvgl/examples/scroll/lv_example_scroll_3.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/scroll/lv_example_scroll_3.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/scroll/lv_example_scroll_3.c.s
 .PHONY : lvgl/examples/scroll/lv_example_scroll_3.c.s
 
 lvgl/examples/styles/lv_example_style_1.o: lvgl/examples/styles/lv_example_style_1.c.o
@@ -2342,7 +2342,7 @@ lvgl/examples/styles/lv_example_style_1.o: lvgl/examples/styles/lv_example_style
 
 # target to build an object file
 lvgl/examples/styles/lv_example_style_1.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/styles/lv_example_style_1.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/styles/lv_example_style_1.c.o
 .PHONY : lvgl/examples/styles/lv_example_style_1.c.o
 
 lvgl/examples/styles/lv_example_style_1.i: lvgl/examples/styles/lv_example_style_1.c.i
@@ -2350,7 +2350,7 @@ lvgl/examples/styles/lv_example_style_1.i: lvgl/examples/styles/lv_example_style
 
 # target to preprocess a source file
 lvgl/examples/styles/lv_example_style_1.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/styles/lv_example_style_1.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/styles/lv_example_style_1.c.i
 .PHONY : lvgl/examples/styles/lv_example_style_1.c.i
 
 lvgl/examples/styles/lv_example_style_1.s: lvgl/examples/styles/lv_example_style_1.c.s
@@ -2358,7 +2358,7 @@ lvgl/examples/styles/lv_example_style_1.s: lvgl/examples/styles/lv_example_style
 
 # target to generate assembly for a file
 lvgl/examples/styles/lv_example_style_1.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/styles/lv_example_style_1.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/styles/lv_example_style_1.c.s
 .PHONY : lvgl/examples/styles/lv_example_style_1.c.s
 
 lvgl/examples/styles/lv_example_style_10.o: lvgl/examples/styles/lv_example_style_10.c.o
@@ -2366,7 +2366,7 @@ lvgl/examples/styles/lv_example_style_10.o: lvgl/examples/styles/lv_example_styl
 
 # target to build an object file
 lvgl/examples/styles/lv_example_style_10.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/styles/lv_example_style_10.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/styles/lv_example_style_10.c.o
 .PHONY : lvgl/examples/styles/lv_example_style_10.c.o
 
 lvgl/examples/styles/lv_example_style_10.i: lvgl/examples/styles/lv_example_style_10.c.i
@@ -2374,7 +2374,7 @@ lvgl/examples/styles/lv_example_style_10.i: lvgl/examples/styles/lv_example_styl
 
 # target to preprocess a source file
 lvgl/examples/styles/lv_example_style_10.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/styles/lv_example_style_10.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/styles/lv_example_style_10.c.i
 .PHONY : lvgl/examples/styles/lv_example_style_10.c.i
 
 lvgl/examples/styles/lv_example_style_10.s: lvgl/examples/styles/lv_example_style_10.c.s
@@ -2382,7 +2382,7 @@ lvgl/examples/styles/lv_example_style_10.s: lvgl/examples/styles/lv_example_styl
 
 # target to generate assembly for a file
 lvgl/examples/styles/lv_example_style_10.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/styles/lv_example_style_10.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/styles/lv_example_style_10.c.s
 .PHONY : lvgl/examples/styles/lv_example_style_10.c.s
 
 lvgl/examples/styles/lv_example_style_11.o: lvgl/examples/styles/lv_example_style_11.c.o
@@ -2390,7 +2390,7 @@ lvgl/examples/styles/lv_example_style_11.o: lvgl/examples/styles/lv_example_styl
 
 # target to build an object file
 lvgl/examples/styles/lv_example_style_11.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/styles/lv_example_style_11.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/styles/lv_example_style_11.c.o
 .PHONY : lvgl/examples/styles/lv_example_style_11.c.o
 
 lvgl/examples/styles/lv_example_style_11.i: lvgl/examples/styles/lv_example_style_11.c.i
@@ -2398,7 +2398,7 @@ lvgl/examples/styles/lv_example_style_11.i: lvgl/examples/styles/lv_example_styl
 
 # target to preprocess a source file
 lvgl/examples/styles/lv_example_style_11.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/styles/lv_example_style_11.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/styles/lv_example_style_11.c.i
 .PHONY : lvgl/examples/styles/lv_example_style_11.c.i
 
 lvgl/examples/styles/lv_example_style_11.s: lvgl/examples/styles/lv_example_style_11.c.s
@@ -2406,7 +2406,7 @@ lvgl/examples/styles/lv_example_style_11.s: lvgl/examples/styles/lv_example_styl
 
 # target to generate assembly for a file
 lvgl/examples/styles/lv_example_style_11.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/styles/lv_example_style_11.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/styles/lv_example_style_11.c.s
 .PHONY : lvgl/examples/styles/lv_example_style_11.c.s
 
 lvgl/examples/styles/lv_example_style_2.o: lvgl/examples/styles/lv_example_style_2.c.o
@@ -2414,7 +2414,7 @@ lvgl/examples/styles/lv_example_style_2.o: lvgl/examples/styles/lv_example_style
 
 # target to build an object file
 lvgl/examples/styles/lv_example_style_2.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/styles/lv_example_style_2.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/styles/lv_example_style_2.c.o
 .PHONY : lvgl/examples/styles/lv_example_style_2.c.o
 
 lvgl/examples/styles/lv_example_style_2.i: lvgl/examples/styles/lv_example_style_2.c.i
@@ -2422,7 +2422,7 @@ lvgl/examples/styles/lv_example_style_2.i: lvgl/examples/styles/lv_example_style
 
 # target to preprocess a source file
 lvgl/examples/styles/lv_example_style_2.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/styles/lv_example_style_2.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/styles/lv_example_style_2.c.i
 .PHONY : lvgl/examples/styles/lv_example_style_2.c.i
 
 lvgl/examples/styles/lv_example_style_2.s: lvgl/examples/styles/lv_example_style_2.c.s
@@ -2430,7 +2430,7 @@ lvgl/examples/styles/lv_example_style_2.s: lvgl/examples/styles/lv_example_style
 
 # target to generate assembly for a file
 lvgl/examples/styles/lv_example_style_2.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/styles/lv_example_style_2.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/styles/lv_example_style_2.c.s
 .PHONY : lvgl/examples/styles/lv_example_style_2.c.s
 
 lvgl/examples/styles/lv_example_style_3.o: lvgl/examples/styles/lv_example_style_3.c.o
@@ -2438,7 +2438,7 @@ lvgl/examples/styles/lv_example_style_3.o: lvgl/examples/styles/lv_example_style
 
 # target to build an object file
 lvgl/examples/styles/lv_example_style_3.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/styles/lv_example_style_3.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/styles/lv_example_style_3.c.o
 .PHONY : lvgl/examples/styles/lv_example_style_3.c.o
 
 lvgl/examples/styles/lv_example_style_3.i: lvgl/examples/styles/lv_example_style_3.c.i
@@ -2446,7 +2446,7 @@ lvgl/examples/styles/lv_example_style_3.i: lvgl/examples/styles/lv_example_style
 
 # target to preprocess a source file
 lvgl/examples/styles/lv_example_style_3.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/styles/lv_example_style_3.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/styles/lv_example_style_3.c.i
 .PHONY : lvgl/examples/styles/lv_example_style_3.c.i
 
 lvgl/examples/styles/lv_example_style_3.s: lvgl/examples/styles/lv_example_style_3.c.s
@@ -2454,7 +2454,7 @@ lvgl/examples/styles/lv_example_style_3.s: lvgl/examples/styles/lv_example_style
 
 # target to generate assembly for a file
 lvgl/examples/styles/lv_example_style_3.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/styles/lv_example_style_3.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/styles/lv_example_style_3.c.s
 .PHONY : lvgl/examples/styles/lv_example_style_3.c.s
 
 lvgl/examples/styles/lv_example_style_4.o: lvgl/examples/styles/lv_example_style_4.c.o
@@ -2462,7 +2462,7 @@ lvgl/examples/styles/lv_example_style_4.o: lvgl/examples/styles/lv_example_style
 
 # target to build an object file
 lvgl/examples/styles/lv_example_style_4.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/styles/lv_example_style_4.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/styles/lv_example_style_4.c.o
 .PHONY : lvgl/examples/styles/lv_example_style_4.c.o
 
 lvgl/examples/styles/lv_example_style_4.i: lvgl/examples/styles/lv_example_style_4.c.i
@@ -2470,7 +2470,7 @@ lvgl/examples/styles/lv_example_style_4.i: lvgl/examples/styles/lv_example_style
 
 # target to preprocess a source file
 lvgl/examples/styles/lv_example_style_4.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/styles/lv_example_style_4.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/styles/lv_example_style_4.c.i
 .PHONY : lvgl/examples/styles/lv_example_style_4.c.i
 
 lvgl/examples/styles/lv_example_style_4.s: lvgl/examples/styles/lv_example_style_4.c.s
@@ -2478,7 +2478,7 @@ lvgl/examples/styles/lv_example_style_4.s: lvgl/examples/styles/lv_example_style
 
 # target to generate assembly for a file
 lvgl/examples/styles/lv_example_style_4.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/styles/lv_example_style_4.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/styles/lv_example_style_4.c.s
 .PHONY : lvgl/examples/styles/lv_example_style_4.c.s
 
 lvgl/examples/styles/lv_example_style_6.o: lvgl/examples/styles/lv_example_style_6.c.o
@@ -2486,7 +2486,7 @@ lvgl/examples/styles/lv_example_style_6.o: lvgl/examples/styles/lv_example_style
 
 # target to build an object file
 lvgl/examples/styles/lv_example_style_6.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/styles/lv_example_style_6.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/styles/lv_example_style_6.c.o
 .PHONY : lvgl/examples/styles/lv_example_style_6.c.o
 
 lvgl/examples/styles/lv_example_style_6.i: lvgl/examples/styles/lv_example_style_6.c.i
@@ -2494,7 +2494,7 @@ lvgl/examples/styles/lv_example_style_6.i: lvgl/examples/styles/lv_example_style
 
 # target to preprocess a source file
 lvgl/examples/styles/lv_example_style_6.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/styles/lv_example_style_6.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/styles/lv_example_style_6.c.i
 .PHONY : lvgl/examples/styles/lv_example_style_6.c.i
 
 lvgl/examples/styles/lv_example_style_6.s: lvgl/examples/styles/lv_example_style_6.c.s
@@ -2502,7 +2502,7 @@ lvgl/examples/styles/lv_example_style_6.s: lvgl/examples/styles/lv_example_style
 
 # target to generate assembly for a file
 lvgl/examples/styles/lv_example_style_6.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/styles/lv_example_style_6.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/styles/lv_example_style_6.c.s
 .PHONY : lvgl/examples/styles/lv_example_style_6.c.s
 
 lvgl/examples/styles/lv_example_style_7.o: lvgl/examples/styles/lv_example_style_7.c.o
@@ -2510,7 +2510,7 @@ lvgl/examples/styles/lv_example_style_7.o: lvgl/examples/styles/lv_example_style
 
 # target to build an object file
 lvgl/examples/styles/lv_example_style_7.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/styles/lv_example_style_7.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/styles/lv_example_style_7.c.o
 .PHONY : lvgl/examples/styles/lv_example_style_7.c.o
 
 lvgl/examples/styles/lv_example_style_7.i: lvgl/examples/styles/lv_example_style_7.c.i
@@ -2518,7 +2518,7 @@ lvgl/examples/styles/lv_example_style_7.i: lvgl/examples/styles/lv_example_style
 
 # target to preprocess a source file
 lvgl/examples/styles/lv_example_style_7.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/styles/lv_example_style_7.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/styles/lv_example_style_7.c.i
 .PHONY : lvgl/examples/styles/lv_example_style_7.c.i
 
 lvgl/examples/styles/lv_example_style_7.s: lvgl/examples/styles/lv_example_style_7.c.s
@@ -2526,7 +2526,7 @@ lvgl/examples/styles/lv_example_style_7.s: lvgl/examples/styles/lv_example_style
 
 # target to generate assembly for a file
 lvgl/examples/styles/lv_example_style_7.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/styles/lv_example_style_7.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/styles/lv_example_style_7.c.s
 .PHONY : lvgl/examples/styles/lv_example_style_7.c.s
 
 lvgl/examples/styles/lv_example_style_8.o: lvgl/examples/styles/lv_example_style_8.c.o
@@ -2534,7 +2534,7 @@ lvgl/examples/styles/lv_example_style_8.o: lvgl/examples/styles/lv_example_style
 
 # target to build an object file
 lvgl/examples/styles/lv_example_style_8.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/styles/lv_example_style_8.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/styles/lv_example_style_8.c.o
 .PHONY : lvgl/examples/styles/lv_example_style_8.c.o
 
 lvgl/examples/styles/lv_example_style_8.i: lvgl/examples/styles/lv_example_style_8.c.i
@@ -2542,7 +2542,7 @@ lvgl/examples/styles/lv_example_style_8.i: lvgl/examples/styles/lv_example_style
 
 # target to preprocess a source file
 lvgl/examples/styles/lv_example_style_8.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/styles/lv_example_style_8.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/styles/lv_example_style_8.c.i
 .PHONY : lvgl/examples/styles/lv_example_style_8.c.i
 
 lvgl/examples/styles/lv_example_style_8.s: lvgl/examples/styles/lv_example_style_8.c.s
@@ -2550,7 +2550,7 @@ lvgl/examples/styles/lv_example_style_8.s: lvgl/examples/styles/lv_example_style
 
 # target to generate assembly for a file
 lvgl/examples/styles/lv_example_style_8.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/styles/lv_example_style_8.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/styles/lv_example_style_8.c.s
 .PHONY : lvgl/examples/styles/lv_example_style_8.c.s
 
 lvgl/examples/styles/lv_example_style_9.o: lvgl/examples/styles/lv_example_style_9.c.o
@@ -2558,7 +2558,7 @@ lvgl/examples/styles/lv_example_style_9.o: lvgl/examples/styles/lv_example_style
 
 # target to build an object file
 lvgl/examples/styles/lv_example_style_9.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/styles/lv_example_style_9.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/styles/lv_example_style_9.c.o
 .PHONY : lvgl/examples/styles/lv_example_style_9.c.o
 
 lvgl/examples/styles/lv_example_style_9.i: lvgl/examples/styles/lv_example_style_9.c.i
@@ -2566,7 +2566,7 @@ lvgl/examples/styles/lv_example_style_9.i: lvgl/examples/styles/lv_example_style
 
 # target to preprocess a source file
 lvgl/examples/styles/lv_example_style_9.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/styles/lv_example_style_9.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/styles/lv_example_style_9.c.i
 .PHONY : lvgl/examples/styles/lv_example_style_9.c.i
 
 lvgl/examples/styles/lv_example_style_9.s: lvgl/examples/styles/lv_example_style_9.c.s
@@ -2574,7 +2574,7 @@ lvgl/examples/styles/lv_example_style_9.s: lvgl/examples/styles/lv_example_style
 
 # target to generate assembly for a file
 lvgl/examples/styles/lv_example_style_9.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/styles/lv_example_style_9.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/styles/lv_example_style_9.c.s
 .PHONY : lvgl/examples/styles/lv_example_style_9.c.s
 
 lvgl/examples/widgets/arc/lv_example_arc_1.o: lvgl/examples/widgets/arc/lv_example_arc_1.c.o
@@ -2582,7 +2582,7 @@ lvgl/examples/widgets/arc/lv_example_arc_1.o: lvgl/examples/widgets/arc/lv_examp
 
 # target to build an object file
 lvgl/examples/widgets/arc/lv_example_arc_1.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/arc/lv_example_arc_1.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/arc/lv_example_arc_1.c.o
 .PHONY : lvgl/examples/widgets/arc/lv_example_arc_1.c.o
 
 lvgl/examples/widgets/arc/lv_example_arc_1.i: lvgl/examples/widgets/arc/lv_example_arc_1.c.i
@@ -2590,7 +2590,7 @@ lvgl/examples/widgets/arc/lv_example_arc_1.i: lvgl/examples/widgets/arc/lv_examp
 
 # target to preprocess a source file
 lvgl/examples/widgets/arc/lv_example_arc_1.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/arc/lv_example_arc_1.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/arc/lv_example_arc_1.c.i
 .PHONY : lvgl/examples/widgets/arc/lv_example_arc_1.c.i
 
 lvgl/examples/widgets/arc/lv_example_arc_1.s: lvgl/examples/widgets/arc/lv_example_arc_1.c.s
@@ -2598,7 +2598,7 @@ lvgl/examples/widgets/arc/lv_example_arc_1.s: lvgl/examples/widgets/arc/lv_examp
 
 # target to generate assembly for a file
 lvgl/examples/widgets/arc/lv_example_arc_1.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/arc/lv_example_arc_1.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/arc/lv_example_arc_1.c.s
 .PHONY : lvgl/examples/widgets/arc/lv_example_arc_1.c.s
 
 lvgl/examples/widgets/arc/lv_example_arc_2.o: lvgl/examples/widgets/arc/lv_example_arc_2.c.o
@@ -2606,7 +2606,7 @@ lvgl/examples/widgets/arc/lv_example_arc_2.o: lvgl/examples/widgets/arc/lv_examp
 
 # target to build an object file
 lvgl/examples/widgets/arc/lv_example_arc_2.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/arc/lv_example_arc_2.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/arc/lv_example_arc_2.c.o
 .PHONY : lvgl/examples/widgets/arc/lv_example_arc_2.c.o
 
 lvgl/examples/widgets/arc/lv_example_arc_2.i: lvgl/examples/widgets/arc/lv_example_arc_2.c.i
@@ -2614,7 +2614,7 @@ lvgl/examples/widgets/arc/lv_example_arc_2.i: lvgl/examples/widgets/arc/lv_examp
 
 # target to preprocess a source file
 lvgl/examples/widgets/arc/lv_example_arc_2.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/arc/lv_example_arc_2.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/arc/lv_example_arc_2.c.i
 .PHONY : lvgl/examples/widgets/arc/lv_example_arc_2.c.i
 
 lvgl/examples/widgets/arc/lv_example_arc_2.s: lvgl/examples/widgets/arc/lv_example_arc_2.c.s
@@ -2622,7 +2622,7 @@ lvgl/examples/widgets/arc/lv_example_arc_2.s: lvgl/examples/widgets/arc/lv_examp
 
 # target to generate assembly for a file
 lvgl/examples/widgets/arc/lv_example_arc_2.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/arc/lv_example_arc_2.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/arc/lv_example_arc_2.c.s
 .PHONY : lvgl/examples/widgets/arc/lv_example_arc_2.c.s
 
 lvgl/examples/widgets/bar/lv_example_bar_1.o: lvgl/examples/widgets/bar/lv_example_bar_1.c.o
@@ -2630,7 +2630,7 @@ lvgl/examples/widgets/bar/lv_example_bar_1.o: lvgl/examples/widgets/bar/lv_examp
 
 # target to build an object file
 lvgl/examples/widgets/bar/lv_example_bar_1.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/bar/lv_example_bar_1.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/bar/lv_example_bar_1.c.o
 .PHONY : lvgl/examples/widgets/bar/lv_example_bar_1.c.o
 
 lvgl/examples/widgets/bar/lv_example_bar_1.i: lvgl/examples/widgets/bar/lv_example_bar_1.c.i
@@ -2638,7 +2638,7 @@ lvgl/examples/widgets/bar/lv_example_bar_1.i: lvgl/examples/widgets/bar/lv_examp
 
 # target to preprocess a source file
 lvgl/examples/widgets/bar/lv_example_bar_1.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/bar/lv_example_bar_1.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/bar/lv_example_bar_1.c.i
 .PHONY : lvgl/examples/widgets/bar/lv_example_bar_1.c.i
 
 lvgl/examples/widgets/bar/lv_example_bar_1.s: lvgl/examples/widgets/bar/lv_example_bar_1.c.s
@@ -2646,7 +2646,7 @@ lvgl/examples/widgets/bar/lv_example_bar_1.s: lvgl/examples/widgets/bar/lv_examp
 
 # target to generate assembly for a file
 lvgl/examples/widgets/bar/lv_example_bar_1.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/bar/lv_example_bar_1.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/bar/lv_example_bar_1.c.s
 .PHONY : lvgl/examples/widgets/bar/lv_example_bar_1.c.s
 
 lvgl/examples/widgets/bar/lv_example_bar_2.o: lvgl/examples/widgets/bar/lv_example_bar_2.c.o
@@ -2654,7 +2654,7 @@ lvgl/examples/widgets/bar/lv_example_bar_2.o: lvgl/examples/widgets/bar/lv_examp
 
 # target to build an object file
 lvgl/examples/widgets/bar/lv_example_bar_2.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/bar/lv_example_bar_2.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/bar/lv_example_bar_2.c.o
 .PHONY : lvgl/examples/widgets/bar/lv_example_bar_2.c.o
 
 lvgl/examples/widgets/bar/lv_example_bar_2.i: lvgl/examples/widgets/bar/lv_example_bar_2.c.i
@@ -2662,7 +2662,7 @@ lvgl/examples/widgets/bar/lv_example_bar_2.i: lvgl/examples/widgets/bar/lv_examp
 
 # target to preprocess a source file
 lvgl/examples/widgets/bar/lv_example_bar_2.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/bar/lv_example_bar_2.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/bar/lv_example_bar_2.c.i
 .PHONY : lvgl/examples/widgets/bar/lv_example_bar_2.c.i
 
 lvgl/examples/widgets/bar/lv_example_bar_2.s: lvgl/examples/widgets/bar/lv_example_bar_2.c.s
@@ -2670,7 +2670,7 @@ lvgl/examples/widgets/bar/lv_example_bar_2.s: lvgl/examples/widgets/bar/lv_examp
 
 # target to generate assembly for a file
 lvgl/examples/widgets/bar/lv_example_bar_2.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/bar/lv_example_bar_2.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/bar/lv_example_bar_2.c.s
 .PHONY : lvgl/examples/widgets/bar/lv_example_bar_2.c.s
 
 lvgl/examples/widgets/bar/lv_example_bar_3.o: lvgl/examples/widgets/bar/lv_example_bar_3.c.o
@@ -2678,7 +2678,7 @@ lvgl/examples/widgets/bar/lv_example_bar_3.o: lvgl/examples/widgets/bar/lv_examp
 
 # target to build an object file
 lvgl/examples/widgets/bar/lv_example_bar_3.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/bar/lv_example_bar_3.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/bar/lv_example_bar_3.c.o
 .PHONY : lvgl/examples/widgets/bar/lv_example_bar_3.c.o
 
 lvgl/examples/widgets/bar/lv_example_bar_3.i: lvgl/examples/widgets/bar/lv_example_bar_3.c.i
@@ -2686,7 +2686,7 @@ lvgl/examples/widgets/bar/lv_example_bar_3.i: lvgl/examples/widgets/bar/lv_examp
 
 # target to preprocess a source file
 lvgl/examples/widgets/bar/lv_example_bar_3.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/bar/lv_example_bar_3.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/bar/lv_example_bar_3.c.i
 .PHONY : lvgl/examples/widgets/bar/lv_example_bar_3.c.i
 
 lvgl/examples/widgets/bar/lv_example_bar_3.s: lvgl/examples/widgets/bar/lv_example_bar_3.c.s
@@ -2694,7 +2694,7 @@ lvgl/examples/widgets/bar/lv_example_bar_3.s: lvgl/examples/widgets/bar/lv_examp
 
 # target to generate assembly for a file
 lvgl/examples/widgets/bar/lv_example_bar_3.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/bar/lv_example_bar_3.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/bar/lv_example_bar_3.c.s
 .PHONY : lvgl/examples/widgets/bar/lv_example_bar_3.c.s
 
 lvgl/examples/widgets/bar/lv_example_bar_4.o: lvgl/examples/widgets/bar/lv_example_bar_4.c.o
@@ -2702,7 +2702,7 @@ lvgl/examples/widgets/bar/lv_example_bar_4.o: lvgl/examples/widgets/bar/lv_examp
 
 # target to build an object file
 lvgl/examples/widgets/bar/lv_example_bar_4.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/bar/lv_example_bar_4.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/bar/lv_example_bar_4.c.o
 .PHONY : lvgl/examples/widgets/bar/lv_example_bar_4.c.o
 
 lvgl/examples/widgets/bar/lv_example_bar_4.i: lvgl/examples/widgets/bar/lv_example_bar_4.c.i
@@ -2710,7 +2710,7 @@ lvgl/examples/widgets/bar/lv_example_bar_4.i: lvgl/examples/widgets/bar/lv_examp
 
 # target to preprocess a source file
 lvgl/examples/widgets/bar/lv_example_bar_4.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/bar/lv_example_bar_4.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/bar/lv_example_bar_4.c.i
 .PHONY : lvgl/examples/widgets/bar/lv_example_bar_4.c.i
 
 lvgl/examples/widgets/bar/lv_example_bar_4.s: lvgl/examples/widgets/bar/lv_example_bar_4.c.s
@@ -2718,7 +2718,7 @@ lvgl/examples/widgets/bar/lv_example_bar_4.s: lvgl/examples/widgets/bar/lv_examp
 
 # target to generate assembly for a file
 lvgl/examples/widgets/bar/lv_example_bar_4.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/bar/lv_example_bar_4.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/bar/lv_example_bar_4.c.s
 .PHONY : lvgl/examples/widgets/bar/lv_example_bar_4.c.s
 
 lvgl/examples/widgets/bar/lv_example_bar_5.o: lvgl/examples/widgets/bar/lv_example_bar_5.c.o
@@ -2726,7 +2726,7 @@ lvgl/examples/widgets/bar/lv_example_bar_5.o: lvgl/examples/widgets/bar/lv_examp
 
 # target to build an object file
 lvgl/examples/widgets/bar/lv_example_bar_5.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/bar/lv_example_bar_5.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/bar/lv_example_bar_5.c.o
 .PHONY : lvgl/examples/widgets/bar/lv_example_bar_5.c.o
 
 lvgl/examples/widgets/bar/lv_example_bar_5.i: lvgl/examples/widgets/bar/lv_example_bar_5.c.i
@@ -2734,7 +2734,7 @@ lvgl/examples/widgets/bar/lv_example_bar_5.i: lvgl/examples/widgets/bar/lv_examp
 
 # target to preprocess a source file
 lvgl/examples/widgets/bar/lv_example_bar_5.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/bar/lv_example_bar_5.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/bar/lv_example_bar_5.c.i
 .PHONY : lvgl/examples/widgets/bar/lv_example_bar_5.c.i
 
 lvgl/examples/widgets/bar/lv_example_bar_5.s: lvgl/examples/widgets/bar/lv_example_bar_5.c.s
@@ -2742,7 +2742,7 @@ lvgl/examples/widgets/bar/lv_example_bar_5.s: lvgl/examples/widgets/bar/lv_examp
 
 # target to generate assembly for a file
 lvgl/examples/widgets/bar/lv_example_bar_5.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/bar/lv_example_bar_5.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/bar/lv_example_bar_5.c.s
 .PHONY : lvgl/examples/widgets/bar/lv_example_bar_5.c.s
 
 lvgl/examples/widgets/bar/lv_example_bar_6.o: lvgl/examples/widgets/bar/lv_example_bar_6.c.o
@@ -2750,7 +2750,7 @@ lvgl/examples/widgets/bar/lv_example_bar_6.o: lvgl/examples/widgets/bar/lv_examp
 
 # target to build an object file
 lvgl/examples/widgets/bar/lv_example_bar_6.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/bar/lv_example_bar_6.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/bar/lv_example_bar_6.c.o
 .PHONY : lvgl/examples/widgets/bar/lv_example_bar_6.c.o
 
 lvgl/examples/widgets/bar/lv_example_bar_6.i: lvgl/examples/widgets/bar/lv_example_bar_6.c.i
@@ -2758,7 +2758,7 @@ lvgl/examples/widgets/bar/lv_example_bar_6.i: lvgl/examples/widgets/bar/lv_examp
 
 # target to preprocess a source file
 lvgl/examples/widgets/bar/lv_example_bar_6.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/bar/lv_example_bar_6.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/bar/lv_example_bar_6.c.i
 .PHONY : lvgl/examples/widgets/bar/lv_example_bar_6.c.i
 
 lvgl/examples/widgets/bar/lv_example_bar_6.s: lvgl/examples/widgets/bar/lv_example_bar_6.c.s
@@ -2766,7 +2766,7 @@ lvgl/examples/widgets/bar/lv_example_bar_6.s: lvgl/examples/widgets/bar/lv_examp
 
 # target to generate assembly for a file
 lvgl/examples/widgets/bar/lv_example_bar_6.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/bar/lv_example_bar_6.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/bar/lv_example_bar_6.c.s
 .PHONY : lvgl/examples/widgets/bar/lv_example_bar_6.c.s
 
 lvgl/examples/widgets/btn/lv_example_btn_1.o: lvgl/examples/widgets/btn/lv_example_btn_1.c.o
@@ -2774,7 +2774,7 @@ lvgl/examples/widgets/btn/lv_example_btn_1.o: lvgl/examples/widgets/btn/lv_examp
 
 # target to build an object file
 lvgl/examples/widgets/btn/lv_example_btn_1.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/btn/lv_example_btn_1.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/btn/lv_example_btn_1.c.o
 .PHONY : lvgl/examples/widgets/btn/lv_example_btn_1.c.o
 
 lvgl/examples/widgets/btn/lv_example_btn_1.i: lvgl/examples/widgets/btn/lv_example_btn_1.c.i
@@ -2782,7 +2782,7 @@ lvgl/examples/widgets/btn/lv_example_btn_1.i: lvgl/examples/widgets/btn/lv_examp
 
 # target to preprocess a source file
 lvgl/examples/widgets/btn/lv_example_btn_1.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/btn/lv_example_btn_1.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/btn/lv_example_btn_1.c.i
 .PHONY : lvgl/examples/widgets/btn/lv_example_btn_1.c.i
 
 lvgl/examples/widgets/btn/lv_example_btn_1.s: lvgl/examples/widgets/btn/lv_example_btn_1.c.s
@@ -2790,7 +2790,7 @@ lvgl/examples/widgets/btn/lv_example_btn_1.s: lvgl/examples/widgets/btn/lv_examp
 
 # target to generate assembly for a file
 lvgl/examples/widgets/btn/lv_example_btn_1.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/btn/lv_example_btn_1.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/btn/lv_example_btn_1.c.s
 .PHONY : lvgl/examples/widgets/btn/lv_example_btn_1.c.s
 
 lvgl/examples/widgets/btn/lv_example_btn_2.o: lvgl/examples/widgets/btn/lv_example_btn_2.c.o
@@ -2798,7 +2798,7 @@ lvgl/examples/widgets/btn/lv_example_btn_2.o: lvgl/examples/widgets/btn/lv_examp
 
 # target to build an object file
 lvgl/examples/widgets/btn/lv_example_btn_2.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/btn/lv_example_btn_2.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/btn/lv_example_btn_2.c.o
 .PHONY : lvgl/examples/widgets/btn/lv_example_btn_2.c.o
 
 lvgl/examples/widgets/btn/lv_example_btn_2.i: lvgl/examples/widgets/btn/lv_example_btn_2.c.i
@@ -2806,7 +2806,7 @@ lvgl/examples/widgets/btn/lv_example_btn_2.i: lvgl/examples/widgets/btn/lv_examp
 
 # target to preprocess a source file
 lvgl/examples/widgets/btn/lv_example_btn_2.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/btn/lv_example_btn_2.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/btn/lv_example_btn_2.c.i
 .PHONY : lvgl/examples/widgets/btn/lv_example_btn_2.c.i
 
 lvgl/examples/widgets/btn/lv_example_btn_2.s: lvgl/examples/widgets/btn/lv_example_btn_2.c.s
@@ -2814,7 +2814,7 @@ lvgl/examples/widgets/btn/lv_example_btn_2.s: lvgl/examples/widgets/btn/lv_examp
 
 # target to generate assembly for a file
 lvgl/examples/widgets/btn/lv_example_btn_2.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/btn/lv_example_btn_2.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/btn/lv_example_btn_2.c.s
 .PHONY : lvgl/examples/widgets/btn/lv_example_btn_2.c.s
 
 lvgl/examples/widgets/btn/lv_example_btn_3.o: lvgl/examples/widgets/btn/lv_example_btn_3.c.o
@@ -2822,7 +2822,7 @@ lvgl/examples/widgets/btn/lv_example_btn_3.o: lvgl/examples/widgets/btn/lv_examp
 
 # target to build an object file
 lvgl/examples/widgets/btn/lv_example_btn_3.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/btn/lv_example_btn_3.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/btn/lv_example_btn_3.c.o
 .PHONY : lvgl/examples/widgets/btn/lv_example_btn_3.c.o
 
 lvgl/examples/widgets/btn/lv_example_btn_3.i: lvgl/examples/widgets/btn/lv_example_btn_3.c.i
@@ -2830,7 +2830,7 @@ lvgl/examples/widgets/btn/lv_example_btn_3.i: lvgl/examples/widgets/btn/lv_examp
 
 # target to preprocess a source file
 lvgl/examples/widgets/btn/lv_example_btn_3.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/btn/lv_example_btn_3.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/btn/lv_example_btn_3.c.i
 .PHONY : lvgl/examples/widgets/btn/lv_example_btn_3.c.i
 
 lvgl/examples/widgets/btn/lv_example_btn_3.s: lvgl/examples/widgets/btn/lv_example_btn_3.c.s
@@ -2838,7 +2838,7 @@ lvgl/examples/widgets/btn/lv_example_btn_3.s: lvgl/examples/widgets/btn/lv_examp
 
 # target to generate assembly for a file
 lvgl/examples/widgets/btn/lv_example_btn_3.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/btn/lv_example_btn_3.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/btn/lv_example_btn_3.c.s
 .PHONY : lvgl/examples/widgets/btn/lv_example_btn_3.c.s
 
 lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_1.o: lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_1.c.o
@@ -2846,7 +2846,7 @@ lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_1.o: lvgl/examples/widgets/
 
 # target to build an object file
 lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_1.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_1.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_1.c.o
 .PHONY : lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_1.c.o
 
 lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_1.i: lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_1.c.i
@@ -2854,7 +2854,7 @@ lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_1.i: lvgl/examples/widgets/
 
 # target to preprocess a source file
 lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_1.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_1.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_1.c.i
 .PHONY : lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_1.c.i
 
 lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_1.s: lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_1.c.s
@@ -2862,7 +2862,7 @@ lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_1.s: lvgl/examples/widgets/
 
 # target to generate assembly for a file
 lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_1.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_1.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_1.c.s
 .PHONY : lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_1.c.s
 
 lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_2.o: lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_2.c.o
@@ -2870,7 +2870,7 @@ lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_2.o: lvgl/examples/widgets/
 
 # target to build an object file
 lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_2.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_2.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_2.c.o
 .PHONY : lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_2.c.o
 
 lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_2.i: lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_2.c.i
@@ -2878,7 +2878,7 @@ lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_2.i: lvgl/examples/widgets/
 
 # target to preprocess a source file
 lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_2.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_2.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_2.c.i
 .PHONY : lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_2.c.i
 
 lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_2.s: lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_2.c.s
@@ -2886,7 +2886,7 @@ lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_2.s: lvgl/examples/widgets/
 
 # target to generate assembly for a file
 lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_2.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_2.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_2.c.s
 .PHONY : lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_2.c.s
 
 lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_3.o: lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_3.c.o
@@ -2894,7 +2894,7 @@ lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_3.o: lvgl/examples/widgets/
 
 # target to build an object file
 lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_3.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_3.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_3.c.o
 .PHONY : lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_3.c.o
 
 lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_3.i: lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_3.c.i
@@ -2902,7 +2902,7 @@ lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_3.i: lvgl/examples/widgets/
 
 # target to preprocess a source file
 lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_3.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_3.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_3.c.i
 .PHONY : lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_3.c.i
 
 lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_3.s: lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_3.c.s
@@ -2910,7 +2910,7 @@ lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_3.s: lvgl/examples/widgets/
 
 # target to generate assembly for a file
 lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_3.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_3.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_3.c.s
 .PHONY : lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_3.c.s
 
 lvgl/examples/widgets/calendar/lv_example_calendar_1.o: lvgl/examples/widgets/calendar/lv_example_calendar_1.c.o
@@ -2918,7 +2918,7 @@ lvgl/examples/widgets/calendar/lv_example_calendar_1.o: lvgl/examples/widgets/ca
 
 # target to build an object file
 lvgl/examples/widgets/calendar/lv_example_calendar_1.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/calendar/lv_example_calendar_1.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/calendar/lv_example_calendar_1.c.o
 .PHONY : lvgl/examples/widgets/calendar/lv_example_calendar_1.c.o
 
 lvgl/examples/widgets/calendar/lv_example_calendar_1.i: lvgl/examples/widgets/calendar/lv_example_calendar_1.c.i
@@ -2926,7 +2926,7 @@ lvgl/examples/widgets/calendar/lv_example_calendar_1.i: lvgl/examples/widgets/ca
 
 # target to preprocess a source file
 lvgl/examples/widgets/calendar/lv_example_calendar_1.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/calendar/lv_example_calendar_1.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/calendar/lv_example_calendar_1.c.i
 .PHONY : lvgl/examples/widgets/calendar/lv_example_calendar_1.c.i
 
 lvgl/examples/widgets/calendar/lv_example_calendar_1.s: lvgl/examples/widgets/calendar/lv_example_calendar_1.c.s
@@ -2934,7 +2934,7 @@ lvgl/examples/widgets/calendar/lv_example_calendar_1.s: lvgl/examples/widgets/ca
 
 # target to generate assembly for a file
 lvgl/examples/widgets/calendar/lv_example_calendar_1.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/calendar/lv_example_calendar_1.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/calendar/lv_example_calendar_1.c.s
 .PHONY : lvgl/examples/widgets/calendar/lv_example_calendar_1.c.s
 
 lvgl/examples/widgets/canvas/lv_example_canvas_1.o: lvgl/examples/widgets/canvas/lv_example_canvas_1.c.o
@@ -2942,7 +2942,7 @@ lvgl/examples/widgets/canvas/lv_example_canvas_1.o: lvgl/examples/widgets/canvas
 
 # target to build an object file
 lvgl/examples/widgets/canvas/lv_example_canvas_1.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/canvas/lv_example_canvas_1.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/canvas/lv_example_canvas_1.c.o
 .PHONY : lvgl/examples/widgets/canvas/lv_example_canvas_1.c.o
 
 lvgl/examples/widgets/canvas/lv_example_canvas_1.i: lvgl/examples/widgets/canvas/lv_example_canvas_1.c.i
@@ -2950,7 +2950,7 @@ lvgl/examples/widgets/canvas/lv_example_canvas_1.i: lvgl/examples/widgets/canvas
 
 # target to preprocess a source file
 lvgl/examples/widgets/canvas/lv_example_canvas_1.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/canvas/lv_example_canvas_1.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/canvas/lv_example_canvas_1.c.i
 .PHONY : lvgl/examples/widgets/canvas/lv_example_canvas_1.c.i
 
 lvgl/examples/widgets/canvas/lv_example_canvas_1.s: lvgl/examples/widgets/canvas/lv_example_canvas_1.c.s
@@ -2958,7 +2958,7 @@ lvgl/examples/widgets/canvas/lv_example_canvas_1.s: lvgl/examples/widgets/canvas
 
 # target to generate assembly for a file
 lvgl/examples/widgets/canvas/lv_example_canvas_1.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/canvas/lv_example_canvas_1.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/canvas/lv_example_canvas_1.c.s
 .PHONY : lvgl/examples/widgets/canvas/lv_example_canvas_1.c.s
 
 lvgl/examples/widgets/canvas/lv_example_canvas_2.o: lvgl/examples/widgets/canvas/lv_example_canvas_2.c.o
@@ -2966,7 +2966,7 @@ lvgl/examples/widgets/canvas/lv_example_canvas_2.o: lvgl/examples/widgets/canvas
 
 # target to build an object file
 lvgl/examples/widgets/canvas/lv_example_canvas_2.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/canvas/lv_example_canvas_2.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/canvas/lv_example_canvas_2.c.o
 .PHONY : lvgl/examples/widgets/canvas/lv_example_canvas_2.c.o
 
 lvgl/examples/widgets/canvas/lv_example_canvas_2.i: lvgl/examples/widgets/canvas/lv_example_canvas_2.c.i
@@ -2974,7 +2974,7 @@ lvgl/examples/widgets/canvas/lv_example_canvas_2.i: lvgl/examples/widgets/canvas
 
 # target to preprocess a source file
 lvgl/examples/widgets/canvas/lv_example_canvas_2.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/canvas/lv_example_canvas_2.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/canvas/lv_example_canvas_2.c.i
 .PHONY : lvgl/examples/widgets/canvas/lv_example_canvas_2.c.i
 
 lvgl/examples/widgets/canvas/lv_example_canvas_2.s: lvgl/examples/widgets/canvas/lv_example_canvas_2.c.s
@@ -2982,7 +2982,7 @@ lvgl/examples/widgets/canvas/lv_example_canvas_2.s: lvgl/examples/widgets/canvas
 
 # target to generate assembly for a file
 lvgl/examples/widgets/canvas/lv_example_canvas_2.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/canvas/lv_example_canvas_2.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/canvas/lv_example_canvas_2.c.s
 .PHONY : lvgl/examples/widgets/canvas/lv_example_canvas_2.c.s
 
 lvgl/examples/widgets/chart/lv_example_chart_1.o: lvgl/examples/widgets/chart/lv_example_chart_1.c.o
@@ -2990,7 +2990,7 @@ lvgl/examples/widgets/chart/lv_example_chart_1.o: lvgl/examples/widgets/chart/lv
 
 # target to build an object file
 lvgl/examples/widgets/chart/lv_example_chart_1.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/chart/lv_example_chart_1.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/chart/lv_example_chart_1.c.o
 .PHONY : lvgl/examples/widgets/chart/lv_example_chart_1.c.o
 
 lvgl/examples/widgets/chart/lv_example_chart_1.i: lvgl/examples/widgets/chart/lv_example_chart_1.c.i
@@ -2998,7 +2998,7 @@ lvgl/examples/widgets/chart/lv_example_chart_1.i: lvgl/examples/widgets/chart/lv
 
 # target to preprocess a source file
 lvgl/examples/widgets/chart/lv_example_chart_1.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/chart/lv_example_chart_1.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/chart/lv_example_chart_1.c.i
 .PHONY : lvgl/examples/widgets/chart/lv_example_chart_1.c.i
 
 lvgl/examples/widgets/chart/lv_example_chart_1.s: lvgl/examples/widgets/chart/lv_example_chart_1.c.s
@@ -3006,7 +3006,7 @@ lvgl/examples/widgets/chart/lv_example_chart_1.s: lvgl/examples/widgets/chart/lv
 
 # target to generate assembly for a file
 lvgl/examples/widgets/chart/lv_example_chart_1.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/chart/lv_example_chart_1.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/chart/lv_example_chart_1.c.s
 .PHONY : lvgl/examples/widgets/chart/lv_example_chart_1.c.s
 
 lvgl/examples/widgets/chart/lv_example_chart_2.o: lvgl/examples/widgets/chart/lv_example_chart_2.c.o
@@ -3014,7 +3014,7 @@ lvgl/examples/widgets/chart/lv_example_chart_2.o: lvgl/examples/widgets/chart/lv
 
 # target to build an object file
 lvgl/examples/widgets/chart/lv_example_chart_2.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/chart/lv_example_chart_2.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/chart/lv_example_chart_2.c.o
 .PHONY : lvgl/examples/widgets/chart/lv_example_chart_2.c.o
 
 lvgl/examples/widgets/chart/lv_example_chart_2.i: lvgl/examples/widgets/chart/lv_example_chart_2.c.i
@@ -3022,7 +3022,7 @@ lvgl/examples/widgets/chart/lv_example_chart_2.i: lvgl/examples/widgets/chart/lv
 
 # target to preprocess a source file
 lvgl/examples/widgets/chart/lv_example_chart_2.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/chart/lv_example_chart_2.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/chart/lv_example_chart_2.c.i
 .PHONY : lvgl/examples/widgets/chart/lv_example_chart_2.c.i
 
 lvgl/examples/widgets/chart/lv_example_chart_2.s: lvgl/examples/widgets/chart/lv_example_chart_2.c.s
@@ -3030,7 +3030,7 @@ lvgl/examples/widgets/chart/lv_example_chart_2.s: lvgl/examples/widgets/chart/lv
 
 # target to generate assembly for a file
 lvgl/examples/widgets/chart/lv_example_chart_2.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/chart/lv_example_chart_2.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/chart/lv_example_chart_2.c.s
 .PHONY : lvgl/examples/widgets/chart/lv_example_chart_2.c.s
 
 lvgl/examples/widgets/chart/lv_example_chart_3.o: lvgl/examples/widgets/chart/lv_example_chart_3.c.o
@@ -3038,7 +3038,7 @@ lvgl/examples/widgets/chart/lv_example_chart_3.o: lvgl/examples/widgets/chart/lv
 
 # target to build an object file
 lvgl/examples/widgets/chart/lv_example_chart_3.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/chart/lv_example_chart_3.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/chart/lv_example_chart_3.c.o
 .PHONY : lvgl/examples/widgets/chart/lv_example_chart_3.c.o
 
 lvgl/examples/widgets/chart/lv_example_chart_3.i: lvgl/examples/widgets/chart/lv_example_chart_3.c.i
@@ -3046,7 +3046,7 @@ lvgl/examples/widgets/chart/lv_example_chart_3.i: lvgl/examples/widgets/chart/lv
 
 # target to preprocess a source file
 lvgl/examples/widgets/chart/lv_example_chart_3.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/chart/lv_example_chart_3.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/chart/lv_example_chart_3.c.i
 .PHONY : lvgl/examples/widgets/chart/lv_example_chart_3.c.i
 
 lvgl/examples/widgets/chart/lv_example_chart_3.s: lvgl/examples/widgets/chart/lv_example_chart_3.c.s
@@ -3054,7 +3054,7 @@ lvgl/examples/widgets/chart/lv_example_chart_3.s: lvgl/examples/widgets/chart/lv
 
 # target to generate assembly for a file
 lvgl/examples/widgets/chart/lv_example_chart_3.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/chart/lv_example_chart_3.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/chart/lv_example_chart_3.c.s
 .PHONY : lvgl/examples/widgets/chart/lv_example_chart_3.c.s
 
 lvgl/examples/widgets/chart/lv_example_chart_4.o: lvgl/examples/widgets/chart/lv_example_chart_4.c.o
@@ -3062,7 +3062,7 @@ lvgl/examples/widgets/chart/lv_example_chart_4.o: lvgl/examples/widgets/chart/lv
 
 # target to build an object file
 lvgl/examples/widgets/chart/lv_example_chart_4.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/chart/lv_example_chart_4.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/chart/lv_example_chart_4.c.o
 .PHONY : lvgl/examples/widgets/chart/lv_example_chart_4.c.o
 
 lvgl/examples/widgets/chart/lv_example_chart_4.i: lvgl/examples/widgets/chart/lv_example_chart_4.c.i
@@ -3070,7 +3070,7 @@ lvgl/examples/widgets/chart/lv_example_chart_4.i: lvgl/examples/widgets/chart/lv
 
 # target to preprocess a source file
 lvgl/examples/widgets/chart/lv_example_chart_4.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/chart/lv_example_chart_4.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/chart/lv_example_chart_4.c.i
 .PHONY : lvgl/examples/widgets/chart/lv_example_chart_4.c.i
 
 lvgl/examples/widgets/chart/lv_example_chart_4.s: lvgl/examples/widgets/chart/lv_example_chart_4.c.s
@@ -3078,7 +3078,7 @@ lvgl/examples/widgets/chart/lv_example_chart_4.s: lvgl/examples/widgets/chart/lv
 
 # target to generate assembly for a file
 lvgl/examples/widgets/chart/lv_example_chart_4.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/chart/lv_example_chart_4.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/chart/lv_example_chart_4.c.s
 .PHONY : lvgl/examples/widgets/chart/lv_example_chart_4.c.s
 
 lvgl/examples/widgets/chart/lv_example_chart_5.o: lvgl/examples/widgets/chart/lv_example_chart_5.c.o
@@ -3086,7 +3086,7 @@ lvgl/examples/widgets/chart/lv_example_chart_5.o: lvgl/examples/widgets/chart/lv
 
 # target to build an object file
 lvgl/examples/widgets/chart/lv_example_chart_5.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/chart/lv_example_chart_5.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/chart/lv_example_chart_5.c.o
 .PHONY : lvgl/examples/widgets/chart/lv_example_chart_5.c.o
 
 lvgl/examples/widgets/chart/lv_example_chart_5.i: lvgl/examples/widgets/chart/lv_example_chart_5.c.i
@@ -3094,7 +3094,7 @@ lvgl/examples/widgets/chart/lv_example_chart_5.i: lvgl/examples/widgets/chart/lv
 
 # target to preprocess a source file
 lvgl/examples/widgets/chart/lv_example_chart_5.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/chart/lv_example_chart_5.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/chart/lv_example_chart_5.c.i
 .PHONY : lvgl/examples/widgets/chart/lv_example_chart_5.c.i
 
 lvgl/examples/widgets/chart/lv_example_chart_5.s: lvgl/examples/widgets/chart/lv_example_chart_5.c.s
@@ -3102,7 +3102,7 @@ lvgl/examples/widgets/chart/lv_example_chart_5.s: lvgl/examples/widgets/chart/lv
 
 # target to generate assembly for a file
 lvgl/examples/widgets/chart/lv_example_chart_5.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/chart/lv_example_chart_5.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/chart/lv_example_chart_5.c.s
 .PHONY : lvgl/examples/widgets/chart/lv_example_chart_5.c.s
 
 lvgl/examples/widgets/chart/lv_example_chart_6.o: lvgl/examples/widgets/chart/lv_example_chart_6.c.o
@@ -3110,7 +3110,7 @@ lvgl/examples/widgets/chart/lv_example_chart_6.o: lvgl/examples/widgets/chart/lv
 
 # target to build an object file
 lvgl/examples/widgets/chart/lv_example_chart_6.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/chart/lv_example_chart_6.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/chart/lv_example_chart_6.c.o
 .PHONY : lvgl/examples/widgets/chart/lv_example_chart_6.c.o
 
 lvgl/examples/widgets/chart/lv_example_chart_6.i: lvgl/examples/widgets/chart/lv_example_chart_6.c.i
@@ -3118,7 +3118,7 @@ lvgl/examples/widgets/chart/lv_example_chart_6.i: lvgl/examples/widgets/chart/lv
 
 # target to preprocess a source file
 lvgl/examples/widgets/chart/lv_example_chart_6.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/chart/lv_example_chart_6.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/chart/lv_example_chart_6.c.i
 .PHONY : lvgl/examples/widgets/chart/lv_example_chart_6.c.i
 
 lvgl/examples/widgets/chart/lv_example_chart_6.s: lvgl/examples/widgets/chart/lv_example_chart_6.c.s
@@ -3126,7 +3126,7 @@ lvgl/examples/widgets/chart/lv_example_chart_6.s: lvgl/examples/widgets/chart/lv
 
 # target to generate assembly for a file
 lvgl/examples/widgets/chart/lv_example_chart_6.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/chart/lv_example_chart_6.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/chart/lv_example_chart_6.c.s
 .PHONY : lvgl/examples/widgets/chart/lv_example_chart_6.c.s
 
 lvgl/examples/widgets/checkbox/lv_example_checkbox_1.o: lvgl/examples/widgets/checkbox/lv_example_checkbox_1.c.o
@@ -3134,7 +3134,7 @@ lvgl/examples/widgets/checkbox/lv_example_checkbox_1.o: lvgl/examples/widgets/ch
 
 # target to build an object file
 lvgl/examples/widgets/checkbox/lv_example_checkbox_1.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/checkbox/lv_example_checkbox_1.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/checkbox/lv_example_checkbox_1.c.o
 .PHONY : lvgl/examples/widgets/checkbox/lv_example_checkbox_1.c.o
 
 lvgl/examples/widgets/checkbox/lv_example_checkbox_1.i: lvgl/examples/widgets/checkbox/lv_example_checkbox_1.c.i
@@ -3142,7 +3142,7 @@ lvgl/examples/widgets/checkbox/lv_example_checkbox_1.i: lvgl/examples/widgets/ch
 
 # target to preprocess a source file
 lvgl/examples/widgets/checkbox/lv_example_checkbox_1.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/checkbox/lv_example_checkbox_1.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/checkbox/lv_example_checkbox_1.c.i
 .PHONY : lvgl/examples/widgets/checkbox/lv_example_checkbox_1.c.i
 
 lvgl/examples/widgets/checkbox/lv_example_checkbox_1.s: lvgl/examples/widgets/checkbox/lv_example_checkbox_1.c.s
@@ -3150,7 +3150,7 @@ lvgl/examples/widgets/checkbox/lv_example_checkbox_1.s: lvgl/examples/widgets/ch
 
 # target to generate assembly for a file
 lvgl/examples/widgets/checkbox/lv_example_checkbox_1.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/checkbox/lv_example_checkbox_1.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/checkbox/lv_example_checkbox_1.c.s
 .PHONY : lvgl/examples/widgets/checkbox/lv_example_checkbox_1.c.s
 
 lvgl/examples/widgets/colorwheel/lv_example_colorwheel_1.o: lvgl/examples/widgets/colorwheel/lv_example_colorwheel_1.c.o
@@ -3158,7 +3158,7 @@ lvgl/examples/widgets/colorwheel/lv_example_colorwheel_1.o: lvgl/examples/widget
 
 # target to build an object file
 lvgl/examples/widgets/colorwheel/lv_example_colorwheel_1.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/colorwheel/lv_example_colorwheel_1.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/colorwheel/lv_example_colorwheel_1.c.o
 .PHONY : lvgl/examples/widgets/colorwheel/lv_example_colorwheel_1.c.o
 
 lvgl/examples/widgets/colorwheel/lv_example_colorwheel_1.i: lvgl/examples/widgets/colorwheel/lv_example_colorwheel_1.c.i
@@ -3166,7 +3166,7 @@ lvgl/examples/widgets/colorwheel/lv_example_colorwheel_1.i: lvgl/examples/widget
 
 # target to preprocess a source file
 lvgl/examples/widgets/colorwheel/lv_example_colorwheel_1.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/colorwheel/lv_example_colorwheel_1.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/colorwheel/lv_example_colorwheel_1.c.i
 .PHONY : lvgl/examples/widgets/colorwheel/lv_example_colorwheel_1.c.i
 
 lvgl/examples/widgets/colorwheel/lv_example_colorwheel_1.s: lvgl/examples/widgets/colorwheel/lv_example_colorwheel_1.c.s
@@ -3174,7 +3174,7 @@ lvgl/examples/widgets/colorwheel/lv_example_colorwheel_1.s: lvgl/examples/widget
 
 # target to generate assembly for a file
 lvgl/examples/widgets/colorwheel/lv_example_colorwheel_1.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/colorwheel/lv_example_colorwheel_1.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/colorwheel/lv_example_colorwheel_1.c.s
 .PHONY : lvgl/examples/widgets/colorwheel/lv_example_colorwheel_1.c.s
 
 lvgl/examples/widgets/dropdown/lv_example_dropdown_1.o: lvgl/examples/widgets/dropdown/lv_example_dropdown_1.c.o
@@ -3182,7 +3182,7 @@ lvgl/examples/widgets/dropdown/lv_example_dropdown_1.o: lvgl/examples/widgets/dr
 
 # target to build an object file
 lvgl/examples/widgets/dropdown/lv_example_dropdown_1.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/dropdown/lv_example_dropdown_1.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/dropdown/lv_example_dropdown_1.c.o
 .PHONY : lvgl/examples/widgets/dropdown/lv_example_dropdown_1.c.o
 
 lvgl/examples/widgets/dropdown/lv_example_dropdown_1.i: lvgl/examples/widgets/dropdown/lv_example_dropdown_1.c.i
@@ -3190,7 +3190,7 @@ lvgl/examples/widgets/dropdown/lv_example_dropdown_1.i: lvgl/examples/widgets/dr
 
 # target to preprocess a source file
 lvgl/examples/widgets/dropdown/lv_example_dropdown_1.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/dropdown/lv_example_dropdown_1.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/dropdown/lv_example_dropdown_1.c.i
 .PHONY : lvgl/examples/widgets/dropdown/lv_example_dropdown_1.c.i
 
 lvgl/examples/widgets/dropdown/lv_example_dropdown_1.s: lvgl/examples/widgets/dropdown/lv_example_dropdown_1.c.s
@@ -3198,7 +3198,7 @@ lvgl/examples/widgets/dropdown/lv_example_dropdown_1.s: lvgl/examples/widgets/dr
 
 # target to generate assembly for a file
 lvgl/examples/widgets/dropdown/lv_example_dropdown_1.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/dropdown/lv_example_dropdown_1.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/dropdown/lv_example_dropdown_1.c.s
 .PHONY : lvgl/examples/widgets/dropdown/lv_example_dropdown_1.c.s
 
 lvgl/examples/widgets/dropdown/lv_example_dropdown_2.o: lvgl/examples/widgets/dropdown/lv_example_dropdown_2.c.o
@@ -3206,7 +3206,7 @@ lvgl/examples/widgets/dropdown/lv_example_dropdown_2.o: lvgl/examples/widgets/dr
 
 # target to build an object file
 lvgl/examples/widgets/dropdown/lv_example_dropdown_2.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/dropdown/lv_example_dropdown_2.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/dropdown/lv_example_dropdown_2.c.o
 .PHONY : lvgl/examples/widgets/dropdown/lv_example_dropdown_2.c.o
 
 lvgl/examples/widgets/dropdown/lv_example_dropdown_2.i: lvgl/examples/widgets/dropdown/lv_example_dropdown_2.c.i
@@ -3214,7 +3214,7 @@ lvgl/examples/widgets/dropdown/lv_example_dropdown_2.i: lvgl/examples/widgets/dr
 
 # target to preprocess a source file
 lvgl/examples/widgets/dropdown/lv_example_dropdown_2.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/dropdown/lv_example_dropdown_2.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/dropdown/lv_example_dropdown_2.c.i
 .PHONY : lvgl/examples/widgets/dropdown/lv_example_dropdown_2.c.i
 
 lvgl/examples/widgets/dropdown/lv_example_dropdown_2.s: lvgl/examples/widgets/dropdown/lv_example_dropdown_2.c.s
@@ -3222,7 +3222,7 @@ lvgl/examples/widgets/dropdown/lv_example_dropdown_2.s: lvgl/examples/widgets/dr
 
 # target to generate assembly for a file
 lvgl/examples/widgets/dropdown/lv_example_dropdown_2.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/dropdown/lv_example_dropdown_2.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/dropdown/lv_example_dropdown_2.c.s
 .PHONY : lvgl/examples/widgets/dropdown/lv_example_dropdown_2.c.s
 
 lvgl/examples/widgets/dropdown/lv_example_dropdown_3.o: lvgl/examples/widgets/dropdown/lv_example_dropdown_3.c.o
@@ -3230,7 +3230,7 @@ lvgl/examples/widgets/dropdown/lv_example_dropdown_3.o: lvgl/examples/widgets/dr
 
 # target to build an object file
 lvgl/examples/widgets/dropdown/lv_example_dropdown_3.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/dropdown/lv_example_dropdown_3.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/dropdown/lv_example_dropdown_3.c.o
 .PHONY : lvgl/examples/widgets/dropdown/lv_example_dropdown_3.c.o
 
 lvgl/examples/widgets/dropdown/lv_example_dropdown_3.i: lvgl/examples/widgets/dropdown/lv_example_dropdown_3.c.i
@@ -3238,7 +3238,7 @@ lvgl/examples/widgets/dropdown/lv_example_dropdown_3.i: lvgl/examples/widgets/dr
 
 # target to preprocess a source file
 lvgl/examples/widgets/dropdown/lv_example_dropdown_3.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/dropdown/lv_example_dropdown_3.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/dropdown/lv_example_dropdown_3.c.i
 .PHONY : lvgl/examples/widgets/dropdown/lv_example_dropdown_3.c.i
 
 lvgl/examples/widgets/dropdown/lv_example_dropdown_3.s: lvgl/examples/widgets/dropdown/lv_example_dropdown_3.c.s
@@ -3246,7 +3246,7 @@ lvgl/examples/widgets/dropdown/lv_example_dropdown_3.s: lvgl/examples/widgets/dr
 
 # target to generate assembly for a file
 lvgl/examples/widgets/dropdown/lv_example_dropdown_3.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/dropdown/lv_example_dropdown_3.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/dropdown/lv_example_dropdown_3.c.s
 .PHONY : lvgl/examples/widgets/dropdown/lv_example_dropdown_3.c.s
 
 lvgl/examples/widgets/img/lv_example_img_1.o: lvgl/examples/widgets/img/lv_example_img_1.c.o
@@ -3254,7 +3254,7 @@ lvgl/examples/widgets/img/lv_example_img_1.o: lvgl/examples/widgets/img/lv_examp
 
 # target to build an object file
 lvgl/examples/widgets/img/lv_example_img_1.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/img/lv_example_img_1.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/img/lv_example_img_1.c.o
 .PHONY : lvgl/examples/widgets/img/lv_example_img_1.c.o
 
 lvgl/examples/widgets/img/lv_example_img_1.i: lvgl/examples/widgets/img/lv_example_img_1.c.i
@@ -3262,7 +3262,7 @@ lvgl/examples/widgets/img/lv_example_img_1.i: lvgl/examples/widgets/img/lv_examp
 
 # target to preprocess a source file
 lvgl/examples/widgets/img/lv_example_img_1.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/img/lv_example_img_1.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/img/lv_example_img_1.c.i
 .PHONY : lvgl/examples/widgets/img/lv_example_img_1.c.i
 
 lvgl/examples/widgets/img/lv_example_img_1.s: lvgl/examples/widgets/img/lv_example_img_1.c.s
@@ -3270,7 +3270,7 @@ lvgl/examples/widgets/img/lv_example_img_1.s: lvgl/examples/widgets/img/lv_examp
 
 # target to generate assembly for a file
 lvgl/examples/widgets/img/lv_example_img_1.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/img/lv_example_img_1.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/img/lv_example_img_1.c.s
 .PHONY : lvgl/examples/widgets/img/lv_example_img_1.c.s
 
 lvgl/examples/widgets/img/lv_example_img_2.o: lvgl/examples/widgets/img/lv_example_img_2.c.o
@@ -3278,7 +3278,7 @@ lvgl/examples/widgets/img/lv_example_img_2.o: lvgl/examples/widgets/img/lv_examp
 
 # target to build an object file
 lvgl/examples/widgets/img/lv_example_img_2.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/img/lv_example_img_2.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/img/lv_example_img_2.c.o
 .PHONY : lvgl/examples/widgets/img/lv_example_img_2.c.o
 
 lvgl/examples/widgets/img/lv_example_img_2.i: lvgl/examples/widgets/img/lv_example_img_2.c.i
@@ -3286,7 +3286,7 @@ lvgl/examples/widgets/img/lv_example_img_2.i: lvgl/examples/widgets/img/lv_examp
 
 # target to preprocess a source file
 lvgl/examples/widgets/img/lv_example_img_2.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/img/lv_example_img_2.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/img/lv_example_img_2.c.i
 .PHONY : lvgl/examples/widgets/img/lv_example_img_2.c.i
 
 lvgl/examples/widgets/img/lv_example_img_2.s: lvgl/examples/widgets/img/lv_example_img_2.c.s
@@ -3294,7 +3294,7 @@ lvgl/examples/widgets/img/lv_example_img_2.s: lvgl/examples/widgets/img/lv_examp
 
 # target to generate assembly for a file
 lvgl/examples/widgets/img/lv_example_img_2.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/img/lv_example_img_2.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/img/lv_example_img_2.c.s
 .PHONY : lvgl/examples/widgets/img/lv_example_img_2.c.s
 
 lvgl/examples/widgets/img/lv_example_img_3.o: lvgl/examples/widgets/img/lv_example_img_3.c.o
@@ -3302,7 +3302,7 @@ lvgl/examples/widgets/img/lv_example_img_3.o: lvgl/examples/widgets/img/lv_examp
 
 # target to build an object file
 lvgl/examples/widgets/img/lv_example_img_3.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/img/lv_example_img_3.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/img/lv_example_img_3.c.o
 .PHONY : lvgl/examples/widgets/img/lv_example_img_3.c.o
 
 lvgl/examples/widgets/img/lv_example_img_3.i: lvgl/examples/widgets/img/lv_example_img_3.c.i
@@ -3310,7 +3310,7 @@ lvgl/examples/widgets/img/lv_example_img_3.i: lvgl/examples/widgets/img/lv_examp
 
 # target to preprocess a source file
 lvgl/examples/widgets/img/lv_example_img_3.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/img/lv_example_img_3.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/img/lv_example_img_3.c.i
 .PHONY : lvgl/examples/widgets/img/lv_example_img_3.c.i
 
 lvgl/examples/widgets/img/lv_example_img_3.s: lvgl/examples/widgets/img/lv_example_img_3.c.s
@@ -3318,7 +3318,7 @@ lvgl/examples/widgets/img/lv_example_img_3.s: lvgl/examples/widgets/img/lv_examp
 
 # target to generate assembly for a file
 lvgl/examples/widgets/img/lv_example_img_3.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/img/lv_example_img_3.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/img/lv_example_img_3.c.s
 .PHONY : lvgl/examples/widgets/img/lv_example_img_3.c.s
 
 lvgl/examples/widgets/img/lv_example_img_4.o: lvgl/examples/widgets/img/lv_example_img_4.c.o
@@ -3326,7 +3326,7 @@ lvgl/examples/widgets/img/lv_example_img_4.o: lvgl/examples/widgets/img/lv_examp
 
 # target to build an object file
 lvgl/examples/widgets/img/lv_example_img_4.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/img/lv_example_img_4.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/img/lv_example_img_4.c.o
 .PHONY : lvgl/examples/widgets/img/lv_example_img_4.c.o
 
 lvgl/examples/widgets/img/lv_example_img_4.i: lvgl/examples/widgets/img/lv_example_img_4.c.i
@@ -3334,7 +3334,7 @@ lvgl/examples/widgets/img/lv_example_img_4.i: lvgl/examples/widgets/img/lv_examp
 
 # target to preprocess a source file
 lvgl/examples/widgets/img/lv_example_img_4.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/img/lv_example_img_4.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/img/lv_example_img_4.c.i
 .PHONY : lvgl/examples/widgets/img/lv_example_img_4.c.i
 
 lvgl/examples/widgets/img/lv_example_img_4.s: lvgl/examples/widgets/img/lv_example_img_4.c.s
@@ -3342,7 +3342,7 @@ lvgl/examples/widgets/img/lv_example_img_4.s: lvgl/examples/widgets/img/lv_examp
 
 # target to generate assembly for a file
 lvgl/examples/widgets/img/lv_example_img_4.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/img/lv_example_img_4.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/img/lv_example_img_4.c.s
 .PHONY : lvgl/examples/widgets/img/lv_example_img_4.c.s
 
 lvgl/examples/widgets/imgbtn/lv_example_imgbtn_1.o: lvgl/examples/widgets/imgbtn/lv_example_imgbtn_1.c.o
@@ -3350,7 +3350,7 @@ lvgl/examples/widgets/imgbtn/lv_example_imgbtn_1.o: lvgl/examples/widgets/imgbtn
 
 # target to build an object file
 lvgl/examples/widgets/imgbtn/lv_example_imgbtn_1.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/imgbtn/lv_example_imgbtn_1.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/imgbtn/lv_example_imgbtn_1.c.o
 .PHONY : lvgl/examples/widgets/imgbtn/lv_example_imgbtn_1.c.o
 
 lvgl/examples/widgets/imgbtn/lv_example_imgbtn_1.i: lvgl/examples/widgets/imgbtn/lv_example_imgbtn_1.c.i
@@ -3358,7 +3358,7 @@ lvgl/examples/widgets/imgbtn/lv_example_imgbtn_1.i: lvgl/examples/widgets/imgbtn
 
 # target to preprocess a source file
 lvgl/examples/widgets/imgbtn/lv_example_imgbtn_1.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/imgbtn/lv_example_imgbtn_1.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/imgbtn/lv_example_imgbtn_1.c.i
 .PHONY : lvgl/examples/widgets/imgbtn/lv_example_imgbtn_1.c.i
 
 lvgl/examples/widgets/imgbtn/lv_example_imgbtn_1.s: lvgl/examples/widgets/imgbtn/lv_example_imgbtn_1.c.s
@@ -3366,7 +3366,7 @@ lvgl/examples/widgets/imgbtn/lv_example_imgbtn_1.s: lvgl/examples/widgets/imgbtn
 
 # target to generate assembly for a file
 lvgl/examples/widgets/imgbtn/lv_example_imgbtn_1.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/imgbtn/lv_example_imgbtn_1.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/imgbtn/lv_example_imgbtn_1.c.s
 .PHONY : lvgl/examples/widgets/imgbtn/lv_example_imgbtn_1.c.s
 
 lvgl/examples/widgets/keyboard/lv_example_keyboard_1.o: lvgl/examples/widgets/keyboard/lv_example_keyboard_1.c.o
@@ -3374,7 +3374,7 @@ lvgl/examples/widgets/keyboard/lv_example_keyboard_1.o: lvgl/examples/widgets/ke
 
 # target to build an object file
 lvgl/examples/widgets/keyboard/lv_example_keyboard_1.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/keyboard/lv_example_keyboard_1.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/keyboard/lv_example_keyboard_1.c.o
 .PHONY : lvgl/examples/widgets/keyboard/lv_example_keyboard_1.c.o
 
 lvgl/examples/widgets/keyboard/lv_example_keyboard_1.i: lvgl/examples/widgets/keyboard/lv_example_keyboard_1.c.i
@@ -3382,7 +3382,7 @@ lvgl/examples/widgets/keyboard/lv_example_keyboard_1.i: lvgl/examples/widgets/ke
 
 # target to preprocess a source file
 lvgl/examples/widgets/keyboard/lv_example_keyboard_1.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/keyboard/lv_example_keyboard_1.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/keyboard/lv_example_keyboard_1.c.i
 .PHONY : lvgl/examples/widgets/keyboard/lv_example_keyboard_1.c.i
 
 lvgl/examples/widgets/keyboard/lv_example_keyboard_1.s: lvgl/examples/widgets/keyboard/lv_example_keyboard_1.c.s
@@ -3390,7 +3390,7 @@ lvgl/examples/widgets/keyboard/lv_example_keyboard_1.s: lvgl/examples/widgets/ke
 
 # target to generate assembly for a file
 lvgl/examples/widgets/keyboard/lv_example_keyboard_1.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/keyboard/lv_example_keyboard_1.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/keyboard/lv_example_keyboard_1.c.s
 .PHONY : lvgl/examples/widgets/keyboard/lv_example_keyboard_1.c.s
 
 lvgl/examples/widgets/label/lv_example_label_1.o: lvgl/examples/widgets/label/lv_example_label_1.c.o
@@ -3398,7 +3398,7 @@ lvgl/examples/widgets/label/lv_example_label_1.o: lvgl/examples/widgets/label/lv
 
 # target to build an object file
 lvgl/examples/widgets/label/lv_example_label_1.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/label/lv_example_label_1.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/label/lv_example_label_1.c.o
 .PHONY : lvgl/examples/widgets/label/lv_example_label_1.c.o
 
 lvgl/examples/widgets/label/lv_example_label_1.i: lvgl/examples/widgets/label/lv_example_label_1.c.i
@@ -3406,7 +3406,7 @@ lvgl/examples/widgets/label/lv_example_label_1.i: lvgl/examples/widgets/label/lv
 
 # target to preprocess a source file
 lvgl/examples/widgets/label/lv_example_label_1.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/label/lv_example_label_1.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/label/lv_example_label_1.c.i
 .PHONY : lvgl/examples/widgets/label/lv_example_label_1.c.i
 
 lvgl/examples/widgets/label/lv_example_label_1.s: lvgl/examples/widgets/label/lv_example_label_1.c.s
@@ -3414,7 +3414,7 @@ lvgl/examples/widgets/label/lv_example_label_1.s: lvgl/examples/widgets/label/lv
 
 # target to generate assembly for a file
 lvgl/examples/widgets/label/lv_example_label_1.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/label/lv_example_label_1.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/label/lv_example_label_1.c.s
 .PHONY : lvgl/examples/widgets/label/lv_example_label_1.c.s
 
 lvgl/examples/widgets/label/lv_example_label_2.o: lvgl/examples/widgets/label/lv_example_label_2.c.o
@@ -3422,7 +3422,7 @@ lvgl/examples/widgets/label/lv_example_label_2.o: lvgl/examples/widgets/label/lv
 
 # target to build an object file
 lvgl/examples/widgets/label/lv_example_label_2.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/label/lv_example_label_2.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/label/lv_example_label_2.c.o
 .PHONY : lvgl/examples/widgets/label/lv_example_label_2.c.o
 
 lvgl/examples/widgets/label/lv_example_label_2.i: lvgl/examples/widgets/label/lv_example_label_2.c.i
@@ -3430,7 +3430,7 @@ lvgl/examples/widgets/label/lv_example_label_2.i: lvgl/examples/widgets/label/lv
 
 # target to preprocess a source file
 lvgl/examples/widgets/label/lv_example_label_2.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/label/lv_example_label_2.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/label/lv_example_label_2.c.i
 .PHONY : lvgl/examples/widgets/label/lv_example_label_2.c.i
 
 lvgl/examples/widgets/label/lv_example_label_2.s: lvgl/examples/widgets/label/lv_example_label_2.c.s
@@ -3438,7 +3438,7 @@ lvgl/examples/widgets/label/lv_example_label_2.s: lvgl/examples/widgets/label/lv
 
 # target to generate assembly for a file
 lvgl/examples/widgets/label/lv_example_label_2.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/label/lv_example_label_2.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/label/lv_example_label_2.c.s
 .PHONY : lvgl/examples/widgets/label/lv_example_label_2.c.s
 
 lvgl/examples/widgets/led/lv_example_led_1.o: lvgl/examples/widgets/led/lv_example_led_1.c.o
@@ -3446,7 +3446,7 @@ lvgl/examples/widgets/led/lv_example_led_1.o: lvgl/examples/widgets/led/lv_examp
 
 # target to build an object file
 lvgl/examples/widgets/led/lv_example_led_1.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/led/lv_example_led_1.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/led/lv_example_led_1.c.o
 .PHONY : lvgl/examples/widgets/led/lv_example_led_1.c.o
 
 lvgl/examples/widgets/led/lv_example_led_1.i: lvgl/examples/widgets/led/lv_example_led_1.c.i
@@ -3454,7 +3454,7 @@ lvgl/examples/widgets/led/lv_example_led_1.i: lvgl/examples/widgets/led/lv_examp
 
 # target to preprocess a source file
 lvgl/examples/widgets/led/lv_example_led_1.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/led/lv_example_led_1.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/led/lv_example_led_1.c.i
 .PHONY : lvgl/examples/widgets/led/lv_example_led_1.c.i
 
 lvgl/examples/widgets/led/lv_example_led_1.s: lvgl/examples/widgets/led/lv_example_led_1.c.s
@@ -3462,7 +3462,7 @@ lvgl/examples/widgets/led/lv_example_led_1.s: lvgl/examples/widgets/led/lv_examp
 
 # target to generate assembly for a file
 lvgl/examples/widgets/led/lv_example_led_1.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/led/lv_example_led_1.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/led/lv_example_led_1.c.s
 .PHONY : lvgl/examples/widgets/led/lv_example_led_1.c.s
 
 lvgl/examples/widgets/line/lv_example_line_1.o: lvgl/examples/widgets/line/lv_example_line_1.c.o
@@ -3470,7 +3470,7 @@ lvgl/examples/widgets/line/lv_example_line_1.o: lvgl/examples/widgets/line/lv_ex
 
 # target to build an object file
 lvgl/examples/widgets/line/lv_example_line_1.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/line/lv_example_line_1.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/line/lv_example_line_1.c.o
 .PHONY : lvgl/examples/widgets/line/lv_example_line_1.c.o
 
 lvgl/examples/widgets/line/lv_example_line_1.i: lvgl/examples/widgets/line/lv_example_line_1.c.i
@@ -3478,7 +3478,7 @@ lvgl/examples/widgets/line/lv_example_line_1.i: lvgl/examples/widgets/line/lv_ex
 
 # target to preprocess a source file
 lvgl/examples/widgets/line/lv_example_line_1.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/line/lv_example_line_1.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/line/lv_example_line_1.c.i
 .PHONY : lvgl/examples/widgets/line/lv_example_line_1.c.i
 
 lvgl/examples/widgets/line/lv_example_line_1.s: lvgl/examples/widgets/line/lv_example_line_1.c.s
@@ -3486,7 +3486,7 @@ lvgl/examples/widgets/line/lv_example_line_1.s: lvgl/examples/widgets/line/lv_ex
 
 # target to generate assembly for a file
 lvgl/examples/widgets/line/lv_example_line_1.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/line/lv_example_line_1.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/line/lv_example_line_1.c.s
 .PHONY : lvgl/examples/widgets/line/lv_example_line_1.c.s
 
 lvgl/examples/widgets/list/lv_example_list_1.o: lvgl/examples/widgets/list/lv_example_list_1.c.o
@@ -3494,7 +3494,7 @@ lvgl/examples/widgets/list/lv_example_list_1.o: lvgl/examples/widgets/list/lv_ex
 
 # target to build an object file
 lvgl/examples/widgets/list/lv_example_list_1.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/list/lv_example_list_1.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/list/lv_example_list_1.c.o
 .PHONY : lvgl/examples/widgets/list/lv_example_list_1.c.o
 
 lvgl/examples/widgets/list/lv_example_list_1.i: lvgl/examples/widgets/list/lv_example_list_1.c.i
@@ -3502,7 +3502,7 @@ lvgl/examples/widgets/list/lv_example_list_1.i: lvgl/examples/widgets/list/lv_ex
 
 # target to preprocess a source file
 lvgl/examples/widgets/list/lv_example_list_1.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/list/lv_example_list_1.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/list/lv_example_list_1.c.i
 .PHONY : lvgl/examples/widgets/list/lv_example_list_1.c.i
 
 lvgl/examples/widgets/list/lv_example_list_1.s: lvgl/examples/widgets/list/lv_example_list_1.c.s
@@ -3510,7 +3510,7 @@ lvgl/examples/widgets/list/lv_example_list_1.s: lvgl/examples/widgets/list/lv_ex
 
 # target to generate assembly for a file
 lvgl/examples/widgets/list/lv_example_list_1.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/list/lv_example_list_1.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/list/lv_example_list_1.c.s
 .PHONY : lvgl/examples/widgets/list/lv_example_list_1.c.s
 
 lvgl/examples/widgets/meter/lv_example_meter_1.o: lvgl/examples/widgets/meter/lv_example_meter_1.c.o
@@ -3518,7 +3518,7 @@ lvgl/examples/widgets/meter/lv_example_meter_1.o: lvgl/examples/widgets/meter/lv
 
 # target to build an object file
 lvgl/examples/widgets/meter/lv_example_meter_1.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/meter/lv_example_meter_1.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/meter/lv_example_meter_1.c.o
 .PHONY : lvgl/examples/widgets/meter/lv_example_meter_1.c.o
 
 lvgl/examples/widgets/meter/lv_example_meter_1.i: lvgl/examples/widgets/meter/lv_example_meter_1.c.i
@@ -3526,7 +3526,7 @@ lvgl/examples/widgets/meter/lv_example_meter_1.i: lvgl/examples/widgets/meter/lv
 
 # target to preprocess a source file
 lvgl/examples/widgets/meter/lv_example_meter_1.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/meter/lv_example_meter_1.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/meter/lv_example_meter_1.c.i
 .PHONY : lvgl/examples/widgets/meter/lv_example_meter_1.c.i
 
 lvgl/examples/widgets/meter/lv_example_meter_1.s: lvgl/examples/widgets/meter/lv_example_meter_1.c.s
@@ -3534,7 +3534,7 @@ lvgl/examples/widgets/meter/lv_example_meter_1.s: lvgl/examples/widgets/meter/lv
 
 # target to generate assembly for a file
 lvgl/examples/widgets/meter/lv_example_meter_1.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/meter/lv_example_meter_1.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/meter/lv_example_meter_1.c.s
 .PHONY : lvgl/examples/widgets/meter/lv_example_meter_1.c.s
 
 lvgl/examples/widgets/meter/lv_example_meter_2.o: lvgl/examples/widgets/meter/lv_example_meter_2.c.o
@@ -3542,7 +3542,7 @@ lvgl/examples/widgets/meter/lv_example_meter_2.o: lvgl/examples/widgets/meter/lv
 
 # target to build an object file
 lvgl/examples/widgets/meter/lv_example_meter_2.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/meter/lv_example_meter_2.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/meter/lv_example_meter_2.c.o
 .PHONY : lvgl/examples/widgets/meter/lv_example_meter_2.c.o
 
 lvgl/examples/widgets/meter/lv_example_meter_2.i: lvgl/examples/widgets/meter/lv_example_meter_2.c.i
@@ -3550,7 +3550,7 @@ lvgl/examples/widgets/meter/lv_example_meter_2.i: lvgl/examples/widgets/meter/lv
 
 # target to preprocess a source file
 lvgl/examples/widgets/meter/lv_example_meter_2.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/meter/lv_example_meter_2.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/meter/lv_example_meter_2.c.i
 .PHONY : lvgl/examples/widgets/meter/lv_example_meter_2.c.i
 
 lvgl/examples/widgets/meter/lv_example_meter_2.s: lvgl/examples/widgets/meter/lv_example_meter_2.c.s
@@ -3558,7 +3558,7 @@ lvgl/examples/widgets/meter/lv_example_meter_2.s: lvgl/examples/widgets/meter/lv
 
 # target to generate assembly for a file
 lvgl/examples/widgets/meter/lv_example_meter_2.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/meter/lv_example_meter_2.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/meter/lv_example_meter_2.c.s
 .PHONY : lvgl/examples/widgets/meter/lv_example_meter_2.c.s
 
 lvgl/examples/widgets/meter/lv_example_meter_3.o: lvgl/examples/widgets/meter/lv_example_meter_3.c.o
@@ -3566,7 +3566,7 @@ lvgl/examples/widgets/meter/lv_example_meter_3.o: lvgl/examples/widgets/meter/lv
 
 # target to build an object file
 lvgl/examples/widgets/meter/lv_example_meter_3.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/meter/lv_example_meter_3.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/meter/lv_example_meter_3.c.o
 .PHONY : lvgl/examples/widgets/meter/lv_example_meter_3.c.o
 
 lvgl/examples/widgets/meter/lv_example_meter_3.i: lvgl/examples/widgets/meter/lv_example_meter_3.c.i
@@ -3574,7 +3574,7 @@ lvgl/examples/widgets/meter/lv_example_meter_3.i: lvgl/examples/widgets/meter/lv
 
 # target to preprocess a source file
 lvgl/examples/widgets/meter/lv_example_meter_3.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/meter/lv_example_meter_3.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/meter/lv_example_meter_3.c.i
 .PHONY : lvgl/examples/widgets/meter/lv_example_meter_3.c.i
 
 lvgl/examples/widgets/meter/lv_example_meter_3.s: lvgl/examples/widgets/meter/lv_example_meter_3.c.s
@@ -3582,7 +3582,7 @@ lvgl/examples/widgets/meter/lv_example_meter_3.s: lvgl/examples/widgets/meter/lv
 
 # target to generate assembly for a file
 lvgl/examples/widgets/meter/lv_example_meter_3.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/meter/lv_example_meter_3.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/meter/lv_example_meter_3.c.s
 .PHONY : lvgl/examples/widgets/meter/lv_example_meter_3.c.s
 
 lvgl/examples/widgets/meter/lv_example_meter_4.o: lvgl/examples/widgets/meter/lv_example_meter_4.c.o
@@ -3590,7 +3590,7 @@ lvgl/examples/widgets/meter/lv_example_meter_4.o: lvgl/examples/widgets/meter/lv
 
 # target to build an object file
 lvgl/examples/widgets/meter/lv_example_meter_4.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/meter/lv_example_meter_4.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/meter/lv_example_meter_4.c.o
 .PHONY : lvgl/examples/widgets/meter/lv_example_meter_4.c.o
 
 lvgl/examples/widgets/meter/lv_example_meter_4.i: lvgl/examples/widgets/meter/lv_example_meter_4.c.i
@@ -3598,7 +3598,7 @@ lvgl/examples/widgets/meter/lv_example_meter_4.i: lvgl/examples/widgets/meter/lv
 
 # target to preprocess a source file
 lvgl/examples/widgets/meter/lv_example_meter_4.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/meter/lv_example_meter_4.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/meter/lv_example_meter_4.c.i
 .PHONY : lvgl/examples/widgets/meter/lv_example_meter_4.c.i
 
 lvgl/examples/widgets/meter/lv_example_meter_4.s: lvgl/examples/widgets/meter/lv_example_meter_4.c.s
@@ -3606,7 +3606,7 @@ lvgl/examples/widgets/meter/lv_example_meter_4.s: lvgl/examples/widgets/meter/lv
 
 # target to generate assembly for a file
 lvgl/examples/widgets/meter/lv_example_meter_4.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/meter/lv_example_meter_4.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/meter/lv_example_meter_4.c.s
 .PHONY : lvgl/examples/widgets/meter/lv_example_meter_4.c.s
 
 lvgl/examples/widgets/msgbox/lv_example_msgbox_1.o: lvgl/examples/widgets/msgbox/lv_example_msgbox_1.c.o
@@ -3614,7 +3614,7 @@ lvgl/examples/widgets/msgbox/lv_example_msgbox_1.o: lvgl/examples/widgets/msgbox
 
 # target to build an object file
 lvgl/examples/widgets/msgbox/lv_example_msgbox_1.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/msgbox/lv_example_msgbox_1.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/msgbox/lv_example_msgbox_1.c.o
 .PHONY : lvgl/examples/widgets/msgbox/lv_example_msgbox_1.c.o
 
 lvgl/examples/widgets/msgbox/lv_example_msgbox_1.i: lvgl/examples/widgets/msgbox/lv_example_msgbox_1.c.i
@@ -3622,7 +3622,7 @@ lvgl/examples/widgets/msgbox/lv_example_msgbox_1.i: lvgl/examples/widgets/msgbox
 
 # target to preprocess a source file
 lvgl/examples/widgets/msgbox/lv_example_msgbox_1.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/msgbox/lv_example_msgbox_1.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/msgbox/lv_example_msgbox_1.c.i
 .PHONY : lvgl/examples/widgets/msgbox/lv_example_msgbox_1.c.i
 
 lvgl/examples/widgets/msgbox/lv_example_msgbox_1.s: lvgl/examples/widgets/msgbox/lv_example_msgbox_1.c.s
@@ -3630,7 +3630,7 @@ lvgl/examples/widgets/msgbox/lv_example_msgbox_1.s: lvgl/examples/widgets/msgbox
 
 # target to generate assembly for a file
 lvgl/examples/widgets/msgbox/lv_example_msgbox_1.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/msgbox/lv_example_msgbox_1.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/msgbox/lv_example_msgbox_1.c.s
 .PHONY : lvgl/examples/widgets/msgbox/lv_example_msgbox_1.c.s
 
 lvgl/examples/widgets/obj/lv_example_obj_1.o: lvgl/examples/widgets/obj/lv_example_obj_1.c.o
@@ -3638,7 +3638,7 @@ lvgl/examples/widgets/obj/lv_example_obj_1.o: lvgl/examples/widgets/obj/lv_examp
 
 # target to build an object file
 lvgl/examples/widgets/obj/lv_example_obj_1.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/obj/lv_example_obj_1.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/obj/lv_example_obj_1.c.o
 .PHONY : lvgl/examples/widgets/obj/lv_example_obj_1.c.o
 
 lvgl/examples/widgets/obj/lv_example_obj_1.i: lvgl/examples/widgets/obj/lv_example_obj_1.c.i
@@ -3646,7 +3646,7 @@ lvgl/examples/widgets/obj/lv_example_obj_1.i: lvgl/examples/widgets/obj/lv_examp
 
 # target to preprocess a source file
 lvgl/examples/widgets/obj/lv_example_obj_1.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/obj/lv_example_obj_1.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/obj/lv_example_obj_1.c.i
 .PHONY : lvgl/examples/widgets/obj/lv_example_obj_1.c.i
 
 lvgl/examples/widgets/obj/lv_example_obj_1.s: lvgl/examples/widgets/obj/lv_example_obj_1.c.s
@@ -3654,7 +3654,7 @@ lvgl/examples/widgets/obj/lv_example_obj_1.s: lvgl/examples/widgets/obj/lv_examp
 
 # target to generate assembly for a file
 lvgl/examples/widgets/obj/lv_example_obj_1.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/obj/lv_example_obj_1.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/obj/lv_example_obj_1.c.s
 .PHONY : lvgl/examples/widgets/obj/lv_example_obj_1.c.s
 
 lvgl/examples/widgets/roller/lv_example_roller_1.o: lvgl/examples/widgets/roller/lv_example_roller_1.c.o
@@ -3662,7 +3662,7 @@ lvgl/examples/widgets/roller/lv_example_roller_1.o: lvgl/examples/widgets/roller
 
 # target to build an object file
 lvgl/examples/widgets/roller/lv_example_roller_1.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/roller/lv_example_roller_1.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/roller/lv_example_roller_1.c.o
 .PHONY : lvgl/examples/widgets/roller/lv_example_roller_1.c.o
 
 lvgl/examples/widgets/roller/lv_example_roller_1.i: lvgl/examples/widgets/roller/lv_example_roller_1.c.i
@@ -3670,7 +3670,7 @@ lvgl/examples/widgets/roller/lv_example_roller_1.i: lvgl/examples/widgets/roller
 
 # target to preprocess a source file
 lvgl/examples/widgets/roller/lv_example_roller_1.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/roller/lv_example_roller_1.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/roller/lv_example_roller_1.c.i
 .PHONY : lvgl/examples/widgets/roller/lv_example_roller_1.c.i
 
 lvgl/examples/widgets/roller/lv_example_roller_1.s: lvgl/examples/widgets/roller/lv_example_roller_1.c.s
@@ -3678,7 +3678,7 @@ lvgl/examples/widgets/roller/lv_example_roller_1.s: lvgl/examples/widgets/roller
 
 # target to generate assembly for a file
 lvgl/examples/widgets/roller/lv_example_roller_1.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/roller/lv_example_roller_1.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/roller/lv_example_roller_1.c.s
 .PHONY : lvgl/examples/widgets/roller/lv_example_roller_1.c.s
 
 lvgl/examples/widgets/roller/lv_example_roller_2.o: lvgl/examples/widgets/roller/lv_example_roller_2.c.o
@@ -3686,7 +3686,7 @@ lvgl/examples/widgets/roller/lv_example_roller_2.o: lvgl/examples/widgets/roller
 
 # target to build an object file
 lvgl/examples/widgets/roller/lv_example_roller_2.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/roller/lv_example_roller_2.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/roller/lv_example_roller_2.c.o
 .PHONY : lvgl/examples/widgets/roller/lv_example_roller_2.c.o
 
 lvgl/examples/widgets/roller/lv_example_roller_2.i: lvgl/examples/widgets/roller/lv_example_roller_2.c.i
@@ -3694,7 +3694,7 @@ lvgl/examples/widgets/roller/lv_example_roller_2.i: lvgl/examples/widgets/roller
 
 # target to preprocess a source file
 lvgl/examples/widgets/roller/lv_example_roller_2.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/roller/lv_example_roller_2.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/roller/lv_example_roller_2.c.i
 .PHONY : lvgl/examples/widgets/roller/lv_example_roller_2.c.i
 
 lvgl/examples/widgets/roller/lv_example_roller_2.s: lvgl/examples/widgets/roller/lv_example_roller_2.c.s
@@ -3702,7 +3702,7 @@ lvgl/examples/widgets/roller/lv_example_roller_2.s: lvgl/examples/widgets/roller
 
 # target to generate assembly for a file
 lvgl/examples/widgets/roller/lv_example_roller_2.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/roller/lv_example_roller_2.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/roller/lv_example_roller_2.c.s
 .PHONY : lvgl/examples/widgets/roller/lv_example_roller_2.c.s
 
 lvgl/examples/widgets/slider/lv_example_slider_1.o: lvgl/examples/widgets/slider/lv_example_slider_1.c.o
@@ -3710,7 +3710,7 @@ lvgl/examples/widgets/slider/lv_example_slider_1.o: lvgl/examples/widgets/slider
 
 # target to build an object file
 lvgl/examples/widgets/slider/lv_example_slider_1.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/slider/lv_example_slider_1.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/slider/lv_example_slider_1.c.o
 .PHONY : lvgl/examples/widgets/slider/lv_example_slider_1.c.o
 
 lvgl/examples/widgets/slider/lv_example_slider_1.i: lvgl/examples/widgets/slider/lv_example_slider_1.c.i
@@ -3718,7 +3718,7 @@ lvgl/examples/widgets/slider/lv_example_slider_1.i: lvgl/examples/widgets/slider
 
 # target to preprocess a source file
 lvgl/examples/widgets/slider/lv_example_slider_1.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/slider/lv_example_slider_1.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/slider/lv_example_slider_1.c.i
 .PHONY : lvgl/examples/widgets/slider/lv_example_slider_1.c.i
 
 lvgl/examples/widgets/slider/lv_example_slider_1.s: lvgl/examples/widgets/slider/lv_example_slider_1.c.s
@@ -3726,7 +3726,7 @@ lvgl/examples/widgets/slider/lv_example_slider_1.s: lvgl/examples/widgets/slider
 
 # target to generate assembly for a file
 lvgl/examples/widgets/slider/lv_example_slider_1.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/slider/lv_example_slider_1.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/slider/lv_example_slider_1.c.s
 .PHONY : lvgl/examples/widgets/slider/lv_example_slider_1.c.s
 
 lvgl/examples/widgets/slider/lv_example_slider_2.o: lvgl/examples/widgets/slider/lv_example_slider_2.c.o
@@ -3734,7 +3734,7 @@ lvgl/examples/widgets/slider/lv_example_slider_2.o: lvgl/examples/widgets/slider
 
 # target to build an object file
 lvgl/examples/widgets/slider/lv_example_slider_2.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/slider/lv_example_slider_2.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/slider/lv_example_slider_2.c.o
 .PHONY : lvgl/examples/widgets/slider/lv_example_slider_2.c.o
 
 lvgl/examples/widgets/slider/lv_example_slider_2.i: lvgl/examples/widgets/slider/lv_example_slider_2.c.i
@@ -3742,7 +3742,7 @@ lvgl/examples/widgets/slider/lv_example_slider_2.i: lvgl/examples/widgets/slider
 
 # target to preprocess a source file
 lvgl/examples/widgets/slider/lv_example_slider_2.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/slider/lv_example_slider_2.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/slider/lv_example_slider_2.c.i
 .PHONY : lvgl/examples/widgets/slider/lv_example_slider_2.c.i
 
 lvgl/examples/widgets/slider/lv_example_slider_2.s: lvgl/examples/widgets/slider/lv_example_slider_2.c.s
@@ -3750,7 +3750,7 @@ lvgl/examples/widgets/slider/lv_example_slider_2.s: lvgl/examples/widgets/slider
 
 # target to generate assembly for a file
 lvgl/examples/widgets/slider/lv_example_slider_2.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/slider/lv_example_slider_2.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/slider/lv_example_slider_2.c.s
 .PHONY : lvgl/examples/widgets/slider/lv_example_slider_2.c.s
 
 lvgl/examples/widgets/slider/lv_example_slider_3.o: lvgl/examples/widgets/slider/lv_example_slider_3.c.o
@@ -3758,7 +3758,7 @@ lvgl/examples/widgets/slider/lv_example_slider_3.o: lvgl/examples/widgets/slider
 
 # target to build an object file
 lvgl/examples/widgets/slider/lv_example_slider_3.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/slider/lv_example_slider_3.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/slider/lv_example_slider_3.c.o
 .PHONY : lvgl/examples/widgets/slider/lv_example_slider_3.c.o
 
 lvgl/examples/widgets/slider/lv_example_slider_3.i: lvgl/examples/widgets/slider/lv_example_slider_3.c.i
@@ -3766,7 +3766,7 @@ lvgl/examples/widgets/slider/lv_example_slider_3.i: lvgl/examples/widgets/slider
 
 # target to preprocess a source file
 lvgl/examples/widgets/slider/lv_example_slider_3.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/slider/lv_example_slider_3.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/slider/lv_example_slider_3.c.i
 .PHONY : lvgl/examples/widgets/slider/lv_example_slider_3.c.i
 
 lvgl/examples/widgets/slider/lv_example_slider_3.s: lvgl/examples/widgets/slider/lv_example_slider_3.c.s
@@ -3774,7 +3774,7 @@ lvgl/examples/widgets/slider/lv_example_slider_3.s: lvgl/examples/widgets/slider
 
 # target to generate assembly for a file
 lvgl/examples/widgets/slider/lv_example_slider_3.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/slider/lv_example_slider_3.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/slider/lv_example_slider_3.c.s
 .PHONY : lvgl/examples/widgets/slider/lv_example_slider_3.c.s
 
 lvgl/examples/widgets/spinbox/lv_example_spinbox_1.o: lvgl/examples/widgets/spinbox/lv_example_spinbox_1.c.o
@@ -3782,7 +3782,7 @@ lvgl/examples/widgets/spinbox/lv_example_spinbox_1.o: lvgl/examples/widgets/spin
 
 # target to build an object file
 lvgl/examples/widgets/spinbox/lv_example_spinbox_1.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/spinbox/lv_example_spinbox_1.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/spinbox/lv_example_spinbox_1.c.o
 .PHONY : lvgl/examples/widgets/spinbox/lv_example_spinbox_1.c.o
 
 lvgl/examples/widgets/spinbox/lv_example_spinbox_1.i: lvgl/examples/widgets/spinbox/lv_example_spinbox_1.c.i
@@ -3790,7 +3790,7 @@ lvgl/examples/widgets/spinbox/lv_example_spinbox_1.i: lvgl/examples/widgets/spin
 
 # target to preprocess a source file
 lvgl/examples/widgets/spinbox/lv_example_spinbox_1.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/spinbox/lv_example_spinbox_1.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/spinbox/lv_example_spinbox_1.c.i
 .PHONY : lvgl/examples/widgets/spinbox/lv_example_spinbox_1.c.i
 
 lvgl/examples/widgets/spinbox/lv_example_spinbox_1.s: lvgl/examples/widgets/spinbox/lv_example_spinbox_1.c.s
@@ -3798,7 +3798,7 @@ lvgl/examples/widgets/spinbox/lv_example_spinbox_1.s: lvgl/examples/widgets/spin
 
 # target to generate assembly for a file
 lvgl/examples/widgets/spinbox/lv_example_spinbox_1.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/spinbox/lv_example_spinbox_1.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/spinbox/lv_example_spinbox_1.c.s
 .PHONY : lvgl/examples/widgets/spinbox/lv_example_spinbox_1.c.s
 
 lvgl/examples/widgets/spinner/lv_example_spinner_1.o: lvgl/examples/widgets/spinner/lv_example_spinner_1.c.o
@@ -3806,7 +3806,7 @@ lvgl/examples/widgets/spinner/lv_example_spinner_1.o: lvgl/examples/widgets/spin
 
 # target to build an object file
 lvgl/examples/widgets/spinner/lv_example_spinner_1.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/spinner/lv_example_spinner_1.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/spinner/lv_example_spinner_1.c.o
 .PHONY : lvgl/examples/widgets/spinner/lv_example_spinner_1.c.o
 
 lvgl/examples/widgets/spinner/lv_example_spinner_1.i: lvgl/examples/widgets/spinner/lv_example_spinner_1.c.i
@@ -3814,7 +3814,7 @@ lvgl/examples/widgets/spinner/lv_example_spinner_1.i: lvgl/examples/widgets/spin
 
 # target to preprocess a source file
 lvgl/examples/widgets/spinner/lv_example_spinner_1.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/spinner/lv_example_spinner_1.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/spinner/lv_example_spinner_1.c.i
 .PHONY : lvgl/examples/widgets/spinner/lv_example_spinner_1.c.i
 
 lvgl/examples/widgets/spinner/lv_example_spinner_1.s: lvgl/examples/widgets/spinner/lv_example_spinner_1.c.s
@@ -3822,7 +3822,7 @@ lvgl/examples/widgets/spinner/lv_example_spinner_1.s: lvgl/examples/widgets/spin
 
 # target to generate assembly for a file
 lvgl/examples/widgets/spinner/lv_example_spinner_1.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/spinner/lv_example_spinner_1.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/spinner/lv_example_spinner_1.c.s
 .PHONY : lvgl/examples/widgets/spinner/lv_example_spinner_1.c.s
 
 lvgl/examples/widgets/switch/lv_example_switch_1.o: lvgl/examples/widgets/switch/lv_example_switch_1.c.o
@@ -3830,7 +3830,7 @@ lvgl/examples/widgets/switch/lv_example_switch_1.o: lvgl/examples/widgets/switch
 
 # target to build an object file
 lvgl/examples/widgets/switch/lv_example_switch_1.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/switch/lv_example_switch_1.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/switch/lv_example_switch_1.c.o
 .PHONY : lvgl/examples/widgets/switch/lv_example_switch_1.c.o
 
 lvgl/examples/widgets/switch/lv_example_switch_1.i: lvgl/examples/widgets/switch/lv_example_switch_1.c.i
@@ -3838,7 +3838,7 @@ lvgl/examples/widgets/switch/lv_example_switch_1.i: lvgl/examples/widgets/switch
 
 # target to preprocess a source file
 lvgl/examples/widgets/switch/lv_example_switch_1.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/switch/lv_example_switch_1.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/switch/lv_example_switch_1.c.i
 .PHONY : lvgl/examples/widgets/switch/lv_example_switch_1.c.i
 
 lvgl/examples/widgets/switch/lv_example_switch_1.s: lvgl/examples/widgets/switch/lv_example_switch_1.c.s
@@ -3846,7 +3846,7 @@ lvgl/examples/widgets/switch/lv_example_switch_1.s: lvgl/examples/widgets/switch
 
 # target to generate assembly for a file
 lvgl/examples/widgets/switch/lv_example_switch_1.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/switch/lv_example_switch_1.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/switch/lv_example_switch_1.c.s
 .PHONY : lvgl/examples/widgets/switch/lv_example_switch_1.c.s
 
 lvgl/examples/widgets/table/lv_example_table_1.o: lvgl/examples/widgets/table/lv_example_table_1.c.o
@@ -3854,7 +3854,7 @@ lvgl/examples/widgets/table/lv_example_table_1.o: lvgl/examples/widgets/table/lv
 
 # target to build an object file
 lvgl/examples/widgets/table/lv_example_table_1.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/table/lv_example_table_1.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/table/lv_example_table_1.c.o
 .PHONY : lvgl/examples/widgets/table/lv_example_table_1.c.o
 
 lvgl/examples/widgets/table/lv_example_table_1.i: lvgl/examples/widgets/table/lv_example_table_1.c.i
@@ -3862,7 +3862,7 @@ lvgl/examples/widgets/table/lv_example_table_1.i: lvgl/examples/widgets/table/lv
 
 # target to preprocess a source file
 lvgl/examples/widgets/table/lv_example_table_1.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/table/lv_example_table_1.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/table/lv_example_table_1.c.i
 .PHONY : lvgl/examples/widgets/table/lv_example_table_1.c.i
 
 lvgl/examples/widgets/table/lv_example_table_1.s: lvgl/examples/widgets/table/lv_example_table_1.c.s
@@ -3870,7 +3870,7 @@ lvgl/examples/widgets/table/lv_example_table_1.s: lvgl/examples/widgets/table/lv
 
 # target to generate assembly for a file
 lvgl/examples/widgets/table/lv_example_table_1.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/table/lv_example_table_1.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/table/lv_example_table_1.c.s
 .PHONY : lvgl/examples/widgets/table/lv_example_table_1.c.s
 
 lvgl/examples/widgets/table/lv_example_table_2.o: lvgl/examples/widgets/table/lv_example_table_2.c.o
@@ -3878,7 +3878,7 @@ lvgl/examples/widgets/table/lv_example_table_2.o: lvgl/examples/widgets/table/lv
 
 # target to build an object file
 lvgl/examples/widgets/table/lv_example_table_2.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/table/lv_example_table_2.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/table/lv_example_table_2.c.o
 .PHONY : lvgl/examples/widgets/table/lv_example_table_2.c.o
 
 lvgl/examples/widgets/table/lv_example_table_2.i: lvgl/examples/widgets/table/lv_example_table_2.c.i
@@ -3886,7 +3886,7 @@ lvgl/examples/widgets/table/lv_example_table_2.i: lvgl/examples/widgets/table/lv
 
 # target to preprocess a source file
 lvgl/examples/widgets/table/lv_example_table_2.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/table/lv_example_table_2.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/table/lv_example_table_2.c.i
 .PHONY : lvgl/examples/widgets/table/lv_example_table_2.c.i
 
 lvgl/examples/widgets/table/lv_example_table_2.s: lvgl/examples/widgets/table/lv_example_table_2.c.s
@@ -3894,7 +3894,7 @@ lvgl/examples/widgets/table/lv_example_table_2.s: lvgl/examples/widgets/table/lv
 
 # target to generate assembly for a file
 lvgl/examples/widgets/table/lv_example_table_2.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/table/lv_example_table_2.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/table/lv_example_table_2.c.s
 .PHONY : lvgl/examples/widgets/table/lv_example_table_2.c.s
 
 lvgl/examples/widgets/tabview/lv_example_tabview_1.o: lvgl/examples/widgets/tabview/lv_example_tabview_1.c.o
@@ -3902,7 +3902,7 @@ lvgl/examples/widgets/tabview/lv_example_tabview_1.o: lvgl/examples/widgets/tabv
 
 # target to build an object file
 lvgl/examples/widgets/tabview/lv_example_tabview_1.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/tabview/lv_example_tabview_1.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/tabview/lv_example_tabview_1.c.o
 .PHONY : lvgl/examples/widgets/tabview/lv_example_tabview_1.c.o
 
 lvgl/examples/widgets/tabview/lv_example_tabview_1.i: lvgl/examples/widgets/tabview/lv_example_tabview_1.c.i
@@ -3910,7 +3910,7 @@ lvgl/examples/widgets/tabview/lv_example_tabview_1.i: lvgl/examples/widgets/tabv
 
 # target to preprocess a source file
 lvgl/examples/widgets/tabview/lv_example_tabview_1.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/tabview/lv_example_tabview_1.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/tabview/lv_example_tabview_1.c.i
 .PHONY : lvgl/examples/widgets/tabview/lv_example_tabview_1.c.i
 
 lvgl/examples/widgets/tabview/lv_example_tabview_1.s: lvgl/examples/widgets/tabview/lv_example_tabview_1.c.s
@@ -3918,7 +3918,7 @@ lvgl/examples/widgets/tabview/lv_example_tabview_1.s: lvgl/examples/widgets/tabv
 
 # target to generate assembly for a file
 lvgl/examples/widgets/tabview/lv_example_tabview_1.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/tabview/lv_example_tabview_1.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/tabview/lv_example_tabview_1.c.s
 .PHONY : lvgl/examples/widgets/tabview/lv_example_tabview_1.c.s
 
 lvgl/examples/widgets/textarea/lv_example_textarea_1.o: lvgl/examples/widgets/textarea/lv_example_textarea_1.c.o
@@ -3926,7 +3926,7 @@ lvgl/examples/widgets/textarea/lv_example_textarea_1.o: lvgl/examples/widgets/te
 
 # target to build an object file
 lvgl/examples/widgets/textarea/lv_example_textarea_1.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/textarea/lv_example_textarea_1.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/textarea/lv_example_textarea_1.c.o
 .PHONY : lvgl/examples/widgets/textarea/lv_example_textarea_1.c.o
 
 lvgl/examples/widgets/textarea/lv_example_textarea_1.i: lvgl/examples/widgets/textarea/lv_example_textarea_1.c.i
@@ -3934,7 +3934,7 @@ lvgl/examples/widgets/textarea/lv_example_textarea_1.i: lvgl/examples/widgets/te
 
 # target to preprocess a source file
 lvgl/examples/widgets/textarea/lv_example_textarea_1.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/textarea/lv_example_textarea_1.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/textarea/lv_example_textarea_1.c.i
 .PHONY : lvgl/examples/widgets/textarea/lv_example_textarea_1.c.i
 
 lvgl/examples/widgets/textarea/lv_example_textarea_1.s: lvgl/examples/widgets/textarea/lv_example_textarea_1.c.s
@@ -3942,7 +3942,7 @@ lvgl/examples/widgets/textarea/lv_example_textarea_1.s: lvgl/examples/widgets/te
 
 # target to generate assembly for a file
 lvgl/examples/widgets/textarea/lv_example_textarea_1.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/textarea/lv_example_textarea_1.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/textarea/lv_example_textarea_1.c.s
 .PHONY : lvgl/examples/widgets/textarea/lv_example_textarea_1.c.s
 
 lvgl/examples/widgets/textarea/lv_example_textarea_2.o: lvgl/examples/widgets/textarea/lv_example_textarea_2.c.o
@@ -3950,7 +3950,7 @@ lvgl/examples/widgets/textarea/lv_example_textarea_2.o: lvgl/examples/widgets/te
 
 # target to build an object file
 lvgl/examples/widgets/textarea/lv_example_textarea_2.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/textarea/lv_example_textarea_2.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/textarea/lv_example_textarea_2.c.o
 .PHONY : lvgl/examples/widgets/textarea/lv_example_textarea_2.c.o
 
 lvgl/examples/widgets/textarea/lv_example_textarea_2.i: lvgl/examples/widgets/textarea/lv_example_textarea_2.c.i
@@ -3958,7 +3958,7 @@ lvgl/examples/widgets/textarea/lv_example_textarea_2.i: lvgl/examples/widgets/te
 
 # target to preprocess a source file
 lvgl/examples/widgets/textarea/lv_example_textarea_2.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/textarea/lv_example_textarea_2.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/textarea/lv_example_textarea_2.c.i
 .PHONY : lvgl/examples/widgets/textarea/lv_example_textarea_2.c.i
 
 lvgl/examples/widgets/textarea/lv_example_textarea_2.s: lvgl/examples/widgets/textarea/lv_example_textarea_2.c.s
@@ -3966,7 +3966,7 @@ lvgl/examples/widgets/textarea/lv_example_textarea_2.s: lvgl/examples/widgets/te
 
 # target to generate assembly for a file
 lvgl/examples/widgets/textarea/lv_example_textarea_2.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/textarea/lv_example_textarea_2.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/textarea/lv_example_textarea_2.c.s
 .PHONY : lvgl/examples/widgets/textarea/lv_example_textarea_2.c.s
 
 lvgl/examples/widgets/textarea/lv_example_textarea_3.o: lvgl/examples/widgets/textarea/lv_example_textarea_3.c.o
@@ -3974,7 +3974,7 @@ lvgl/examples/widgets/textarea/lv_example_textarea_3.o: lvgl/examples/widgets/te
 
 # target to build an object file
 lvgl/examples/widgets/textarea/lv_example_textarea_3.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/textarea/lv_example_textarea_3.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/textarea/lv_example_textarea_3.c.o
 .PHONY : lvgl/examples/widgets/textarea/lv_example_textarea_3.c.o
 
 lvgl/examples/widgets/textarea/lv_example_textarea_3.i: lvgl/examples/widgets/textarea/lv_example_textarea_3.c.i
@@ -3982,7 +3982,7 @@ lvgl/examples/widgets/textarea/lv_example_textarea_3.i: lvgl/examples/widgets/te
 
 # target to preprocess a source file
 lvgl/examples/widgets/textarea/lv_example_textarea_3.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/textarea/lv_example_textarea_3.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/textarea/lv_example_textarea_3.c.i
 .PHONY : lvgl/examples/widgets/textarea/lv_example_textarea_3.c.i
 
 lvgl/examples/widgets/textarea/lv_example_textarea_3.s: lvgl/examples/widgets/textarea/lv_example_textarea_3.c.s
@@ -3990,7 +3990,7 @@ lvgl/examples/widgets/textarea/lv_example_textarea_3.s: lvgl/examples/widgets/te
 
 # target to generate assembly for a file
 lvgl/examples/widgets/textarea/lv_example_textarea_3.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/textarea/lv_example_textarea_3.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/textarea/lv_example_textarea_3.c.s
 .PHONY : lvgl/examples/widgets/textarea/lv_example_textarea_3.c.s
 
 lvgl/examples/widgets/tileview/lv_example_tileview_1.o: lvgl/examples/widgets/tileview/lv_example_tileview_1.c.o
@@ -3998,7 +3998,7 @@ lvgl/examples/widgets/tileview/lv_example_tileview_1.o: lvgl/examples/widgets/ti
 
 # target to build an object file
 lvgl/examples/widgets/tileview/lv_example_tileview_1.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/tileview/lv_example_tileview_1.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/tileview/lv_example_tileview_1.c.o
 .PHONY : lvgl/examples/widgets/tileview/lv_example_tileview_1.c.o
 
 lvgl/examples/widgets/tileview/lv_example_tileview_1.i: lvgl/examples/widgets/tileview/lv_example_tileview_1.c.i
@@ -4006,7 +4006,7 @@ lvgl/examples/widgets/tileview/lv_example_tileview_1.i: lvgl/examples/widgets/ti
 
 # target to preprocess a source file
 lvgl/examples/widgets/tileview/lv_example_tileview_1.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/tileview/lv_example_tileview_1.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/tileview/lv_example_tileview_1.c.i
 .PHONY : lvgl/examples/widgets/tileview/lv_example_tileview_1.c.i
 
 lvgl/examples/widgets/tileview/lv_example_tileview_1.s: lvgl/examples/widgets/tileview/lv_example_tileview_1.c.s
@@ -4014,7 +4014,7 @@ lvgl/examples/widgets/tileview/lv_example_tileview_1.s: lvgl/examples/widgets/ti
 
 # target to generate assembly for a file
 lvgl/examples/widgets/tileview/lv_example_tileview_1.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/tileview/lv_example_tileview_1.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/tileview/lv_example_tileview_1.c.s
 .PHONY : lvgl/examples/widgets/tileview/lv_example_tileview_1.c.s
 
 lvgl/examples/widgets/win/lv_example_win_1.o: lvgl/examples/widgets/win/lv_example_win_1.c.o
@@ -4022,7 +4022,7 @@ lvgl/examples/widgets/win/lv_example_win_1.o: lvgl/examples/widgets/win/lv_examp
 
 # target to build an object file
 lvgl/examples/widgets/win/lv_example_win_1.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/win/lv_example_win_1.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/win/lv_example_win_1.c.o
 .PHONY : lvgl/examples/widgets/win/lv_example_win_1.c.o
 
 lvgl/examples/widgets/win/lv_example_win_1.i: lvgl/examples/widgets/win/lv_example_win_1.c.i
@@ -4030,7 +4030,7 @@ lvgl/examples/widgets/win/lv_example_win_1.i: lvgl/examples/widgets/win/lv_examp
 
 # target to preprocess a source file
 lvgl/examples/widgets/win/lv_example_win_1.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/win/lv_example_win_1.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/win/lv_example_win_1.c.i
 .PHONY : lvgl/examples/widgets/win/lv_example_win_1.c.i
 
 lvgl/examples/widgets/win/lv_example_win_1.s: lvgl/examples/widgets/win/lv_example_win_1.c.s
@@ -4038,7 +4038,7 @@ lvgl/examples/widgets/win/lv_example_win_1.s: lvgl/examples/widgets/win/lv_examp
 
 # target to generate assembly for a file
 lvgl/examples/widgets/win/lv_example_win_1.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/examples/widgets/win/lv_example_win_1.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/win/lv_example_win_1.c.s
 .PHONY : lvgl/examples/widgets/win/lv_example_win_1.c.s
 
 lvgl/src/core/lv_disp.o: lvgl/src/core/lv_disp.c.o
@@ -4046,7 +4046,7 @@ lvgl/src/core/lv_disp.o: lvgl/src/core/lv_disp.c.o
 
 # target to build an object file
 lvgl/src/core/lv_disp.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/core/lv_disp.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/core/lv_disp.c.o
 .PHONY : lvgl/src/core/lv_disp.c.o
 
 lvgl/src/core/lv_disp.i: lvgl/src/core/lv_disp.c.i
@@ -4054,7 +4054,7 @@ lvgl/src/core/lv_disp.i: lvgl/src/core/lv_disp.c.i
 
 # target to preprocess a source file
 lvgl/src/core/lv_disp.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/core/lv_disp.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/core/lv_disp.c.i
 .PHONY : lvgl/src/core/lv_disp.c.i
 
 lvgl/src/core/lv_disp.s: lvgl/src/core/lv_disp.c.s
@@ -4062,7 +4062,7 @@ lvgl/src/core/lv_disp.s: lvgl/src/core/lv_disp.c.s
 
 # target to generate assembly for a file
 lvgl/src/core/lv_disp.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/core/lv_disp.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/core/lv_disp.c.s
 .PHONY : lvgl/src/core/lv_disp.c.s
 
 lvgl/src/core/lv_event.o: lvgl/src/core/lv_event.c.o
@@ -4070,7 +4070,7 @@ lvgl/src/core/lv_event.o: lvgl/src/core/lv_event.c.o
 
 # target to build an object file
 lvgl/src/core/lv_event.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/core/lv_event.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/core/lv_event.c.o
 .PHONY : lvgl/src/core/lv_event.c.o
 
 lvgl/src/core/lv_event.i: lvgl/src/core/lv_event.c.i
@@ -4078,7 +4078,7 @@ lvgl/src/core/lv_event.i: lvgl/src/core/lv_event.c.i
 
 # target to preprocess a source file
 lvgl/src/core/lv_event.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/core/lv_event.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/core/lv_event.c.i
 .PHONY : lvgl/src/core/lv_event.c.i
 
 lvgl/src/core/lv_event.s: lvgl/src/core/lv_event.c.s
@@ -4086,7 +4086,7 @@ lvgl/src/core/lv_event.s: lvgl/src/core/lv_event.c.s
 
 # target to generate assembly for a file
 lvgl/src/core/lv_event.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/core/lv_event.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/core/lv_event.c.s
 .PHONY : lvgl/src/core/lv_event.c.s
 
 lvgl/src/core/lv_group.o: lvgl/src/core/lv_group.c.o
@@ -4094,7 +4094,7 @@ lvgl/src/core/lv_group.o: lvgl/src/core/lv_group.c.o
 
 # target to build an object file
 lvgl/src/core/lv_group.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/core/lv_group.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/core/lv_group.c.o
 .PHONY : lvgl/src/core/lv_group.c.o
 
 lvgl/src/core/lv_group.i: lvgl/src/core/lv_group.c.i
@@ -4102,7 +4102,7 @@ lvgl/src/core/lv_group.i: lvgl/src/core/lv_group.c.i
 
 # target to preprocess a source file
 lvgl/src/core/lv_group.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/core/lv_group.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/core/lv_group.c.i
 .PHONY : lvgl/src/core/lv_group.c.i
 
 lvgl/src/core/lv_group.s: lvgl/src/core/lv_group.c.s
@@ -4110,7 +4110,7 @@ lvgl/src/core/lv_group.s: lvgl/src/core/lv_group.c.s
 
 # target to generate assembly for a file
 lvgl/src/core/lv_group.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/core/lv_group.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/core/lv_group.c.s
 .PHONY : lvgl/src/core/lv_group.c.s
 
 lvgl/src/core/lv_indev.o: lvgl/src/core/lv_indev.c.o
@@ -4118,7 +4118,7 @@ lvgl/src/core/lv_indev.o: lvgl/src/core/lv_indev.c.o
 
 # target to build an object file
 lvgl/src/core/lv_indev.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/core/lv_indev.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/core/lv_indev.c.o
 .PHONY : lvgl/src/core/lv_indev.c.o
 
 lvgl/src/core/lv_indev.i: lvgl/src/core/lv_indev.c.i
@@ -4126,7 +4126,7 @@ lvgl/src/core/lv_indev.i: lvgl/src/core/lv_indev.c.i
 
 # target to preprocess a source file
 lvgl/src/core/lv_indev.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/core/lv_indev.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/core/lv_indev.c.i
 .PHONY : lvgl/src/core/lv_indev.c.i
 
 lvgl/src/core/lv_indev.s: lvgl/src/core/lv_indev.c.s
@@ -4134,7 +4134,7 @@ lvgl/src/core/lv_indev.s: lvgl/src/core/lv_indev.c.s
 
 # target to generate assembly for a file
 lvgl/src/core/lv_indev.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/core/lv_indev.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/core/lv_indev.c.s
 .PHONY : lvgl/src/core/lv_indev.c.s
 
 lvgl/src/core/lv_indev_scroll.o: lvgl/src/core/lv_indev_scroll.c.o
@@ -4142,7 +4142,7 @@ lvgl/src/core/lv_indev_scroll.o: lvgl/src/core/lv_indev_scroll.c.o
 
 # target to build an object file
 lvgl/src/core/lv_indev_scroll.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/core/lv_indev_scroll.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/core/lv_indev_scroll.c.o
 .PHONY : lvgl/src/core/lv_indev_scroll.c.o
 
 lvgl/src/core/lv_indev_scroll.i: lvgl/src/core/lv_indev_scroll.c.i
@@ -4150,7 +4150,7 @@ lvgl/src/core/lv_indev_scroll.i: lvgl/src/core/lv_indev_scroll.c.i
 
 # target to preprocess a source file
 lvgl/src/core/lv_indev_scroll.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/core/lv_indev_scroll.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/core/lv_indev_scroll.c.i
 .PHONY : lvgl/src/core/lv_indev_scroll.c.i
 
 lvgl/src/core/lv_indev_scroll.s: lvgl/src/core/lv_indev_scroll.c.s
@@ -4158,7 +4158,7 @@ lvgl/src/core/lv_indev_scroll.s: lvgl/src/core/lv_indev_scroll.c.s
 
 # target to generate assembly for a file
 lvgl/src/core/lv_indev_scroll.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/core/lv_indev_scroll.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/core/lv_indev_scroll.c.s
 .PHONY : lvgl/src/core/lv_indev_scroll.c.s
 
 lvgl/src/core/lv_obj.o: lvgl/src/core/lv_obj.c.o
@@ -4166,7 +4166,7 @@ lvgl/src/core/lv_obj.o: lvgl/src/core/lv_obj.c.o
 
 # target to build an object file
 lvgl/src/core/lv_obj.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/core/lv_obj.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/core/lv_obj.c.o
 .PHONY : lvgl/src/core/lv_obj.c.o
 
 lvgl/src/core/lv_obj.i: lvgl/src/core/lv_obj.c.i
@@ -4174,7 +4174,7 @@ lvgl/src/core/lv_obj.i: lvgl/src/core/lv_obj.c.i
 
 # target to preprocess a source file
 lvgl/src/core/lv_obj.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/core/lv_obj.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/core/lv_obj.c.i
 .PHONY : lvgl/src/core/lv_obj.c.i
 
 lvgl/src/core/lv_obj.s: lvgl/src/core/lv_obj.c.s
@@ -4182,7 +4182,7 @@ lvgl/src/core/lv_obj.s: lvgl/src/core/lv_obj.c.s
 
 # target to generate assembly for a file
 lvgl/src/core/lv_obj.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/core/lv_obj.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/core/lv_obj.c.s
 .PHONY : lvgl/src/core/lv_obj.c.s
 
 lvgl/src/core/lv_obj_class.o: lvgl/src/core/lv_obj_class.c.o
@@ -4190,7 +4190,7 @@ lvgl/src/core/lv_obj_class.o: lvgl/src/core/lv_obj_class.c.o
 
 # target to build an object file
 lvgl/src/core/lv_obj_class.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/core/lv_obj_class.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/core/lv_obj_class.c.o
 .PHONY : lvgl/src/core/lv_obj_class.c.o
 
 lvgl/src/core/lv_obj_class.i: lvgl/src/core/lv_obj_class.c.i
@@ -4198,7 +4198,7 @@ lvgl/src/core/lv_obj_class.i: lvgl/src/core/lv_obj_class.c.i
 
 # target to preprocess a source file
 lvgl/src/core/lv_obj_class.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/core/lv_obj_class.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/core/lv_obj_class.c.i
 .PHONY : lvgl/src/core/lv_obj_class.c.i
 
 lvgl/src/core/lv_obj_class.s: lvgl/src/core/lv_obj_class.c.s
@@ -4206,7 +4206,7 @@ lvgl/src/core/lv_obj_class.s: lvgl/src/core/lv_obj_class.c.s
 
 # target to generate assembly for a file
 lvgl/src/core/lv_obj_class.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/core/lv_obj_class.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/core/lv_obj_class.c.s
 .PHONY : lvgl/src/core/lv_obj_class.c.s
 
 lvgl/src/core/lv_obj_draw.o: lvgl/src/core/lv_obj_draw.c.o
@@ -4214,7 +4214,7 @@ lvgl/src/core/lv_obj_draw.o: lvgl/src/core/lv_obj_draw.c.o
 
 # target to build an object file
 lvgl/src/core/lv_obj_draw.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/core/lv_obj_draw.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/core/lv_obj_draw.c.o
 .PHONY : lvgl/src/core/lv_obj_draw.c.o
 
 lvgl/src/core/lv_obj_draw.i: lvgl/src/core/lv_obj_draw.c.i
@@ -4222,7 +4222,7 @@ lvgl/src/core/lv_obj_draw.i: lvgl/src/core/lv_obj_draw.c.i
 
 # target to preprocess a source file
 lvgl/src/core/lv_obj_draw.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/core/lv_obj_draw.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/core/lv_obj_draw.c.i
 .PHONY : lvgl/src/core/lv_obj_draw.c.i
 
 lvgl/src/core/lv_obj_draw.s: lvgl/src/core/lv_obj_draw.c.s
@@ -4230,7 +4230,7 @@ lvgl/src/core/lv_obj_draw.s: lvgl/src/core/lv_obj_draw.c.s
 
 # target to generate assembly for a file
 lvgl/src/core/lv_obj_draw.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/core/lv_obj_draw.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/core/lv_obj_draw.c.s
 .PHONY : lvgl/src/core/lv_obj_draw.c.s
 
 lvgl/src/core/lv_obj_pos.o: lvgl/src/core/lv_obj_pos.c.o
@@ -4238,7 +4238,7 @@ lvgl/src/core/lv_obj_pos.o: lvgl/src/core/lv_obj_pos.c.o
 
 # target to build an object file
 lvgl/src/core/lv_obj_pos.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/core/lv_obj_pos.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/core/lv_obj_pos.c.o
 .PHONY : lvgl/src/core/lv_obj_pos.c.o
 
 lvgl/src/core/lv_obj_pos.i: lvgl/src/core/lv_obj_pos.c.i
@@ -4246,7 +4246,7 @@ lvgl/src/core/lv_obj_pos.i: lvgl/src/core/lv_obj_pos.c.i
 
 # target to preprocess a source file
 lvgl/src/core/lv_obj_pos.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/core/lv_obj_pos.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/core/lv_obj_pos.c.i
 .PHONY : lvgl/src/core/lv_obj_pos.c.i
 
 lvgl/src/core/lv_obj_pos.s: lvgl/src/core/lv_obj_pos.c.s
@@ -4254,7 +4254,7 @@ lvgl/src/core/lv_obj_pos.s: lvgl/src/core/lv_obj_pos.c.s
 
 # target to generate assembly for a file
 lvgl/src/core/lv_obj_pos.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/core/lv_obj_pos.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/core/lv_obj_pos.c.s
 .PHONY : lvgl/src/core/lv_obj_pos.c.s
 
 lvgl/src/core/lv_obj_scroll.o: lvgl/src/core/lv_obj_scroll.c.o
@@ -4262,7 +4262,7 @@ lvgl/src/core/lv_obj_scroll.o: lvgl/src/core/lv_obj_scroll.c.o
 
 # target to build an object file
 lvgl/src/core/lv_obj_scroll.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/core/lv_obj_scroll.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/core/lv_obj_scroll.c.o
 .PHONY : lvgl/src/core/lv_obj_scroll.c.o
 
 lvgl/src/core/lv_obj_scroll.i: lvgl/src/core/lv_obj_scroll.c.i
@@ -4270,7 +4270,7 @@ lvgl/src/core/lv_obj_scroll.i: lvgl/src/core/lv_obj_scroll.c.i
 
 # target to preprocess a source file
 lvgl/src/core/lv_obj_scroll.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/core/lv_obj_scroll.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/core/lv_obj_scroll.c.i
 .PHONY : lvgl/src/core/lv_obj_scroll.c.i
 
 lvgl/src/core/lv_obj_scroll.s: lvgl/src/core/lv_obj_scroll.c.s
@@ -4278,7 +4278,7 @@ lvgl/src/core/lv_obj_scroll.s: lvgl/src/core/lv_obj_scroll.c.s
 
 # target to generate assembly for a file
 lvgl/src/core/lv_obj_scroll.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/core/lv_obj_scroll.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/core/lv_obj_scroll.c.s
 .PHONY : lvgl/src/core/lv_obj_scroll.c.s
 
 lvgl/src/core/lv_obj_style.o: lvgl/src/core/lv_obj_style.c.o
@@ -4286,7 +4286,7 @@ lvgl/src/core/lv_obj_style.o: lvgl/src/core/lv_obj_style.c.o
 
 # target to build an object file
 lvgl/src/core/lv_obj_style.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/core/lv_obj_style.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/core/lv_obj_style.c.o
 .PHONY : lvgl/src/core/lv_obj_style.c.o
 
 lvgl/src/core/lv_obj_style.i: lvgl/src/core/lv_obj_style.c.i
@@ -4294,7 +4294,7 @@ lvgl/src/core/lv_obj_style.i: lvgl/src/core/lv_obj_style.c.i
 
 # target to preprocess a source file
 lvgl/src/core/lv_obj_style.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/core/lv_obj_style.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/core/lv_obj_style.c.i
 .PHONY : lvgl/src/core/lv_obj_style.c.i
 
 lvgl/src/core/lv_obj_style.s: lvgl/src/core/lv_obj_style.c.s
@@ -4302,7 +4302,7 @@ lvgl/src/core/lv_obj_style.s: lvgl/src/core/lv_obj_style.c.s
 
 # target to generate assembly for a file
 lvgl/src/core/lv_obj_style.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/core/lv_obj_style.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/core/lv_obj_style.c.s
 .PHONY : lvgl/src/core/lv_obj_style.c.s
 
 lvgl/src/core/lv_obj_tree.o: lvgl/src/core/lv_obj_tree.c.o
@@ -4310,7 +4310,7 @@ lvgl/src/core/lv_obj_tree.o: lvgl/src/core/lv_obj_tree.c.o
 
 # target to build an object file
 lvgl/src/core/lv_obj_tree.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/core/lv_obj_tree.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/core/lv_obj_tree.c.o
 .PHONY : lvgl/src/core/lv_obj_tree.c.o
 
 lvgl/src/core/lv_obj_tree.i: lvgl/src/core/lv_obj_tree.c.i
@@ -4318,7 +4318,7 @@ lvgl/src/core/lv_obj_tree.i: lvgl/src/core/lv_obj_tree.c.i
 
 # target to preprocess a source file
 lvgl/src/core/lv_obj_tree.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/core/lv_obj_tree.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/core/lv_obj_tree.c.i
 .PHONY : lvgl/src/core/lv_obj_tree.c.i
 
 lvgl/src/core/lv_obj_tree.s: lvgl/src/core/lv_obj_tree.c.s
@@ -4326,7 +4326,7 @@ lvgl/src/core/lv_obj_tree.s: lvgl/src/core/lv_obj_tree.c.s
 
 # target to generate assembly for a file
 lvgl/src/core/lv_obj_tree.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/core/lv_obj_tree.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/core/lv_obj_tree.c.s
 .PHONY : lvgl/src/core/lv_obj_tree.c.s
 
 lvgl/src/core/lv_refr.o: lvgl/src/core/lv_refr.c.o
@@ -4334,7 +4334,7 @@ lvgl/src/core/lv_refr.o: lvgl/src/core/lv_refr.c.o
 
 # target to build an object file
 lvgl/src/core/lv_refr.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/core/lv_refr.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/core/lv_refr.c.o
 .PHONY : lvgl/src/core/lv_refr.c.o
 
 lvgl/src/core/lv_refr.i: lvgl/src/core/lv_refr.c.i
@@ -4342,7 +4342,7 @@ lvgl/src/core/lv_refr.i: lvgl/src/core/lv_refr.c.i
 
 # target to preprocess a source file
 lvgl/src/core/lv_refr.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/core/lv_refr.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/core/lv_refr.c.i
 .PHONY : lvgl/src/core/lv_refr.c.i
 
 lvgl/src/core/lv_refr.s: lvgl/src/core/lv_refr.c.s
@@ -4350,7 +4350,7 @@ lvgl/src/core/lv_refr.s: lvgl/src/core/lv_refr.c.s
 
 # target to generate assembly for a file
 lvgl/src/core/lv_refr.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/core/lv_refr.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/core/lv_refr.c.s
 .PHONY : lvgl/src/core/lv_refr.c.s
 
 lvgl/src/core/lv_theme.o: lvgl/src/core/lv_theme.c.o
@@ -4358,7 +4358,7 @@ lvgl/src/core/lv_theme.o: lvgl/src/core/lv_theme.c.o
 
 # target to build an object file
 lvgl/src/core/lv_theme.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/core/lv_theme.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/core/lv_theme.c.o
 .PHONY : lvgl/src/core/lv_theme.c.o
 
 lvgl/src/core/lv_theme.i: lvgl/src/core/lv_theme.c.i
@@ -4366,7 +4366,7 @@ lvgl/src/core/lv_theme.i: lvgl/src/core/lv_theme.c.i
 
 # target to preprocess a source file
 lvgl/src/core/lv_theme.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/core/lv_theme.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/core/lv_theme.c.i
 .PHONY : lvgl/src/core/lv_theme.c.i
 
 lvgl/src/core/lv_theme.s: lvgl/src/core/lv_theme.c.s
@@ -4374,7 +4374,7 @@ lvgl/src/core/lv_theme.s: lvgl/src/core/lv_theme.c.s
 
 # target to generate assembly for a file
 lvgl/src/core/lv_theme.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/core/lv_theme.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/core/lv_theme.c.s
 .PHONY : lvgl/src/core/lv_theme.c.s
 
 lvgl/src/draw/lv_draw_arc.o: lvgl/src/draw/lv_draw_arc.c.o
@@ -4382,7 +4382,7 @@ lvgl/src/draw/lv_draw_arc.o: lvgl/src/draw/lv_draw_arc.c.o
 
 # target to build an object file
 lvgl/src/draw/lv_draw_arc.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/draw/lv_draw_arc.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/draw/lv_draw_arc.c.o
 .PHONY : lvgl/src/draw/lv_draw_arc.c.o
 
 lvgl/src/draw/lv_draw_arc.i: lvgl/src/draw/lv_draw_arc.c.i
@@ -4390,7 +4390,7 @@ lvgl/src/draw/lv_draw_arc.i: lvgl/src/draw/lv_draw_arc.c.i
 
 # target to preprocess a source file
 lvgl/src/draw/lv_draw_arc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/draw/lv_draw_arc.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/draw/lv_draw_arc.c.i
 .PHONY : lvgl/src/draw/lv_draw_arc.c.i
 
 lvgl/src/draw/lv_draw_arc.s: lvgl/src/draw/lv_draw_arc.c.s
@@ -4398,7 +4398,7 @@ lvgl/src/draw/lv_draw_arc.s: lvgl/src/draw/lv_draw_arc.c.s
 
 # target to generate assembly for a file
 lvgl/src/draw/lv_draw_arc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/draw/lv_draw_arc.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/draw/lv_draw_arc.c.s
 .PHONY : lvgl/src/draw/lv_draw_arc.c.s
 
 lvgl/src/draw/lv_draw_blend.o: lvgl/src/draw/lv_draw_blend.c.o
@@ -4406,7 +4406,7 @@ lvgl/src/draw/lv_draw_blend.o: lvgl/src/draw/lv_draw_blend.c.o
 
 # target to build an object file
 lvgl/src/draw/lv_draw_blend.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/draw/lv_draw_blend.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/draw/lv_draw_blend.c.o
 .PHONY : lvgl/src/draw/lv_draw_blend.c.o
 
 lvgl/src/draw/lv_draw_blend.i: lvgl/src/draw/lv_draw_blend.c.i
@@ -4414,7 +4414,7 @@ lvgl/src/draw/lv_draw_blend.i: lvgl/src/draw/lv_draw_blend.c.i
 
 # target to preprocess a source file
 lvgl/src/draw/lv_draw_blend.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/draw/lv_draw_blend.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/draw/lv_draw_blend.c.i
 .PHONY : lvgl/src/draw/lv_draw_blend.c.i
 
 lvgl/src/draw/lv_draw_blend.s: lvgl/src/draw/lv_draw_blend.c.s
@@ -4422,7 +4422,7 @@ lvgl/src/draw/lv_draw_blend.s: lvgl/src/draw/lv_draw_blend.c.s
 
 # target to generate assembly for a file
 lvgl/src/draw/lv_draw_blend.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/draw/lv_draw_blend.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/draw/lv_draw_blend.c.s
 .PHONY : lvgl/src/draw/lv_draw_blend.c.s
 
 lvgl/src/draw/lv_draw_img.o: lvgl/src/draw/lv_draw_img.c.o
@@ -4430,7 +4430,7 @@ lvgl/src/draw/lv_draw_img.o: lvgl/src/draw/lv_draw_img.c.o
 
 # target to build an object file
 lvgl/src/draw/lv_draw_img.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/draw/lv_draw_img.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/draw/lv_draw_img.c.o
 .PHONY : lvgl/src/draw/lv_draw_img.c.o
 
 lvgl/src/draw/lv_draw_img.i: lvgl/src/draw/lv_draw_img.c.i
@@ -4438,7 +4438,7 @@ lvgl/src/draw/lv_draw_img.i: lvgl/src/draw/lv_draw_img.c.i
 
 # target to preprocess a source file
 lvgl/src/draw/lv_draw_img.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/draw/lv_draw_img.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/draw/lv_draw_img.c.i
 .PHONY : lvgl/src/draw/lv_draw_img.c.i
 
 lvgl/src/draw/lv_draw_img.s: lvgl/src/draw/lv_draw_img.c.s
@@ -4446,7 +4446,7 @@ lvgl/src/draw/lv_draw_img.s: lvgl/src/draw/lv_draw_img.c.s
 
 # target to generate assembly for a file
 lvgl/src/draw/lv_draw_img.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/draw/lv_draw_img.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/draw/lv_draw_img.c.s
 .PHONY : lvgl/src/draw/lv_draw_img.c.s
 
 lvgl/src/draw/lv_draw_label.o: lvgl/src/draw/lv_draw_label.c.o
@@ -4454,7 +4454,7 @@ lvgl/src/draw/lv_draw_label.o: lvgl/src/draw/lv_draw_label.c.o
 
 # target to build an object file
 lvgl/src/draw/lv_draw_label.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/draw/lv_draw_label.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/draw/lv_draw_label.c.o
 .PHONY : lvgl/src/draw/lv_draw_label.c.o
 
 lvgl/src/draw/lv_draw_label.i: lvgl/src/draw/lv_draw_label.c.i
@@ -4462,7 +4462,7 @@ lvgl/src/draw/lv_draw_label.i: lvgl/src/draw/lv_draw_label.c.i
 
 # target to preprocess a source file
 lvgl/src/draw/lv_draw_label.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/draw/lv_draw_label.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/draw/lv_draw_label.c.i
 .PHONY : lvgl/src/draw/lv_draw_label.c.i
 
 lvgl/src/draw/lv_draw_label.s: lvgl/src/draw/lv_draw_label.c.s
@@ -4470,7 +4470,7 @@ lvgl/src/draw/lv_draw_label.s: lvgl/src/draw/lv_draw_label.c.s
 
 # target to generate assembly for a file
 lvgl/src/draw/lv_draw_label.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/draw/lv_draw_label.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/draw/lv_draw_label.c.s
 .PHONY : lvgl/src/draw/lv_draw_label.c.s
 
 lvgl/src/draw/lv_draw_line.o: lvgl/src/draw/lv_draw_line.c.o
@@ -4478,7 +4478,7 @@ lvgl/src/draw/lv_draw_line.o: lvgl/src/draw/lv_draw_line.c.o
 
 # target to build an object file
 lvgl/src/draw/lv_draw_line.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/draw/lv_draw_line.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/draw/lv_draw_line.c.o
 .PHONY : lvgl/src/draw/lv_draw_line.c.o
 
 lvgl/src/draw/lv_draw_line.i: lvgl/src/draw/lv_draw_line.c.i
@@ -4486,7 +4486,7 @@ lvgl/src/draw/lv_draw_line.i: lvgl/src/draw/lv_draw_line.c.i
 
 # target to preprocess a source file
 lvgl/src/draw/lv_draw_line.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/draw/lv_draw_line.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/draw/lv_draw_line.c.i
 .PHONY : lvgl/src/draw/lv_draw_line.c.i
 
 lvgl/src/draw/lv_draw_line.s: lvgl/src/draw/lv_draw_line.c.s
@@ -4494,7 +4494,7 @@ lvgl/src/draw/lv_draw_line.s: lvgl/src/draw/lv_draw_line.c.s
 
 # target to generate assembly for a file
 lvgl/src/draw/lv_draw_line.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/draw/lv_draw_line.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/draw/lv_draw_line.c.s
 .PHONY : lvgl/src/draw/lv_draw_line.c.s
 
 lvgl/src/draw/lv_draw_mask.o: lvgl/src/draw/lv_draw_mask.c.o
@@ -4502,7 +4502,7 @@ lvgl/src/draw/lv_draw_mask.o: lvgl/src/draw/lv_draw_mask.c.o
 
 # target to build an object file
 lvgl/src/draw/lv_draw_mask.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/draw/lv_draw_mask.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/draw/lv_draw_mask.c.o
 .PHONY : lvgl/src/draw/lv_draw_mask.c.o
 
 lvgl/src/draw/lv_draw_mask.i: lvgl/src/draw/lv_draw_mask.c.i
@@ -4510,7 +4510,7 @@ lvgl/src/draw/lv_draw_mask.i: lvgl/src/draw/lv_draw_mask.c.i
 
 # target to preprocess a source file
 lvgl/src/draw/lv_draw_mask.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/draw/lv_draw_mask.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/draw/lv_draw_mask.c.i
 .PHONY : lvgl/src/draw/lv_draw_mask.c.i
 
 lvgl/src/draw/lv_draw_mask.s: lvgl/src/draw/lv_draw_mask.c.s
@@ -4518,7 +4518,7 @@ lvgl/src/draw/lv_draw_mask.s: lvgl/src/draw/lv_draw_mask.c.s
 
 # target to generate assembly for a file
 lvgl/src/draw/lv_draw_mask.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/draw/lv_draw_mask.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/draw/lv_draw_mask.c.s
 .PHONY : lvgl/src/draw/lv_draw_mask.c.s
 
 lvgl/src/draw/lv_draw_rect.o: lvgl/src/draw/lv_draw_rect.c.o
@@ -4526,7 +4526,7 @@ lvgl/src/draw/lv_draw_rect.o: lvgl/src/draw/lv_draw_rect.c.o
 
 # target to build an object file
 lvgl/src/draw/lv_draw_rect.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/draw/lv_draw_rect.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/draw/lv_draw_rect.c.o
 .PHONY : lvgl/src/draw/lv_draw_rect.c.o
 
 lvgl/src/draw/lv_draw_rect.i: lvgl/src/draw/lv_draw_rect.c.i
@@ -4534,7 +4534,7 @@ lvgl/src/draw/lv_draw_rect.i: lvgl/src/draw/lv_draw_rect.c.i
 
 # target to preprocess a source file
 lvgl/src/draw/lv_draw_rect.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/draw/lv_draw_rect.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/draw/lv_draw_rect.c.i
 .PHONY : lvgl/src/draw/lv_draw_rect.c.i
 
 lvgl/src/draw/lv_draw_rect.s: lvgl/src/draw/lv_draw_rect.c.s
@@ -4542,7 +4542,7 @@ lvgl/src/draw/lv_draw_rect.s: lvgl/src/draw/lv_draw_rect.c.s
 
 # target to generate assembly for a file
 lvgl/src/draw/lv_draw_rect.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/draw/lv_draw_rect.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/draw/lv_draw_rect.c.s
 .PHONY : lvgl/src/draw/lv_draw_rect.c.s
 
 lvgl/src/draw/lv_draw_triangle.o: lvgl/src/draw/lv_draw_triangle.c.o
@@ -4550,7 +4550,7 @@ lvgl/src/draw/lv_draw_triangle.o: lvgl/src/draw/lv_draw_triangle.c.o
 
 # target to build an object file
 lvgl/src/draw/lv_draw_triangle.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/draw/lv_draw_triangle.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/draw/lv_draw_triangle.c.o
 .PHONY : lvgl/src/draw/lv_draw_triangle.c.o
 
 lvgl/src/draw/lv_draw_triangle.i: lvgl/src/draw/lv_draw_triangle.c.i
@@ -4558,7 +4558,7 @@ lvgl/src/draw/lv_draw_triangle.i: lvgl/src/draw/lv_draw_triangle.c.i
 
 # target to preprocess a source file
 lvgl/src/draw/lv_draw_triangle.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/draw/lv_draw_triangle.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/draw/lv_draw_triangle.c.i
 .PHONY : lvgl/src/draw/lv_draw_triangle.c.i
 
 lvgl/src/draw/lv_draw_triangle.s: lvgl/src/draw/lv_draw_triangle.c.s
@@ -4566,7 +4566,7 @@ lvgl/src/draw/lv_draw_triangle.s: lvgl/src/draw/lv_draw_triangle.c.s
 
 # target to generate assembly for a file
 lvgl/src/draw/lv_draw_triangle.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/draw/lv_draw_triangle.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/draw/lv_draw_triangle.c.s
 .PHONY : lvgl/src/draw/lv_draw_triangle.c.s
 
 lvgl/src/draw/lv_img_buf.o: lvgl/src/draw/lv_img_buf.c.o
@@ -4574,7 +4574,7 @@ lvgl/src/draw/lv_img_buf.o: lvgl/src/draw/lv_img_buf.c.o
 
 # target to build an object file
 lvgl/src/draw/lv_img_buf.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/draw/lv_img_buf.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/draw/lv_img_buf.c.o
 .PHONY : lvgl/src/draw/lv_img_buf.c.o
 
 lvgl/src/draw/lv_img_buf.i: lvgl/src/draw/lv_img_buf.c.i
@@ -4582,7 +4582,7 @@ lvgl/src/draw/lv_img_buf.i: lvgl/src/draw/lv_img_buf.c.i
 
 # target to preprocess a source file
 lvgl/src/draw/lv_img_buf.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/draw/lv_img_buf.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/draw/lv_img_buf.c.i
 .PHONY : lvgl/src/draw/lv_img_buf.c.i
 
 lvgl/src/draw/lv_img_buf.s: lvgl/src/draw/lv_img_buf.c.s
@@ -4590,7 +4590,7 @@ lvgl/src/draw/lv_img_buf.s: lvgl/src/draw/lv_img_buf.c.s
 
 # target to generate assembly for a file
 lvgl/src/draw/lv_img_buf.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/draw/lv_img_buf.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/draw/lv_img_buf.c.s
 .PHONY : lvgl/src/draw/lv_img_buf.c.s
 
 lvgl/src/draw/lv_img_cache.o: lvgl/src/draw/lv_img_cache.c.o
@@ -4598,7 +4598,7 @@ lvgl/src/draw/lv_img_cache.o: lvgl/src/draw/lv_img_cache.c.o
 
 # target to build an object file
 lvgl/src/draw/lv_img_cache.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/draw/lv_img_cache.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/draw/lv_img_cache.c.o
 .PHONY : lvgl/src/draw/lv_img_cache.c.o
 
 lvgl/src/draw/lv_img_cache.i: lvgl/src/draw/lv_img_cache.c.i
@@ -4606,7 +4606,7 @@ lvgl/src/draw/lv_img_cache.i: lvgl/src/draw/lv_img_cache.c.i
 
 # target to preprocess a source file
 lvgl/src/draw/lv_img_cache.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/draw/lv_img_cache.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/draw/lv_img_cache.c.i
 .PHONY : lvgl/src/draw/lv_img_cache.c.i
 
 lvgl/src/draw/lv_img_cache.s: lvgl/src/draw/lv_img_cache.c.s
@@ -4614,7 +4614,7 @@ lvgl/src/draw/lv_img_cache.s: lvgl/src/draw/lv_img_cache.c.s
 
 # target to generate assembly for a file
 lvgl/src/draw/lv_img_cache.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/draw/lv_img_cache.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/draw/lv_img_cache.c.s
 .PHONY : lvgl/src/draw/lv_img_cache.c.s
 
 lvgl/src/draw/lv_img_decoder.o: lvgl/src/draw/lv_img_decoder.c.o
@@ -4622,7 +4622,7 @@ lvgl/src/draw/lv_img_decoder.o: lvgl/src/draw/lv_img_decoder.c.o
 
 # target to build an object file
 lvgl/src/draw/lv_img_decoder.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/draw/lv_img_decoder.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/draw/lv_img_decoder.c.o
 .PHONY : lvgl/src/draw/lv_img_decoder.c.o
 
 lvgl/src/draw/lv_img_decoder.i: lvgl/src/draw/lv_img_decoder.c.i
@@ -4630,7 +4630,7 @@ lvgl/src/draw/lv_img_decoder.i: lvgl/src/draw/lv_img_decoder.c.i
 
 # target to preprocess a source file
 lvgl/src/draw/lv_img_decoder.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/draw/lv_img_decoder.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/draw/lv_img_decoder.c.i
 .PHONY : lvgl/src/draw/lv_img_decoder.c.i
 
 lvgl/src/draw/lv_img_decoder.s: lvgl/src/draw/lv_img_decoder.c.s
@@ -4638,7 +4638,7 @@ lvgl/src/draw/lv_img_decoder.s: lvgl/src/draw/lv_img_decoder.c.s
 
 # target to generate assembly for a file
 lvgl/src/draw/lv_img_decoder.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/draw/lv_img_decoder.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/draw/lv_img_decoder.c.s
 .PHONY : lvgl/src/draw/lv_img_decoder.c.s
 
 lvgl/src/extra/layouts/flex/lv_flex.o: lvgl/src/extra/layouts/flex/lv_flex.c.o
@@ -4646,7 +4646,7 @@ lvgl/src/extra/layouts/flex/lv_flex.o: lvgl/src/extra/layouts/flex/lv_flex.c.o
 
 # target to build an object file
 lvgl/src/extra/layouts/flex/lv_flex.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/layouts/flex/lv_flex.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/layouts/flex/lv_flex.c.o
 .PHONY : lvgl/src/extra/layouts/flex/lv_flex.c.o
 
 lvgl/src/extra/layouts/flex/lv_flex.i: lvgl/src/extra/layouts/flex/lv_flex.c.i
@@ -4654,7 +4654,7 @@ lvgl/src/extra/layouts/flex/lv_flex.i: lvgl/src/extra/layouts/flex/lv_flex.c.i
 
 # target to preprocess a source file
 lvgl/src/extra/layouts/flex/lv_flex.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/layouts/flex/lv_flex.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/layouts/flex/lv_flex.c.i
 .PHONY : lvgl/src/extra/layouts/flex/lv_flex.c.i
 
 lvgl/src/extra/layouts/flex/lv_flex.s: lvgl/src/extra/layouts/flex/lv_flex.c.s
@@ -4662,7 +4662,7 @@ lvgl/src/extra/layouts/flex/lv_flex.s: lvgl/src/extra/layouts/flex/lv_flex.c.s
 
 # target to generate assembly for a file
 lvgl/src/extra/layouts/flex/lv_flex.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/layouts/flex/lv_flex.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/layouts/flex/lv_flex.c.s
 .PHONY : lvgl/src/extra/layouts/flex/lv_flex.c.s
 
 lvgl/src/extra/layouts/grid/lv_grid.o: lvgl/src/extra/layouts/grid/lv_grid.c.o
@@ -4670,7 +4670,7 @@ lvgl/src/extra/layouts/grid/lv_grid.o: lvgl/src/extra/layouts/grid/lv_grid.c.o
 
 # target to build an object file
 lvgl/src/extra/layouts/grid/lv_grid.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/layouts/grid/lv_grid.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/layouts/grid/lv_grid.c.o
 .PHONY : lvgl/src/extra/layouts/grid/lv_grid.c.o
 
 lvgl/src/extra/layouts/grid/lv_grid.i: lvgl/src/extra/layouts/grid/lv_grid.c.i
@@ -4678,7 +4678,7 @@ lvgl/src/extra/layouts/grid/lv_grid.i: lvgl/src/extra/layouts/grid/lv_grid.c.i
 
 # target to preprocess a source file
 lvgl/src/extra/layouts/grid/lv_grid.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/layouts/grid/lv_grid.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/layouts/grid/lv_grid.c.i
 .PHONY : lvgl/src/extra/layouts/grid/lv_grid.c.i
 
 lvgl/src/extra/layouts/grid/lv_grid.s: lvgl/src/extra/layouts/grid/lv_grid.c.s
@@ -4686,7 +4686,7 @@ lvgl/src/extra/layouts/grid/lv_grid.s: lvgl/src/extra/layouts/grid/lv_grid.c.s
 
 # target to generate assembly for a file
 lvgl/src/extra/layouts/grid/lv_grid.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/layouts/grid/lv_grid.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/layouts/grid/lv_grid.c.s
 .PHONY : lvgl/src/extra/layouts/grid/lv_grid.c.s
 
 lvgl/src/extra/lv_extra.o: lvgl/src/extra/lv_extra.c.o
@@ -4694,7 +4694,7 @@ lvgl/src/extra/lv_extra.o: lvgl/src/extra/lv_extra.c.o
 
 # target to build an object file
 lvgl/src/extra/lv_extra.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/lv_extra.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/lv_extra.c.o
 .PHONY : lvgl/src/extra/lv_extra.c.o
 
 lvgl/src/extra/lv_extra.i: lvgl/src/extra/lv_extra.c.i
@@ -4702,7 +4702,7 @@ lvgl/src/extra/lv_extra.i: lvgl/src/extra/lv_extra.c.i
 
 # target to preprocess a source file
 lvgl/src/extra/lv_extra.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/lv_extra.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/lv_extra.c.i
 .PHONY : lvgl/src/extra/lv_extra.c.i
 
 lvgl/src/extra/lv_extra.s: lvgl/src/extra/lv_extra.c.s
@@ -4710,7 +4710,7 @@ lvgl/src/extra/lv_extra.s: lvgl/src/extra/lv_extra.c.s
 
 # target to generate assembly for a file
 lvgl/src/extra/lv_extra.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/lv_extra.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/lv_extra.c.s
 .PHONY : lvgl/src/extra/lv_extra.c.s
 
 lvgl/src/extra/themes/basic/lv_theme_basic.o: lvgl/src/extra/themes/basic/lv_theme_basic.c.o
@@ -4718,7 +4718,7 @@ lvgl/src/extra/themes/basic/lv_theme_basic.o: lvgl/src/extra/themes/basic/lv_the
 
 # target to build an object file
 lvgl/src/extra/themes/basic/lv_theme_basic.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/themes/basic/lv_theme_basic.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/themes/basic/lv_theme_basic.c.o
 .PHONY : lvgl/src/extra/themes/basic/lv_theme_basic.c.o
 
 lvgl/src/extra/themes/basic/lv_theme_basic.i: lvgl/src/extra/themes/basic/lv_theme_basic.c.i
@@ -4726,7 +4726,7 @@ lvgl/src/extra/themes/basic/lv_theme_basic.i: lvgl/src/extra/themes/basic/lv_the
 
 # target to preprocess a source file
 lvgl/src/extra/themes/basic/lv_theme_basic.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/themes/basic/lv_theme_basic.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/themes/basic/lv_theme_basic.c.i
 .PHONY : lvgl/src/extra/themes/basic/lv_theme_basic.c.i
 
 lvgl/src/extra/themes/basic/lv_theme_basic.s: lvgl/src/extra/themes/basic/lv_theme_basic.c.s
@@ -4734,7 +4734,7 @@ lvgl/src/extra/themes/basic/lv_theme_basic.s: lvgl/src/extra/themes/basic/lv_the
 
 # target to generate assembly for a file
 lvgl/src/extra/themes/basic/lv_theme_basic.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/themes/basic/lv_theme_basic.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/themes/basic/lv_theme_basic.c.s
 .PHONY : lvgl/src/extra/themes/basic/lv_theme_basic.c.s
 
 lvgl/src/extra/themes/default/lv_theme_default.o: lvgl/src/extra/themes/default/lv_theme_default.c.o
@@ -4742,7 +4742,7 @@ lvgl/src/extra/themes/default/lv_theme_default.o: lvgl/src/extra/themes/default/
 
 # target to build an object file
 lvgl/src/extra/themes/default/lv_theme_default.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/themes/default/lv_theme_default.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/themes/default/lv_theme_default.c.o
 .PHONY : lvgl/src/extra/themes/default/lv_theme_default.c.o
 
 lvgl/src/extra/themes/default/lv_theme_default.i: lvgl/src/extra/themes/default/lv_theme_default.c.i
@@ -4750,7 +4750,7 @@ lvgl/src/extra/themes/default/lv_theme_default.i: lvgl/src/extra/themes/default/
 
 # target to preprocess a source file
 lvgl/src/extra/themes/default/lv_theme_default.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/themes/default/lv_theme_default.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/themes/default/lv_theme_default.c.i
 .PHONY : lvgl/src/extra/themes/default/lv_theme_default.c.i
 
 lvgl/src/extra/themes/default/lv_theme_default.s: lvgl/src/extra/themes/default/lv_theme_default.c.s
@@ -4758,7 +4758,7 @@ lvgl/src/extra/themes/default/lv_theme_default.s: lvgl/src/extra/themes/default/
 
 # target to generate assembly for a file
 lvgl/src/extra/themes/default/lv_theme_default.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/themes/default/lv_theme_default.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/themes/default/lv_theme_default.c.s
 .PHONY : lvgl/src/extra/themes/default/lv_theme_default.c.s
 
 lvgl/src/extra/widgets/calendar/lv_calendar.o: lvgl/src/extra/widgets/calendar/lv_calendar.c.o
@@ -4766,7 +4766,7 @@ lvgl/src/extra/widgets/calendar/lv_calendar.o: lvgl/src/extra/widgets/calendar/l
 
 # target to build an object file
 lvgl/src/extra/widgets/calendar/lv_calendar.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/widgets/calendar/lv_calendar.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/widgets/calendar/lv_calendar.c.o
 .PHONY : lvgl/src/extra/widgets/calendar/lv_calendar.c.o
 
 lvgl/src/extra/widgets/calendar/lv_calendar.i: lvgl/src/extra/widgets/calendar/lv_calendar.c.i
@@ -4774,7 +4774,7 @@ lvgl/src/extra/widgets/calendar/lv_calendar.i: lvgl/src/extra/widgets/calendar/l
 
 # target to preprocess a source file
 lvgl/src/extra/widgets/calendar/lv_calendar.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/widgets/calendar/lv_calendar.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/widgets/calendar/lv_calendar.c.i
 .PHONY : lvgl/src/extra/widgets/calendar/lv_calendar.c.i
 
 lvgl/src/extra/widgets/calendar/lv_calendar.s: lvgl/src/extra/widgets/calendar/lv_calendar.c.s
@@ -4782,7 +4782,7 @@ lvgl/src/extra/widgets/calendar/lv_calendar.s: lvgl/src/extra/widgets/calendar/l
 
 # target to generate assembly for a file
 lvgl/src/extra/widgets/calendar/lv_calendar.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/widgets/calendar/lv_calendar.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/widgets/calendar/lv_calendar.c.s
 .PHONY : lvgl/src/extra/widgets/calendar/lv_calendar.c.s
 
 lvgl/src/extra/widgets/calendar/lv_calendar_header_arrow.o: lvgl/src/extra/widgets/calendar/lv_calendar_header_arrow.c.o
@@ -4790,7 +4790,7 @@ lvgl/src/extra/widgets/calendar/lv_calendar_header_arrow.o: lvgl/src/extra/widge
 
 # target to build an object file
 lvgl/src/extra/widgets/calendar/lv_calendar_header_arrow.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/widgets/calendar/lv_calendar_header_arrow.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/widgets/calendar/lv_calendar_header_arrow.c.o
 .PHONY : lvgl/src/extra/widgets/calendar/lv_calendar_header_arrow.c.o
 
 lvgl/src/extra/widgets/calendar/lv_calendar_header_arrow.i: lvgl/src/extra/widgets/calendar/lv_calendar_header_arrow.c.i
@@ -4798,7 +4798,7 @@ lvgl/src/extra/widgets/calendar/lv_calendar_header_arrow.i: lvgl/src/extra/widge
 
 # target to preprocess a source file
 lvgl/src/extra/widgets/calendar/lv_calendar_header_arrow.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/widgets/calendar/lv_calendar_header_arrow.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/widgets/calendar/lv_calendar_header_arrow.c.i
 .PHONY : lvgl/src/extra/widgets/calendar/lv_calendar_header_arrow.c.i
 
 lvgl/src/extra/widgets/calendar/lv_calendar_header_arrow.s: lvgl/src/extra/widgets/calendar/lv_calendar_header_arrow.c.s
@@ -4806,7 +4806,7 @@ lvgl/src/extra/widgets/calendar/lv_calendar_header_arrow.s: lvgl/src/extra/widge
 
 # target to generate assembly for a file
 lvgl/src/extra/widgets/calendar/lv_calendar_header_arrow.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/widgets/calendar/lv_calendar_header_arrow.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/widgets/calendar/lv_calendar_header_arrow.c.s
 .PHONY : lvgl/src/extra/widgets/calendar/lv_calendar_header_arrow.c.s
 
 lvgl/src/extra/widgets/calendar/lv_calendar_header_dropdown.o: lvgl/src/extra/widgets/calendar/lv_calendar_header_dropdown.c.o
@@ -4814,7 +4814,7 @@ lvgl/src/extra/widgets/calendar/lv_calendar_header_dropdown.o: lvgl/src/extra/wi
 
 # target to build an object file
 lvgl/src/extra/widgets/calendar/lv_calendar_header_dropdown.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/widgets/calendar/lv_calendar_header_dropdown.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/widgets/calendar/lv_calendar_header_dropdown.c.o
 .PHONY : lvgl/src/extra/widgets/calendar/lv_calendar_header_dropdown.c.o
 
 lvgl/src/extra/widgets/calendar/lv_calendar_header_dropdown.i: lvgl/src/extra/widgets/calendar/lv_calendar_header_dropdown.c.i
@@ -4822,7 +4822,7 @@ lvgl/src/extra/widgets/calendar/lv_calendar_header_dropdown.i: lvgl/src/extra/wi
 
 # target to preprocess a source file
 lvgl/src/extra/widgets/calendar/lv_calendar_header_dropdown.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/widgets/calendar/lv_calendar_header_dropdown.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/widgets/calendar/lv_calendar_header_dropdown.c.i
 .PHONY : lvgl/src/extra/widgets/calendar/lv_calendar_header_dropdown.c.i
 
 lvgl/src/extra/widgets/calendar/lv_calendar_header_dropdown.s: lvgl/src/extra/widgets/calendar/lv_calendar_header_dropdown.c.s
@@ -4830,7 +4830,7 @@ lvgl/src/extra/widgets/calendar/lv_calendar_header_dropdown.s: lvgl/src/extra/wi
 
 # target to generate assembly for a file
 lvgl/src/extra/widgets/calendar/lv_calendar_header_dropdown.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/widgets/calendar/lv_calendar_header_dropdown.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/widgets/calendar/lv_calendar_header_dropdown.c.s
 .PHONY : lvgl/src/extra/widgets/calendar/lv_calendar_header_dropdown.c.s
 
 lvgl/src/extra/widgets/chart/lv_chart.o: lvgl/src/extra/widgets/chart/lv_chart.c.o
@@ -4838,7 +4838,7 @@ lvgl/src/extra/widgets/chart/lv_chart.o: lvgl/src/extra/widgets/chart/lv_chart.c
 
 # target to build an object file
 lvgl/src/extra/widgets/chart/lv_chart.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/widgets/chart/lv_chart.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/widgets/chart/lv_chart.c.o
 .PHONY : lvgl/src/extra/widgets/chart/lv_chart.c.o
 
 lvgl/src/extra/widgets/chart/lv_chart.i: lvgl/src/extra/widgets/chart/lv_chart.c.i
@@ -4846,7 +4846,7 @@ lvgl/src/extra/widgets/chart/lv_chart.i: lvgl/src/extra/widgets/chart/lv_chart.c
 
 # target to preprocess a source file
 lvgl/src/extra/widgets/chart/lv_chart.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/widgets/chart/lv_chart.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/widgets/chart/lv_chart.c.i
 .PHONY : lvgl/src/extra/widgets/chart/lv_chart.c.i
 
 lvgl/src/extra/widgets/chart/lv_chart.s: lvgl/src/extra/widgets/chart/lv_chart.c.s
@@ -4854,7 +4854,7 @@ lvgl/src/extra/widgets/chart/lv_chart.s: lvgl/src/extra/widgets/chart/lv_chart.c
 
 # target to generate assembly for a file
 lvgl/src/extra/widgets/chart/lv_chart.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/widgets/chart/lv_chart.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/widgets/chart/lv_chart.c.s
 .PHONY : lvgl/src/extra/widgets/chart/lv_chart.c.s
 
 lvgl/src/extra/widgets/colorwheel/lv_colorwheel.o: lvgl/src/extra/widgets/colorwheel/lv_colorwheel.c.o
@@ -4862,7 +4862,7 @@ lvgl/src/extra/widgets/colorwheel/lv_colorwheel.o: lvgl/src/extra/widgets/colorw
 
 # target to build an object file
 lvgl/src/extra/widgets/colorwheel/lv_colorwheel.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/widgets/colorwheel/lv_colorwheel.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/widgets/colorwheel/lv_colorwheel.c.o
 .PHONY : lvgl/src/extra/widgets/colorwheel/lv_colorwheel.c.o
 
 lvgl/src/extra/widgets/colorwheel/lv_colorwheel.i: lvgl/src/extra/widgets/colorwheel/lv_colorwheel.c.i
@@ -4870,7 +4870,7 @@ lvgl/src/extra/widgets/colorwheel/lv_colorwheel.i: lvgl/src/extra/widgets/colorw
 
 # target to preprocess a source file
 lvgl/src/extra/widgets/colorwheel/lv_colorwheel.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/widgets/colorwheel/lv_colorwheel.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/widgets/colorwheel/lv_colorwheel.c.i
 .PHONY : lvgl/src/extra/widgets/colorwheel/lv_colorwheel.c.i
 
 lvgl/src/extra/widgets/colorwheel/lv_colorwheel.s: lvgl/src/extra/widgets/colorwheel/lv_colorwheel.c.s
@@ -4878,7 +4878,7 @@ lvgl/src/extra/widgets/colorwheel/lv_colorwheel.s: lvgl/src/extra/widgets/colorw
 
 # target to generate assembly for a file
 lvgl/src/extra/widgets/colorwheel/lv_colorwheel.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/widgets/colorwheel/lv_colorwheel.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/widgets/colorwheel/lv_colorwheel.c.s
 .PHONY : lvgl/src/extra/widgets/colorwheel/lv_colorwheel.c.s
 
 lvgl/src/extra/widgets/imgbtn/lv_imgbtn.o: lvgl/src/extra/widgets/imgbtn/lv_imgbtn.c.o
@@ -4886,7 +4886,7 @@ lvgl/src/extra/widgets/imgbtn/lv_imgbtn.o: lvgl/src/extra/widgets/imgbtn/lv_imgb
 
 # target to build an object file
 lvgl/src/extra/widgets/imgbtn/lv_imgbtn.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/widgets/imgbtn/lv_imgbtn.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/widgets/imgbtn/lv_imgbtn.c.o
 .PHONY : lvgl/src/extra/widgets/imgbtn/lv_imgbtn.c.o
 
 lvgl/src/extra/widgets/imgbtn/lv_imgbtn.i: lvgl/src/extra/widgets/imgbtn/lv_imgbtn.c.i
@@ -4894,7 +4894,7 @@ lvgl/src/extra/widgets/imgbtn/lv_imgbtn.i: lvgl/src/extra/widgets/imgbtn/lv_imgb
 
 # target to preprocess a source file
 lvgl/src/extra/widgets/imgbtn/lv_imgbtn.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/widgets/imgbtn/lv_imgbtn.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/widgets/imgbtn/lv_imgbtn.c.i
 .PHONY : lvgl/src/extra/widgets/imgbtn/lv_imgbtn.c.i
 
 lvgl/src/extra/widgets/imgbtn/lv_imgbtn.s: lvgl/src/extra/widgets/imgbtn/lv_imgbtn.c.s
@@ -4902,7 +4902,7 @@ lvgl/src/extra/widgets/imgbtn/lv_imgbtn.s: lvgl/src/extra/widgets/imgbtn/lv_imgb
 
 # target to generate assembly for a file
 lvgl/src/extra/widgets/imgbtn/lv_imgbtn.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/widgets/imgbtn/lv_imgbtn.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/widgets/imgbtn/lv_imgbtn.c.s
 .PHONY : lvgl/src/extra/widgets/imgbtn/lv_imgbtn.c.s
 
 lvgl/src/extra/widgets/keyboard/lv_keyboard.o: lvgl/src/extra/widgets/keyboard/lv_keyboard.c.o
@@ -4910,7 +4910,7 @@ lvgl/src/extra/widgets/keyboard/lv_keyboard.o: lvgl/src/extra/widgets/keyboard/l
 
 # target to build an object file
 lvgl/src/extra/widgets/keyboard/lv_keyboard.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/widgets/keyboard/lv_keyboard.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/widgets/keyboard/lv_keyboard.c.o
 .PHONY : lvgl/src/extra/widgets/keyboard/lv_keyboard.c.o
 
 lvgl/src/extra/widgets/keyboard/lv_keyboard.i: lvgl/src/extra/widgets/keyboard/lv_keyboard.c.i
@@ -4918,7 +4918,7 @@ lvgl/src/extra/widgets/keyboard/lv_keyboard.i: lvgl/src/extra/widgets/keyboard/l
 
 # target to preprocess a source file
 lvgl/src/extra/widgets/keyboard/lv_keyboard.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/widgets/keyboard/lv_keyboard.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/widgets/keyboard/lv_keyboard.c.i
 .PHONY : lvgl/src/extra/widgets/keyboard/lv_keyboard.c.i
 
 lvgl/src/extra/widgets/keyboard/lv_keyboard.s: lvgl/src/extra/widgets/keyboard/lv_keyboard.c.s
@@ -4926,7 +4926,7 @@ lvgl/src/extra/widgets/keyboard/lv_keyboard.s: lvgl/src/extra/widgets/keyboard/l
 
 # target to generate assembly for a file
 lvgl/src/extra/widgets/keyboard/lv_keyboard.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/widgets/keyboard/lv_keyboard.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/widgets/keyboard/lv_keyboard.c.s
 .PHONY : lvgl/src/extra/widgets/keyboard/lv_keyboard.c.s
 
 lvgl/src/extra/widgets/led/lv_led.o: lvgl/src/extra/widgets/led/lv_led.c.o
@@ -4934,7 +4934,7 @@ lvgl/src/extra/widgets/led/lv_led.o: lvgl/src/extra/widgets/led/lv_led.c.o
 
 # target to build an object file
 lvgl/src/extra/widgets/led/lv_led.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/widgets/led/lv_led.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/widgets/led/lv_led.c.o
 .PHONY : lvgl/src/extra/widgets/led/lv_led.c.o
 
 lvgl/src/extra/widgets/led/lv_led.i: lvgl/src/extra/widgets/led/lv_led.c.i
@@ -4942,7 +4942,7 @@ lvgl/src/extra/widgets/led/lv_led.i: lvgl/src/extra/widgets/led/lv_led.c.i
 
 # target to preprocess a source file
 lvgl/src/extra/widgets/led/lv_led.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/widgets/led/lv_led.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/widgets/led/lv_led.c.i
 .PHONY : lvgl/src/extra/widgets/led/lv_led.c.i
 
 lvgl/src/extra/widgets/led/lv_led.s: lvgl/src/extra/widgets/led/lv_led.c.s
@@ -4950,7 +4950,7 @@ lvgl/src/extra/widgets/led/lv_led.s: lvgl/src/extra/widgets/led/lv_led.c.s
 
 # target to generate assembly for a file
 lvgl/src/extra/widgets/led/lv_led.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/widgets/led/lv_led.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/widgets/led/lv_led.c.s
 .PHONY : lvgl/src/extra/widgets/led/lv_led.c.s
 
 lvgl/src/extra/widgets/list/lv_list.o: lvgl/src/extra/widgets/list/lv_list.c.o
@@ -4958,7 +4958,7 @@ lvgl/src/extra/widgets/list/lv_list.o: lvgl/src/extra/widgets/list/lv_list.c.o
 
 # target to build an object file
 lvgl/src/extra/widgets/list/lv_list.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/widgets/list/lv_list.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/widgets/list/lv_list.c.o
 .PHONY : lvgl/src/extra/widgets/list/lv_list.c.o
 
 lvgl/src/extra/widgets/list/lv_list.i: lvgl/src/extra/widgets/list/lv_list.c.i
@@ -4966,7 +4966,7 @@ lvgl/src/extra/widgets/list/lv_list.i: lvgl/src/extra/widgets/list/lv_list.c.i
 
 # target to preprocess a source file
 lvgl/src/extra/widgets/list/lv_list.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/widgets/list/lv_list.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/widgets/list/lv_list.c.i
 .PHONY : lvgl/src/extra/widgets/list/lv_list.c.i
 
 lvgl/src/extra/widgets/list/lv_list.s: lvgl/src/extra/widgets/list/lv_list.c.s
@@ -4974,7 +4974,7 @@ lvgl/src/extra/widgets/list/lv_list.s: lvgl/src/extra/widgets/list/lv_list.c.s
 
 # target to generate assembly for a file
 lvgl/src/extra/widgets/list/lv_list.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/widgets/list/lv_list.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/widgets/list/lv_list.c.s
 .PHONY : lvgl/src/extra/widgets/list/lv_list.c.s
 
 lvgl/src/extra/widgets/meter/lv_meter.o: lvgl/src/extra/widgets/meter/lv_meter.c.o
@@ -4982,7 +4982,7 @@ lvgl/src/extra/widgets/meter/lv_meter.o: lvgl/src/extra/widgets/meter/lv_meter.c
 
 # target to build an object file
 lvgl/src/extra/widgets/meter/lv_meter.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/widgets/meter/lv_meter.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/widgets/meter/lv_meter.c.o
 .PHONY : lvgl/src/extra/widgets/meter/lv_meter.c.o
 
 lvgl/src/extra/widgets/meter/lv_meter.i: lvgl/src/extra/widgets/meter/lv_meter.c.i
@@ -4990,7 +4990,7 @@ lvgl/src/extra/widgets/meter/lv_meter.i: lvgl/src/extra/widgets/meter/lv_meter.c
 
 # target to preprocess a source file
 lvgl/src/extra/widgets/meter/lv_meter.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/widgets/meter/lv_meter.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/widgets/meter/lv_meter.c.i
 .PHONY : lvgl/src/extra/widgets/meter/lv_meter.c.i
 
 lvgl/src/extra/widgets/meter/lv_meter.s: lvgl/src/extra/widgets/meter/lv_meter.c.s
@@ -4998,7 +4998,7 @@ lvgl/src/extra/widgets/meter/lv_meter.s: lvgl/src/extra/widgets/meter/lv_meter.c
 
 # target to generate assembly for a file
 lvgl/src/extra/widgets/meter/lv_meter.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/widgets/meter/lv_meter.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/widgets/meter/lv_meter.c.s
 .PHONY : lvgl/src/extra/widgets/meter/lv_meter.c.s
 
 lvgl/src/extra/widgets/msgbox/lv_msgbox.o: lvgl/src/extra/widgets/msgbox/lv_msgbox.c.o
@@ -5006,7 +5006,7 @@ lvgl/src/extra/widgets/msgbox/lv_msgbox.o: lvgl/src/extra/widgets/msgbox/lv_msgb
 
 # target to build an object file
 lvgl/src/extra/widgets/msgbox/lv_msgbox.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/widgets/msgbox/lv_msgbox.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/widgets/msgbox/lv_msgbox.c.o
 .PHONY : lvgl/src/extra/widgets/msgbox/lv_msgbox.c.o
 
 lvgl/src/extra/widgets/msgbox/lv_msgbox.i: lvgl/src/extra/widgets/msgbox/lv_msgbox.c.i
@@ -5014,7 +5014,7 @@ lvgl/src/extra/widgets/msgbox/lv_msgbox.i: lvgl/src/extra/widgets/msgbox/lv_msgb
 
 # target to preprocess a source file
 lvgl/src/extra/widgets/msgbox/lv_msgbox.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/widgets/msgbox/lv_msgbox.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/widgets/msgbox/lv_msgbox.c.i
 .PHONY : lvgl/src/extra/widgets/msgbox/lv_msgbox.c.i
 
 lvgl/src/extra/widgets/msgbox/lv_msgbox.s: lvgl/src/extra/widgets/msgbox/lv_msgbox.c.s
@@ -5022,7 +5022,7 @@ lvgl/src/extra/widgets/msgbox/lv_msgbox.s: lvgl/src/extra/widgets/msgbox/lv_msgb
 
 # target to generate assembly for a file
 lvgl/src/extra/widgets/msgbox/lv_msgbox.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/widgets/msgbox/lv_msgbox.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/widgets/msgbox/lv_msgbox.c.s
 .PHONY : lvgl/src/extra/widgets/msgbox/lv_msgbox.c.s
 
 lvgl/src/extra/widgets/spinbox/lv_spinbox.o: lvgl/src/extra/widgets/spinbox/lv_spinbox.c.o
@@ -5030,7 +5030,7 @@ lvgl/src/extra/widgets/spinbox/lv_spinbox.o: lvgl/src/extra/widgets/spinbox/lv_s
 
 # target to build an object file
 lvgl/src/extra/widgets/spinbox/lv_spinbox.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/widgets/spinbox/lv_spinbox.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/widgets/spinbox/lv_spinbox.c.o
 .PHONY : lvgl/src/extra/widgets/spinbox/lv_spinbox.c.o
 
 lvgl/src/extra/widgets/spinbox/lv_spinbox.i: lvgl/src/extra/widgets/spinbox/lv_spinbox.c.i
@@ -5038,7 +5038,7 @@ lvgl/src/extra/widgets/spinbox/lv_spinbox.i: lvgl/src/extra/widgets/spinbox/lv_s
 
 # target to preprocess a source file
 lvgl/src/extra/widgets/spinbox/lv_spinbox.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/widgets/spinbox/lv_spinbox.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/widgets/spinbox/lv_spinbox.c.i
 .PHONY : lvgl/src/extra/widgets/spinbox/lv_spinbox.c.i
 
 lvgl/src/extra/widgets/spinbox/lv_spinbox.s: lvgl/src/extra/widgets/spinbox/lv_spinbox.c.s
@@ -5046,7 +5046,7 @@ lvgl/src/extra/widgets/spinbox/lv_spinbox.s: lvgl/src/extra/widgets/spinbox/lv_s
 
 # target to generate assembly for a file
 lvgl/src/extra/widgets/spinbox/lv_spinbox.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/widgets/spinbox/lv_spinbox.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/widgets/spinbox/lv_spinbox.c.s
 .PHONY : lvgl/src/extra/widgets/spinbox/lv_spinbox.c.s
 
 lvgl/src/extra/widgets/spinner/lv_spinner.o: lvgl/src/extra/widgets/spinner/lv_spinner.c.o
@@ -5054,7 +5054,7 @@ lvgl/src/extra/widgets/spinner/lv_spinner.o: lvgl/src/extra/widgets/spinner/lv_s
 
 # target to build an object file
 lvgl/src/extra/widgets/spinner/lv_spinner.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/widgets/spinner/lv_spinner.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/widgets/spinner/lv_spinner.c.o
 .PHONY : lvgl/src/extra/widgets/spinner/lv_spinner.c.o
 
 lvgl/src/extra/widgets/spinner/lv_spinner.i: lvgl/src/extra/widgets/spinner/lv_spinner.c.i
@@ -5062,7 +5062,7 @@ lvgl/src/extra/widgets/spinner/lv_spinner.i: lvgl/src/extra/widgets/spinner/lv_s
 
 # target to preprocess a source file
 lvgl/src/extra/widgets/spinner/lv_spinner.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/widgets/spinner/lv_spinner.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/widgets/spinner/lv_spinner.c.i
 .PHONY : lvgl/src/extra/widgets/spinner/lv_spinner.c.i
 
 lvgl/src/extra/widgets/spinner/lv_spinner.s: lvgl/src/extra/widgets/spinner/lv_spinner.c.s
@@ -5070,7 +5070,7 @@ lvgl/src/extra/widgets/spinner/lv_spinner.s: lvgl/src/extra/widgets/spinner/lv_s
 
 # target to generate assembly for a file
 lvgl/src/extra/widgets/spinner/lv_spinner.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/widgets/spinner/lv_spinner.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/widgets/spinner/lv_spinner.c.s
 .PHONY : lvgl/src/extra/widgets/spinner/lv_spinner.c.s
 
 lvgl/src/extra/widgets/tabview/lv_tabview.o: lvgl/src/extra/widgets/tabview/lv_tabview.c.o
@@ -5078,7 +5078,7 @@ lvgl/src/extra/widgets/tabview/lv_tabview.o: lvgl/src/extra/widgets/tabview/lv_t
 
 # target to build an object file
 lvgl/src/extra/widgets/tabview/lv_tabview.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/widgets/tabview/lv_tabview.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/widgets/tabview/lv_tabview.c.o
 .PHONY : lvgl/src/extra/widgets/tabview/lv_tabview.c.o
 
 lvgl/src/extra/widgets/tabview/lv_tabview.i: lvgl/src/extra/widgets/tabview/lv_tabview.c.i
@@ -5086,7 +5086,7 @@ lvgl/src/extra/widgets/tabview/lv_tabview.i: lvgl/src/extra/widgets/tabview/lv_t
 
 # target to preprocess a source file
 lvgl/src/extra/widgets/tabview/lv_tabview.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/widgets/tabview/lv_tabview.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/widgets/tabview/lv_tabview.c.i
 .PHONY : lvgl/src/extra/widgets/tabview/lv_tabview.c.i
 
 lvgl/src/extra/widgets/tabview/lv_tabview.s: lvgl/src/extra/widgets/tabview/lv_tabview.c.s
@@ -5094,7 +5094,7 @@ lvgl/src/extra/widgets/tabview/lv_tabview.s: lvgl/src/extra/widgets/tabview/lv_t
 
 # target to generate assembly for a file
 lvgl/src/extra/widgets/tabview/lv_tabview.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/widgets/tabview/lv_tabview.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/widgets/tabview/lv_tabview.c.s
 .PHONY : lvgl/src/extra/widgets/tabview/lv_tabview.c.s
 
 lvgl/src/extra/widgets/tileview/lv_tileview.o: lvgl/src/extra/widgets/tileview/lv_tileview.c.o
@@ -5102,7 +5102,7 @@ lvgl/src/extra/widgets/tileview/lv_tileview.o: lvgl/src/extra/widgets/tileview/l
 
 # target to build an object file
 lvgl/src/extra/widgets/tileview/lv_tileview.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/widgets/tileview/lv_tileview.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/widgets/tileview/lv_tileview.c.o
 .PHONY : lvgl/src/extra/widgets/tileview/lv_tileview.c.o
 
 lvgl/src/extra/widgets/tileview/lv_tileview.i: lvgl/src/extra/widgets/tileview/lv_tileview.c.i
@@ -5110,7 +5110,7 @@ lvgl/src/extra/widgets/tileview/lv_tileview.i: lvgl/src/extra/widgets/tileview/l
 
 # target to preprocess a source file
 lvgl/src/extra/widgets/tileview/lv_tileview.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/widgets/tileview/lv_tileview.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/widgets/tileview/lv_tileview.c.i
 .PHONY : lvgl/src/extra/widgets/tileview/lv_tileview.c.i
 
 lvgl/src/extra/widgets/tileview/lv_tileview.s: lvgl/src/extra/widgets/tileview/lv_tileview.c.s
@@ -5118,7 +5118,7 @@ lvgl/src/extra/widgets/tileview/lv_tileview.s: lvgl/src/extra/widgets/tileview/l
 
 # target to generate assembly for a file
 lvgl/src/extra/widgets/tileview/lv_tileview.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/widgets/tileview/lv_tileview.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/widgets/tileview/lv_tileview.c.s
 .PHONY : lvgl/src/extra/widgets/tileview/lv_tileview.c.s
 
 lvgl/src/extra/widgets/win/lv_win.o: lvgl/src/extra/widgets/win/lv_win.c.o
@@ -5126,7 +5126,7 @@ lvgl/src/extra/widgets/win/lv_win.o: lvgl/src/extra/widgets/win/lv_win.c.o
 
 # target to build an object file
 lvgl/src/extra/widgets/win/lv_win.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/widgets/win/lv_win.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/widgets/win/lv_win.c.o
 .PHONY : lvgl/src/extra/widgets/win/lv_win.c.o
 
 lvgl/src/extra/widgets/win/lv_win.i: lvgl/src/extra/widgets/win/lv_win.c.i
@@ -5134,7 +5134,7 @@ lvgl/src/extra/widgets/win/lv_win.i: lvgl/src/extra/widgets/win/lv_win.c.i
 
 # target to preprocess a source file
 lvgl/src/extra/widgets/win/lv_win.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/widgets/win/lv_win.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/widgets/win/lv_win.c.i
 .PHONY : lvgl/src/extra/widgets/win/lv_win.c.i
 
 lvgl/src/extra/widgets/win/lv_win.s: lvgl/src/extra/widgets/win/lv_win.c.s
@@ -5142,7 +5142,7 @@ lvgl/src/extra/widgets/win/lv_win.s: lvgl/src/extra/widgets/win/lv_win.c.s
 
 # target to generate assembly for a file
 lvgl/src/extra/widgets/win/lv_win.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/extra/widgets/win/lv_win.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/widgets/win/lv_win.c.s
 .PHONY : lvgl/src/extra/widgets/win/lv_win.c.s
 
 lvgl/src/font/lv_font.o: lvgl/src/font/lv_font.c.o
@@ -5150,7 +5150,7 @@ lvgl/src/font/lv_font.o: lvgl/src/font/lv_font.c.o
 
 # target to build an object file
 lvgl/src/font/lv_font.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font.c.o
 .PHONY : lvgl/src/font/lv_font.c.o
 
 lvgl/src/font/lv_font.i: lvgl/src/font/lv_font.c.i
@@ -5158,7 +5158,7 @@ lvgl/src/font/lv_font.i: lvgl/src/font/lv_font.c.i
 
 # target to preprocess a source file
 lvgl/src/font/lv_font.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font.c.i
 .PHONY : lvgl/src/font/lv_font.c.i
 
 lvgl/src/font/lv_font.s: lvgl/src/font/lv_font.c.s
@@ -5166,7 +5166,7 @@ lvgl/src/font/lv_font.s: lvgl/src/font/lv_font.c.s
 
 # target to generate assembly for a file
 lvgl/src/font/lv_font.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font.c.s
 .PHONY : lvgl/src/font/lv_font.c.s
 
 lvgl/src/font/lv_font_dejavu_16_persian_hebrew.o: lvgl/src/font/lv_font_dejavu_16_persian_hebrew.c.o
@@ -5174,7 +5174,7 @@ lvgl/src/font/lv_font_dejavu_16_persian_hebrew.o: lvgl/src/font/lv_font_dejavu_1
 
 # target to build an object file
 lvgl/src/font/lv_font_dejavu_16_persian_hebrew.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_dejavu_16_persian_hebrew.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_dejavu_16_persian_hebrew.c.o
 .PHONY : lvgl/src/font/lv_font_dejavu_16_persian_hebrew.c.o
 
 lvgl/src/font/lv_font_dejavu_16_persian_hebrew.i: lvgl/src/font/lv_font_dejavu_16_persian_hebrew.c.i
@@ -5182,7 +5182,7 @@ lvgl/src/font/lv_font_dejavu_16_persian_hebrew.i: lvgl/src/font/lv_font_dejavu_1
 
 # target to preprocess a source file
 lvgl/src/font/lv_font_dejavu_16_persian_hebrew.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_dejavu_16_persian_hebrew.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_dejavu_16_persian_hebrew.c.i
 .PHONY : lvgl/src/font/lv_font_dejavu_16_persian_hebrew.c.i
 
 lvgl/src/font/lv_font_dejavu_16_persian_hebrew.s: lvgl/src/font/lv_font_dejavu_16_persian_hebrew.c.s
@@ -5190,7 +5190,7 @@ lvgl/src/font/lv_font_dejavu_16_persian_hebrew.s: lvgl/src/font/lv_font_dejavu_1
 
 # target to generate assembly for a file
 lvgl/src/font/lv_font_dejavu_16_persian_hebrew.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_dejavu_16_persian_hebrew.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_dejavu_16_persian_hebrew.c.s
 .PHONY : lvgl/src/font/lv_font_dejavu_16_persian_hebrew.c.s
 
 lvgl/src/font/lv_font_fmt_txt.o: lvgl/src/font/lv_font_fmt_txt.c.o
@@ -5198,7 +5198,7 @@ lvgl/src/font/lv_font_fmt_txt.o: lvgl/src/font/lv_font_fmt_txt.c.o
 
 # target to build an object file
 lvgl/src/font/lv_font_fmt_txt.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_fmt_txt.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_fmt_txt.c.o
 .PHONY : lvgl/src/font/lv_font_fmt_txt.c.o
 
 lvgl/src/font/lv_font_fmt_txt.i: lvgl/src/font/lv_font_fmt_txt.c.i
@@ -5206,7 +5206,7 @@ lvgl/src/font/lv_font_fmt_txt.i: lvgl/src/font/lv_font_fmt_txt.c.i
 
 # target to preprocess a source file
 lvgl/src/font/lv_font_fmt_txt.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_fmt_txt.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_fmt_txt.c.i
 .PHONY : lvgl/src/font/lv_font_fmt_txt.c.i
 
 lvgl/src/font/lv_font_fmt_txt.s: lvgl/src/font/lv_font_fmt_txt.c.s
@@ -5214,7 +5214,7 @@ lvgl/src/font/lv_font_fmt_txt.s: lvgl/src/font/lv_font_fmt_txt.c.s
 
 # target to generate assembly for a file
 lvgl/src/font/lv_font_fmt_txt.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_fmt_txt.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_fmt_txt.c.s
 .PHONY : lvgl/src/font/lv_font_fmt_txt.c.s
 
 lvgl/src/font/lv_font_loader.o: lvgl/src/font/lv_font_loader.c.o
@@ -5222,7 +5222,7 @@ lvgl/src/font/lv_font_loader.o: lvgl/src/font/lv_font_loader.c.o
 
 # target to build an object file
 lvgl/src/font/lv_font_loader.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_loader.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_loader.c.o
 .PHONY : lvgl/src/font/lv_font_loader.c.o
 
 lvgl/src/font/lv_font_loader.i: lvgl/src/font/lv_font_loader.c.i
@@ -5230,7 +5230,7 @@ lvgl/src/font/lv_font_loader.i: lvgl/src/font/lv_font_loader.c.i
 
 # target to preprocess a source file
 lvgl/src/font/lv_font_loader.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_loader.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_loader.c.i
 .PHONY : lvgl/src/font/lv_font_loader.c.i
 
 lvgl/src/font/lv_font_loader.s: lvgl/src/font/lv_font_loader.c.s
@@ -5238,7 +5238,7 @@ lvgl/src/font/lv_font_loader.s: lvgl/src/font/lv_font_loader.c.s
 
 # target to generate assembly for a file
 lvgl/src/font/lv_font_loader.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_loader.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_loader.c.s
 .PHONY : lvgl/src/font/lv_font_loader.c.s
 
 lvgl/src/font/lv_font_montserrat_10.o: lvgl/src/font/lv_font_montserrat_10.c.o
@@ -5246,7 +5246,7 @@ lvgl/src/font/lv_font_montserrat_10.o: lvgl/src/font/lv_font_montserrat_10.c.o
 
 # target to build an object file
 lvgl/src/font/lv_font_montserrat_10.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_10.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_10.c.o
 .PHONY : lvgl/src/font/lv_font_montserrat_10.c.o
 
 lvgl/src/font/lv_font_montserrat_10.i: lvgl/src/font/lv_font_montserrat_10.c.i
@@ -5254,7 +5254,7 @@ lvgl/src/font/lv_font_montserrat_10.i: lvgl/src/font/lv_font_montserrat_10.c.i
 
 # target to preprocess a source file
 lvgl/src/font/lv_font_montserrat_10.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_10.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_10.c.i
 .PHONY : lvgl/src/font/lv_font_montserrat_10.c.i
 
 lvgl/src/font/lv_font_montserrat_10.s: lvgl/src/font/lv_font_montserrat_10.c.s
@@ -5262,7 +5262,7 @@ lvgl/src/font/lv_font_montserrat_10.s: lvgl/src/font/lv_font_montserrat_10.c.s
 
 # target to generate assembly for a file
 lvgl/src/font/lv_font_montserrat_10.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_10.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_10.c.s
 .PHONY : lvgl/src/font/lv_font_montserrat_10.c.s
 
 lvgl/src/font/lv_font_montserrat_12.o: lvgl/src/font/lv_font_montserrat_12.c.o
@@ -5270,7 +5270,7 @@ lvgl/src/font/lv_font_montserrat_12.o: lvgl/src/font/lv_font_montserrat_12.c.o
 
 # target to build an object file
 lvgl/src/font/lv_font_montserrat_12.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_12.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_12.c.o
 .PHONY : lvgl/src/font/lv_font_montserrat_12.c.o
 
 lvgl/src/font/lv_font_montserrat_12.i: lvgl/src/font/lv_font_montserrat_12.c.i
@@ -5278,7 +5278,7 @@ lvgl/src/font/lv_font_montserrat_12.i: lvgl/src/font/lv_font_montserrat_12.c.i
 
 # target to preprocess a source file
 lvgl/src/font/lv_font_montserrat_12.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_12.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_12.c.i
 .PHONY : lvgl/src/font/lv_font_montserrat_12.c.i
 
 lvgl/src/font/lv_font_montserrat_12.s: lvgl/src/font/lv_font_montserrat_12.c.s
@@ -5286,7 +5286,7 @@ lvgl/src/font/lv_font_montserrat_12.s: lvgl/src/font/lv_font_montserrat_12.c.s
 
 # target to generate assembly for a file
 lvgl/src/font/lv_font_montserrat_12.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_12.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_12.c.s
 .PHONY : lvgl/src/font/lv_font_montserrat_12.c.s
 
 lvgl/src/font/lv_font_montserrat_12_subpx.o: lvgl/src/font/lv_font_montserrat_12_subpx.c.o
@@ -5294,7 +5294,7 @@ lvgl/src/font/lv_font_montserrat_12_subpx.o: lvgl/src/font/lv_font_montserrat_12
 
 # target to build an object file
 lvgl/src/font/lv_font_montserrat_12_subpx.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_12_subpx.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_12_subpx.c.o
 .PHONY : lvgl/src/font/lv_font_montserrat_12_subpx.c.o
 
 lvgl/src/font/lv_font_montserrat_12_subpx.i: lvgl/src/font/lv_font_montserrat_12_subpx.c.i
@@ -5302,7 +5302,7 @@ lvgl/src/font/lv_font_montserrat_12_subpx.i: lvgl/src/font/lv_font_montserrat_12
 
 # target to preprocess a source file
 lvgl/src/font/lv_font_montserrat_12_subpx.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_12_subpx.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_12_subpx.c.i
 .PHONY : lvgl/src/font/lv_font_montserrat_12_subpx.c.i
 
 lvgl/src/font/lv_font_montserrat_12_subpx.s: lvgl/src/font/lv_font_montserrat_12_subpx.c.s
@@ -5310,7 +5310,7 @@ lvgl/src/font/lv_font_montserrat_12_subpx.s: lvgl/src/font/lv_font_montserrat_12
 
 # target to generate assembly for a file
 lvgl/src/font/lv_font_montserrat_12_subpx.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_12_subpx.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_12_subpx.c.s
 .PHONY : lvgl/src/font/lv_font_montserrat_12_subpx.c.s
 
 lvgl/src/font/lv_font_montserrat_14.o: lvgl/src/font/lv_font_montserrat_14.c.o
@@ -5318,7 +5318,7 @@ lvgl/src/font/lv_font_montserrat_14.o: lvgl/src/font/lv_font_montserrat_14.c.o
 
 # target to build an object file
 lvgl/src/font/lv_font_montserrat_14.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_14.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_14.c.o
 .PHONY : lvgl/src/font/lv_font_montserrat_14.c.o
 
 lvgl/src/font/lv_font_montserrat_14.i: lvgl/src/font/lv_font_montserrat_14.c.i
@@ -5326,7 +5326,7 @@ lvgl/src/font/lv_font_montserrat_14.i: lvgl/src/font/lv_font_montserrat_14.c.i
 
 # target to preprocess a source file
 lvgl/src/font/lv_font_montserrat_14.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_14.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_14.c.i
 .PHONY : lvgl/src/font/lv_font_montserrat_14.c.i
 
 lvgl/src/font/lv_font_montserrat_14.s: lvgl/src/font/lv_font_montserrat_14.c.s
@@ -5334,7 +5334,7 @@ lvgl/src/font/lv_font_montserrat_14.s: lvgl/src/font/lv_font_montserrat_14.c.s
 
 # target to generate assembly for a file
 lvgl/src/font/lv_font_montserrat_14.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_14.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_14.c.s
 .PHONY : lvgl/src/font/lv_font_montserrat_14.c.s
 
 lvgl/src/font/lv_font_montserrat_16.o: lvgl/src/font/lv_font_montserrat_16.c.o
@@ -5342,7 +5342,7 @@ lvgl/src/font/lv_font_montserrat_16.o: lvgl/src/font/lv_font_montserrat_16.c.o
 
 # target to build an object file
 lvgl/src/font/lv_font_montserrat_16.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_16.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_16.c.o
 .PHONY : lvgl/src/font/lv_font_montserrat_16.c.o
 
 lvgl/src/font/lv_font_montserrat_16.i: lvgl/src/font/lv_font_montserrat_16.c.i
@@ -5350,7 +5350,7 @@ lvgl/src/font/lv_font_montserrat_16.i: lvgl/src/font/lv_font_montserrat_16.c.i
 
 # target to preprocess a source file
 lvgl/src/font/lv_font_montserrat_16.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_16.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_16.c.i
 .PHONY : lvgl/src/font/lv_font_montserrat_16.c.i
 
 lvgl/src/font/lv_font_montserrat_16.s: lvgl/src/font/lv_font_montserrat_16.c.s
@@ -5358,7 +5358,7 @@ lvgl/src/font/lv_font_montserrat_16.s: lvgl/src/font/lv_font_montserrat_16.c.s
 
 # target to generate assembly for a file
 lvgl/src/font/lv_font_montserrat_16.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_16.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_16.c.s
 .PHONY : lvgl/src/font/lv_font_montserrat_16.c.s
 
 lvgl/src/font/lv_font_montserrat_18.o: lvgl/src/font/lv_font_montserrat_18.c.o
@@ -5366,7 +5366,7 @@ lvgl/src/font/lv_font_montserrat_18.o: lvgl/src/font/lv_font_montserrat_18.c.o
 
 # target to build an object file
 lvgl/src/font/lv_font_montserrat_18.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_18.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_18.c.o
 .PHONY : lvgl/src/font/lv_font_montserrat_18.c.o
 
 lvgl/src/font/lv_font_montserrat_18.i: lvgl/src/font/lv_font_montserrat_18.c.i
@@ -5374,7 +5374,7 @@ lvgl/src/font/lv_font_montserrat_18.i: lvgl/src/font/lv_font_montserrat_18.c.i
 
 # target to preprocess a source file
 lvgl/src/font/lv_font_montserrat_18.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_18.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_18.c.i
 .PHONY : lvgl/src/font/lv_font_montserrat_18.c.i
 
 lvgl/src/font/lv_font_montserrat_18.s: lvgl/src/font/lv_font_montserrat_18.c.s
@@ -5382,7 +5382,7 @@ lvgl/src/font/lv_font_montserrat_18.s: lvgl/src/font/lv_font_montserrat_18.c.s
 
 # target to generate assembly for a file
 lvgl/src/font/lv_font_montserrat_18.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_18.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_18.c.s
 .PHONY : lvgl/src/font/lv_font_montserrat_18.c.s
 
 lvgl/src/font/lv_font_montserrat_20.o: lvgl/src/font/lv_font_montserrat_20.c.o
@@ -5390,7 +5390,7 @@ lvgl/src/font/lv_font_montserrat_20.o: lvgl/src/font/lv_font_montserrat_20.c.o
 
 # target to build an object file
 lvgl/src/font/lv_font_montserrat_20.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_20.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_20.c.o
 .PHONY : lvgl/src/font/lv_font_montserrat_20.c.o
 
 lvgl/src/font/lv_font_montserrat_20.i: lvgl/src/font/lv_font_montserrat_20.c.i
@@ -5398,7 +5398,7 @@ lvgl/src/font/lv_font_montserrat_20.i: lvgl/src/font/lv_font_montserrat_20.c.i
 
 # target to preprocess a source file
 lvgl/src/font/lv_font_montserrat_20.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_20.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_20.c.i
 .PHONY : lvgl/src/font/lv_font_montserrat_20.c.i
 
 lvgl/src/font/lv_font_montserrat_20.s: lvgl/src/font/lv_font_montserrat_20.c.s
@@ -5406,7 +5406,7 @@ lvgl/src/font/lv_font_montserrat_20.s: lvgl/src/font/lv_font_montserrat_20.c.s
 
 # target to generate assembly for a file
 lvgl/src/font/lv_font_montserrat_20.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_20.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_20.c.s
 .PHONY : lvgl/src/font/lv_font_montserrat_20.c.s
 
 lvgl/src/font/lv_font_montserrat_22.o: lvgl/src/font/lv_font_montserrat_22.c.o
@@ -5414,7 +5414,7 @@ lvgl/src/font/lv_font_montserrat_22.o: lvgl/src/font/lv_font_montserrat_22.c.o
 
 # target to build an object file
 lvgl/src/font/lv_font_montserrat_22.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_22.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_22.c.o
 .PHONY : lvgl/src/font/lv_font_montserrat_22.c.o
 
 lvgl/src/font/lv_font_montserrat_22.i: lvgl/src/font/lv_font_montserrat_22.c.i
@@ -5422,7 +5422,7 @@ lvgl/src/font/lv_font_montserrat_22.i: lvgl/src/font/lv_font_montserrat_22.c.i
 
 # target to preprocess a source file
 lvgl/src/font/lv_font_montserrat_22.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_22.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_22.c.i
 .PHONY : lvgl/src/font/lv_font_montserrat_22.c.i
 
 lvgl/src/font/lv_font_montserrat_22.s: lvgl/src/font/lv_font_montserrat_22.c.s
@@ -5430,7 +5430,7 @@ lvgl/src/font/lv_font_montserrat_22.s: lvgl/src/font/lv_font_montserrat_22.c.s
 
 # target to generate assembly for a file
 lvgl/src/font/lv_font_montserrat_22.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_22.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_22.c.s
 .PHONY : lvgl/src/font/lv_font_montserrat_22.c.s
 
 lvgl/src/font/lv_font_montserrat_24.o: lvgl/src/font/lv_font_montserrat_24.c.o
@@ -5438,7 +5438,7 @@ lvgl/src/font/lv_font_montserrat_24.o: lvgl/src/font/lv_font_montserrat_24.c.o
 
 # target to build an object file
 lvgl/src/font/lv_font_montserrat_24.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_24.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_24.c.o
 .PHONY : lvgl/src/font/lv_font_montserrat_24.c.o
 
 lvgl/src/font/lv_font_montserrat_24.i: lvgl/src/font/lv_font_montserrat_24.c.i
@@ -5446,7 +5446,7 @@ lvgl/src/font/lv_font_montserrat_24.i: lvgl/src/font/lv_font_montserrat_24.c.i
 
 # target to preprocess a source file
 lvgl/src/font/lv_font_montserrat_24.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_24.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_24.c.i
 .PHONY : lvgl/src/font/lv_font_montserrat_24.c.i
 
 lvgl/src/font/lv_font_montserrat_24.s: lvgl/src/font/lv_font_montserrat_24.c.s
@@ -5454,7 +5454,7 @@ lvgl/src/font/lv_font_montserrat_24.s: lvgl/src/font/lv_font_montserrat_24.c.s
 
 # target to generate assembly for a file
 lvgl/src/font/lv_font_montserrat_24.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_24.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_24.c.s
 .PHONY : lvgl/src/font/lv_font_montserrat_24.c.s
 
 lvgl/src/font/lv_font_montserrat_26.o: lvgl/src/font/lv_font_montserrat_26.c.o
@@ -5462,7 +5462,7 @@ lvgl/src/font/lv_font_montserrat_26.o: lvgl/src/font/lv_font_montserrat_26.c.o
 
 # target to build an object file
 lvgl/src/font/lv_font_montserrat_26.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_26.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_26.c.o
 .PHONY : lvgl/src/font/lv_font_montserrat_26.c.o
 
 lvgl/src/font/lv_font_montserrat_26.i: lvgl/src/font/lv_font_montserrat_26.c.i
@@ -5470,7 +5470,7 @@ lvgl/src/font/lv_font_montserrat_26.i: lvgl/src/font/lv_font_montserrat_26.c.i
 
 # target to preprocess a source file
 lvgl/src/font/lv_font_montserrat_26.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_26.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_26.c.i
 .PHONY : lvgl/src/font/lv_font_montserrat_26.c.i
 
 lvgl/src/font/lv_font_montserrat_26.s: lvgl/src/font/lv_font_montserrat_26.c.s
@@ -5478,7 +5478,7 @@ lvgl/src/font/lv_font_montserrat_26.s: lvgl/src/font/lv_font_montserrat_26.c.s
 
 # target to generate assembly for a file
 lvgl/src/font/lv_font_montserrat_26.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_26.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_26.c.s
 .PHONY : lvgl/src/font/lv_font_montserrat_26.c.s
 
 lvgl/src/font/lv_font_montserrat_28.o: lvgl/src/font/lv_font_montserrat_28.c.o
@@ -5486,7 +5486,7 @@ lvgl/src/font/lv_font_montserrat_28.o: lvgl/src/font/lv_font_montserrat_28.c.o
 
 # target to build an object file
 lvgl/src/font/lv_font_montserrat_28.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_28.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_28.c.o
 .PHONY : lvgl/src/font/lv_font_montserrat_28.c.o
 
 lvgl/src/font/lv_font_montserrat_28.i: lvgl/src/font/lv_font_montserrat_28.c.i
@@ -5494,7 +5494,7 @@ lvgl/src/font/lv_font_montserrat_28.i: lvgl/src/font/lv_font_montserrat_28.c.i
 
 # target to preprocess a source file
 lvgl/src/font/lv_font_montserrat_28.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_28.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_28.c.i
 .PHONY : lvgl/src/font/lv_font_montserrat_28.c.i
 
 lvgl/src/font/lv_font_montserrat_28.s: lvgl/src/font/lv_font_montserrat_28.c.s
@@ -5502,7 +5502,7 @@ lvgl/src/font/lv_font_montserrat_28.s: lvgl/src/font/lv_font_montserrat_28.c.s
 
 # target to generate assembly for a file
 lvgl/src/font/lv_font_montserrat_28.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_28.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_28.c.s
 .PHONY : lvgl/src/font/lv_font_montserrat_28.c.s
 
 lvgl/src/font/lv_font_montserrat_28_compressed.o: lvgl/src/font/lv_font_montserrat_28_compressed.c.o
@@ -5510,7 +5510,7 @@ lvgl/src/font/lv_font_montserrat_28_compressed.o: lvgl/src/font/lv_font_montserr
 
 # target to build an object file
 lvgl/src/font/lv_font_montserrat_28_compressed.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_28_compressed.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_28_compressed.c.o
 .PHONY : lvgl/src/font/lv_font_montserrat_28_compressed.c.o
 
 lvgl/src/font/lv_font_montserrat_28_compressed.i: lvgl/src/font/lv_font_montserrat_28_compressed.c.i
@@ -5518,7 +5518,7 @@ lvgl/src/font/lv_font_montserrat_28_compressed.i: lvgl/src/font/lv_font_montserr
 
 # target to preprocess a source file
 lvgl/src/font/lv_font_montserrat_28_compressed.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_28_compressed.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_28_compressed.c.i
 .PHONY : lvgl/src/font/lv_font_montserrat_28_compressed.c.i
 
 lvgl/src/font/lv_font_montserrat_28_compressed.s: lvgl/src/font/lv_font_montserrat_28_compressed.c.s
@@ -5526,7 +5526,7 @@ lvgl/src/font/lv_font_montserrat_28_compressed.s: lvgl/src/font/lv_font_montserr
 
 # target to generate assembly for a file
 lvgl/src/font/lv_font_montserrat_28_compressed.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_28_compressed.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_28_compressed.c.s
 .PHONY : lvgl/src/font/lv_font_montserrat_28_compressed.c.s
 
 lvgl/src/font/lv_font_montserrat_30.o: lvgl/src/font/lv_font_montserrat_30.c.o
@@ -5534,7 +5534,7 @@ lvgl/src/font/lv_font_montserrat_30.o: lvgl/src/font/lv_font_montserrat_30.c.o
 
 # target to build an object file
 lvgl/src/font/lv_font_montserrat_30.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_30.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_30.c.o
 .PHONY : lvgl/src/font/lv_font_montserrat_30.c.o
 
 lvgl/src/font/lv_font_montserrat_30.i: lvgl/src/font/lv_font_montserrat_30.c.i
@@ -5542,7 +5542,7 @@ lvgl/src/font/lv_font_montserrat_30.i: lvgl/src/font/lv_font_montserrat_30.c.i
 
 # target to preprocess a source file
 lvgl/src/font/lv_font_montserrat_30.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_30.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_30.c.i
 .PHONY : lvgl/src/font/lv_font_montserrat_30.c.i
 
 lvgl/src/font/lv_font_montserrat_30.s: lvgl/src/font/lv_font_montserrat_30.c.s
@@ -5550,7 +5550,7 @@ lvgl/src/font/lv_font_montserrat_30.s: lvgl/src/font/lv_font_montserrat_30.c.s
 
 # target to generate assembly for a file
 lvgl/src/font/lv_font_montserrat_30.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_30.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_30.c.s
 .PHONY : lvgl/src/font/lv_font_montserrat_30.c.s
 
 lvgl/src/font/lv_font_montserrat_32.o: lvgl/src/font/lv_font_montserrat_32.c.o
@@ -5558,7 +5558,7 @@ lvgl/src/font/lv_font_montserrat_32.o: lvgl/src/font/lv_font_montserrat_32.c.o
 
 # target to build an object file
 lvgl/src/font/lv_font_montserrat_32.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_32.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_32.c.o
 .PHONY : lvgl/src/font/lv_font_montserrat_32.c.o
 
 lvgl/src/font/lv_font_montserrat_32.i: lvgl/src/font/lv_font_montserrat_32.c.i
@@ -5566,7 +5566,7 @@ lvgl/src/font/lv_font_montserrat_32.i: lvgl/src/font/lv_font_montserrat_32.c.i
 
 # target to preprocess a source file
 lvgl/src/font/lv_font_montserrat_32.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_32.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_32.c.i
 .PHONY : lvgl/src/font/lv_font_montserrat_32.c.i
 
 lvgl/src/font/lv_font_montserrat_32.s: lvgl/src/font/lv_font_montserrat_32.c.s
@@ -5574,7 +5574,7 @@ lvgl/src/font/lv_font_montserrat_32.s: lvgl/src/font/lv_font_montserrat_32.c.s
 
 # target to generate assembly for a file
 lvgl/src/font/lv_font_montserrat_32.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_32.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_32.c.s
 .PHONY : lvgl/src/font/lv_font_montserrat_32.c.s
 
 lvgl/src/font/lv_font_montserrat_34.o: lvgl/src/font/lv_font_montserrat_34.c.o
@@ -5582,7 +5582,7 @@ lvgl/src/font/lv_font_montserrat_34.o: lvgl/src/font/lv_font_montserrat_34.c.o
 
 # target to build an object file
 lvgl/src/font/lv_font_montserrat_34.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_34.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_34.c.o
 .PHONY : lvgl/src/font/lv_font_montserrat_34.c.o
 
 lvgl/src/font/lv_font_montserrat_34.i: lvgl/src/font/lv_font_montserrat_34.c.i
@@ -5590,7 +5590,7 @@ lvgl/src/font/lv_font_montserrat_34.i: lvgl/src/font/lv_font_montserrat_34.c.i
 
 # target to preprocess a source file
 lvgl/src/font/lv_font_montserrat_34.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_34.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_34.c.i
 .PHONY : lvgl/src/font/lv_font_montserrat_34.c.i
 
 lvgl/src/font/lv_font_montserrat_34.s: lvgl/src/font/lv_font_montserrat_34.c.s
@@ -5598,7 +5598,7 @@ lvgl/src/font/lv_font_montserrat_34.s: lvgl/src/font/lv_font_montserrat_34.c.s
 
 # target to generate assembly for a file
 lvgl/src/font/lv_font_montserrat_34.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_34.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_34.c.s
 .PHONY : lvgl/src/font/lv_font_montserrat_34.c.s
 
 lvgl/src/font/lv_font_montserrat_36.o: lvgl/src/font/lv_font_montserrat_36.c.o
@@ -5606,7 +5606,7 @@ lvgl/src/font/lv_font_montserrat_36.o: lvgl/src/font/lv_font_montserrat_36.c.o
 
 # target to build an object file
 lvgl/src/font/lv_font_montserrat_36.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_36.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_36.c.o
 .PHONY : lvgl/src/font/lv_font_montserrat_36.c.o
 
 lvgl/src/font/lv_font_montserrat_36.i: lvgl/src/font/lv_font_montserrat_36.c.i
@@ -5614,7 +5614,7 @@ lvgl/src/font/lv_font_montserrat_36.i: lvgl/src/font/lv_font_montserrat_36.c.i
 
 # target to preprocess a source file
 lvgl/src/font/lv_font_montserrat_36.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_36.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_36.c.i
 .PHONY : lvgl/src/font/lv_font_montserrat_36.c.i
 
 lvgl/src/font/lv_font_montserrat_36.s: lvgl/src/font/lv_font_montserrat_36.c.s
@@ -5622,7 +5622,7 @@ lvgl/src/font/lv_font_montserrat_36.s: lvgl/src/font/lv_font_montserrat_36.c.s
 
 # target to generate assembly for a file
 lvgl/src/font/lv_font_montserrat_36.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_36.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_36.c.s
 .PHONY : lvgl/src/font/lv_font_montserrat_36.c.s
 
 lvgl/src/font/lv_font_montserrat_38.o: lvgl/src/font/lv_font_montserrat_38.c.o
@@ -5630,7 +5630,7 @@ lvgl/src/font/lv_font_montserrat_38.o: lvgl/src/font/lv_font_montserrat_38.c.o
 
 # target to build an object file
 lvgl/src/font/lv_font_montserrat_38.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_38.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_38.c.o
 .PHONY : lvgl/src/font/lv_font_montserrat_38.c.o
 
 lvgl/src/font/lv_font_montserrat_38.i: lvgl/src/font/lv_font_montserrat_38.c.i
@@ -5638,7 +5638,7 @@ lvgl/src/font/lv_font_montserrat_38.i: lvgl/src/font/lv_font_montserrat_38.c.i
 
 # target to preprocess a source file
 lvgl/src/font/lv_font_montserrat_38.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_38.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_38.c.i
 .PHONY : lvgl/src/font/lv_font_montserrat_38.c.i
 
 lvgl/src/font/lv_font_montserrat_38.s: lvgl/src/font/lv_font_montserrat_38.c.s
@@ -5646,7 +5646,7 @@ lvgl/src/font/lv_font_montserrat_38.s: lvgl/src/font/lv_font_montserrat_38.c.s
 
 # target to generate assembly for a file
 lvgl/src/font/lv_font_montserrat_38.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_38.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_38.c.s
 .PHONY : lvgl/src/font/lv_font_montserrat_38.c.s
 
 lvgl/src/font/lv_font_montserrat_40.o: lvgl/src/font/lv_font_montserrat_40.c.o
@@ -5654,7 +5654,7 @@ lvgl/src/font/lv_font_montserrat_40.o: lvgl/src/font/lv_font_montserrat_40.c.o
 
 # target to build an object file
 lvgl/src/font/lv_font_montserrat_40.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_40.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_40.c.o
 .PHONY : lvgl/src/font/lv_font_montserrat_40.c.o
 
 lvgl/src/font/lv_font_montserrat_40.i: lvgl/src/font/lv_font_montserrat_40.c.i
@@ -5662,7 +5662,7 @@ lvgl/src/font/lv_font_montserrat_40.i: lvgl/src/font/lv_font_montserrat_40.c.i
 
 # target to preprocess a source file
 lvgl/src/font/lv_font_montserrat_40.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_40.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_40.c.i
 .PHONY : lvgl/src/font/lv_font_montserrat_40.c.i
 
 lvgl/src/font/lv_font_montserrat_40.s: lvgl/src/font/lv_font_montserrat_40.c.s
@@ -5670,7 +5670,7 @@ lvgl/src/font/lv_font_montserrat_40.s: lvgl/src/font/lv_font_montserrat_40.c.s
 
 # target to generate assembly for a file
 lvgl/src/font/lv_font_montserrat_40.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_40.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_40.c.s
 .PHONY : lvgl/src/font/lv_font_montserrat_40.c.s
 
 lvgl/src/font/lv_font_montserrat_42.o: lvgl/src/font/lv_font_montserrat_42.c.o
@@ -5678,7 +5678,7 @@ lvgl/src/font/lv_font_montserrat_42.o: lvgl/src/font/lv_font_montserrat_42.c.o
 
 # target to build an object file
 lvgl/src/font/lv_font_montserrat_42.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_42.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_42.c.o
 .PHONY : lvgl/src/font/lv_font_montserrat_42.c.o
 
 lvgl/src/font/lv_font_montserrat_42.i: lvgl/src/font/lv_font_montserrat_42.c.i
@@ -5686,7 +5686,7 @@ lvgl/src/font/lv_font_montserrat_42.i: lvgl/src/font/lv_font_montserrat_42.c.i
 
 # target to preprocess a source file
 lvgl/src/font/lv_font_montserrat_42.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_42.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_42.c.i
 .PHONY : lvgl/src/font/lv_font_montserrat_42.c.i
 
 lvgl/src/font/lv_font_montserrat_42.s: lvgl/src/font/lv_font_montserrat_42.c.s
@@ -5694,7 +5694,7 @@ lvgl/src/font/lv_font_montserrat_42.s: lvgl/src/font/lv_font_montserrat_42.c.s
 
 # target to generate assembly for a file
 lvgl/src/font/lv_font_montserrat_42.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_42.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_42.c.s
 .PHONY : lvgl/src/font/lv_font_montserrat_42.c.s
 
 lvgl/src/font/lv_font_montserrat_44.o: lvgl/src/font/lv_font_montserrat_44.c.o
@@ -5702,7 +5702,7 @@ lvgl/src/font/lv_font_montserrat_44.o: lvgl/src/font/lv_font_montserrat_44.c.o
 
 # target to build an object file
 lvgl/src/font/lv_font_montserrat_44.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_44.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_44.c.o
 .PHONY : lvgl/src/font/lv_font_montserrat_44.c.o
 
 lvgl/src/font/lv_font_montserrat_44.i: lvgl/src/font/lv_font_montserrat_44.c.i
@@ -5710,7 +5710,7 @@ lvgl/src/font/lv_font_montserrat_44.i: lvgl/src/font/lv_font_montserrat_44.c.i
 
 # target to preprocess a source file
 lvgl/src/font/lv_font_montserrat_44.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_44.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_44.c.i
 .PHONY : lvgl/src/font/lv_font_montserrat_44.c.i
 
 lvgl/src/font/lv_font_montserrat_44.s: lvgl/src/font/lv_font_montserrat_44.c.s
@@ -5718,7 +5718,7 @@ lvgl/src/font/lv_font_montserrat_44.s: lvgl/src/font/lv_font_montserrat_44.c.s
 
 # target to generate assembly for a file
 lvgl/src/font/lv_font_montserrat_44.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_44.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_44.c.s
 .PHONY : lvgl/src/font/lv_font_montserrat_44.c.s
 
 lvgl/src/font/lv_font_montserrat_46.o: lvgl/src/font/lv_font_montserrat_46.c.o
@@ -5726,7 +5726,7 @@ lvgl/src/font/lv_font_montserrat_46.o: lvgl/src/font/lv_font_montserrat_46.c.o
 
 # target to build an object file
 lvgl/src/font/lv_font_montserrat_46.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_46.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_46.c.o
 .PHONY : lvgl/src/font/lv_font_montserrat_46.c.o
 
 lvgl/src/font/lv_font_montserrat_46.i: lvgl/src/font/lv_font_montserrat_46.c.i
@@ -5734,7 +5734,7 @@ lvgl/src/font/lv_font_montserrat_46.i: lvgl/src/font/lv_font_montserrat_46.c.i
 
 # target to preprocess a source file
 lvgl/src/font/lv_font_montserrat_46.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_46.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_46.c.i
 .PHONY : lvgl/src/font/lv_font_montserrat_46.c.i
 
 lvgl/src/font/lv_font_montserrat_46.s: lvgl/src/font/lv_font_montserrat_46.c.s
@@ -5742,7 +5742,7 @@ lvgl/src/font/lv_font_montserrat_46.s: lvgl/src/font/lv_font_montserrat_46.c.s
 
 # target to generate assembly for a file
 lvgl/src/font/lv_font_montserrat_46.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_46.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_46.c.s
 .PHONY : lvgl/src/font/lv_font_montserrat_46.c.s
 
 lvgl/src/font/lv_font_montserrat_48.o: lvgl/src/font/lv_font_montserrat_48.c.o
@@ -5750,7 +5750,7 @@ lvgl/src/font/lv_font_montserrat_48.o: lvgl/src/font/lv_font_montserrat_48.c.o
 
 # target to build an object file
 lvgl/src/font/lv_font_montserrat_48.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_48.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_48.c.o
 .PHONY : lvgl/src/font/lv_font_montserrat_48.c.o
 
 lvgl/src/font/lv_font_montserrat_48.i: lvgl/src/font/lv_font_montserrat_48.c.i
@@ -5758,7 +5758,7 @@ lvgl/src/font/lv_font_montserrat_48.i: lvgl/src/font/lv_font_montserrat_48.c.i
 
 # target to preprocess a source file
 lvgl/src/font/lv_font_montserrat_48.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_48.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_48.c.i
 .PHONY : lvgl/src/font/lv_font_montserrat_48.c.i
 
 lvgl/src/font/lv_font_montserrat_48.s: lvgl/src/font/lv_font_montserrat_48.c.s
@@ -5766,7 +5766,7 @@ lvgl/src/font/lv_font_montserrat_48.s: lvgl/src/font/lv_font_montserrat_48.c.s
 
 # target to generate assembly for a file
 lvgl/src/font/lv_font_montserrat_48.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_48.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_48.c.s
 .PHONY : lvgl/src/font/lv_font_montserrat_48.c.s
 
 lvgl/src/font/lv_font_montserrat_8.o: lvgl/src/font/lv_font_montserrat_8.c.o
@@ -5774,7 +5774,7 @@ lvgl/src/font/lv_font_montserrat_8.o: lvgl/src/font/lv_font_montserrat_8.c.o
 
 # target to build an object file
 lvgl/src/font/lv_font_montserrat_8.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_8.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_8.c.o
 .PHONY : lvgl/src/font/lv_font_montserrat_8.c.o
 
 lvgl/src/font/lv_font_montserrat_8.i: lvgl/src/font/lv_font_montserrat_8.c.i
@@ -5782,7 +5782,7 @@ lvgl/src/font/lv_font_montserrat_8.i: lvgl/src/font/lv_font_montserrat_8.c.i
 
 # target to preprocess a source file
 lvgl/src/font/lv_font_montserrat_8.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_8.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_8.c.i
 .PHONY : lvgl/src/font/lv_font_montserrat_8.c.i
 
 lvgl/src/font/lv_font_montserrat_8.s: lvgl/src/font/lv_font_montserrat_8.c.s
@@ -5790,7 +5790,7 @@ lvgl/src/font/lv_font_montserrat_8.s: lvgl/src/font/lv_font_montserrat_8.c.s
 
 # target to generate assembly for a file
 lvgl/src/font/lv_font_montserrat_8.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_montserrat_8.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_montserrat_8.c.s
 .PHONY : lvgl/src/font/lv_font_montserrat_8.c.s
 
 lvgl/src/font/lv_font_simsun_16_cjk.o: lvgl/src/font/lv_font_simsun_16_cjk.c.o
@@ -5798,7 +5798,7 @@ lvgl/src/font/lv_font_simsun_16_cjk.o: lvgl/src/font/lv_font_simsun_16_cjk.c.o
 
 # target to build an object file
 lvgl/src/font/lv_font_simsun_16_cjk.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_simsun_16_cjk.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_simsun_16_cjk.c.o
 .PHONY : lvgl/src/font/lv_font_simsun_16_cjk.c.o
 
 lvgl/src/font/lv_font_simsun_16_cjk.i: lvgl/src/font/lv_font_simsun_16_cjk.c.i
@@ -5806,7 +5806,7 @@ lvgl/src/font/lv_font_simsun_16_cjk.i: lvgl/src/font/lv_font_simsun_16_cjk.c.i
 
 # target to preprocess a source file
 lvgl/src/font/lv_font_simsun_16_cjk.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_simsun_16_cjk.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_simsun_16_cjk.c.i
 .PHONY : lvgl/src/font/lv_font_simsun_16_cjk.c.i
 
 lvgl/src/font/lv_font_simsun_16_cjk.s: lvgl/src/font/lv_font_simsun_16_cjk.c.s
@@ -5814,7 +5814,7 @@ lvgl/src/font/lv_font_simsun_16_cjk.s: lvgl/src/font/lv_font_simsun_16_cjk.c.s
 
 # target to generate assembly for a file
 lvgl/src/font/lv_font_simsun_16_cjk.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_simsun_16_cjk.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_simsun_16_cjk.c.s
 .PHONY : lvgl/src/font/lv_font_simsun_16_cjk.c.s
 
 lvgl/src/font/lv_font_unscii_16.o: lvgl/src/font/lv_font_unscii_16.c.o
@@ -5822,7 +5822,7 @@ lvgl/src/font/lv_font_unscii_16.o: lvgl/src/font/lv_font_unscii_16.c.o
 
 # target to build an object file
 lvgl/src/font/lv_font_unscii_16.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_unscii_16.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_unscii_16.c.o
 .PHONY : lvgl/src/font/lv_font_unscii_16.c.o
 
 lvgl/src/font/lv_font_unscii_16.i: lvgl/src/font/lv_font_unscii_16.c.i
@@ -5830,7 +5830,7 @@ lvgl/src/font/lv_font_unscii_16.i: lvgl/src/font/lv_font_unscii_16.c.i
 
 # target to preprocess a source file
 lvgl/src/font/lv_font_unscii_16.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_unscii_16.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_unscii_16.c.i
 .PHONY : lvgl/src/font/lv_font_unscii_16.c.i
 
 lvgl/src/font/lv_font_unscii_16.s: lvgl/src/font/lv_font_unscii_16.c.s
@@ -5838,7 +5838,7 @@ lvgl/src/font/lv_font_unscii_16.s: lvgl/src/font/lv_font_unscii_16.c.s
 
 # target to generate assembly for a file
 lvgl/src/font/lv_font_unscii_16.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_unscii_16.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_unscii_16.c.s
 .PHONY : lvgl/src/font/lv_font_unscii_16.c.s
 
 lvgl/src/font/lv_font_unscii_8.o: lvgl/src/font/lv_font_unscii_8.c.o
@@ -5846,7 +5846,7 @@ lvgl/src/font/lv_font_unscii_8.o: lvgl/src/font/lv_font_unscii_8.c.o
 
 # target to build an object file
 lvgl/src/font/lv_font_unscii_8.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_unscii_8.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_unscii_8.c.o
 .PHONY : lvgl/src/font/lv_font_unscii_8.c.o
 
 lvgl/src/font/lv_font_unscii_8.i: lvgl/src/font/lv_font_unscii_8.c.i
@@ -5854,7 +5854,7 @@ lvgl/src/font/lv_font_unscii_8.i: lvgl/src/font/lv_font_unscii_8.c.i
 
 # target to preprocess a source file
 lvgl/src/font/lv_font_unscii_8.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_unscii_8.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_unscii_8.c.i
 .PHONY : lvgl/src/font/lv_font_unscii_8.c.i
 
 lvgl/src/font/lv_font_unscii_8.s: lvgl/src/font/lv_font_unscii_8.c.s
@@ -5862,7 +5862,7 @@ lvgl/src/font/lv_font_unscii_8.s: lvgl/src/font/lv_font_unscii_8.c.s
 
 # target to generate assembly for a file
 lvgl/src/font/lv_font_unscii_8.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/font/lv_font_unscii_8.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/font/lv_font_unscii_8.c.s
 .PHONY : lvgl/src/font/lv_font_unscii_8.c.s
 
 lvgl/src/gpu/lv_gpu_nxp_pxp.o: lvgl/src/gpu/lv_gpu_nxp_pxp.c.o
@@ -5870,7 +5870,7 @@ lvgl/src/gpu/lv_gpu_nxp_pxp.o: lvgl/src/gpu/lv_gpu_nxp_pxp.c.o
 
 # target to build an object file
 lvgl/src/gpu/lv_gpu_nxp_pxp.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/gpu/lv_gpu_nxp_pxp.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/gpu/lv_gpu_nxp_pxp.c.o
 .PHONY : lvgl/src/gpu/lv_gpu_nxp_pxp.c.o
 
 lvgl/src/gpu/lv_gpu_nxp_pxp.i: lvgl/src/gpu/lv_gpu_nxp_pxp.c.i
@@ -5878,7 +5878,7 @@ lvgl/src/gpu/lv_gpu_nxp_pxp.i: lvgl/src/gpu/lv_gpu_nxp_pxp.c.i
 
 # target to preprocess a source file
 lvgl/src/gpu/lv_gpu_nxp_pxp.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/gpu/lv_gpu_nxp_pxp.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/gpu/lv_gpu_nxp_pxp.c.i
 .PHONY : lvgl/src/gpu/lv_gpu_nxp_pxp.c.i
 
 lvgl/src/gpu/lv_gpu_nxp_pxp.s: lvgl/src/gpu/lv_gpu_nxp_pxp.c.s
@@ -5886,7 +5886,7 @@ lvgl/src/gpu/lv_gpu_nxp_pxp.s: lvgl/src/gpu/lv_gpu_nxp_pxp.c.s
 
 # target to generate assembly for a file
 lvgl/src/gpu/lv_gpu_nxp_pxp.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/gpu/lv_gpu_nxp_pxp.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/gpu/lv_gpu_nxp_pxp.c.s
 .PHONY : lvgl/src/gpu/lv_gpu_nxp_pxp.c.s
 
 lvgl/src/gpu/lv_gpu_nxp_pxp_osa.o: lvgl/src/gpu/lv_gpu_nxp_pxp_osa.c.o
@@ -5894,7 +5894,7 @@ lvgl/src/gpu/lv_gpu_nxp_pxp_osa.o: lvgl/src/gpu/lv_gpu_nxp_pxp_osa.c.o
 
 # target to build an object file
 lvgl/src/gpu/lv_gpu_nxp_pxp_osa.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/gpu/lv_gpu_nxp_pxp_osa.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/gpu/lv_gpu_nxp_pxp_osa.c.o
 .PHONY : lvgl/src/gpu/lv_gpu_nxp_pxp_osa.c.o
 
 lvgl/src/gpu/lv_gpu_nxp_pxp_osa.i: lvgl/src/gpu/lv_gpu_nxp_pxp_osa.c.i
@@ -5902,7 +5902,7 @@ lvgl/src/gpu/lv_gpu_nxp_pxp_osa.i: lvgl/src/gpu/lv_gpu_nxp_pxp_osa.c.i
 
 # target to preprocess a source file
 lvgl/src/gpu/lv_gpu_nxp_pxp_osa.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/gpu/lv_gpu_nxp_pxp_osa.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/gpu/lv_gpu_nxp_pxp_osa.c.i
 .PHONY : lvgl/src/gpu/lv_gpu_nxp_pxp_osa.c.i
 
 lvgl/src/gpu/lv_gpu_nxp_pxp_osa.s: lvgl/src/gpu/lv_gpu_nxp_pxp_osa.c.s
@@ -5910,7 +5910,7 @@ lvgl/src/gpu/lv_gpu_nxp_pxp_osa.s: lvgl/src/gpu/lv_gpu_nxp_pxp_osa.c.s
 
 # target to generate assembly for a file
 lvgl/src/gpu/lv_gpu_nxp_pxp_osa.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/gpu/lv_gpu_nxp_pxp_osa.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/gpu/lv_gpu_nxp_pxp_osa.c.s
 .PHONY : lvgl/src/gpu/lv_gpu_nxp_pxp_osa.c.s
 
 lvgl/src/gpu/lv_gpu_nxp_vglite.o: lvgl/src/gpu/lv_gpu_nxp_vglite.c.o
@@ -5918,7 +5918,7 @@ lvgl/src/gpu/lv_gpu_nxp_vglite.o: lvgl/src/gpu/lv_gpu_nxp_vglite.c.o
 
 # target to build an object file
 lvgl/src/gpu/lv_gpu_nxp_vglite.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/gpu/lv_gpu_nxp_vglite.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/gpu/lv_gpu_nxp_vglite.c.o
 .PHONY : lvgl/src/gpu/lv_gpu_nxp_vglite.c.o
 
 lvgl/src/gpu/lv_gpu_nxp_vglite.i: lvgl/src/gpu/lv_gpu_nxp_vglite.c.i
@@ -5926,7 +5926,7 @@ lvgl/src/gpu/lv_gpu_nxp_vglite.i: lvgl/src/gpu/lv_gpu_nxp_vglite.c.i
 
 # target to preprocess a source file
 lvgl/src/gpu/lv_gpu_nxp_vglite.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/gpu/lv_gpu_nxp_vglite.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/gpu/lv_gpu_nxp_vglite.c.i
 .PHONY : lvgl/src/gpu/lv_gpu_nxp_vglite.c.i
 
 lvgl/src/gpu/lv_gpu_nxp_vglite.s: lvgl/src/gpu/lv_gpu_nxp_vglite.c.s
@@ -5934,7 +5934,7 @@ lvgl/src/gpu/lv_gpu_nxp_vglite.s: lvgl/src/gpu/lv_gpu_nxp_vglite.c.s
 
 # target to generate assembly for a file
 lvgl/src/gpu/lv_gpu_nxp_vglite.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/gpu/lv_gpu_nxp_vglite.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/gpu/lv_gpu_nxp_vglite.c.s
 .PHONY : lvgl/src/gpu/lv_gpu_nxp_vglite.c.s
 
 lvgl/src/gpu/lv_gpu_stm32_dma2d.o: lvgl/src/gpu/lv_gpu_stm32_dma2d.c.o
@@ -5942,7 +5942,7 @@ lvgl/src/gpu/lv_gpu_stm32_dma2d.o: lvgl/src/gpu/lv_gpu_stm32_dma2d.c.o
 
 # target to build an object file
 lvgl/src/gpu/lv_gpu_stm32_dma2d.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/gpu/lv_gpu_stm32_dma2d.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/gpu/lv_gpu_stm32_dma2d.c.o
 .PHONY : lvgl/src/gpu/lv_gpu_stm32_dma2d.c.o
 
 lvgl/src/gpu/lv_gpu_stm32_dma2d.i: lvgl/src/gpu/lv_gpu_stm32_dma2d.c.i
@@ -5950,7 +5950,7 @@ lvgl/src/gpu/lv_gpu_stm32_dma2d.i: lvgl/src/gpu/lv_gpu_stm32_dma2d.c.i
 
 # target to preprocess a source file
 lvgl/src/gpu/lv_gpu_stm32_dma2d.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/gpu/lv_gpu_stm32_dma2d.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/gpu/lv_gpu_stm32_dma2d.c.i
 .PHONY : lvgl/src/gpu/lv_gpu_stm32_dma2d.c.i
 
 lvgl/src/gpu/lv_gpu_stm32_dma2d.s: lvgl/src/gpu/lv_gpu_stm32_dma2d.c.s
@@ -5958,7 +5958,7 @@ lvgl/src/gpu/lv_gpu_stm32_dma2d.s: lvgl/src/gpu/lv_gpu_stm32_dma2d.c.s
 
 # target to generate assembly for a file
 lvgl/src/gpu/lv_gpu_stm32_dma2d.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/gpu/lv_gpu_stm32_dma2d.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/gpu/lv_gpu_stm32_dma2d.c.s
 .PHONY : lvgl/src/gpu/lv_gpu_stm32_dma2d.c.s
 
 lvgl/src/hal/lv_hal_disp.o: lvgl/src/hal/lv_hal_disp.c.o
@@ -5966,7 +5966,7 @@ lvgl/src/hal/lv_hal_disp.o: lvgl/src/hal/lv_hal_disp.c.o
 
 # target to build an object file
 lvgl/src/hal/lv_hal_disp.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/hal/lv_hal_disp.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/hal/lv_hal_disp.c.o
 .PHONY : lvgl/src/hal/lv_hal_disp.c.o
 
 lvgl/src/hal/lv_hal_disp.i: lvgl/src/hal/lv_hal_disp.c.i
@@ -5974,7 +5974,7 @@ lvgl/src/hal/lv_hal_disp.i: lvgl/src/hal/lv_hal_disp.c.i
 
 # target to preprocess a source file
 lvgl/src/hal/lv_hal_disp.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/hal/lv_hal_disp.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/hal/lv_hal_disp.c.i
 .PHONY : lvgl/src/hal/lv_hal_disp.c.i
 
 lvgl/src/hal/lv_hal_disp.s: lvgl/src/hal/lv_hal_disp.c.s
@@ -5982,7 +5982,7 @@ lvgl/src/hal/lv_hal_disp.s: lvgl/src/hal/lv_hal_disp.c.s
 
 # target to generate assembly for a file
 lvgl/src/hal/lv_hal_disp.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/hal/lv_hal_disp.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/hal/lv_hal_disp.c.s
 .PHONY : lvgl/src/hal/lv_hal_disp.c.s
 
 lvgl/src/hal/lv_hal_indev.o: lvgl/src/hal/lv_hal_indev.c.o
@@ -5990,7 +5990,7 @@ lvgl/src/hal/lv_hal_indev.o: lvgl/src/hal/lv_hal_indev.c.o
 
 # target to build an object file
 lvgl/src/hal/lv_hal_indev.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/hal/lv_hal_indev.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/hal/lv_hal_indev.c.o
 .PHONY : lvgl/src/hal/lv_hal_indev.c.o
 
 lvgl/src/hal/lv_hal_indev.i: lvgl/src/hal/lv_hal_indev.c.i
@@ -5998,7 +5998,7 @@ lvgl/src/hal/lv_hal_indev.i: lvgl/src/hal/lv_hal_indev.c.i
 
 # target to preprocess a source file
 lvgl/src/hal/lv_hal_indev.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/hal/lv_hal_indev.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/hal/lv_hal_indev.c.i
 .PHONY : lvgl/src/hal/lv_hal_indev.c.i
 
 lvgl/src/hal/lv_hal_indev.s: lvgl/src/hal/lv_hal_indev.c.s
@@ -6006,7 +6006,7 @@ lvgl/src/hal/lv_hal_indev.s: lvgl/src/hal/lv_hal_indev.c.s
 
 # target to generate assembly for a file
 lvgl/src/hal/lv_hal_indev.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/hal/lv_hal_indev.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/hal/lv_hal_indev.c.s
 .PHONY : lvgl/src/hal/lv_hal_indev.c.s
 
 lvgl/src/hal/lv_hal_tick.o: lvgl/src/hal/lv_hal_tick.c.o
@@ -6014,7 +6014,7 @@ lvgl/src/hal/lv_hal_tick.o: lvgl/src/hal/lv_hal_tick.c.o
 
 # target to build an object file
 lvgl/src/hal/lv_hal_tick.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/hal/lv_hal_tick.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/hal/lv_hal_tick.c.o
 .PHONY : lvgl/src/hal/lv_hal_tick.c.o
 
 lvgl/src/hal/lv_hal_tick.i: lvgl/src/hal/lv_hal_tick.c.i
@@ -6022,7 +6022,7 @@ lvgl/src/hal/lv_hal_tick.i: lvgl/src/hal/lv_hal_tick.c.i
 
 # target to preprocess a source file
 lvgl/src/hal/lv_hal_tick.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/hal/lv_hal_tick.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/hal/lv_hal_tick.c.i
 .PHONY : lvgl/src/hal/lv_hal_tick.c.i
 
 lvgl/src/hal/lv_hal_tick.s: lvgl/src/hal/lv_hal_tick.c.s
@@ -6030,7 +6030,7 @@ lvgl/src/hal/lv_hal_tick.s: lvgl/src/hal/lv_hal_tick.c.s
 
 # target to generate assembly for a file
 lvgl/src/hal/lv_hal_tick.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/hal/lv_hal_tick.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/hal/lv_hal_tick.c.s
 .PHONY : lvgl/src/hal/lv_hal_tick.c.s
 
 lvgl/src/misc/lv_anim.o: lvgl/src/misc/lv_anim.c.o
@@ -6038,7 +6038,7 @@ lvgl/src/misc/lv_anim.o: lvgl/src/misc/lv_anim.c.o
 
 # target to build an object file
 lvgl/src/misc/lv_anim.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/misc/lv_anim.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_anim.c.o
 .PHONY : lvgl/src/misc/lv_anim.c.o
 
 lvgl/src/misc/lv_anim.i: lvgl/src/misc/lv_anim.c.i
@@ -6046,7 +6046,7 @@ lvgl/src/misc/lv_anim.i: lvgl/src/misc/lv_anim.c.i
 
 # target to preprocess a source file
 lvgl/src/misc/lv_anim.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/misc/lv_anim.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_anim.c.i
 .PHONY : lvgl/src/misc/lv_anim.c.i
 
 lvgl/src/misc/lv_anim.s: lvgl/src/misc/lv_anim.c.s
@@ -6054,7 +6054,7 @@ lvgl/src/misc/lv_anim.s: lvgl/src/misc/lv_anim.c.s
 
 # target to generate assembly for a file
 lvgl/src/misc/lv_anim.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/misc/lv_anim.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_anim.c.s
 .PHONY : lvgl/src/misc/lv_anim.c.s
 
 lvgl/src/misc/lv_area.o: lvgl/src/misc/lv_area.c.o
@@ -6062,7 +6062,7 @@ lvgl/src/misc/lv_area.o: lvgl/src/misc/lv_area.c.o
 
 # target to build an object file
 lvgl/src/misc/lv_area.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/misc/lv_area.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_area.c.o
 .PHONY : lvgl/src/misc/lv_area.c.o
 
 lvgl/src/misc/lv_area.i: lvgl/src/misc/lv_area.c.i
@@ -6070,7 +6070,7 @@ lvgl/src/misc/lv_area.i: lvgl/src/misc/lv_area.c.i
 
 # target to preprocess a source file
 lvgl/src/misc/lv_area.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/misc/lv_area.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_area.c.i
 .PHONY : lvgl/src/misc/lv_area.c.i
 
 lvgl/src/misc/lv_area.s: lvgl/src/misc/lv_area.c.s
@@ -6078,7 +6078,7 @@ lvgl/src/misc/lv_area.s: lvgl/src/misc/lv_area.c.s
 
 # target to generate assembly for a file
 lvgl/src/misc/lv_area.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/misc/lv_area.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_area.c.s
 .PHONY : lvgl/src/misc/lv_area.c.s
 
 lvgl/src/misc/lv_async.o: lvgl/src/misc/lv_async.c.o
@@ -6086,7 +6086,7 @@ lvgl/src/misc/lv_async.o: lvgl/src/misc/lv_async.c.o
 
 # target to build an object file
 lvgl/src/misc/lv_async.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/misc/lv_async.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_async.c.o
 .PHONY : lvgl/src/misc/lv_async.c.o
 
 lvgl/src/misc/lv_async.i: lvgl/src/misc/lv_async.c.i
@@ -6094,7 +6094,7 @@ lvgl/src/misc/lv_async.i: lvgl/src/misc/lv_async.c.i
 
 # target to preprocess a source file
 lvgl/src/misc/lv_async.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/misc/lv_async.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_async.c.i
 .PHONY : lvgl/src/misc/lv_async.c.i
 
 lvgl/src/misc/lv_async.s: lvgl/src/misc/lv_async.c.s
@@ -6102,7 +6102,7 @@ lvgl/src/misc/lv_async.s: lvgl/src/misc/lv_async.c.s
 
 # target to generate assembly for a file
 lvgl/src/misc/lv_async.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/misc/lv_async.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_async.c.s
 .PHONY : lvgl/src/misc/lv_async.c.s
 
 lvgl/src/misc/lv_bidi.o: lvgl/src/misc/lv_bidi.c.o
@@ -6110,7 +6110,7 @@ lvgl/src/misc/lv_bidi.o: lvgl/src/misc/lv_bidi.c.o
 
 # target to build an object file
 lvgl/src/misc/lv_bidi.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/misc/lv_bidi.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_bidi.c.o
 .PHONY : lvgl/src/misc/lv_bidi.c.o
 
 lvgl/src/misc/lv_bidi.i: lvgl/src/misc/lv_bidi.c.i
@@ -6118,7 +6118,7 @@ lvgl/src/misc/lv_bidi.i: lvgl/src/misc/lv_bidi.c.i
 
 # target to preprocess a source file
 lvgl/src/misc/lv_bidi.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/misc/lv_bidi.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_bidi.c.i
 .PHONY : lvgl/src/misc/lv_bidi.c.i
 
 lvgl/src/misc/lv_bidi.s: lvgl/src/misc/lv_bidi.c.s
@@ -6126,7 +6126,7 @@ lvgl/src/misc/lv_bidi.s: lvgl/src/misc/lv_bidi.c.s
 
 # target to generate assembly for a file
 lvgl/src/misc/lv_bidi.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/misc/lv_bidi.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_bidi.c.s
 .PHONY : lvgl/src/misc/lv_bidi.c.s
 
 lvgl/src/misc/lv_color.o: lvgl/src/misc/lv_color.c.o
@@ -6134,7 +6134,7 @@ lvgl/src/misc/lv_color.o: lvgl/src/misc/lv_color.c.o
 
 # target to build an object file
 lvgl/src/misc/lv_color.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/misc/lv_color.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_color.c.o
 .PHONY : lvgl/src/misc/lv_color.c.o
 
 lvgl/src/misc/lv_color.i: lvgl/src/misc/lv_color.c.i
@@ -6142,7 +6142,7 @@ lvgl/src/misc/lv_color.i: lvgl/src/misc/lv_color.c.i
 
 # target to preprocess a source file
 lvgl/src/misc/lv_color.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/misc/lv_color.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_color.c.i
 .PHONY : lvgl/src/misc/lv_color.c.i
 
 lvgl/src/misc/lv_color.s: lvgl/src/misc/lv_color.c.s
@@ -6150,7 +6150,7 @@ lvgl/src/misc/lv_color.s: lvgl/src/misc/lv_color.c.s
 
 # target to generate assembly for a file
 lvgl/src/misc/lv_color.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/misc/lv_color.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_color.c.s
 .PHONY : lvgl/src/misc/lv_color.c.s
 
 lvgl/src/misc/lv_fs.o: lvgl/src/misc/lv_fs.c.o
@@ -6158,7 +6158,7 @@ lvgl/src/misc/lv_fs.o: lvgl/src/misc/lv_fs.c.o
 
 # target to build an object file
 lvgl/src/misc/lv_fs.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/misc/lv_fs.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_fs.c.o
 .PHONY : lvgl/src/misc/lv_fs.c.o
 
 lvgl/src/misc/lv_fs.i: lvgl/src/misc/lv_fs.c.i
@@ -6166,7 +6166,7 @@ lvgl/src/misc/lv_fs.i: lvgl/src/misc/lv_fs.c.i
 
 # target to preprocess a source file
 lvgl/src/misc/lv_fs.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/misc/lv_fs.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_fs.c.i
 .PHONY : lvgl/src/misc/lv_fs.c.i
 
 lvgl/src/misc/lv_fs.s: lvgl/src/misc/lv_fs.c.s
@@ -6174,7 +6174,7 @@ lvgl/src/misc/lv_fs.s: lvgl/src/misc/lv_fs.c.s
 
 # target to generate assembly for a file
 lvgl/src/misc/lv_fs.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/misc/lv_fs.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_fs.c.s
 .PHONY : lvgl/src/misc/lv_fs.c.s
 
 lvgl/src/misc/lv_gc.o: lvgl/src/misc/lv_gc.c.o
@@ -6182,7 +6182,7 @@ lvgl/src/misc/lv_gc.o: lvgl/src/misc/lv_gc.c.o
 
 # target to build an object file
 lvgl/src/misc/lv_gc.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/misc/lv_gc.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_gc.c.o
 .PHONY : lvgl/src/misc/lv_gc.c.o
 
 lvgl/src/misc/lv_gc.i: lvgl/src/misc/lv_gc.c.i
@@ -6190,7 +6190,7 @@ lvgl/src/misc/lv_gc.i: lvgl/src/misc/lv_gc.c.i
 
 # target to preprocess a source file
 lvgl/src/misc/lv_gc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/misc/lv_gc.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_gc.c.i
 .PHONY : lvgl/src/misc/lv_gc.c.i
 
 lvgl/src/misc/lv_gc.s: lvgl/src/misc/lv_gc.c.s
@@ -6198,7 +6198,7 @@ lvgl/src/misc/lv_gc.s: lvgl/src/misc/lv_gc.c.s
 
 # target to generate assembly for a file
 lvgl/src/misc/lv_gc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/misc/lv_gc.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_gc.c.s
 .PHONY : lvgl/src/misc/lv_gc.c.s
 
 lvgl/src/misc/lv_ll.o: lvgl/src/misc/lv_ll.c.o
@@ -6206,7 +6206,7 @@ lvgl/src/misc/lv_ll.o: lvgl/src/misc/lv_ll.c.o
 
 # target to build an object file
 lvgl/src/misc/lv_ll.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/misc/lv_ll.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_ll.c.o
 .PHONY : lvgl/src/misc/lv_ll.c.o
 
 lvgl/src/misc/lv_ll.i: lvgl/src/misc/lv_ll.c.i
@@ -6214,7 +6214,7 @@ lvgl/src/misc/lv_ll.i: lvgl/src/misc/lv_ll.c.i
 
 # target to preprocess a source file
 lvgl/src/misc/lv_ll.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/misc/lv_ll.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_ll.c.i
 .PHONY : lvgl/src/misc/lv_ll.c.i
 
 lvgl/src/misc/lv_ll.s: lvgl/src/misc/lv_ll.c.s
@@ -6222,7 +6222,7 @@ lvgl/src/misc/lv_ll.s: lvgl/src/misc/lv_ll.c.s
 
 # target to generate assembly for a file
 lvgl/src/misc/lv_ll.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/misc/lv_ll.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_ll.c.s
 .PHONY : lvgl/src/misc/lv_ll.c.s
 
 lvgl/src/misc/lv_log.o: lvgl/src/misc/lv_log.c.o
@@ -6230,7 +6230,7 @@ lvgl/src/misc/lv_log.o: lvgl/src/misc/lv_log.c.o
 
 # target to build an object file
 lvgl/src/misc/lv_log.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/misc/lv_log.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_log.c.o
 .PHONY : lvgl/src/misc/lv_log.c.o
 
 lvgl/src/misc/lv_log.i: lvgl/src/misc/lv_log.c.i
@@ -6238,7 +6238,7 @@ lvgl/src/misc/lv_log.i: lvgl/src/misc/lv_log.c.i
 
 # target to preprocess a source file
 lvgl/src/misc/lv_log.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/misc/lv_log.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_log.c.i
 .PHONY : lvgl/src/misc/lv_log.c.i
 
 lvgl/src/misc/lv_log.s: lvgl/src/misc/lv_log.c.s
@@ -6246,7 +6246,7 @@ lvgl/src/misc/lv_log.s: lvgl/src/misc/lv_log.c.s
 
 # target to generate assembly for a file
 lvgl/src/misc/lv_log.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/misc/lv_log.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_log.c.s
 .PHONY : lvgl/src/misc/lv_log.c.s
 
 lvgl/src/misc/lv_math.o: lvgl/src/misc/lv_math.c.o
@@ -6254,7 +6254,7 @@ lvgl/src/misc/lv_math.o: lvgl/src/misc/lv_math.c.o
 
 # target to build an object file
 lvgl/src/misc/lv_math.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/misc/lv_math.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_math.c.o
 .PHONY : lvgl/src/misc/lv_math.c.o
 
 lvgl/src/misc/lv_math.i: lvgl/src/misc/lv_math.c.i
@@ -6262,7 +6262,7 @@ lvgl/src/misc/lv_math.i: lvgl/src/misc/lv_math.c.i
 
 # target to preprocess a source file
 lvgl/src/misc/lv_math.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/misc/lv_math.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_math.c.i
 .PHONY : lvgl/src/misc/lv_math.c.i
 
 lvgl/src/misc/lv_math.s: lvgl/src/misc/lv_math.c.s
@@ -6270,7 +6270,7 @@ lvgl/src/misc/lv_math.s: lvgl/src/misc/lv_math.c.s
 
 # target to generate assembly for a file
 lvgl/src/misc/lv_math.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/misc/lv_math.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_math.c.s
 .PHONY : lvgl/src/misc/lv_math.c.s
 
 lvgl/src/misc/lv_mem.o: lvgl/src/misc/lv_mem.c.o
@@ -6278,7 +6278,7 @@ lvgl/src/misc/lv_mem.o: lvgl/src/misc/lv_mem.c.o
 
 # target to build an object file
 lvgl/src/misc/lv_mem.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/misc/lv_mem.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_mem.c.o
 .PHONY : lvgl/src/misc/lv_mem.c.o
 
 lvgl/src/misc/lv_mem.i: lvgl/src/misc/lv_mem.c.i
@@ -6286,7 +6286,7 @@ lvgl/src/misc/lv_mem.i: lvgl/src/misc/lv_mem.c.i
 
 # target to preprocess a source file
 lvgl/src/misc/lv_mem.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/misc/lv_mem.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_mem.c.i
 .PHONY : lvgl/src/misc/lv_mem.c.i
 
 lvgl/src/misc/lv_mem.s: lvgl/src/misc/lv_mem.c.s
@@ -6294,7 +6294,7 @@ lvgl/src/misc/lv_mem.s: lvgl/src/misc/lv_mem.c.s
 
 # target to generate assembly for a file
 lvgl/src/misc/lv_mem.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/misc/lv_mem.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_mem.c.s
 .PHONY : lvgl/src/misc/lv_mem.c.s
 
 lvgl/src/misc/lv_printf.o: lvgl/src/misc/lv_printf.c.o
@@ -6302,7 +6302,7 @@ lvgl/src/misc/lv_printf.o: lvgl/src/misc/lv_printf.c.o
 
 # target to build an object file
 lvgl/src/misc/lv_printf.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/misc/lv_printf.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_printf.c.o
 .PHONY : lvgl/src/misc/lv_printf.c.o
 
 lvgl/src/misc/lv_printf.i: lvgl/src/misc/lv_printf.c.i
@@ -6310,7 +6310,7 @@ lvgl/src/misc/lv_printf.i: lvgl/src/misc/lv_printf.c.i
 
 # target to preprocess a source file
 lvgl/src/misc/lv_printf.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/misc/lv_printf.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_printf.c.i
 .PHONY : lvgl/src/misc/lv_printf.c.i
 
 lvgl/src/misc/lv_printf.s: lvgl/src/misc/lv_printf.c.s
@@ -6318,7 +6318,7 @@ lvgl/src/misc/lv_printf.s: lvgl/src/misc/lv_printf.c.s
 
 # target to generate assembly for a file
 lvgl/src/misc/lv_printf.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/misc/lv_printf.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_printf.c.s
 .PHONY : lvgl/src/misc/lv_printf.c.s
 
 lvgl/src/misc/lv_style.o: lvgl/src/misc/lv_style.c.o
@@ -6326,7 +6326,7 @@ lvgl/src/misc/lv_style.o: lvgl/src/misc/lv_style.c.o
 
 # target to build an object file
 lvgl/src/misc/lv_style.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/misc/lv_style.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_style.c.o
 .PHONY : lvgl/src/misc/lv_style.c.o
 
 lvgl/src/misc/lv_style.i: lvgl/src/misc/lv_style.c.i
@@ -6334,7 +6334,7 @@ lvgl/src/misc/lv_style.i: lvgl/src/misc/lv_style.c.i
 
 # target to preprocess a source file
 lvgl/src/misc/lv_style.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/misc/lv_style.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_style.c.i
 .PHONY : lvgl/src/misc/lv_style.c.i
 
 lvgl/src/misc/lv_style.s: lvgl/src/misc/lv_style.c.s
@@ -6342,7 +6342,7 @@ lvgl/src/misc/lv_style.s: lvgl/src/misc/lv_style.c.s
 
 # target to generate assembly for a file
 lvgl/src/misc/lv_style.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/misc/lv_style.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_style.c.s
 .PHONY : lvgl/src/misc/lv_style.c.s
 
 lvgl/src/misc/lv_templ.o: lvgl/src/misc/lv_templ.c.o
@@ -6350,7 +6350,7 @@ lvgl/src/misc/lv_templ.o: lvgl/src/misc/lv_templ.c.o
 
 # target to build an object file
 lvgl/src/misc/lv_templ.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/misc/lv_templ.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_templ.c.o
 .PHONY : lvgl/src/misc/lv_templ.c.o
 
 lvgl/src/misc/lv_templ.i: lvgl/src/misc/lv_templ.c.i
@@ -6358,7 +6358,7 @@ lvgl/src/misc/lv_templ.i: lvgl/src/misc/lv_templ.c.i
 
 # target to preprocess a source file
 lvgl/src/misc/lv_templ.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/misc/lv_templ.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_templ.c.i
 .PHONY : lvgl/src/misc/lv_templ.c.i
 
 lvgl/src/misc/lv_templ.s: lvgl/src/misc/lv_templ.c.s
@@ -6366,7 +6366,7 @@ lvgl/src/misc/lv_templ.s: lvgl/src/misc/lv_templ.c.s
 
 # target to generate assembly for a file
 lvgl/src/misc/lv_templ.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/misc/lv_templ.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_templ.c.s
 .PHONY : lvgl/src/misc/lv_templ.c.s
 
 lvgl/src/misc/lv_timer.o: lvgl/src/misc/lv_timer.c.o
@@ -6374,7 +6374,7 @@ lvgl/src/misc/lv_timer.o: lvgl/src/misc/lv_timer.c.o
 
 # target to build an object file
 lvgl/src/misc/lv_timer.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/misc/lv_timer.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_timer.c.o
 .PHONY : lvgl/src/misc/lv_timer.c.o
 
 lvgl/src/misc/lv_timer.i: lvgl/src/misc/lv_timer.c.i
@@ -6382,7 +6382,7 @@ lvgl/src/misc/lv_timer.i: lvgl/src/misc/lv_timer.c.i
 
 # target to preprocess a source file
 lvgl/src/misc/lv_timer.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/misc/lv_timer.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_timer.c.i
 .PHONY : lvgl/src/misc/lv_timer.c.i
 
 lvgl/src/misc/lv_timer.s: lvgl/src/misc/lv_timer.c.s
@@ -6390,7 +6390,7 @@ lvgl/src/misc/lv_timer.s: lvgl/src/misc/lv_timer.c.s
 
 # target to generate assembly for a file
 lvgl/src/misc/lv_timer.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/misc/lv_timer.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_timer.c.s
 .PHONY : lvgl/src/misc/lv_timer.c.s
 
 lvgl/src/misc/lv_tlsf.o: lvgl/src/misc/lv_tlsf.c.o
@@ -6398,7 +6398,7 @@ lvgl/src/misc/lv_tlsf.o: lvgl/src/misc/lv_tlsf.c.o
 
 # target to build an object file
 lvgl/src/misc/lv_tlsf.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/misc/lv_tlsf.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_tlsf.c.o
 .PHONY : lvgl/src/misc/lv_tlsf.c.o
 
 lvgl/src/misc/lv_tlsf.i: lvgl/src/misc/lv_tlsf.c.i
@@ -6406,7 +6406,7 @@ lvgl/src/misc/lv_tlsf.i: lvgl/src/misc/lv_tlsf.c.i
 
 # target to preprocess a source file
 lvgl/src/misc/lv_tlsf.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/misc/lv_tlsf.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_tlsf.c.i
 .PHONY : lvgl/src/misc/lv_tlsf.c.i
 
 lvgl/src/misc/lv_tlsf.s: lvgl/src/misc/lv_tlsf.c.s
@@ -6414,7 +6414,7 @@ lvgl/src/misc/lv_tlsf.s: lvgl/src/misc/lv_tlsf.c.s
 
 # target to generate assembly for a file
 lvgl/src/misc/lv_tlsf.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/misc/lv_tlsf.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_tlsf.c.s
 .PHONY : lvgl/src/misc/lv_tlsf.c.s
 
 lvgl/src/misc/lv_txt.o: lvgl/src/misc/lv_txt.c.o
@@ -6422,7 +6422,7 @@ lvgl/src/misc/lv_txt.o: lvgl/src/misc/lv_txt.c.o
 
 # target to build an object file
 lvgl/src/misc/lv_txt.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/misc/lv_txt.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_txt.c.o
 .PHONY : lvgl/src/misc/lv_txt.c.o
 
 lvgl/src/misc/lv_txt.i: lvgl/src/misc/lv_txt.c.i
@@ -6430,7 +6430,7 @@ lvgl/src/misc/lv_txt.i: lvgl/src/misc/lv_txt.c.i
 
 # target to preprocess a source file
 lvgl/src/misc/lv_txt.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/misc/lv_txt.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_txt.c.i
 .PHONY : lvgl/src/misc/lv_txt.c.i
 
 lvgl/src/misc/lv_txt.s: lvgl/src/misc/lv_txt.c.s
@@ -6438,7 +6438,7 @@ lvgl/src/misc/lv_txt.s: lvgl/src/misc/lv_txt.c.s
 
 # target to generate assembly for a file
 lvgl/src/misc/lv_txt.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/misc/lv_txt.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_txt.c.s
 .PHONY : lvgl/src/misc/lv_txt.c.s
 
 lvgl/src/misc/lv_txt_ap.o: lvgl/src/misc/lv_txt_ap.c.o
@@ -6446,7 +6446,7 @@ lvgl/src/misc/lv_txt_ap.o: lvgl/src/misc/lv_txt_ap.c.o
 
 # target to build an object file
 lvgl/src/misc/lv_txt_ap.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/misc/lv_txt_ap.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_txt_ap.c.o
 .PHONY : lvgl/src/misc/lv_txt_ap.c.o
 
 lvgl/src/misc/lv_txt_ap.i: lvgl/src/misc/lv_txt_ap.c.i
@@ -6454,7 +6454,7 @@ lvgl/src/misc/lv_txt_ap.i: lvgl/src/misc/lv_txt_ap.c.i
 
 # target to preprocess a source file
 lvgl/src/misc/lv_txt_ap.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/misc/lv_txt_ap.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_txt_ap.c.i
 .PHONY : lvgl/src/misc/lv_txt_ap.c.i
 
 lvgl/src/misc/lv_txt_ap.s: lvgl/src/misc/lv_txt_ap.c.s
@@ -6462,7 +6462,7 @@ lvgl/src/misc/lv_txt_ap.s: lvgl/src/misc/lv_txt_ap.c.s
 
 # target to generate assembly for a file
 lvgl/src/misc/lv_txt_ap.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/misc/lv_txt_ap.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_txt_ap.c.s
 .PHONY : lvgl/src/misc/lv_txt_ap.c.s
 
 lvgl/src/misc/lv_utils.o: lvgl/src/misc/lv_utils.c.o
@@ -6470,7 +6470,7 @@ lvgl/src/misc/lv_utils.o: lvgl/src/misc/lv_utils.c.o
 
 # target to build an object file
 lvgl/src/misc/lv_utils.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/misc/lv_utils.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_utils.c.o
 .PHONY : lvgl/src/misc/lv_utils.c.o
 
 lvgl/src/misc/lv_utils.i: lvgl/src/misc/lv_utils.c.i
@@ -6478,7 +6478,7 @@ lvgl/src/misc/lv_utils.i: lvgl/src/misc/lv_utils.c.i
 
 # target to preprocess a source file
 lvgl/src/misc/lv_utils.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/misc/lv_utils.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_utils.c.i
 .PHONY : lvgl/src/misc/lv_utils.c.i
 
 lvgl/src/misc/lv_utils.s: lvgl/src/misc/lv_utils.c.s
@@ -6486,7 +6486,7 @@ lvgl/src/misc/lv_utils.s: lvgl/src/misc/lv_utils.c.s
 
 # target to generate assembly for a file
 lvgl/src/misc/lv_utils.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/misc/lv_utils.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_utils.c.s
 .PHONY : lvgl/src/misc/lv_utils.c.s
 
 lvgl/src/widgets/lv_arc.o: lvgl/src/widgets/lv_arc.c.o
@@ -6494,7 +6494,7 @@ lvgl/src/widgets/lv_arc.o: lvgl/src/widgets/lv_arc.c.o
 
 # target to build an object file
 lvgl/src/widgets/lv_arc.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/widgets/lv_arc.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/widgets/lv_arc.c.o
 .PHONY : lvgl/src/widgets/lv_arc.c.o
 
 lvgl/src/widgets/lv_arc.i: lvgl/src/widgets/lv_arc.c.i
@@ -6502,7 +6502,7 @@ lvgl/src/widgets/lv_arc.i: lvgl/src/widgets/lv_arc.c.i
 
 # target to preprocess a source file
 lvgl/src/widgets/lv_arc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/widgets/lv_arc.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/widgets/lv_arc.c.i
 .PHONY : lvgl/src/widgets/lv_arc.c.i
 
 lvgl/src/widgets/lv_arc.s: lvgl/src/widgets/lv_arc.c.s
@@ -6510,7 +6510,7 @@ lvgl/src/widgets/lv_arc.s: lvgl/src/widgets/lv_arc.c.s
 
 # target to generate assembly for a file
 lvgl/src/widgets/lv_arc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/widgets/lv_arc.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/widgets/lv_arc.c.s
 .PHONY : lvgl/src/widgets/lv_arc.c.s
 
 lvgl/src/widgets/lv_bar.o: lvgl/src/widgets/lv_bar.c.o
@@ -6518,7 +6518,7 @@ lvgl/src/widgets/lv_bar.o: lvgl/src/widgets/lv_bar.c.o
 
 # target to build an object file
 lvgl/src/widgets/lv_bar.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/widgets/lv_bar.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/widgets/lv_bar.c.o
 .PHONY : lvgl/src/widgets/lv_bar.c.o
 
 lvgl/src/widgets/lv_bar.i: lvgl/src/widgets/lv_bar.c.i
@@ -6526,7 +6526,7 @@ lvgl/src/widgets/lv_bar.i: lvgl/src/widgets/lv_bar.c.i
 
 # target to preprocess a source file
 lvgl/src/widgets/lv_bar.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/widgets/lv_bar.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/widgets/lv_bar.c.i
 .PHONY : lvgl/src/widgets/lv_bar.c.i
 
 lvgl/src/widgets/lv_bar.s: lvgl/src/widgets/lv_bar.c.s
@@ -6534,7 +6534,7 @@ lvgl/src/widgets/lv_bar.s: lvgl/src/widgets/lv_bar.c.s
 
 # target to generate assembly for a file
 lvgl/src/widgets/lv_bar.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/widgets/lv_bar.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/widgets/lv_bar.c.s
 .PHONY : lvgl/src/widgets/lv_bar.c.s
 
 lvgl/src/widgets/lv_btn.o: lvgl/src/widgets/lv_btn.c.o
@@ -6542,7 +6542,7 @@ lvgl/src/widgets/lv_btn.o: lvgl/src/widgets/lv_btn.c.o
 
 # target to build an object file
 lvgl/src/widgets/lv_btn.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/widgets/lv_btn.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/widgets/lv_btn.c.o
 .PHONY : lvgl/src/widgets/lv_btn.c.o
 
 lvgl/src/widgets/lv_btn.i: lvgl/src/widgets/lv_btn.c.i
@@ -6550,7 +6550,7 @@ lvgl/src/widgets/lv_btn.i: lvgl/src/widgets/lv_btn.c.i
 
 # target to preprocess a source file
 lvgl/src/widgets/lv_btn.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/widgets/lv_btn.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/widgets/lv_btn.c.i
 .PHONY : lvgl/src/widgets/lv_btn.c.i
 
 lvgl/src/widgets/lv_btn.s: lvgl/src/widgets/lv_btn.c.s
@@ -6558,7 +6558,7 @@ lvgl/src/widgets/lv_btn.s: lvgl/src/widgets/lv_btn.c.s
 
 # target to generate assembly for a file
 lvgl/src/widgets/lv_btn.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/widgets/lv_btn.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/widgets/lv_btn.c.s
 .PHONY : lvgl/src/widgets/lv_btn.c.s
 
 lvgl/src/widgets/lv_btnmatrix.o: lvgl/src/widgets/lv_btnmatrix.c.o
@@ -6566,7 +6566,7 @@ lvgl/src/widgets/lv_btnmatrix.o: lvgl/src/widgets/lv_btnmatrix.c.o
 
 # target to build an object file
 lvgl/src/widgets/lv_btnmatrix.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/widgets/lv_btnmatrix.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/widgets/lv_btnmatrix.c.o
 .PHONY : lvgl/src/widgets/lv_btnmatrix.c.o
 
 lvgl/src/widgets/lv_btnmatrix.i: lvgl/src/widgets/lv_btnmatrix.c.i
@@ -6574,7 +6574,7 @@ lvgl/src/widgets/lv_btnmatrix.i: lvgl/src/widgets/lv_btnmatrix.c.i
 
 # target to preprocess a source file
 lvgl/src/widgets/lv_btnmatrix.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/widgets/lv_btnmatrix.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/widgets/lv_btnmatrix.c.i
 .PHONY : lvgl/src/widgets/lv_btnmatrix.c.i
 
 lvgl/src/widgets/lv_btnmatrix.s: lvgl/src/widgets/lv_btnmatrix.c.s
@@ -6582,7 +6582,7 @@ lvgl/src/widgets/lv_btnmatrix.s: lvgl/src/widgets/lv_btnmatrix.c.s
 
 # target to generate assembly for a file
 lvgl/src/widgets/lv_btnmatrix.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/widgets/lv_btnmatrix.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/widgets/lv_btnmatrix.c.s
 .PHONY : lvgl/src/widgets/lv_btnmatrix.c.s
 
 lvgl/src/widgets/lv_canvas.o: lvgl/src/widgets/lv_canvas.c.o
@@ -6590,7 +6590,7 @@ lvgl/src/widgets/lv_canvas.o: lvgl/src/widgets/lv_canvas.c.o
 
 # target to build an object file
 lvgl/src/widgets/lv_canvas.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/widgets/lv_canvas.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/widgets/lv_canvas.c.o
 .PHONY : lvgl/src/widgets/lv_canvas.c.o
 
 lvgl/src/widgets/lv_canvas.i: lvgl/src/widgets/lv_canvas.c.i
@@ -6598,7 +6598,7 @@ lvgl/src/widgets/lv_canvas.i: lvgl/src/widgets/lv_canvas.c.i
 
 # target to preprocess a source file
 lvgl/src/widgets/lv_canvas.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/widgets/lv_canvas.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/widgets/lv_canvas.c.i
 .PHONY : lvgl/src/widgets/lv_canvas.c.i
 
 lvgl/src/widgets/lv_canvas.s: lvgl/src/widgets/lv_canvas.c.s
@@ -6606,7 +6606,7 @@ lvgl/src/widgets/lv_canvas.s: lvgl/src/widgets/lv_canvas.c.s
 
 # target to generate assembly for a file
 lvgl/src/widgets/lv_canvas.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/widgets/lv_canvas.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/widgets/lv_canvas.c.s
 .PHONY : lvgl/src/widgets/lv_canvas.c.s
 
 lvgl/src/widgets/lv_checkbox.o: lvgl/src/widgets/lv_checkbox.c.o
@@ -6614,7 +6614,7 @@ lvgl/src/widgets/lv_checkbox.o: lvgl/src/widgets/lv_checkbox.c.o
 
 # target to build an object file
 lvgl/src/widgets/lv_checkbox.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/widgets/lv_checkbox.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/widgets/lv_checkbox.c.o
 .PHONY : lvgl/src/widgets/lv_checkbox.c.o
 
 lvgl/src/widgets/lv_checkbox.i: lvgl/src/widgets/lv_checkbox.c.i
@@ -6622,7 +6622,7 @@ lvgl/src/widgets/lv_checkbox.i: lvgl/src/widgets/lv_checkbox.c.i
 
 # target to preprocess a source file
 lvgl/src/widgets/lv_checkbox.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/widgets/lv_checkbox.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/widgets/lv_checkbox.c.i
 .PHONY : lvgl/src/widgets/lv_checkbox.c.i
 
 lvgl/src/widgets/lv_checkbox.s: lvgl/src/widgets/lv_checkbox.c.s
@@ -6630,7 +6630,7 @@ lvgl/src/widgets/lv_checkbox.s: lvgl/src/widgets/lv_checkbox.c.s
 
 # target to generate assembly for a file
 lvgl/src/widgets/lv_checkbox.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/widgets/lv_checkbox.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/widgets/lv_checkbox.c.s
 .PHONY : lvgl/src/widgets/lv_checkbox.c.s
 
 lvgl/src/widgets/lv_dropdown.o: lvgl/src/widgets/lv_dropdown.c.o
@@ -6638,7 +6638,7 @@ lvgl/src/widgets/lv_dropdown.o: lvgl/src/widgets/lv_dropdown.c.o
 
 # target to build an object file
 lvgl/src/widgets/lv_dropdown.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/widgets/lv_dropdown.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/widgets/lv_dropdown.c.o
 .PHONY : lvgl/src/widgets/lv_dropdown.c.o
 
 lvgl/src/widgets/lv_dropdown.i: lvgl/src/widgets/lv_dropdown.c.i
@@ -6646,7 +6646,7 @@ lvgl/src/widgets/lv_dropdown.i: lvgl/src/widgets/lv_dropdown.c.i
 
 # target to preprocess a source file
 lvgl/src/widgets/lv_dropdown.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/widgets/lv_dropdown.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/widgets/lv_dropdown.c.i
 .PHONY : lvgl/src/widgets/lv_dropdown.c.i
 
 lvgl/src/widgets/lv_dropdown.s: lvgl/src/widgets/lv_dropdown.c.s
@@ -6654,7 +6654,7 @@ lvgl/src/widgets/lv_dropdown.s: lvgl/src/widgets/lv_dropdown.c.s
 
 # target to generate assembly for a file
 lvgl/src/widgets/lv_dropdown.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/widgets/lv_dropdown.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/widgets/lv_dropdown.c.s
 .PHONY : lvgl/src/widgets/lv_dropdown.c.s
 
 lvgl/src/widgets/lv_img.o: lvgl/src/widgets/lv_img.c.o
@@ -6662,7 +6662,7 @@ lvgl/src/widgets/lv_img.o: lvgl/src/widgets/lv_img.c.o
 
 # target to build an object file
 lvgl/src/widgets/lv_img.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/widgets/lv_img.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/widgets/lv_img.c.o
 .PHONY : lvgl/src/widgets/lv_img.c.o
 
 lvgl/src/widgets/lv_img.i: lvgl/src/widgets/lv_img.c.i
@@ -6670,7 +6670,7 @@ lvgl/src/widgets/lv_img.i: lvgl/src/widgets/lv_img.c.i
 
 # target to preprocess a source file
 lvgl/src/widgets/lv_img.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/widgets/lv_img.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/widgets/lv_img.c.i
 .PHONY : lvgl/src/widgets/lv_img.c.i
 
 lvgl/src/widgets/lv_img.s: lvgl/src/widgets/lv_img.c.s
@@ -6678,7 +6678,7 @@ lvgl/src/widgets/lv_img.s: lvgl/src/widgets/lv_img.c.s
 
 # target to generate assembly for a file
 lvgl/src/widgets/lv_img.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/widgets/lv_img.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/widgets/lv_img.c.s
 .PHONY : lvgl/src/widgets/lv_img.c.s
 
 lvgl/src/widgets/lv_label.o: lvgl/src/widgets/lv_label.c.o
@@ -6686,7 +6686,7 @@ lvgl/src/widgets/lv_label.o: lvgl/src/widgets/lv_label.c.o
 
 # target to build an object file
 lvgl/src/widgets/lv_label.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/widgets/lv_label.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/widgets/lv_label.c.o
 .PHONY : lvgl/src/widgets/lv_label.c.o
 
 lvgl/src/widgets/lv_label.i: lvgl/src/widgets/lv_label.c.i
@@ -6694,7 +6694,7 @@ lvgl/src/widgets/lv_label.i: lvgl/src/widgets/lv_label.c.i
 
 # target to preprocess a source file
 lvgl/src/widgets/lv_label.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/widgets/lv_label.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/widgets/lv_label.c.i
 .PHONY : lvgl/src/widgets/lv_label.c.i
 
 lvgl/src/widgets/lv_label.s: lvgl/src/widgets/lv_label.c.s
@@ -6702,7 +6702,7 @@ lvgl/src/widgets/lv_label.s: lvgl/src/widgets/lv_label.c.s
 
 # target to generate assembly for a file
 lvgl/src/widgets/lv_label.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/widgets/lv_label.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/widgets/lv_label.c.s
 .PHONY : lvgl/src/widgets/lv_label.c.s
 
 lvgl/src/widgets/lv_line.o: lvgl/src/widgets/lv_line.c.o
@@ -6710,7 +6710,7 @@ lvgl/src/widgets/lv_line.o: lvgl/src/widgets/lv_line.c.o
 
 # target to build an object file
 lvgl/src/widgets/lv_line.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/widgets/lv_line.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/widgets/lv_line.c.o
 .PHONY : lvgl/src/widgets/lv_line.c.o
 
 lvgl/src/widgets/lv_line.i: lvgl/src/widgets/lv_line.c.i
@@ -6718,7 +6718,7 @@ lvgl/src/widgets/lv_line.i: lvgl/src/widgets/lv_line.c.i
 
 # target to preprocess a source file
 lvgl/src/widgets/lv_line.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/widgets/lv_line.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/widgets/lv_line.c.i
 .PHONY : lvgl/src/widgets/lv_line.c.i
 
 lvgl/src/widgets/lv_line.s: lvgl/src/widgets/lv_line.c.s
@@ -6726,7 +6726,7 @@ lvgl/src/widgets/lv_line.s: lvgl/src/widgets/lv_line.c.s
 
 # target to generate assembly for a file
 lvgl/src/widgets/lv_line.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/widgets/lv_line.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/widgets/lv_line.c.s
 .PHONY : lvgl/src/widgets/lv_line.c.s
 
 lvgl/src/widgets/lv_objx_templ.o: lvgl/src/widgets/lv_objx_templ.c.o
@@ -6734,7 +6734,7 @@ lvgl/src/widgets/lv_objx_templ.o: lvgl/src/widgets/lv_objx_templ.c.o
 
 # target to build an object file
 lvgl/src/widgets/lv_objx_templ.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/widgets/lv_objx_templ.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/widgets/lv_objx_templ.c.o
 .PHONY : lvgl/src/widgets/lv_objx_templ.c.o
 
 lvgl/src/widgets/lv_objx_templ.i: lvgl/src/widgets/lv_objx_templ.c.i
@@ -6742,7 +6742,7 @@ lvgl/src/widgets/lv_objx_templ.i: lvgl/src/widgets/lv_objx_templ.c.i
 
 # target to preprocess a source file
 lvgl/src/widgets/lv_objx_templ.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/widgets/lv_objx_templ.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/widgets/lv_objx_templ.c.i
 .PHONY : lvgl/src/widgets/lv_objx_templ.c.i
 
 lvgl/src/widgets/lv_objx_templ.s: lvgl/src/widgets/lv_objx_templ.c.s
@@ -6750,7 +6750,7 @@ lvgl/src/widgets/lv_objx_templ.s: lvgl/src/widgets/lv_objx_templ.c.s
 
 # target to generate assembly for a file
 lvgl/src/widgets/lv_objx_templ.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/widgets/lv_objx_templ.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/widgets/lv_objx_templ.c.s
 .PHONY : lvgl/src/widgets/lv_objx_templ.c.s
 
 lvgl/src/widgets/lv_roller.o: lvgl/src/widgets/lv_roller.c.o
@@ -6758,7 +6758,7 @@ lvgl/src/widgets/lv_roller.o: lvgl/src/widgets/lv_roller.c.o
 
 # target to build an object file
 lvgl/src/widgets/lv_roller.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/widgets/lv_roller.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/widgets/lv_roller.c.o
 .PHONY : lvgl/src/widgets/lv_roller.c.o
 
 lvgl/src/widgets/lv_roller.i: lvgl/src/widgets/lv_roller.c.i
@@ -6766,7 +6766,7 @@ lvgl/src/widgets/lv_roller.i: lvgl/src/widgets/lv_roller.c.i
 
 # target to preprocess a source file
 lvgl/src/widgets/lv_roller.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/widgets/lv_roller.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/widgets/lv_roller.c.i
 .PHONY : lvgl/src/widgets/lv_roller.c.i
 
 lvgl/src/widgets/lv_roller.s: lvgl/src/widgets/lv_roller.c.s
@@ -6774,7 +6774,7 @@ lvgl/src/widgets/lv_roller.s: lvgl/src/widgets/lv_roller.c.s
 
 # target to generate assembly for a file
 lvgl/src/widgets/lv_roller.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/widgets/lv_roller.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/widgets/lv_roller.c.s
 .PHONY : lvgl/src/widgets/lv_roller.c.s
 
 lvgl/src/widgets/lv_slider.o: lvgl/src/widgets/lv_slider.c.o
@@ -6782,7 +6782,7 @@ lvgl/src/widgets/lv_slider.o: lvgl/src/widgets/lv_slider.c.o
 
 # target to build an object file
 lvgl/src/widgets/lv_slider.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/widgets/lv_slider.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/widgets/lv_slider.c.o
 .PHONY : lvgl/src/widgets/lv_slider.c.o
 
 lvgl/src/widgets/lv_slider.i: lvgl/src/widgets/lv_slider.c.i
@@ -6790,7 +6790,7 @@ lvgl/src/widgets/lv_slider.i: lvgl/src/widgets/lv_slider.c.i
 
 # target to preprocess a source file
 lvgl/src/widgets/lv_slider.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/widgets/lv_slider.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/widgets/lv_slider.c.i
 .PHONY : lvgl/src/widgets/lv_slider.c.i
 
 lvgl/src/widgets/lv_slider.s: lvgl/src/widgets/lv_slider.c.s
@@ -6798,7 +6798,7 @@ lvgl/src/widgets/lv_slider.s: lvgl/src/widgets/lv_slider.c.s
 
 # target to generate assembly for a file
 lvgl/src/widgets/lv_slider.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/widgets/lv_slider.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/widgets/lv_slider.c.s
 .PHONY : lvgl/src/widgets/lv_slider.c.s
 
 lvgl/src/widgets/lv_switch.o: lvgl/src/widgets/lv_switch.c.o
@@ -6806,7 +6806,7 @@ lvgl/src/widgets/lv_switch.o: lvgl/src/widgets/lv_switch.c.o
 
 # target to build an object file
 lvgl/src/widgets/lv_switch.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/widgets/lv_switch.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/widgets/lv_switch.c.o
 .PHONY : lvgl/src/widgets/lv_switch.c.o
 
 lvgl/src/widgets/lv_switch.i: lvgl/src/widgets/lv_switch.c.i
@@ -6814,7 +6814,7 @@ lvgl/src/widgets/lv_switch.i: lvgl/src/widgets/lv_switch.c.i
 
 # target to preprocess a source file
 lvgl/src/widgets/lv_switch.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/widgets/lv_switch.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/widgets/lv_switch.c.i
 .PHONY : lvgl/src/widgets/lv_switch.c.i
 
 lvgl/src/widgets/lv_switch.s: lvgl/src/widgets/lv_switch.c.s
@@ -6822,7 +6822,7 @@ lvgl/src/widgets/lv_switch.s: lvgl/src/widgets/lv_switch.c.s
 
 # target to generate assembly for a file
 lvgl/src/widgets/lv_switch.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/widgets/lv_switch.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/widgets/lv_switch.c.s
 .PHONY : lvgl/src/widgets/lv_switch.c.s
 
 lvgl/src/widgets/lv_table.o: lvgl/src/widgets/lv_table.c.o
@@ -6830,7 +6830,7 @@ lvgl/src/widgets/lv_table.o: lvgl/src/widgets/lv_table.c.o
 
 # target to build an object file
 lvgl/src/widgets/lv_table.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/widgets/lv_table.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/widgets/lv_table.c.o
 .PHONY : lvgl/src/widgets/lv_table.c.o
 
 lvgl/src/widgets/lv_table.i: lvgl/src/widgets/lv_table.c.i
@@ -6838,7 +6838,7 @@ lvgl/src/widgets/lv_table.i: lvgl/src/widgets/lv_table.c.i
 
 # target to preprocess a source file
 lvgl/src/widgets/lv_table.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/widgets/lv_table.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/widgets/lv_table.c.i
 .PHONY : lvgl/src/widgets/lv_table.c.i
 
 lvgl/src/widgets/lv_table.s: lvgl/src/widgets/lv_table.c.s
@@ -6846,7 +6846,7 @@ lvgl/src/widgets/lv_table.s: lvgl/src/widgets/lv_table.c.s
 
 # target to generate assembly for a file
 lvgl/src/widgets/lv_table.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/widgets/lv_table.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/widgets/lv_table.c.s
 .PHONY : lvgl/src/widgets/lv_table.c.s
 
 lvgl/src/widgets/lv_textarea.o: lvgl/src/widgets/lv_textarea.c.o
@@ -6854,7 +6854,7 @@ lvgl/src/widgets/lv_textarea.o: lvgl/src/widgets/lv_textarea.c.o
 
 # target to build an object file
 lvgl/src/widgets/lv_textarea.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/widgets/lv_textarea.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/widgets/lv_textarea.c.o
 .PHONY : lvgl/src/widgets/lv_textarea.c.o
 
 lvgl/src/widgets/lv_textarea.i: lvgl/src/widgets/lv_textarea.c.i
@@ -6862,7 +6862,7 @@ lvgl/src/widgets/lv_textarea.i: lvgl/src/widgets/lv_textarea.c.i
 
 # target to preprocess a source file
 lvgl/src/widgets/lv_textarea.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/widgets/lv_textarea.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/widgets/lv_textarea.c.i
 .PHONY : lvgl/src/widgets/lv_textarea.c.i
 
 lvgl/src/widgets/lv_textarea.s: lvgl/src/widgets/lv_textarea.c.s
@@ -6870,7 +6870,7 @@ lvgl/src/widgets/lv_textarea.s: lvgl/src/widgets/lv_textarea.c.s
 
 # target to generate assembly for a file
 lvgl/src/widgets/lv_textarea.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/src/widgets/lv_textarea.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/widgets/lv_textarea.c.s
 .PHONY : lvgl/src/widgets/lv_textarea.c.s
 
 lvgl/tests/lv_test_assert.o: lvgl/tests/lv_test_assert.c.o
@@ -6878,7 +6878,7 @@ lvgl/tests/lv_test_assert.o: lvgl/tests/lv_test_assert.c.o
 
 # target to build an object file
 lvgl/tests/lv_test_assert.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/tests/lv_test_assert.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/lv_test_assert.c.o
 .PHONY : lvgl/tests/lv_test_assert.c.o
 
 lvgl/tests/lv_test_assert.i: lvgl/tests/lv_test_assert.c.i
@@ -6886,7 +6886,7 @@ lvgl/tests/lv_test_assert.i: lvgl/tests/lv_test_assert.c.i
 
 # target to preprocess a source file
 lvgl/tests/lv_test_assert.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/tests/lv_test_assert.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/lv_test_assert.c.i
 .PHONY : lvgl/tests/lv_test_assert.c.i
 
 lvgl/tests/lv_test_assert.s: lvgl/tests/lv_test_assert.c.s
@@ -6894,7 +6894,7 @@ lvgl/tests/lv_test_assert.s: lvgl/tests/lv_test_assert.c.s
 
 # target to generate assembly for a file
 lvgl/tests/lv_test_assert.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/tests/lv_test_assert.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/lv_test_assert.c.s
 .PHONY : lvgl/tests/lv_test_assert.c.s
 
 lvgl/tests/lv_test_core/lv_test_core.o: lvgl/tests/lv_test_core/lv_test_core.c.o
@@ -6902,7 +6902,7 @@ lvgl/tests/lv_test_core/lv_test_core.o: lvgl/tests/lv_test_core/lv_test_core.c.o
 
 # target to build an object file
 lvgl/tests/lv_test_core/lv_test_core.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/tests/lv_test_core/lv_test_core.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/lv_test_core/lv_test_core.c.o
 .PHONY : lvgl/tests/lv_test_core/lv_test_core.c.o
 
 lvgl/tests/lv_test_core/lv_test_core.i: lvgl/tests/lv_test_core/lv_test_core.c.i
@@ -6910,7 +6910,7 @@ lvgl/tests/lv_test_core/lv_test_core.i: lvgl/tests/lv_test_core/lv_test_core.c.i
 
 # target to preprocess a source file
 lvgl/tests/lv_test_core/lv_test_core.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/tests/lv_test_core/lv_test_core.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/lv_test_core/lv_test_core.c.i
 .PHONY : lvgl/tests/lv_test_core/lv_test_core.c.i
 
 lvgl/tests/lv_test_core/lv_test_core.s: lvgl/tests/lv_test_core/lv_test_core.c.s
@@ -6918,7 +6918,7 @@ lvgl/tests/lv_test_core/lv_test_core.s: lvgl/tests/lv_test_core/lv_test_core.c.s
 
 # target to generate assembly for a file
 lvgl/tests/lv_test_core/lv_test_core.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/tests/lv_test_core/lv_test_core.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/lv_test_core/lv_test_core.c.s
 .PHONY : lvgl/tests/lv_test_core/lv_test_core.c.s
 
 lvgl/tests/lv_test_core/lv_test_font_loader.o: lvgl/tests/lv_test_core/lv_test_font_loader.c.o
@@ -6926,7 +6926,7 @@ lvgl/tests/lv_test_core/lv_test_font_loader.o: lvgl/tests/lv_test_core/lv_test_f
 
 # target to build an object file
 lvgl/tests/lv_test_core/lv_test_font_loader.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/tests/lv_test_core/lv_test_font_loader.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/lv_test_core/lv_test_font_loader.c.o
 .PHONY : lvgl/tests/lv_test_core/lv_test_font_loader.c.o
 
 lvgl/tests/lv_test_core/lv_test_font_loader.i: lvgl/tests/lv_test_core/lv_test_font_loader.c.i
@@ -6934,7 +6934,7 @@ lvgl/tests/lv_test_core/lv_test_font_loader.i: lvgl/tests/lv_test_core/lv_test_f
 
 # target to preprocess a source file
 lvgl/tests/lv_test_core/lv_test_font_loader.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/tests/lv_test_core/lv_test_font_loader.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/lv_test_core/lv_test_font_loader.c.i
 .PHONY : lvgl/tests/lv_test_core/lv_test_font_loader.c.i
 
 lvgl/tests/lv_test_core/lv_test_font_loader.s: lvgl/tests/lv_test_core/lv_test_font_loader.c.s
@@ -6942,7 +6942,7 @@ lvgl/tests/lv_test_core/lv_test_font_loader.s: lvgl/tests/lv_test_core/lv_test_f
 
 # target to generate assembly for a file
 lvgl/tests/lv_test_core/lv_test_font_loader.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/tests/lv_test_core/lv_test_font_loader.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/lv_test_core/lv_test_font_loader.c.s
 .PHONY : lvgl/tests/lv_test_core/lv_test_font_loader.c.s
 
 lvgl/tests/lv_test_core/lv_test_obj.o: lvgl/tests/lv_test_core/lv_test_obj.c.o
@@ -6950,7 +6950,7 @@ lvgl/tests/lv_test_core/lv_test_obj.o: lvgl/tests/lv_test_core/lv_test_obj.c.o
 
 # target to build an object file
 lvgl/tests/lv_test_core/lv_test_obj.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/tests/lv_test_core/lv_test_obj.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/lv_test_core/lv_test_obj.c.o
 .PHONY : lvgl/tests/lv_test_core/lv_test_obj.c.o
 
 lvgl/tests/lv_test_core/lv_test_obj.i: lvgl/tests/lv_test_core/lv_test_obj.c.i
@@ -6958,7 +6958,7 @@ lvgl/tests/lv_test_core/lv_test_obj.i: lvgl/tests/lv_test_core/lv_test_obj.c.i
 
 # target to preprocess a source file
 lvgl/tests/lv_test_core/lv_test_obj.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/tests/lv_test_core/lv_test_obj.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/lv_test_core/lv_test_obj.c.i
 .PHONY : lvgl/tests/lv_test_core/lv_test_obj.c.i
 
 lvgl/tests/lv_test_core/lv_test_obj.s: lvgl/tests/lv_test_core/lv_test_obj.c.s
@@ -6966,7 +6966,7 @@ lvgl/tests/lv_test_core/lv_test_obj.s: lvgl/tests/lv_test_core/lv_test_obj.c.s
 
 # target to generate assembly for a file
 lvgl/tests/lv_test_core/lv_test_obj.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/tests/lv_test_core/lv_test_obj.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/lv_test_core/lv_test_obj.c.s
 .PHONY : lvgl/tests/lv_test_core/lv_test_obj.c.s
 
 lvgl/tests/lv_test_core/lv_test_style.o: lvgl/tests/lv_test_core/lv_test_style.c.o
@@ -6974,7 +6974,7 @@ lvgl/tests/lv_test_core/lv_test_style.o: lvgl/tests/lv_test_core/lv_test_style.c
 
 # target to build an object file
 lvgl/tests/lv_test_core/lv_test_style.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/tests/lv_test_core/lv_test_style.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/lv_test_core/lv_test_style.c.o
 .PHONY : lvgl/tests/lv_test_core/lv_test_style.c.o
 
 lvgl/tests/lv_test_core/lv_test_style.i: lvgl/tests/lv_test_core/lv_test_style.c.i
@@ -6982,7 +6982,7 @@ lvgl/tests/lv_test_core/lv_test_style.i: lvgl/tests/lv_test_core/lv_test_style.c
 
 # target to preprocess a source file
 lvgl/tests/lv_test_core/lv_test_style.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/tests/lv_test_core/lv_test_style.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/lv_test_core/lv_test_style.c.i
 .PHONY : lvgl/tests/lv_test_core/lv_test_style.c.i
 
 lvgl/tests/lv_test_core/lv_test_style.s: lvgl/tests/lv_test_core/lv_test_style.c.s
@@ -6990,7 +6990,7 @@ lvgl/tests/lv_test_core/lv_test_style.s: lvgl/tests/lv_test_core/lv_test_style.c
 
 # target to generate assembly for a file
 lvgl/tests/lv_test_core/lv_test_style.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/tests/lv_test_core/lv_test_style.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/lv_test_core/lv_test_style.c.s
 .PHONY : lvgl/tests/lv_test_core/lv_test_style.c.s
 
 lvgl/tests/lv_test_fonts/font_1.o: lvgl/tests/lv_test_fonts/font_1.c.o
@@ -6998,7 +6998,7 @@ lvgl/tests/lv_test_fonts/font_1.o: lvgl/tests/lv_test_fonts/font_1.c.o
 
 # target to build an object file
 lvgl/tests/lv_test_fonts/font_1.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/tests/lv_test_fonts/font_1.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/lv_test_fonts/font_1.c.o
 .PHONY : lvgl/tests/lv_test_fonts/font_1.c.o
 
 lvgl/tests/lv_test_fonts/font_1.i: lvgl/tests/lv_test_fonts/font_1.c.i
@@ -7006,7 +7006,7 @@ lvgl/tests/lv_test_fonts/font_1.i: lvgl/tests/lv_test_fonts/font_1.c.i
 
 # target to preprocess a source file
 lvgl/tests/lv_test_fonts/font_1.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/tests/lv_test_fonts/font_1.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/lv_test_fonts/font_1.c.i
 .PHONY : lvgl/tests/lv_test_fonts/font_1.c.i
 
 lvgl/tests/lv_test_fonts/font_1.s: lvgl/tests/lv_test_fonts/font_1.c.s
@@ -7014,7 +7014,7 @@ lvgl/tests/lv_test_fonts/font_1.s: lvgl/tests/lv_test_fonts/font_1.c.s
 
 # target to generate assembly for a file
 lvgl/tests/lv_test_fonts/font_1.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/tests/lv_test_fonts/font_1.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/lv_test_fonts/font_1.c.s
 .PHONY : lvgl/tests/lv_test_fonts/font_1.c.s
 
 lvgl/tests/lv_test_fonts/font_2.o: lvgl/tests/lv_test_fonts/font_2.c.o
@@ -7022,7 +7022,7 @@ lvgl/tests/lv_test_fonts/font_2.o: lvgl/tests/lv_test_fonts/font_2.c.o
 
 # target to build an object file
 lvgl/tests/lv_test_fonts/font_2.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/tests/lv_test_fonts/font_2.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/lv_test_fonts/font_2.c.o
 .PHONY : lvgl/tests/lv_test_fonts/font_2.c.o
 
 lvgl/tests/lv_test_fonts/font_2.i: lvgl/tests/lv_test_fonts/font_2.c.i
@@ -7030,7 +7030,7 @@ lvgl/tests/lv_test_fonts/font_2.i: lvgl/tests/lv_test_fonts/font_2.c.i
 
 # target to preprocess a source file
 lvgl/tests/lv_test_fonts/font_2.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/tests/lv_test_fonts/font_2.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/lv_test_fonts/font_2.c.i
 .PHONY : lvgl/tests/lv_test_fonts/font_2.c.i
 
 lvgl/tests/lv_test_fonts/font_2.s: lvgl/tests/lv_test_fonts/font_2.c.s
@@ -7038,7 +7038,7 @@ lvgl/tests/lv_test_fonts/font_2.s: lvgl/tests/lv_test_fonts/font_2.c.s
 
 # target to generate assembly for a file
 lvgl/tests/lv_test_fonts/font_2.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/tests/lv_test_fonts/font_2.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/lv_test_fonts/font_2.c.s
 .PHONY : lvgl/tests/lv_test_fonts/font_2.c.s
 
 lvgl/tests/lv_test_fonts/font_3.o: lvgl/tests/lv_test_fonts/font_3.c.o
@@ -7046,7 +7046,7 @@ lvgl/tests/lv_test_fonts/font_3.o: lvgl/tests/lv_test_fonts/font_3.c.o
 
 # target to build an object file
 lvgl/tests/lv_test_fonts/font_3.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/tests/lv_test_fonts/font_3.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/lv_test_fonts/font_3.c.o
 .PHONY : lvgl/tests/lv_test_fonts/font_3.c.o
 
 lvgl/tests/lv_test_fonts/font_3.i: lvgl/tests/lv_test_fonts/font_3.c.i
@@ -7054,7 +7054,7 @@ lvgl/tests/lv_test_fonts/font_3.i: lvgl/tests/lv_test_fonts/font_3.c.i
 
 # target to preprocess a source file
 lvgl/tests/lv_test_fonts/font_3.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/tests/lv_test_fonts/font_3.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/lv_test_fonts/font_3.c.i
 .PHONY : lvgl/tests/lv_test_fonts/font_3.c.i
 
 lvgl/tests/lv_test_fonts/font_3.s: lvgl/tests/lv_test_fonts/font_3.c.s
@@ -7062,7 +7062,7 @@ lvgl/tests/lv_test_fonts/font_3.s: lvgl/tests/lv_test_fonts/font_3.c.s
 
 # target to generate assembly for a file
 lvgl/tests/lv_test_fonts/font_3.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/tests/lv_test_fonts/font_3.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/lv_test_fonts/font_3.c.s
 .PHONY : lvgl/tests/lv_test_fonts/font_3.c.s
 
 lvgl/tests/lv_test_main.o: lvgl/tests/lv_test_main.c.o
@@ -7070,7 +7070,7 @@ lvgl/tests/lv_test_main.o: lvgl/tests/lv_test_main.c.o
 
 # target to build an object file
 lvgl/tests/lv_test_main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/tests/lv_test_main.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/lv_test_main.c.o
 .PHONY : lvgl/tests/lv_test_main.c.o
 
 lvgl/tests/lv_test_main.i: lvgl/tests/lv_test_main.c.i
@@ -7078,7 +7078,7 @@ lvgl/tests/lv_test_main.i: lvgl/tests/lv_test_main.c.i
 
 # target to preprocess a source file
 lvgl/tests/lv_test_main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/tests/lv_test_main.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/lv_test_main.c.i
 .PHONY : lvgl/tests/lv_test_main.c.i
 
 lvgl/tests/lv_test_main.s: lvgl/tests/lv_test_main.c.s
@@ -7086,7 +7086,7 @@ lvgl/tests/lv_test_main.s: lvgl/tests/lv_test_main.c.s
 
 # target to generate assembly for a file
 lvgl/tests/lv_test_main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/tests/lv_test_main.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/lv_test_main.c.s
 .PHONY : lvgl/tests/lv_test_main.c.s
 
 lvgl/tests/lv_test_widgets/lv_test_label.o: lvgl/tests/lv_test_widgets/lv_test_label.c.o
@@ -7094,7 +7094,7 @@ lvgl/tests/lv_test_widgets/lv_test_label.o: lvgl/tests/lv_test_widgets/lv_test_l
 
 # target to build an object file
 lvgl/tests/lv_test_widgets/lv_test_label.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/tests/lv_test_widgets/lv_test_label.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/lv_test_widgets/lv_test_label.c.o
 .PHONY : lvgl/tests/lv_test_widgets/lv_test_label.c.o
 
 lvgl/tests/lv_test_widgets/lv_test_label.i: lvgl/tests/lv_test_widgets/lv_test_label.c.i
@@ -7102,7 +7102,7 @@ lvgl/tests/lv_test_widgets/lv_test_label.i: lvgl/tests/lv_test_widgets/lv_test_l
 
 # target to preprocess a source file
 lvgl/tests/lv_test_widgets/lv_test_label.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/tests/lv_test_widgets/lv_test_label.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/lv_test_widgets/lv_test_label.c.i
 .PHONY : lvgl/tests/lv_test_widgets/lv_test_label.c.i
 
 lvgl/tests/lv_test_widgets/lv_test_label.s: lvgl/tests/lv_test_widgets/lv_test_label.c.s
@@ -7110,7 +7110,7 @@ lvgl/tests/lv_test_widgets/lv_test_label.s: lvgl/tests/lv_test_widgets/lv_test_l
 
 # target to generate assembly for a file
 lvgl/tests/lv_test_widgets/lv_test_label.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/lvgl/tests/lv_test_widgets/lv_test_label.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/lv_test_widgets/lv_test_label.c.s
 .PHONY : lvgl/tests/lv_test_widgets/lv_test_label.c.s
 
 main.o: main.c.o
@@ -7118,7 +7118,7 @@ main.o: main.c.o
 
 # target to build an object file
 main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/main.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/main.c.o
 .PHONY : main.c.o
 
 main.i: main.c.i
@@ -7126,7 +7126,7 @@ main.i: main.c.i
 
 # target to preprocess a source file
 main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/main.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/main.c.i
 .PHONY : main.c.i
 
 main.s: main.c.s
@@ -7134,7 +7134,7 @@ main.s: main.c.s
 
 # target to generate assembly for a file
 main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/main.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/main.c.s
 .PHONY : main.c.s
 
 mouse_cursor_icon.o: mouse_cursor_icon.c.o
@@ -7142,7 +7142,7 @@ mouse_cursor_icon.o: mouse_cursor_icon.c.o
 
 # target to build an object file
 mouse_cursor_icon.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/mouse_cursor_icon.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/mouse_cursor_icon.c.o
 .PHONY : mouse_cursor_icon.c.o
 
 mouse_cursor_icon.i: mouse_cursor_icon.c.i
@@ -7150,7 +7150,7 @@ mouse_cursor_icon.i: mouse_cursor_icon.c.i
 
 # target to preprocess a source file
 mouse_cursor_icon.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/mouse_cursor_icon.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/mouse_cursor_icon.c.i
 .PHONY : mouse_cursor_icon.c.i
 
 mouse_cursor_icon.s: mouse_cursor_icon.c.s
@@ -7158,7 +7158,7 @@ mouse_cursor_icon.s: mouse_cursor_icon.c.s
 
 # target to generate assembly for a file
 mouse_cursor_icon.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lvgl.dir/build.make CMakeFiles/lvgl.dir/mouse_cursor_icon.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/mouse_cursor_icon.c.s
 .PHONY : mouse_cursor_icon.c.s
 
 # Help Target
@@ -7169,7 +7169,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... lvgl"
+	@echo "... index"
 	@echo "... examplelist.o"
 	@echo "... examplelist.i"
 	@echo "... examplelist.s"
