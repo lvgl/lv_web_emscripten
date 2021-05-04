@@ -28,8 +28,14 @@ jobs:
         with:
           version: ${{env.EM_VERSION}}
           actions-cache-folder: ${{env.EM_CACHE_FOLDER}}
+      - name: Get latest CMake and ninja
+        uses: lukka/get-cmake@latest
       - name: Build demo
-        run: make -j $(nproc)
+        run: |
+          mkdir cmbuild
+          cd cmbuild
+          emcmake cmake ..
+          make -j $(nproc)
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
