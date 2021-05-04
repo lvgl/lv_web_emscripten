@@ -57,7 +57,7 @@
 				canvas: (function() {
 					return canvas;
 				})(),
-                arguments: [ siteURL.searchParams.get("w") || "800", siteURL.searchParams.get("h") || "480" ]
+				arguments: [ siteURL.searchParams.get("w") || "800", siteURL.searchParams.get("h") || "480", siteURL.searchParams.get("example") ?? "default" ]
 			};
 			if(typeof window.git_hash != 'undefined') {
 				var gitHashDiv = document.querySelector("#git-hash");

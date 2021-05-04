@@ -10,15 +10,15 @@ endif
 TARGET := build/index.html
 
 SRCS += $(shell find -L lvgl -name \*.c)
+ifneq (,$(wildcard ./lv_examples))
 SRCS += $(shell find -L lv_examples -name \*.c)
+endif
 
 SRCS += lv_drivers/display/monitor.c lv_drivers/indev/mouse.c
 SRCS += lv_drivers/indev/keyboard.c
 SRCS += lv_drivers/indev/mousewheel.c
 
-# (v5.3) SRCS += lv_drivers/indev/encoder.c
-
-SRCS += main.c mouse_cursor_icon.c
+SRCS += main.c mouse_cursor_icon.c examplelist.c
 
 # If V=1 you will see full compiler arguments
 ifeq ($(V),)

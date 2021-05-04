@@ -18,7 +18,7 @@
 #include "lv_drivers/indev/mousewheel.h"
 #include "lv_drivers/indev/keyboard.h"
 
-#include "lv_examples/lv_demo.h"
+#include "examplelist.h"
 
 /*********************
  *      DEFINES
@@ -60,11 +60,22 @@ void do_loop(void *arg);
 
 int main(int argc, char ** argv)
 {
-    (void) argc;    /*Unused*/
+    extern const struct lv_ci_example lv_ci_example_list[];
+    const struct lv_ci_example *ex = NULL;
     monitor_hor_res = atoi(argv[1]);
     monitor_ver_res = atoi(argv[2]);
+    /* Check if a specific example is wanted (not "default") */
+    if(argc >= 4 && strcmp(ex->name, "default")) {
+        for(ex = &lv_ci_example_list[0]; ex->name != NULL; ex++) {
+            if(!strcmp(ex->name, argv[3])) {
+                break;
+            }
+        }
+        if(ex->name == NULL) {
+            fprintf(stderr, "Unable to find requested example\n");
+        }
+    }
     printf("Starting with screen resolution of %dx%d px\n", monitor_hor_res, monitor_ver_res);
-    (void) argv;    /*Unused*/
 
     /*Initialize LittlevGL*/
     lv_init();
@@ -73,7 +84,12 @@ int main(int argc, char ** argv)
     hal_init();
 
     /*Load a demo*/
-    CHOSEN_DEMO();
+    if(ex != NULL && ex->fn != NULL) {
+        ex->fn();
+    } else {
+        extern void CHOSEN_DEMO(void);
+        CHOSEN_DEMO();
+    }
 
     emscripten_set_main_loop_arg(do_loop, NULL, -1, true);
 }
