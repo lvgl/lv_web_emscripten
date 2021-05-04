@@ -58,6 +58,10 @@ int monitor_hor_res, monitor_ver_res;
  **********************/
 void do_loop(void *arg);
 
+/* Allows disabling CHOSEN_DEMO */
+static void lv_example_noop(void) {
+}
+
 int main(int argc, char ** argv)
 {
     extern const struct lv_ci_example lv_ci_example_list[];
