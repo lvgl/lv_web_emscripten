@@ -1545,77 +1545,77 @@ lv_examples/src/lv_demo_widgets/lv_demo_widgets.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_widgets/lv_demo_widgets.c.s
 .PHONY : lv_examples/src/lv_demo_widgets/lv_demo_widgets.c.s
 
-lvgl/examples/assets/anim001.o: lvgl/examples/assets/anim001.c.o
-.PHONY : lvgl/examples/assets/anim001.o
+lvgl/examples/assets/animimg001.o: lvgl/examples/assets/animimg001.c.o
+.PHONY : lvgl/examples/assets/animimg001.o
 
 # target to build an object file
-lvgl/examples/assets/anim001.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/assets/anim001.c.o
-.PHONY : lvgl/examples/assets/anim001.c.o
+lvgl/examples/assets/animimg001.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/assets/animimg001.c.o
+.PHONY : lvgl/examples/assets/animimg001.c.o
 
-lvgl/examples/assets/anim001.i: lvgl/examples/assets/anim001.c.i
-.PHONY : lvgl/examples/assets/anim001.i
+lvgl/examples/assets/animimg001.i: lvgl/examples/assets/animimg001.c.i
+.PHONY : lvgl/examples/assets/animimg001.i
 
 # target to preprocess a source file
-lvgl/examples/assets/anim001.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/assets/anim001.c.i
-.PHONY : lvgl/examples/assets/anim001.c.i
+lvgl/examples/assets/animimg001.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/assets/animimg001.c.i
+.PHONY : lvgl/examples/assets/animimg001.c.i
 
-lvgl/examples/assets/anim001.s: lvgl/examples/assets/anim001.c.s
-.PHONY : lvgl/examples/assets/anim001.s
+lvgl/examples/assets/animimg001.s: lvgl/examples/assets/animimg001.c.s
+.PHONY : lvgl/examples/assets/animimg001.s
 
 # target to generate assembly for a file
-lvgl/examples/assets/anim001.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/assets/anim001.c.s
-.PHONY : lvgl/examples/assets/anim001.c.s
+lvgl/examples/assets/animimg001.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/assets/animimg001.c.s
+.PHONY : lvgl/examples/assets/animimg001.c.s
 
-lvgl/examples/assets/anim002.o: lvgl/examples/assets/anim002.c.o
-.PHONY : lvgl/examples/assets/anim002.o
+lvgl/examples/assets/animimg002.o: lvgl/examples/assets/animimg002.c.o
+.PHONY : lvgl/examples/assets/animimg002.o
 
 # target to build an object file
-lvgl/examples/assets/anim002.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/assets/anim002.c.o
-.PHONY : lvgl/examples/assets/anim002.c.o
+lvgl/examples/assets/animimg002.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/assets/animimg002.c.o
+.PHONY : lvgl/examples/assets/animimg002.c.o
 
-lvgl/examples/assets/anim002.i: lvgl/examples/assets/anim002.c.i
-.PHONY : lvgl/examples/assets/anim002.i
+lvgl/examples/assets/animimg002.i: lvgl/examples/assets/animimg002.c.i
+.PHONY : lvgl/examples/assets/animimg002.i
 
 # target to preprocess a source file
-lvgl/examples/assets/anim002.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/assets/anim002.c.i
-.PHONY : lvgl/examples/assets/anim002.c.i
+lvgl/examples/assets/animimg002.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/assets/animimg002.c.i
+.PHONY : lvgl/examples/assets/animimg002.c.i
 
-lvgl/examples/assets/anim002.s: lvgl/examples/assets/anim002.c.s
-.PHONY : lvgl/examples/assets/anim002.s
+lvgl/examples/assets/animimg002.s: lvgl/examples/assets/animimg002.c.s
+.PHONY : lvgl/examples/assets/animimg002.s
 
 # target to generate assembly for a file
-lvgl/examples/assets/anim002.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/assets/anim002.c.s
-.PHONY : lvgl/examples/assets/anim002.c.s
+lvgl/examples/assets/animimg002.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/assets/animimg002.c.s
+.PHONY : lvgl/examples/assets/animimg002.c.s
 
-lvgl/examples/assets/anim003.o: lvgl/examples/assets/anim003.c.o
-.PHONY : lvgl/examples/assets/anim003.o
+lvgl/examples/assets/animimg003.o: lvgl/examples/assets/animimg003.c.o
+.PHONY : lvgl/examples/assets/animimg003.o
 
 # target to build an object file
-lvgl/examples/assets/anim003.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/assets/anim003.c.o
-.PHONY : lvgl/examples/assets/anim003.c.o
+lvgl/examples/assets/animimg003.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/assets/animimg003.c.o
+.PHONY : lvgl/examples/assets/animimg003.c.o
 
-lvgl/examples/assets/anim003.i: lvgl/examples/assets/anim003.c.i
-.PHONY : lvgl/examples/assets/anim003.i
+lvgl/examples/assets/animimg003.i: lvgl/examples/assets/animimg003.c.i
+.PHONY : lvgl/examples/assets/animimg003.i
 
 # target to preprocess a source file
-lvgl/examples/assets/anim003.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/assets/anim003.c.i
-.PHONY : lvgl/examples/assets/anim003.c.i
+lvgl/examples/assets/animimg003.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/assets/animimg003.c.i
+.PHONY : lvgl/examples/assets/animimg003.c.i
 
-lvgl/examples/assets/anim003.s: lvgl/examples/assets/anim003.c.s
-.PHONY : lvgl/examples/assets/anim003.s
+lvgl/examples/assets/animimg003.s: lvgl/examples/assets/animimg003.c.s
+.PHONY : lvgl/examples/assets/animimg003.s
 
 # target to generate assembly for a file
-lvgl/examples/assets/anim003.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/assets/anim003.c.s
-.PHONY : lvgl/examples/assets/anim003.c.s
+lvgl/examples/assets/animimg003.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/assets/animimg003.c.s
+.PHONY : lvgl/examples/assets/animimg003.c.s
 
 lvgl/examples/assets/img_caret_down.o: lvgl/examples/assets/img_caret_down.c.o
 .PHONY : lvgl/examples/assets/img_caret_down.o
@@ -2649,29 +2649,29 @@ lvgl/examples/styles/lv_example_style_9.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/styles/lv_example_style_9.c.s
 .PHONY : lvgl/examples/styles/lv_example_style_9.c.s
 
-lvgl/examples/widgets/animimg/lv_example_animimg.o: lvgl/examples/widgets/animimg/lv_example_animimg.c.o
-.PHONY : lvgl/examples/widgets/animimg/lv_example_animimg.o
+lvgl/examples/widgets/animimg/lv_example_animimg_1.o: lvgl/examples/widgets/animimg/lv_example_animimg_1.c.o
+.PHONY : lvgl/examples/widgets/animimg/lv_example_animimg_1.o
 
 # target to build an object file
-lvgl/examples/widgets/animimg/lv_example_animimg.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/animimg/lv_example_animimg.c.o
-.PHONY : lvgl/examples/widgets/animimg/lv_example_animimg.c.o
+lvgl/examples/widgets/animimg/lv_example_animimg_1.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/animimg/lv_example_animimg_1.c.o
+.PHONY : lvgl/examples/widgets/animimg/lv_example_animimg_1.c.o
 
-lvgl/examples/widgets/animimg/lv_example_animimg.i: lvgl/examples/widgets/animimg/lv_example_animimg.c.i
-.PHONY : lvgl/examples/widgets/animimg/lv_example_animimg.i
+lvgl/examples/widgets/animimg/lv_example_animimg_1.i: lvgl/examples/widgets/animimg/lv_example_animimg_1.c.i
+.PHONY : lvgl/examples/widgets/animimg/lv_example_animimg_1.i
 
 # target to preprocess a source file
-lvgl/examples/widgets/animimg/lv_example_animimg.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/animimg/lv_example_animimg.c.i
-.PHONY : lvgl/examples/widgets/animimg/lv_example_animimg.c.i
+lvgl/examples/widgets/animimg/lv_example_animimg_1.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/animimg/lv_example_animimg_1.c.i
+.PHONY : lvgl/examples/widgets/animimg/lv_example_animimg_1.c.i
 
-lvgl/examples/widgets/animimg/lv_example_animimg.s: lvgl/examples/widgets/animimg/lv_example_animimg.c.s
-.PHONY : lvgl/examples/widgets/animimg/lv_example_animimg.s
+lvgl/examples/widgets/animimg/lv_example_animimg_1.s: lvgl/examples/widgets/animimg/lv_example_animimg_1.c.s
+.PHONY : lvgl/examples/widgets/animimg/lv_example_animimg_1.s
 
 # target to generate assembly for a file
-lvgl/examples/widgets/animimg/lv_example_animimg.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/animimg/lv_example_animimg.c.s
-.PHONY : lvgl/examples/widgets/animimg/lv_example_animimg.c.s
+lvgl/examples/widgets/animimg/lv_example_animimg_1.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/animimg/lv_example_animimg_1.c.s
+.PHONY : lvgl/examples/widgets/animimg/lv_example_animimg_1.c.s
 
 lvgl/examples/widgets/arc/lv_example_arc_1.o: lvgl/examples/widgets/arc/lv_example_arc_1.c.o
 .PHONY : lvgl/examples/widgets/arc/lv_example_arc_1.o
@@ -7467,15 +7467,15 @@ help:
 	@echo "... lv_examples/src/lv_demo_widgets/lv_demo_widgets.o"
 	@echo "... lv_examples/src/lv_demo_widgets/lv_demo_widgets.i"
 	@echo "... lv_examples/src/lv_demo_widgets/lv_demo_widgets.s"
-	@echo "... lvgl/examples/assets/anim001.o"
-	@echo "... lvgl/examples/assets/anim001.i"
-	@echo "... lvgl/examples/assets/anim001.s"
-	@echo "... lvgl/examples/assets/anim002.o"
-	@echo "... lvgl/examples/assets/anim002.i"
-	@echo "... lvgl/examples/assets/anim002.s"
-	@echo "... lvgl/examples/assets/anim003.o"
-	@echo "... lvgl/examples/assets/anim003.i"
-	@echo "... lvgl/examples/assets/anim003.s"
+	@echo "... lvgl/examples/assets/animimg001.o"
+	@echo "... lvgl/examples/assets/animimg001.i"
+	@echo "... lvgl/examples/assets/animimg001.s"
+	@echo "... lvgl/examples/assets/animimg002.o"
+	@echo "... lvgl/examples/assets/animimg002.i"
+	@echo "... lvgl/examples/assets/animimg002.s"
+	@echo "... lvgl/examples/assets/animimg003.o"
+	@echo "... lvgl/examples/assets/animimg003.i"
+	@echo "... lvgl/examples/assets/animimg003.s"
 	@echo "... lvgl/examples/assets/img_caret_down.o"
 	@echo "... lvgl/examples/assets/img_caret_down.i"
 	@echo "... lvgl/examples/assets/img_caret_down.s"
@@ -7605,9 +7605,9 @@ help:
 	@echo "... lvgl/examples/styles/lv_example_style_9.o"
 	@echo "... lvgl/examples/styles/lv_example_style_9.i"
 	@echo "... lvgl/examples/styles/lv_example_style_9.s"
-	@echo "... lvgl/examples/widgets/animimg/lv_example_animimg.o"
-	@echo "... lvgl/examples/widgets/animimg/lv_example_animimg.i"
-	@echo "... lvgl/examples/widgets/animimg/lv_example_animimg.s"
+	@echo "... lvgl/examples/widgets/animimg/lv_example_animimg_1.o"
+	@echo "... lvgl/examples/widgets/animimg/lv_example_animimg_1.i"
+	@echo "... lvgl/examples/widgets/animimg/lv_example_animimg_1.s"
 	@echo "... lvgl/examples/widgets/arc/lv_example_arc_1.o"
 	@echo "... lvgl/examples/widgets/arc/lv_example_arc_1.i"
 	@echo "... lvgl/examples/widgets/arc/lv_example_arc_1.s"
