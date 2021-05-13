@@ -729,6 +729,30 @@ lv_examples/src/lv_demo_keypad_encoder/lv_demo_keypad_encoder.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_keypad_encoder/lv_demo_keypad_encoder.c.s
 .PHONY : lv_examples/src/lv_demo_keypad_encoder/lv_demo_keypad_encoder.c.s
 
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_corner_large.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_corner_large.c.o
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_corner_large.o
+
+# target to build an object file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_corner_large.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_corner_large.c.o
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_corner_large.c.o
+
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_corner_large.i: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_corner_large.c.i
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_corner_large.i
+
+# target to preprocess a source file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_corner_large.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_corner_large.c.i
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_corner_large.c.i
+
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_corner_large.s: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_corner_large.c.s
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_corner_large.s
+
+# target to generate assembly for a file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_corner_large.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_corner_large.c.s
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_corner_large.c.s
+
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause.c.o
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause.o
 
@@ -752,6 +776,30 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause.s: lv_exam
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause.c.s
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause.c.s
+
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause_large.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause_large.c.o
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause_large.o
+
+# target to build an object file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause_large.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause_large.c.o
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause_large.c.o
+
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause_large.i: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause_large.c.i
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause_large.i
+
+# target to preprocess a source file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause_large.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause_large.c.i
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause_large.c.i
+
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause_large.s: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause_large.c.s
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause_large.s
+
+# target to generate assembly for a file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause_large.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause_large.c.s
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause_large.c.s
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_play.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_play.c.o
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_play.o
@@ -777,6 +825,30 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_play.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_play.c.s
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_play.c.s
 
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_play_large.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_play_large.c.o
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_play_large.o
+
+# target to build an object file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_play_large.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_play_large.c.o
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_play_large.c.o
+
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_play_large.i: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_play_large.c.i
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_play_large.i
+
+# target to preprocess a source file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_play_large.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_play_large.c.i
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_play_large.c.i
+
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_play_large.s: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_play_large.c.s
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_play_large.s
+
+# target to generate assembly for a file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_play_large.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_play_large.c.s
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_play_large.c.s
+
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop.c.o
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop.o
 
@@ -800,6 +872,30 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop.s: lv_examples/s
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop.c.s
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop.c.s
+
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop_large.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop_large.c.o
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop_large.o
+
+# target to build an object file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop_large.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop_large.c.o
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop_large.c.o
+
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop_large.i: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop_large.c.i
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop_large.i
+
+# target to preprocess a source file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop_large.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop_large.c.i
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop_large.c.i
+
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop_large.s: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop_large.c.s
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop_large.s
+
+# target to generate assembly for a file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop_large.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop_large.c.s
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop_large.c.s
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_next.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_next.c.o
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_next.o
@@ -825,6 +921,30 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_next.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_next.c.s
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_next.c.s
 
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_next_large.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_next_large.c.o
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_next_large.o
+
+# target to build an object file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_next_large.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_next_large.c.o
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_next_large.c.o
+
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_next_large.i: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_next_large.c.i
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_next_large.i
+
+# target to preprocess a source file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_next_large.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_next_large.c.i
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_next_large.c.i
+
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_next_large.s: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_next_large.c.s
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_next_large.s
+
+# target to generate assembly for a file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_next_large.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_next_large.c.s
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_next_large.c.s
+
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause.c.o
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause.o
 
@@ -848,6 +968,30 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause.s: lv_examples/
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause.c.s
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause.c.s
+
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause_large.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause_large.c.o
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause_large.o
+
+# target to build an object file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause_large.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause_large.c.o
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause_large.c.o
+
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause_large.i: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause_large.c.i
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause_large.i
+
+# target to preprocess a source file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause_large.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause_large.c.i
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause_large.c.i
+
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause_large.s: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause_large.c.s
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause_large.s
+
+# target to generate assembly for a file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause_large.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause_large.c.s
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause_large.c.s
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_play.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_play.c.o
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_play.o
@@ -873,6 +1017,30 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_play.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_play.c.s
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_play.c.s
 
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_play_large.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_play_large.c.o
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_play_large.o
+
+# target to build an object file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_play_large.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_play_large.c.o
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_play_large.c.o
+
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_play_large.i: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_play_large.c.i
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_play_large.i
+
+# target to preprocess a source file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_play_large.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_play_large.c.i
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_play_large.c.i
+
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_play_large.s: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_play_large.c.s
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_play_large.s
+
+# target to generate assembly for a file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_play_large.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_play_large.c.s
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_play_large.c.s
+
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev.c.o
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev.o
 
@@ -896,6 +1064,30 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev.s: lv_examples/s
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev.c.s
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev.c.s
+
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev_large.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev_large.c.o
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev_large.o
+
+# target to build an object file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev_large.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev_large.c.o
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev_large.c.o
+
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev_large.i: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev_large.c.i
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev_large.i
+
+# target to preprocess a source file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev_large.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev_large.c.i
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev_large.c.i
+
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev_large.s: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev_large.c.s
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev_large.s
+
+# target to generate assembly for a file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev_large.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev_large.c.s
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev_large.c.s
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_rnd.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_rnd.c.o
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_rnd.o
@@ -921,6 +1113,30 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_rnd.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_rnd.c.s
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_rnd.c.s
 
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_rnd_large.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_rnd_large.c.o
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_rnd_large.o
+
+# target to build an object file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_rnd_large.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_rnd_large.c.o
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_rnd_large.c.o
+
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_rnd_large.i: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_rnd_large.c.i
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_rnd_large.i
+
+# target to preprocess a source file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_rnd_large.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_rnd_large.c.i
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_rnd_large.c.i
+
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_rnd_large.s: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_rnd_large.c.s
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_rnd_large.s
+
+# target to generate assembly for a file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_rnd_large.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_rnd_large.c.s
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_rnd_large.c.s
+
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left.c.o
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left.o
 
@@ -944,6 +1160,30 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left.s: lv_example
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left.c.s
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left.c.s
+
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left_large.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left_large.c.o
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left_large.o
+
+# target to build an object file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left_large.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left_large.c.o
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left_large.c.o
+
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left_large.i: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left_large.c.i
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left_large.i
+
+# target to preprocess a source file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left_large.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left_large.c.i
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left_large.c.i
+
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left_large.s: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left_large.c.s
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left_large.s
+
+# target to generate assembly for a file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left_large.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left_large.c.s
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left_large.c.s
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_right.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_right.c.o
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_right.o
@@ -969,6 +1209,30 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_right.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_right.c.s
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_right.c.s
 
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_right_large.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_right_large.c.o
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_right_large.o
+
+# target to build an object file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_right_large.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_right_large.c.o
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_right_large.c.o
+
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_right_large.i: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_right_large.c.i
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_right_large.i
+
+# target to preprocess a source file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_right_large.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_right_large.c.i
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_right_large.c.i
+
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_right_large.s: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_right_large.c.s
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_right_large.s
+
+# target to generate assembly for a file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_right_large.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_right_large.c.s
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_right_large.c.s
+
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1.c.o
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1.o
 
@@ -992,6 +1256,30 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1.s: lv_examples/sr
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1.c.s
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1.c.s
+
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1_large.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1_large.c.o
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1_large.o
+
+# target to build an object file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1_large.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1_large.c.o
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1_large.c.o
+
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1_large.i: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1_large.c.i
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1_large.i
+
+# target to preprocess a source file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1_large.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1_large.c.i
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1_large.c.i
+
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1_large.s: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1_large.c.s
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1_large.s
+
+# target to generate assembly for a file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1_large.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1_large.c.s
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1_large.c.s
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_2.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_2.c.o
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_2.o
@@ -1017,6 +1305,30 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_2.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_2.c.s
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_2.c.s
 
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_2_large.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_2_large.c.o
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_2_large.o
+
+# target to build an object file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_2_large.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_2_large.c.o
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_2_large.c.o
+
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_2_large.i: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_2_large.c.i
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_2_large.i
+
+# target to preprocess a source file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_2_large.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_2_large.c.i
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_2_large.c.i
+
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_2_large.s: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_2_large.c.s
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_2_large.s
+
+# target to generate assembly for a file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_2_large.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_2_large.c.s
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_2_large.c.s
+
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3.c.o
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3.o
 
@@ -1040,6 +1352,30 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3.s: lv_examples/sr
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3.c.s
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3.c.s
+
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3_large.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3_large.c.o
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3_large.o
+
+# target to build an object file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3_large.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3_large.c.o
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3_large.c.o
+
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3_large.i: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3_large.c.i
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3_large.i
+
+# target to preprocess a source file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3_large.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3_large.c.i
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3_large.c.i
+
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3_large.s: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3_large.c.s
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3_large.s
+
+# target to generate assembly for a file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3_large.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3_large.c.s
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3_large.c.s
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_1.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_1.c.o
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_1.o
@@ -1065,6 +1401,30 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_1.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_1.c.s
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_1.c.s
 
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_1_large.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_1_large.c.o
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_1_large.o
+
+# target to build an object file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_1_large.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_1_large.c.o
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_1_large.c.o
+
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_1_large.i: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_1_large.c.i
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_1_large.i
+
+# target to preprocess a source file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_1_large.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_1_large.c.i
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_1_large.c.i
+
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_1_large.s: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_1_large.c.s
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_1_large.s
+
+# target to generate assembly for a file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_1_large.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_1_large.c.s
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_1_large.c.s
+
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2.c.o
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2.o
 
@@ -1088,6 +1448,30 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2.s: lv_examples/src
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2.c.s
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2.c.s
+
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2_large.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2_large.c.o
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2_large.o
+
+# target to build an object file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2_large.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2_large.c.o
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2_large.c.o
+
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2_large.i: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2_large.c.i
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2_large.i
+
+# target to preprocess a source file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2_large.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2_large.c.i
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2_large.c.i
+
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2_large.s: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2_large.c.s
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2_large.s
+
+# target to generate assembly for a file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2_large.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2_large.c.s
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2_large.c.s
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_3.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_3.c.o
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_3.o
@@ -1113,6 +1497,30 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_3.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_3.c.s
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_3.c.s
 
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_3_large.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_3_large.c.o
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_3_large.o
+
+# target to build an object file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_3_large.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_3_large.c.o
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_3_large.c.o
+
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_3_large.i: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_3_large.c.i
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_3_large.i
+
+# target to preprocess a source file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_3_large.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_3_large.c.i
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_3_large.c.i
+
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_3_large.s: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_3_large.c.s
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_3_large.s
+
+# target to generate assembly for a file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_3_large.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_3_large.c.s
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_3_large.c.s
+
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_4.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_4.c.o
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_4.o
 
@@ -1137,6 +1545,30 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_4.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_4.c.s
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_4.c.s
 
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_4_large.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_4_large.c.o
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_4_large.o
+
+# target to build an object file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_4_large.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_4_large.c.o
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_4_large.c.o
+
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_4_large.i: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_4_large.c.i
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_4_large.i
+
+# target to preprocess a source file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_4_large.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_4_large.c.i
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_4_large.c.i
+
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_4_large.s: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_4_large.c.s
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_4_large.s
+
+# target to generate assembly for a file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_4_large.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_4_large.c.s
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_4_large.c.s
+
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border.c.o
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border.o
 
@@ -1160,6 +1592,30 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border.s: lv_example
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border.c.s
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border.c.s
+
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border_large.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border_large.c.o
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border_large.o
+
+# target to build an object file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border_large.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border_large.c.o
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border_large.c.o
+
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border_large.i: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border_large.c.i
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border_large.i
+
+# target to preprocess a source file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border_large.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border_large.c.i
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border_large.c.i
+
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border_large.s: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border_large.c.s
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border_large.s
+
+# target to generate assembly for a file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border_large.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border_large.c.s
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border_large.c.s
 
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_logo.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_logo.c.o
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_logo.o
@@ -1209,6 +1665,30 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_slider_knob.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_slider_knob.c.s
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_slider_knob.c.s
 
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_slider_knob_large.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_slider_knob_large.c.o
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_slider_knob_large.o
+
+# target to build an object file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_slider_knob_large.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_slider_knob_large.c.o
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_slider_knob_large.c.o
+
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_slider_knob_large.i: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_slider_knob_large.c.i
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_slider_knob_large.i
+
+# target to preprocess a source file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_slider_knob_large.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_slider_knob_large.c.i
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_slider_knob_large.c.i
+
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_slider_knob_large.s: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_slider_knob_large.c.s
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_slider_knob_large.s
+
+# target to generate assembly for a file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_slider_knob_large.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_slider_knob_large.c.s
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_slider_knob_large.c.s
+
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_bottom.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_bottom.c.o
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_bottom.o
 
@@ -1233,6 +1713,30 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_bottom.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_bottom.c.s
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_bottom.c.s
 
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_bottom_large.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_bottom_large.c.o
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_bottom_large.o
+
+# target to build an object file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_bottom_large.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_bottom_large.c.o
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_bottom_large.c.o
+
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_bottom_large.i: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_bottom_large.c.i
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_bottom_large.i
+
+# target to preprocess a source file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_bottom_large.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_bottom_large.c.i
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_bottom_large.c.i
+
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_bottom_large.s: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_bottom_large.c.s
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_bottom_large.s
+
+# target to generate assembly for a file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_bottom_large.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_bottom_large.c.s
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_bottom_large.c.s
+
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top.c.o
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top.o
 
@@ -1256,6 +1760,30 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top.s: lv_examples/s
 lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top.c.s
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top.c.s
+
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top_large.o: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top_large.c.o
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top_large.o
+
+# target to build an object file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top_large.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top_large.c.o
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top_large.c.o
+
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top_large.i: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top_large.c.i
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top_large.i
+
+# target to preprocess a source file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top_large.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top_large.c.i
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top_large.c.i
+
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top_large.s: lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top_large.c.s
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top_large.s
+
+# target to generate assembly for a file
+lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top_large.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top_large.c.s
+.PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top_large.c.s
 
 lv_examples/src/lv_demo_music/assets/lv_demo_music_font_16_bold.o: lv_examples/src/lv_demo_music/assets/lv_demo_music_font_16_bold.c.o
 .PHONY : lv_examples/src/lv_demo_music/assets/lv_demo_music_font_16_bold.o
@@ -3873,6 +4401,30 @@ lvgl/examples/widgets/slider/lv_example_slider_3.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/slider/lv_example_slider_3.c.s
 .PHONY : lvgl/examples/widgets/slider/lv_example_slider_3.c.s
 
+lvgl/examples/widgets/span/lv_example_span_1.o: lvgl/examples/widgets/span/lv_example_span_1.c.o
+.PHONY : lvgl/examples/widgets/span/lv_example_span_1.o
+
+# target to build an object file
+lvgl/examples/widgets/span/lv_example_span_1.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/span/lv_example_span_1.c.o
+.PHONY : lvgl/examples/widgets/span/lv_example_span_1.c.o
+
+lvgl/examples/widgets/span/lv_example_span_1.i: lvgl/examples/widgets/span/lv_example_span_1.c.i
+.PHONY : lvgl/examples/widgets/span/lv_example_span_1.i
+
+# target to preprocess a source file
+lvgl/examples/widgets/span/lv_example_span_1.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/span/lv_example_span_1.c.i
+.PHONY : lvgl/examples/widgets/span/lv_example_span_1.c.i
+
+lvgl/examples/widgets/span/lv_example_span_1.s: lvgl/examples/widgets/span/lv_example_span_1.c.s
+.PHONY : lvgl/examples/widgets/span/lv_example_span_1.s
+
+# target to generate assembly for a file
+lvgl/examples/widgets/span/lv_example_span_1.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/span/lv_example_span_1.c.s
+.PHONY : lvgl/examples/widgets/span/lv_example_span_1.c.s
+
 lvgl/examples/widgets/spinbox/lv_example_spinbox_1.o: lvgl/examples/widgets/spinbox/lv_example_spinbox_1.c.o
 .PHONY : lvgl/examples/widgets/spinbox/lv_example_spinbox_1.o
 
@@ -5144,6 +5696,30 @@ lvgl/src/extra/widgets/msgbox/lv_msgbox.s: lvgl/src/extra/widgets/msgbox/lv_msgb
 lvgl/src/extra/widgets/msgbox/lv_msgbox.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/widgets/msgbox/lv_msgbox.c.s
 .PHONY : lvgl/src/extra/widgets/msgbox/lv_msgbox.c.s
+
+lvgl/src/extra/widgets/span/lv_span.o: lvgl/src/extra/widgets/span/lv_span.c.o
+.PHONY : lvgl/src/extra/widgets/span/lv_span.o
+
+# target to build an object file
+lvgl/src/extra/widgets/span/lv_span.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/widgets/span/lv_span.c.o
+.PHONY : lvgl/src/extra/widgets/span/lv_span.c.o
+
+lvgl/src/extra/widgets/span/lv_span.i: lvgl/src/extra/widgets/span/lv_span.c.i
+.PHONY : lvgl/src/extra/widgets/span/lv_span.i
+
+# target to preprocess a source file
+lvgl/src/extra/widgets/span/lv_span.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/widgets/span/lv_span.c.i
+.PHONY : lvgl/src/extra/widgets/span/lv_span.c.i
+
+lvgl/src/extra/widgets/span/lv_span.s: lvgl/src/extra/widgets/span/lv_span.c.s
+.PHONY : lvgl/src/extra/widgets/span/lv_span.s
+
+# target to generate assembly for a file
+lvgl/src/extra/widgets/span/lv_span.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/widgets/span/lv_span.c.s
+.PHONY : lvgl/src/extra/widgets/span/lv_span.c.s
 
 lvgl/src/extra/widgets/spinbox/lv_spinbox.o: lvgl/src/extra/widgets/spinbox/lv_spinbox.c.o
 .PHONY : lvgl/src/extra/widgets/spinbox/lv_spinbox.o
@@ -7365,72 +7941,138 @@ help:
 	@echo "... lv_examples/src/lv_demo_keypad_encoder/lv_demo_keypad_encoder.o"
 	@echo "... lv_examples/src/lv_demo_keypad_encoder/lv_demo_keypad_encoder.i"
 	@echo "... lv_examples/src/lv_demo_keypad_encoder/lv_demo_keypad_encoder.s"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_corner_large.o"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_corner_large.i"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_corner_large.s"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause.o"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause.i"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause.s"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause_large.o"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause_large.i"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause_large.s"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_play.o"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_play.i"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_play.s"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_play_large.o"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_play_large.i"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_play_large.s"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop.o"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop.i"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop.s"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop_large.o"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop_large.i"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop_large.s"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_next.o"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_next.i"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_next.s"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_next_large.o"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_next_large.i"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_next_large.s"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause.o"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause.i"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause.s"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause_large.o"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause_large.i"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause_large.s"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_play.o"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_play.i"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_play.s"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_play_large.o"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_play_large.i"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_play_large.s"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev.o"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev.i"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev.s"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev_large.o"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev_large.i"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev_large.s"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_rnd.o"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_rnd.i"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_rnd.s"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_rnd_large.o"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_rnd_large.i"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_rnd_large.s"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left.o"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left.i"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left.s"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left_large.o"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left_large.i"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left_large.s"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_right.o"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_right.i"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_right.s"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_right_large.o"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_right_large.i"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_right_large.s"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1.o"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1.i"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1.s"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1_large.o"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1_large.i"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1_large.s"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_2.o"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_2.i"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_2.s"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_2_large.o"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_2_large.i"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_2_large.s"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3.o"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3.i"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3.s"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3_large.o"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3_large.i"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3_large.s"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_1.o"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_1.i"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_1.s"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_1_large.o"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_1_large.i"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_1_large.s"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2.o"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2.i"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2.s"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2_large.o"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2_large.i"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2_large.s"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_3.o"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_3.i"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_3.s"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_3_large.o"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_3_large.i"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_3_large.s"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_4.o"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_4.i"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_4.s"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_4_large.o"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_4_large.i"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_4_large.s"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border.o"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border.i"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border.s"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border_large.o"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border_large.i"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border_large.s"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_logo.o"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_logo.i"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_logo.s"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_slider_knob.o"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_slider_knob.i"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_slider_knob.s"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_slider_knob_large.o"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_slider_knob_large.i"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_slider_knob_large.s"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_bottom.o"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_bottom.i"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_bottom.s"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_bottom_large.o"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_bottom_large.i"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_bottom_large.s"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top.o"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top.i"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top.s"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top_large.o"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top_large.i"
+	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top_large.s"
 	@echo "... lv_examples/src/lv_demo_music/assets/lv_demo_music_font_16_bold.o"
 	@echo "... lv_examples/src/lv_demo_music/assets/lv_demo_music_font_16_bold.i"
 	@echo "... lv_examples/src/lv_demo_music/assets/lv_demo_music_font_16_bold.s"
@@ -7758,6 +8400,9 @@ help:
 	@echo "... lvgl/examples/widgets/slider/lv_example_slider_3.o"
 	@echo "... lvgl/examples/widgets/slider/lv_example_slider_3.i"
 	@echo "... lvgl/examples/widgets/slider/lv_example_slider_3.s"
+	@echo "... lvgl/examples/widgets/span/lv_example_span_1.o"
+	@echo "... lvgl/examples/widgets/span/lv_example_span_1.i"
+	@echo "... lvgl/examples/widgets/span/lv_example_span_1.s"
 	@echo "... lvgl/examples/widgets/spinbox/lv_example_spinbox_1.o"
 	@echo "... lvgl/examples/widgets/spinbox/lv_example_spinbox_1.i"
 	@echo "... lvgl/examples/widgets/spinbox/lv_example_spinbox_1.s"
@@ -7917,6 +8562,9 @@ help:
 	@echo "... lvgl/src/extra/widgets/msgbox/lv_msgbox.o"
 	@echo "... lvgl/src/extra/widgets/msgbox/lv_msgbox.i"
 	@echo "... lvgl/src/extra/widgets/msgbox/lv_msgbox.s"
+	@echo "... lvgl/src/extra/widgets/span/lv_span.o"
+	@echo "... lvgl/src/extra/widgets/span/lv_span.i"
+	@echo "... lvgl/src/extra/widgets/span/lv_span.s"
 	@echo "... lvgl/src/extra/widgets/spinbox/lv_spinbox.o"
 	@echo "... lvgl/src/extra/widgets/spinbox/lv_spinbox.i"
 	@echo "... lvgl/src/extra/widgets/spinbox/lv_spinbox.s"
