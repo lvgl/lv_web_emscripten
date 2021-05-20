@@ -4353,6 +4353,30 @@ lvgl/examples/widgets/roller/lv_example_roller_2.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/roller/lv_example_roller_2.c.s
 .PHONY : lvgl/examples/widgets/roller/lv_example_roller_2.c.s
 
+lvgl/examples/widgets/roller/lv_example_roller_3.o: lvgl/examples/widgets/roller/lv_example_roller_3.c.o
+.PHONY : lvgl/examples/widgets/roller/lv_example_roller_3.o
+
+# target to build an object file
+lvgl/examples/widgets/roller/lv_example_roller_3.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/roller/lv_example_roller_3.c.o
+.PHONY : lvgl/examples/widgets/roller/lv_example_roller_3.c.o
+
+lvgl/examples/widgets/roller/lv_example_roller_3.i: lvgl/examples/widgets/roller/lv_example_roller_3.c.i
+.PHONY : lvgl/examples/widgets/roller/lv_example_roller_3.i
+
+# target to preprocess a source file
+lvgl/examples/widgets/roller/lv_example_roller_3.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/roller/lv_example_roller_3.c.i
+.PHONY : lvgl/examples/widgets/roller/lv_example_roller_3.c.i
+
+lvgl/examples/widgets/roller/lv_example_roller_3.s: lvgl/examples/widgets/roller/lv_example_roller_3.c.s
+.PHONY : lvgl/examples/widgets/roller/lv_example_roller_3.s
+
+# target to generate assembly for a file
+lvgl/examples/widgets/roller/lv_example_roller_3.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/roller/lv_example_roller_3.c.s
+.PHONY : lvgl/examples/widgets/roller/lv_example_roller_3.c.s
+
 lvgl/examples/widgets/slider/lv_example_slider_1.o: lvgl/examples/widgets/slider/lv_example_slider_1.c.o
 .PHONY : lvgl/examples/widgets/slider/lv_example_slider_1.o
 
@@ -8418,6 +8442,9 @@ help:
 	@echo "... lvgl/examples/widgets/roller/lv_example_roller_2.o"
 	@echo "... lvgl/examples/widgets/roller/lv_example_roller_2.i"
 	@echo "... lvgl/examples/widgets/roller/lv_example_roller_2.s"
+	@echo "... lvgl/examples/widgets/roller/lv_example_roller_3.o"
+	@echo "... lvgl/examples/widgets/roller/lv_example_roller_3.i"
+	@echo "... lvgl/examples/widgets/roller/lv_example_roller_3.s"
 	@echo "... lvgl/examples/widgets/slider/lv_example_slider_1.o"
 	@echo "... lvgl/examples/widgets/slider/lv_example_slider_1.i"
 	@echo "... lvgl/examples/widgets/slider/lv_example_slider_1.s"
