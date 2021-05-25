@@ -1785,30 +1785,6 @@ lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top_large.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top_large.c.s
 .PHONY : lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top_large.c.s
 
-lv_examples/src/lv_demo_music/assets/lv_demo_music_font_16_bold.o: lv_examples/src/lv_demo_music/assets/lv_demo_music_font_16_bold.c.o
-.PHONY : lv_examples/src/lv_demo_music/assets/lv_demo_music_font_16_bold.o
-
-# target to build an object file
-lv_examples/src/lv_demo_music/assets/lv_demo_music_font_16_bold.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/lv_demo_music_font_16_bold.c.o
-.PHONY : lv_examples/src/lv_demo_music/assets/lv_demo_music_font_16_bold.c.o
-
-lv_examples/src/lv_demo_music/assets/lv_demo_music_font_16_bold.i: lv_examples/src/lv_demo_music/assets/lv_demo_music_font_16_bold.c.i
-.PHONY : lv_examples/src/lv_demo_music/assets/lv_demo_music_font_16_bold.i
-
-# target to preprocess a source file
-lv_examples/src/lv_demo_music/assets/lv_demo_music_font_16_bold.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/lv_demo_music_font_16_bold.c.i
-.PHONY : lv_examples/src/lv_demo_music/assets/lv_demo_music_font_16_bold.c.i
-
-lv_examples/src/lv_demo_music/assets/lv_demo_music_font_16_bold.s: lv_examples/src/lv_demo_music/assets/lv_demo_music_font_16_bold.c.s
-.PHONY : lv_examples/src/lv_demo_music/assets/lv_demo_music_font_16_bold.s
-
-# target to generate assembly for a file
-lv_examples/src/lv_demo_music/assets/lv_demo_music_font_16_bold.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_music/assets/lv_demo_music_font_16_bold.c.s
-.PHONY : lv_examples/src/lv_demo_music/assets/lv_demo_music_font_16_bold.c.s
-
 lv_examples/src/lv_demo_music/lv_demo_music.o: lv_examples/src/lv_demo_music/lv_demo_music.c.o
 .PHONY : lv_examples/src/lv_demo_music/lv_demo_music.o
 
@@ -3752,6 +3728,30 @@ lvgl/examples/widgets/chart/lv_example_chart_6.s: lvgl/examples/widgets/chart/lv
 lvgl/examples/widgets/chart/lv_example_chart_6.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/chart/lv_example_chart_6.c.s
 .PHONY : lvgl/examples/widgets/chart/lv_example_chart_6.c.s
+
+lvgl/examples/widgets/chart/lv_example_chart_7.o: lvgl/examples/widgets/chart/lv_example_chart_7.c.o
+.PHONY : lvgl/examples/widgets/chart/lv_example_chart_7.o
+
+# target to build an object file
+lvgl/examples/widgets/chart/lv_example_chart_7.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/chart/lv_example_chart_7.c.o
+.PHONY : lvgl/examples/widgets/chart/lv_example_chart_7.c.o
+
+lvgl/examples/widgets/chart/lv_example_chart_7.i: lvgl/examples/widgets/chart/lv_example_chart_7.c.i
+.PHONY : lvgl/examples/widgets/chart/lv_example_chart_7.i
+
+# target to preprocess a source file
+lvgl/examples/widgets/chart/lv_example_chart_7.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/chart/lv_example_chart_7.c.i
+.PHONY : lvgl/examples/widgets/chart/lv_example_chart_7.c.i
+
+lvgl/examples/widgets/chart/lv_example_chart_7.s: lvgl/examples/widgets/chart/lv_example_chart_7.c.s
+.PHONY : lvgl/examples/widgets/chart/lv_example_chart_7.s
+
+# target to generate assembly for a file
+lvgl/examples/widgets/chart/lv_example_chart_7.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/chart/lv_example_chart_7.c.s
+.PHONY : lvgl/examples/widgets/chart/lv_example_chart_7.c.s
 
 lvgl/examples/widgets/checkbox/lv_example_checkbox_1.o: lvgl/examples/widgets/checkbox/lv_example_checkbox_1.c.o
 .PHONY : lvgl/examples/widgets/checkbox/lv_example_checkbox_1.o
@@ -8121,9 +8121,6 @@ help:
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top_large.o"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top_large.i"
 	@echo "... lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top_large.s"
-	@echo "... lv_examples/src/lv_demo_music/assets/lv_demo_music_font_16_bold.o"
-	@echo "... lv_examples/src/lv_demo_music/assets/lv_demo_music_font_16_bold.i"
-	@echo "... lv_examples/src/lv_demo_music/assets/lv_demo_music_font_16_bold.s"
 	@echo "... lv_examples/src/lv_demo_music/lv_demo_music.o"
 	@echo "... lv_examples/src/lv_demo_music/lv_demo_music.i"
 	@echo "... lv_examples/src/lv_demo_music/lv_demo_music.s"
@@ -8367,6 +8364,9 @@ help:
 	@echo "... lvgl/examples/widgets/chart/lv_example_chart_6.o"
 	@echo "... lvgl/examples/widgets/chart/lv_example_chart_6.i"
 	@echo "... lvgl/examples/widgets/chart/lv_example_chart_6.s"
+	@echo "... lvgl/examples/widgets/chart/lv_example_chart_7.o"
+	@echo "... lvgl/examples/widgets/chart/lv_example_chart_7.i"
+	@echo "... lvgl/examples/widgets/chart/lv_example_chart_7.s"
 	@echo "... lvgl/examples/widgets/checkbox/lv_example_checkbox_1.o"
 	@echo "... lvgl/examples/widgets/checkbox/lv_example_checkbox_1.i"
 	@echo "... lvgl/examples/widgets/checkbox/lv_example_checkbox_1.s"
