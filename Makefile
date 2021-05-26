@@ -2049,6 +2049,54 @@ lv_examples/src/lv_demo_widgets/lv_demo_widgets.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_widgets/lv_demo_widgets.c.s
 .PHONY : lv_examples/src/lv_demo_widgets/lv_demo_widgets.c.s
 
+lvgl/examples/anim/lv_example_anim_1.o: lvgl/examples/anim/lv_example_anim_1.c.o
+.PHONY : lvgl/examples/anim/lv_example_anim_1.o
+
+# target to build an object file
+lvgl/examples/anim/lv_example_anim_1.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/anim/lv_example_anim_1.c.o
+.PHONY : lvgl/examples/anim/lv_example_anim_1.c.o
+
+lvgl/examples/anim/lv_example_anim_1.i: lvgl/examples/anim/lv_example_anim_1.c.i
+.PHONY : lvgl/examples/anim/lv_example_anim_1.i
+
+# target to preprocess a source file
+lvgl/examples/anim/lv_example_anim_1.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/anim/lv_example_anim_1.c.i
+.PHONY : lvgl/examples/anim/lv_example_anim_1.c.i
+
+lvgl/examples/anim/lv_example_anim_1.s: lvgl/examples/anim/lv_example_anim_1.c.s
+.PHONY : lvgl/examples/anim/lv_example_anim_1.s
+
+# target to generate assembly for a file
+lvgl/examples/anim/lv_example_anim_1.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/anim/lv_example_anim_1.c.s
+.PHONY : lvgl/examples/anim/lv_example_anim_1.c.s
+
+lvgl/examples/anim/lv_example_anim_2.o: lvgl/examples/anim/lv_example_anim_2.c.o
+.PHONY : lvgl/examples/anim/lv_example_anim_2.o
+
+# target to build an object file
+lvgl/examples/anim/lv_example_anim_2.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/anim/lv_example_anim_2.c.o
+.PHONY : lvgl/examples/anim/lv_example_anim_2.c.o
+
+lvgl/examples/anim/lv_example_anim_2.i: lvgl/examples/anim/lv_example_anim_2.c.i
+.PHONY : lvgl/examples/anim/lv_example_anim_2.i
+
+# target to preprocess a source file
+lvgl/examples/anim/lv_example_anim_2.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/anim/lv_example_anim_2.c.i
+.PHONY : lvgl/examples/anim/lv_example_anim_2.c.i
+
+lvgl/examples/anim/lv_example_anim_2.s: lvgl/examples/anim/lv_example_anim_2.c.s
+.PHONY : lvgl/examples/anim/lv_example_anim_2.s
+
+# target to generate assembly for a file
+lvgl/examples/anim/lv_example_anim_2.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/anim/lv_example_anim_2.c.s
+.PHONY : lvgl/examples/anim/lv_example_anim_2.c.s
+
 lvgl/examples/assets/animimg001.o: lvgl/examples/assets/animimg001.c.o
 .PHONY : lvgl/examples/assets/animimg001.o
 
@@ -2408,6 +2456,78 @@ lvgl/examples/assets/imgbtn_right.s: lvgl/examples/assets/imgbtn_right.c.s
 lvgl/examples/assets/imgbtn_right.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/assets/imgbtn_right.c.s
 .PHONY : lvgl/examples/assets/imgbtn_right.c.s
+
+lvgl/examples/event/lv_example_event_1.o: lvgl/examples/event/lv_example_event_1.c.o
+.PHONY : lvgl/examples/event/lv_example_event_1.o
+
+# target to build an object file
+lvgl/examples/event/lv_example_event_1.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/event/lv_example_event_1.c.o
+.PHONY : lvgl/examples/event/lv_example_event_1.c.o
+
+lvgl/examples/event/lv_example_event_1.i: lvgl/examples/event/lv_example_event_1.c.i
+.PHONY : lvgl/examples/event/lv_example_event_1.i
+
+# target to preprocess a source file
+lvgl/examples/event/lv_example_event_1.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/event/lv_example_event_1.c.i
+.PHONY : lvgl/examples/event/lv_example_event_1.c.i
+
+lvgl/examples/event/lv_example_event_1.s: lvgl/examples/event/lv_example_event_1.c.s
+.PHONY : lvgl/examples/event/lv_example_event_1.s
+
+# target to generate assembly for a file
+lvgl/examples/event/lv_example_event_1.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/event/lv_example_event_1.c.s
+.PHONY : lvgl/examples/event/lv_example_event_1.c.s
+
+lvgl/examples/event/lv_example_event_2.o: lvgl/examples/event/lv_example_event_2.c.o
+.PHONY : lvgl/examples/event/lv_example_event_2.o
+
+# target to build an object file
+lvgl/examples/event/lv_example_event_2.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/event/lv_example_event_2.c.o
+.PHONY : lvgl/examples/event/lv_example_event_2.c.o
+
+lvgl/examples/event/lv_example_event_2.i: lvgl/examples/event/lv_example_event_2.c.i
+.PHONY : lvgl/examples/event/lv_example_event_2.i
+
+# target to preprocess a source file
+lvgl/examples/event/lv_example_event_2.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/event/lv_example_event_2.c.i
+.PHONY : lvgl/examples/event/lv_example_event_2.c.i
+
+lvgl/examples/event/lv_example_event_2.s: lvgl/examples/event/lv_example_event_2.c.s
+.PHONY : lvgl/examples/event/lv_example_event_2.s
+
+# target to generate assembly for a file
+lvgl/examples/event/lv_example_event_2.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/event/lv_example_event_2.c.s
+.PHONY : lvgl/examples/event/lv_example_event_2.c.s
+
+lvgl/examples/event/lv_example_event_3.o: lvgl/examples/event/lv_example_event_3.c.o
+.PHONY : lvgl/examples/event/lv_example_event_3.o
+
+# target to build an object file
+lvgl/examples/event/lv_example_event_3.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/event/lv_example_event_3.c.o
+.PHONY : lvgl/examples/event/lv_example_event_3.c.o
+
+lvgl/examples/event/lv_example_event_3.i: lvgl/examples/event/lv_example_event_3.c.i
+.PHONY : lvgl/examples/event/lv_example_event_3.i
+
+# target to preprocess a source file
+lvgl/examples/event/lv_example_event_3.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/event/lv_example_event_3.c.i
+.PHONY : lvgl/examples/event/lv_example_event_3.c.i
+
+lvgl/examples/event/lv_example_event_3.s: lvgl/examples/event/lv_example_event_3.c.s
+.PHONY : lvgl/examples/event/lv_example_event_3.s
+
+# target to generate assembly for a file
+lvgl/examples/event/lv_example_event_3.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/event/lv_example_event_3.c.s
+.PHONY : lvgl/examples/event/lv_example_event_3.c.s
 
 lvgl/examples/get_started/lv_example_get_started_1.o: lvgl/examples/get_started/lv_example_get_started_1.c.o
 .PHONY : lvgl/examples/get_started/lv_example_get_started_1.o
@@ -2912,6 +3032,30 @@ lvgl/examples/scroll/lv_example_scroll_3.s: lvgl/examples/scroll/lv_example_scro
 lvgl/examples/scroll/lv_example_scroll_3.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/scroll/lv_example_scroll_3.c.s
 .PHONY : lvgl/examples/scroll/lv_example_scroll_3.c.s
+
+lvgl/examples/scroll/lv_example_scroll_4.o: lvgl/examples/scroll/lv_example_scroll_4.c.o
+.PHONY : lvgl/examples/scroll/lv_example_scroll_4.o
+
+# target to build an object file
+lvgl/examples/scroll/lv_example_scroll_4.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/scroll/lv_example_scroll_4.c.o
+.PHONY : lvgl/examples/scroll/lv_example_scroll_4.c.o
+
+lvgl/examples/scroll/lv_example_scroll_4.i: lvgl/examples/scroll/lv_example_scroll_4.c.i
+.PHONY : lvgl/examples/scroll/lv_example_scroll_4.i
+
+# target to preprocess a source file
+lvgl/examples/scroll/lv_example_scroll_4.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/scroll/lv_example_scroll_4.c.i
+.PHONY : lvgl/examples/scroll/lv_example_scroll_4.c.i
+
+lvgl/examples/scroll/lv_example_scroll_4.s: lvgl/examples/scroll/lv_example_scroll_4.c.s
+.PHONY : lvgl/examples/scroll/lv_example_scroll_4.s
+
+# target to generate assembly for a file
+lvgl/examples/scroll/lv_example_scroll_4.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/scroll/lv_example_scroll_4.c.s
+.PHONY : lvgl/examples/scroll/lv_example_scroll_4.c.s
 
 lvgl/examples/styles/lv_example_style_1.o: lvgl/examples/styles/lv_example_style_1.c.o
 .PHONY : lvgl/examples/styles/lv_example_style_1.o
@@ -8202,6 +8346,12 @@ help:
 	@echo "... lv_examples/src/lv_demo_widgets/lv_demo_widgets.o"
 	@echo "... lv_examples/src/lv_demo_widgets/lv_demo_widgets.i"
 	@echo "... lv_examples/src/lv_demo_widgets/lv_demo_widgets.s"
+	@echo "... lvgl/examples/anim/lv_example_anim_1.o"
+	@echo "... lvgl/examples/anim/lv_example_anim_1.i"
+	@echo "... lvgl/examples/anim/lv_example_anim_1.s"
+	@echo "... lvgl/examples/anim/lv_example_anim_2.o"
+	@echo "... lvgl/examples/anim/lv_example_anim_2.i"
+	@echo "... lvgl/examples/anim/lv_example_anim_2.s"
 	@echo "... lvgl/examples/assets/animimg001.o"
 	@echo "... lvgl/examples/assets/animimg001.i"
 	@echo "... lvgl/examples/assets/animimg001.s"
@@ -8247,6 +8397,15 @@ help:
 	@echo "... lvgl/examples/assets/imgbtn_right.o"
 	@echo "... lvgl/examples/assets/imgbtn_right.i"
 	@echo "... lvgl/examples/assets/imgbtn_right.s"
+	@echo "... lvgl/examples/event/lv_example_event_1.o"
+	@echo "... lvgl/examples/event/lv_example_event_1.i"
+	@echo "... lvgl/examples/event/lv_example_event_1.s"
+	@echo "... lvgl/examples/event/lv_example_event_2.o"
+	@echo "... lvgl/examples/event/lv_example_event_2.i"
+	@echo "... lvgl/examples/event/lv_example_event_2.s"
+	@echo "... lvgl/examples/event/lv_example_event_3.o"
+	@echo "... lvgl/examples/event/lv_example_event_3.i"
+	@echo "... lvgl/examples/event/lv_example_event_3.s"
 	@echo "... lvgl/examples/get_started/lv_example_get_started_1.o"
 	@echo "... lvgl/examples/get_started/lv_example_get_started_1.i"
 	@echo "... lvgl/examples/get_started/lv_example_get_started_1.s"
@@ -8310,6 +8469,9 @@ help:
 	@echo "... lvgl/examples/scroll/lv_example_scroll_3.o"
 	@echo "... lvgl/examples/scroll/lv_example_scroll_3.i"
 	@echo "... lvgl/examples/scroll/lv_example_scroll_3.s"
+	@echo "... lvgl/examples/scroll/lv_example_scroll_4.o"
+	@echo "... lvgl/examples/scroll/lv_example_scroll_4.i"
+	@echo "... lvgl/examples/scroll/lv_example_scroll_4.s"
 	@echo "... lvgl/examples/styles/lv_example_style_1.o"
 	@echo "... lvgl/examples/styles/lv_example_style_1.i"
 	@echo "... lvgl/examples/styles/lv_example_style_1.s"
