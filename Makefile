@@ -4065,6 +4065,30 @@ lvgl/examples/widgets/label/lv_example_label_2.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/label/lv_example_label_2.c.s
 .PHONY : lvgl/examples/widgets/label/lv_example_label_2.c.s
 
+lvgl/examples/widgets/label/lv_example_label_3.o: lvgl/examples/widgets/label/lv_example_label_3.c.o
+.PHONY : lvgl/examples/widgets/label/lv_example_label_3.o
+
+# target to build an object file
+lvgl/examples/widgets/label/lv_example_label_3.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/label/lv_example_label_3.c.o
+.PHONY : lvgl/examples/widgets/label/lv_example_label_3.c.o
+
+lvgl/examples/widgets/label/lv_example_label_3.i: lvgl/examples/widgets/label/lv_example_label_3.c.i
+.PHONY : lvgl/examples/widgets/label/lv_example_label_3.i
+
+# target to preprocess a source file
+lvgl/examples/widgets/label/lv_example_label_3.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/label/lv_example_label_3.c.i
+.PHONY : lvgl/examples/widgets/label/lv_example_label_3.c.i
+
+lvgl/examples/widgets/label/lv_example_label_3.s: lvgl/examples/widgets/label/lv_example_label_3.c.s
+.PHONY : lvgl/examples/widgets/label/lv_example_label_3.s
+
+# target to generate assembly for a file
+lvgl/examples/widgets/label/lv_example_label_3.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/label/lv_example_label_3.c.s
+.PHONY : lvgl/examples/widgets/label/lv_example_label_3.c.s
+
 lvgl/examples/widgets/led/lv_example_led_1.o: lvgl/examples/widgets/led/lv_example_led_1.c.o
 .PHONY : lvgl/examples/widgets/led/lv_example_led_1.o
 
@@ -8430,6 +8454,9 @@ help:
 	@echo "... lvgl/examples/widgets/label/lv_example_label_2.o"
 	@echo "... lvgl/examples/widgets/label/lv_example_label_2.i"
 	@echo "... lvgl/examples/widgets/label/lv_example_label_2.s"
+	@echo "... lvgl/examples/widgets/label/lv_example_label_3.o"
+	@echo "... lvgl/examples/widgets/label/lv_example_label_3.i"
+	@echo "... lvgl/examples/widgets/label/lv_example_label_3.s"
 	@echo "... lvgl/examples/widgets/led/lv_example_led_1.o"
 	@echo "... lvgl/examples/widgets/led/lv_example_led_1.i"
 	@echo "... lvgl/examples/widgets/led/lv_example_led_1.s"
