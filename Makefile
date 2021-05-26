@@ -5457,6 +5457,30 @@ lvgl/src/extra/themes/default/lv_theme_default.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/themes/default/lv_theme_default.c.s
 .PHONY : lvgl/src/extra/themes/default/lv_theme_default.c.s
 
+lvgl/src/extra/themes/mono/lv_theme_mono.o: lvgl/src/extra/themes/mono/lv_theme_mono.c.o
+.PHONY : lvgl/src/extra/themes/mono/lv_theme_mono.o
+
+# target to build an object file
+lvgl/src/extra/themes/mono/lv_theme_mono.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/themes/mono/lv_theme_mono.c.o
+.PHONY : lvgl/src/extra/themes/mono/lv_theme_mono.c.o
+
+lvgl/src/extra/themes/mono/lv_theme_mono.i: lvgl/src/extra/themes/mono/lv_theme_mono.c.i
+.PHONY : lvgl/src/extra/themes/mono/lv_theme_mono.i
+
+# target to preprocess a source file
+lvgl/src/extra/themes/mono/lv_theme_mono.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/themes/mono/lv_theme_mono.c.i
+.PHONY : lvgl/src/extra/themes/mono/lv_theme_mono.c.i
+
+lvgl/src/extra/themes/mono/lv_theme_mono.s: lvgl/src/extra/themes/mono/lv_theme_mono.c.s
+.PHONY : lvgl/src/extra/themes/mono/lv_theme_mono.s
+
+# target to generate assembly for a file
+lvgl/src/extra/themes/mono/lv_theme_mono.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/themes/mono/lv_theme_mono.c.s
+.PHONY : lvgl/src/extra/themes/mono/lv_theme_mono.c.s
+
 lvgl/src/extra/widgets/animimg/lv_animimg.o: lvgl/src/extra/widgets/animimg/lv_animimg.c.o
 .PHONY : lvgl/src/extra/widgets/animimg/lv_animimg.o
 
@@ -8580,6 +8604,9 @@ help:
 	@echo "... lvgl/src/extra/themes/default/lv_theme_default.o"
 	@echo "... lvgl/src/extra/themes/default/lv_theme_default.i"
 	@echo "... lvgl/src/extra/themes/default/lv_theme_default.s"
+	@echo "... lvgl/src/extra/themes/mono/lv_theme_mono.o"
+	@echo "... lvgl/src/extra/themes/mono/lv_theme_mono.i"
+	@echo "... lvgl/src/extra/themes/mono/lv_theme_mono.s"
 	@echo "... lvgl/src/extra/widgets/animimg/lv_animimg.o"
 	@echo "... lvgl/src/extra/widgets/animimg/lv_animimg.i"
 	@echo "... lvgl/src/extra/widgets/animimg/lv_animimg.s"
