@@ -3153,6 +3153,78 @@ lvgl/examples/styles/lv_example_style_11.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/styles/lv_example_style_11.c.s
 .PHONY : lvgl/examples/styles/lv_example_style_11.c.s
 
+lvgl/examples/styles/lv_example_style_12.o: lvgl/examples/styles/lv_example_style_12.c.o
+.PHONY : lvgl/examples/styles/lv_example_style_12.o
+
+# target to build an object file
+lvgl/examples/styles/lv_example_style_12.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/styles/lv_example_style_12.c.o
+.PHONY : lvgl/examples/styles/lv_example_style_12.c.o
+
+lvgl/examples/styles/lv_example_style_12.i: lvgl/examples/styles/lv_example_style_12.c.i
+.PHONY : lvgl/examples/styles/lv_example_style_12.i
+
+# target to preprocess a source file
+lvgl/examples/styles/lv_example_style_12.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/styles/lv_example_style_12.c.i
+.PHONY : lvgl/examples/styles/lv_example_style_12.c.i
+
+lvgl/examples/styles/lv_example_style_12.s: lvgl/examples/styles/lv_example_style_12.c.s
+.PHONY : lvgl/examples/styles/lv_example_style_12.s
+
+# target to generate assembly for a file
+lvgl/examples/styles/lv_example_style_12.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/styles/lv_example_style_12.c.s
+.PHONY : lvgl/examples/styles/lv_example_style_12.c.s
+
+lvgl/examples/styles/lv_example_style_13.o: lvgl/examples/styles/lv_example_style_13.c.o
+.PHONY : lvgl/examples/styles/lv_example_style_13.o
+
+# target to build an object file
+lvgl/examples/styles/lv_example_style_13.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/styles/lv_example_style_13.c.o
+.PHONY : lvgl/examples/styles/lv_example_style_13.c.o
+
+lvgl/examples/styles/lv_example_style_13.i: lvgl/examples/styles/lv_example_style_13.c.i
+.PHONY : lvgl/examples/styles/lv_example_style_13.i
+
+# target to preprocess a source file
+lvgl/examples/styles/lv_example_style_13.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/styles/lv_example_style_13.c.i
+.PHONY : lvgl/examples/styles/lv_example_style_13.c.i
+
+lvgl/examples/styles/lv_example_style_13.s: lvgl/examples/styles/lv_example_style_13.c.s
+.PHONY : lvgl/examples/styles/lv_example_style_13.s
+
+# target to generate assembly for a file
+lvgl/examples/styles/lv_example_style_13.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/styles/lv_example_style_13.c.s
+.PHONY : lvgl/examples/styles/lv_example_style_13.c.s
+
+lvgl/examples/styles/lv_example_style_14.o: lvgl/examples/styles/lv_example_style_14.c.o
+.PHONY : lvgl/examples/styles/lv_example_style_14.o
+
+# target to build an object file
+lvgl/examples/styles/lv_example_style_14.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/styles/lv_example_style_14.c.o
+.PHONY : lvgl/examples/styles/lv_example_style_14.c.o
+
+lvgl/examples/styles/lv_example_style_14.i: lvgl/examples/styles/lv_example_style_14.c.i
+.PHONY : lvgl/examples/styles/lv_example_style_14.i
+
+# target to preprocess a source file
+lvgl/examples/styles/lv_example_style_14.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/styles/lv_example_style_14.c.i
+.PHONY : lvgl/examples/styles/lv_example_style_14.c.i
+
+lvgl/examples/styles/lv_example_style_14.s: lvgl/examples/styles/lv_example_style_14.c.s
+.PHONY : lvgl/examples/styles/lv_example_style_14.s
+
+# target to generate assembly for a file
+lvgl/examples/styles/lv_example_style_14.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/styles/lv_example_style_14.c.s
+.PHONY : lvgl/examples/styles/lv_example_style_14.c.s
+
 lvgl/examples/styles/lv_example_style_2.o: lvgl/examples/styles/lv_example_style_2.c.o
 .PHONY : lvgl/examples/styles/lv_example_style_2.o
 
@@ -3224,6 +3296,30 @@ lvgl/examples/styles/lv_example_style_4.s: lvgl/examples/styles/lv_example_style
 lvgl/examples/styles/lv_example_style_4.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/styles/lv_example_style_4.c.s
 .PHONY : lvgl/examples/styles/lv_example_style_4.c.s
+
+lvgl/examples/styles/lv_example_style_5.o: lvgl/examples/styles/lv_example_style_5.c.o
+.PHONY : lvgl/examples/styles/lv_example_style_5.o
+
+# target to build an object file
+lvgl/examples/styles/lv_example_style_5.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/styles/lv_example_style_5.c.o
+.PHONY : lvgl/examples/styles/lv_example_style_5.c.o
+
+lvgl/examples/styles/lv_example_style_5.i: lvgl/examples/styles/lv_example_style_5.c.i
+.PHONY : lvgl/examples/styles/lv_example_style_5.i
+
+# target to preprocess a source file
+lvgl/examples/styles/lv_example_style_5.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/styles/lv_example_style_5.c.i
+.PHONY : lvgl/examples/styles/lv_example_style_5.c.i
+
+lvgl/examples/styles/lv_example_style_5.s: lvgl/examples/styles/lv_example_style_5.c.s
+.PHONY : lvgl/examples/styles/lv_example_style_5.s
+
+# target to generate assembly for a file
+lvgl/examples/styles/lv_example_style_5.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/styles/lv_example_style_5.c.s
+.PHONY : lvgl/examples/styles/lv_example_style_5.c.s
 
 lvgl/examples/styles/lv_example_style_6.o: lvgl/examples/styles/lv_example_style_6.c.o
 .PHONY : lvgl/examples/styles/lv_example_style_6.o
@@ -8508,6 +8604,15 @@ help:
 	@echo "... lvgl/examples/styles/lv_example_style_11.o"
 	@echo "... lvgl/examples/styles/lv_example_style_11.i"
 	@echo "... lvgl/examples/styles/lv_example_style_11.s"
+	@echo "... lvgl/examples/styles/lv_example_style_12.o"
+	@echo "... lvgl/examples/styles/lv_example_style_12.i"
+	@echo "... lvgl/examples/styles/lv_example_style_12.s"
+	@echo "... lvgl/examples/styles/lv_example_style_13.o"
+	@echo "... lvgl/examples/styles/lv_example_style_13.i"
+	@echo "... lvgl/examples/styles/lv_example_style_13.s"
+	@echo "... lvgl/examples/styles/lv_example_style_14.o"
+	@echo "... lvgl/examples/styles/lv_example_style_14.i"
+	@echo "... lvgl/examples/styles/lv_example_style_14.s"
 	@echo "... lvgl/examples/styles/lv_example_style_2.o"
 	@echo "... lvgl/examples/styles/lv_example_style_2.i"
 	@echo "... lvgl/examples/styles/lv_example_style_2.s"
@@ -8517,6 +8622,9 @@ help:
 	@echo "... lvgl/examples/styles/lv_example_style_4.o"
 	@echo "... lvgl/examples/styles/lv_example_style_4.i"
 	@echo "... lvgl/examples/styles/lv_example_style_4.s"
+	@echo "... lvgl/examples/styles/lv_example_style_5.o"
+	@echo "... lvgl/examples/styles/lv_example_style_5.i"
+	@echo "... lvgl/examples/styles/lv_example_style_5.s"
 	@echo "... lvgl/examples/styles/lv_example_style_6.o"
 	@echo "... lvgl/examples/styles/lv_example_style_6.i"
 	@echo "... lvgl/examples/styles/lv_example_style_6.s"
