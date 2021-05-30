@@ -3081,6 +3081,30 @@ lvgl/examples/scroll/lv_example_scroll_5.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/scroll/lv_example_scroll_5.c.s
 .PHONY : lvgl/examples/scroll/lv_example_scroll_5.c.s
 
+lvgl/examples/scroll/lv_example_scroll_6.o: lvgl/examples/scroll/lv_example_scroll_6.c.o
+.PHONY : lvgl/examples/scroll/lv_example_scroll_6.o
+
+# target to build an object file
+lvgl/examples/scroll/lv_example_scroll_6.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/scroll/lv_example_scroll_6.c.o
+.PHONY : lvgl/examples/scroll/lv_example_scroll_6.c.o
+
+lvgl/examples/scroll/lv_example_scroll_6.i: lvgl/examples/scroll/lv_example_scroll_6.c.i
+.PHONY : lvgl/examples/scroll/lv_example_scroll_6.i
+
+# target to preprocess a source file
+lvgl/examples/scroll/lv_example_scroll_6.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/scroll/lv_example_scroll_6.c.i
+.PHONY : lvgl/examples/scroll/lv_example_scroll_6.c.i
+
+lvgl/examples/scroll/lv_example_scroll_6.s: lvgl/examples/scroll/lv_example_scroll_6.c.s
+.PHONY : lvgl/examples/scroll/lv_example_scroll_6.s
+
+# target to generate assembly for a file
+lvgl/examples/scroll/lv_example_scroll_6.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/scroll/lv_example_scroll_6.c.s
+.PHONY : lvgl/examples/scroll/lv_example_scroll_6.c.s
+
 lvgl/examples/styles/lv_example_style_1.o: lvgl/examples/styles/lv_example_style_1.c.o
 .PHONY : lvgl/examples/styles/lv_example_style_1.o
 
@@ -8595,6 +8619,9 @@ help:
 	@echo "... lvgl/examples/scroll/lv_example_scroll_5.o"
 	@echo "... lvgl/examples/scroll/lv_example_scroll_5.i"
 	@echo "... lvgl/examples/scroll/lv_example_scroll_5.s"
+	@echo "... lvgl/examples/scroll/lv_example_scroll_6.o"
+	@echo "... lvgl/examples/scroll/lv_example_scroll_6.i"
+	@echo "... lvgl/examples/scroll/lv_example_scroll_6.s"
 	@echo "... lvgl/examples/styles/lv_example_style_1.o"
 	@echo "... lvgl/examples/styles/lv_example_style_1.i"
 	@echo "... lvgl/examples/styles/lv_example_style_1.s"
