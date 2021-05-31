@@ -5313,6 +5313,30 @@ lvgl/src/core/lv_obj_style.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/core/lv_obj_style.c.s
 .PHONY : lvgl/src/core/lv_obj_style.c.s
 
+lvgl/src/core/lv_obj_style_gen.o: lvgl/src/core/lv_obj_style_gen.c.o
+.PHONY : lvgl/src/core/lv_obj_style_gen.o
+
+# target to build an object file
+lvgl/src/core/lv_obj_style_gen.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/core/lv_obj_style_gen.c.o
+.PHONY : lvgl/src/core/lv_obj_style_gen.c.o
+
+lvgl/src/core/lv_obj_style_gen.i: lvgl/src/core/lv_obj_style_gen.c.i
+.PHONY : lvgl/src/core/lv_obj_style_gen.i
+
+# target to preprocess a source file
+lvgl/src/core/lv_obj_style_gen.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/core/lv_obj_style_gen.c.i
+.PHONY : lvgl/src/core/lv_obj_style_gen.c.i
+
+lvgl/src/core/lv_obj_style_gen.s: lvgl/src/core/lv_obj_style_gen.c.s
+.PHONY : lvgl/src/core/lv_obj_style_gen.s
+
+# target to generate assembly for a file
+lvgl/src/core/lv_obj_style_gen.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/core/lv_obj_style_gen.c.s
+.PHONY : lvgl/src/core/lv_obj_style_gen.c.s
+
 lvgl/src/core/lv_obj_tree.o: lvgl/src/core/lv_obj_tree.c.o
 .PHONY : lvgl/src/core/lv_obj_tree.o
 
@@ -7425,6 +7449,30 @@ lvgl/src/misc/lv_style.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_style.c.s
 .PHONY : lvgl/src/misc/lv_style.c.s
 
+lvgl/src/misc/lv_style_gen.o: lvgl/src/misc/lv_style_gen.c.o
+.PHONY : lvgl/src/misc/lv_style_gen.o
+
+# target to build an object file
+lvgl/src/misc/lv_style_gen.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_style_gen.c.o
+.PHONY : lvgl/src/misc/lv_style_gen.c.o
+
+lvgl/src/misc/lv_style_gen.i: lvgl/src/misc/lv_style_gen.c.i
+.PHONY : lvgl/src/misc/lv_style_gen.i
+
+# target to preprocess a source file
+lvgl/src/misc/lv_style_gen.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_style_gen.c.i
+.PHONY : lvgl/src/misc/lv_style_gen.c.i
+
+lvgl/src/misc/lv_style_gen.s: lvgl/src/misc/lv_style_gen.c.s
+.PHONY : lvgl/src/misc/lv_style_gen.s
+
+# target to generate assembly for a file
+lvgl/src/misc/lv_style_gen.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_style_gen.c.s
+.PHONY : lvgl/src/misc/lv_style_gen.c.s
+
 lvgl/src/misc/lv_templ.o: lvgl/src/misc/lv_templ.c.o
 .PHONY : lvgl/src/misc/lv_templ.o
 
@@ -8898,6 +8946,9 @@ help:
 	@echo "... lvgl/src/core/lv_obj_style.o"
 	@echo "... lvgl/src/core/lv_obj_style.i"
 	@echo "... lvgl/src/core/lv_obj_style.s"
+	@echo "... lvgl/src/core/lv_obj_style_gen.o"
+	@echo "... lvgl/src/core/lv_obj_style_gen.i"
+	@echo "... lvgl/src/core/lv_obj_style_gen.s"
 	@echo "... lvgl/src/core/lv_obj_tree.o"
 	@echo "... lvgl/src/core/lv_obj_tree.i"
 	@echo "... lvgl/src/core/lv_obj_tree.s"
@@ -9162,6 +9213,9 @@ help:
 	@echo "... lvgl/src/misc/lv_style.o"
 	@echo "... lvgl/src/misc/lv_style.i"
 	@echo "... lvgl/src/misc/lv_style.s"
+	@echo "... lvgl/src/misc/lv_style_gen.o"
+	@echo "... lvgl/src/misc/lv_style_gen.i"
+	@echo "... lvgl/src/misc/lv_style_gen.s"
 	@echo "... lvgl/src/misc/lv_templ.o"
 	@echo "... lvgl/src/misc/lv_templ.i"
 	@echo "... lvgl/src/misc/lv_templ.s"
