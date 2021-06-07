@@ -149,22 +149,35 @@ static void hal_init(void)
     disp_drv.ver_res = monitor_ver_res;
     disp1 = lv_disp_drv_register(&disp_drv);
 
-    /* Add the mouse as input device
-     * Use the 'mouse' driver which reads the PC's mouse*/
-    mouse_init();
-    static lv_indev_drv_t indev_drv;
-    lv_indev_drv_init(&indev_drv);          /*Basic initialization*/
-    indev_drv.type = LV_INDEV_TYPE_POINTER;
-    indev_drv.read_cb = mouse_read;         /*This function will be called periodically (by the library) to get the mouse position and state*/
-    lv_indev_t * mouse_indev = lv_indev_drv_register(&indev_drv);
+    lv_group_t * g = lv_group_create();
+    lv_group_set_default(g);
 
-#ifndef __EMSCRIPTEN__ /* Using a cursor with Emscripten makes no sense */
-    /*Set a cursor for the mouse*/
-    LV_IMG_DECLARE(mouse_cursor_icon);                          /*Declare the image file.*/
-    lv_obj_t * cursor_obj =  lv_img_create(lv_disp_get_scr_act(NULL), NULL); /*Create an image object for the cursor */
-    lv_img_set_src(cursor_obj, &mouse_cursor_icon);             /*Set the image source*/
-    lv_indev_set_cursor(mouse_indev, cursor_obj);               /*Connect the image  object to the driver*/
-#endif
+    /* Add the mouse as input device
+    * Use the 'mouse' driver which reads the PC's mouse*/
+    mouse_init();
+    static lv_indev_drv_t indev_drv_1;
+    lv_indev_drv_init(&indev_drv_1); /*Basic initialization*/
+    indev_drv_1.type = LV_INDEV_TYPE_POINTER;
+
+    /*This function will be called periodically (by the library) to get the mouse position and state*/
+    indev_drv_1.read_cb = mouse_read;
+    lv_indev_t *mouse_indev = lv_indev_drv_register(&indev_drv_1);
+
+    keyboard_init();
+    static lv_indev_drv_t indev_drv_2;
+    lv_indev_drv_init(&indev_drv_2); /*Basic initialization*/
+    indev_drv_2.type = LV_INDEV_TYPE_KEYPAD;
+    indev_drv_2.read_cb = keyboard_read;
+    lv_indev_t *kb_indev = lv_indev_drv_register(&indev_drv_2);
+    lv_indev_set_group(kb_indev, g);
+    mousewheel_init();
+    static lv_indev_drv_t indev_drv_3;
+    lv_indev_drv_init(&indev_drv_3); /*Basic initialization*/
+    indev_drv_3.type = LV_INDEV_TYPE_ENCODER;
+    indev_drv_3.read_cb = mousewheel_read;
+
+    lv_indev_t * enc_indev = lv_indev_drv_register(&indev_drv_3);
+    lv_indev_set_group(enc_indev, g);
 
     /* Optional:
      * Create a memory monitor task which prints the memory usage in periodically.*/
