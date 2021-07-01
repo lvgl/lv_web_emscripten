@@ -8025,245 +8025,341 @@ lvgl/src/widgets/lv_textarea.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/widgets/lv_textarea.c.s
 .PHONY : lvgl/src/widgets/lv_textarea.c.s
 
-lvgl/tests/lv_test_assert.o: lvgl/tests/lv_test_assert.c.o
-.PHONY : lvgl/tests/lv_test_assert.o
+lvgl/tests/src/lv_test_indev.o: lvgl/tests/src/lv_test_indev.c.o
+.PHONY : lvgl/tests/src/lv_test_indev.o
 
 # target to build an object file
-lvgl/tests/lv_test_assert.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/lv_test_assert.c.o
-.PHONY : lvgl/tests/lv_test_assert.c.o
+lvgl/tests/src/lv_test_indev.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/src/lv_test_indev.c.o
+.PHONY : lvgl/tests/src/lv_test_indev.c.o
 
-lvgl/tests/lv_test_assert.i: lvgl/tests/lv_test_assert.c.i
-.PHONY : lvgl/tests/lv_test_assert.i
+lvgl/tests/src/lv_test_indev.i: lvgl/tests/src/lv_test_indev.c.i
+.PHONY : lvgl/tests/src/lv_test_indev.i
 
 # target to preprocess a source file
-lvgl/tests/lv_test_assert.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/lv_test_assert.c.i
-.PHONY : lvgl/tests/lv_test_assert.c.i
+lvgl/tests/src/lv_test_indev.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/src/lv_test_indev.c.i
+.PHONY : lvgl/tests/src/lv_test_indev.c.i
 
-lvgl/tests/lv_test_assert.s: lvgl/tests/lv_test_assert.c.s
-.PHONY : lvgl/tests/lv_test_assert.s
+lvgl/tests/src/lv_test_indev.s: lvgl/tests/src/lv_test_indev.c.s
+.PHONY : lvgl/tests/src/lv_test_indev.s
 
 # target to generate assembly for a file
-lvgl/tests/lv_test_assert.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/lv_test_assert.c.s
-.PHONY : lvgl/tests/lv_test_assert.c.s
+lvgl/tests/src/lv_test_indev.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/src/lv_test_indev.c.s
+.PHONY : lvgl/tests/src/lv_test_indev.c.s
 
-lvgl/tests/lv_test_core/lv_test_core.o: lvgl/tests/lv_test_core/lv_test_core.c.o
-.PHONY : lvgl/tests/lv_test_core/lv_test_core.o
+lvgl/tests/src/lv_test_init.o: lvgl/tests/src/lv_test_init.c.o
+.PHONY : lvgl/tests/src/lv_test_init.o
 
 # target to build an object file
-lvgl/tests/lv_test_core/lv_test_core.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/lv_test_core/lv_test_core.c.o
-.PHONY : lvgl/tests/lv_test_core/lv_test_core.c.o
+lvgl/tests/src/lv_test_init.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/src/lv_test_init.c.o
+.PHONY : lvgl/tests/src/lv_test_init.c.o
 
-lvgl/tests/lv_test_core/lv_test_core.i: lvgl/tests/lv_test_core/lv_test_core.c.i
-.PHONY : lvgl/tests/lv_test_core/lv_test_core.i
+lvgl/tests/src/lv_test_init.i: lvgl/tests/src/lv_test_init.c.i
+.PHONY : lvgl/tests/src/lv_test_init.i
 
 # target to preprocess a source file
-lvgl/tests/lv_test_core/lv_test_core.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/lv_test_core/lv_test_core.c.i
-.PHONY : lvgl/tests/lv_test_core/lv_test_core.c.i
+lvgl/tests/src/lv_test_init.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/src/lv_test_init.c.i
+.PHONY : lvgl/tests/src/lv_test_init.c.i
 
-lvgl/tests/lv_test_core/lv_test_core.s: lvgl/tests/lv_test_core/lv_test_core.c.s
-.PHONY : lvgl/tests/lv_test_core/lv_test_core.s
+lvgl/tests/src/lv_test_init.s: lvgl/tests/src/lv_test_init.c.s
+.PHONY : lvgl/tests/src/lv_test_init.s
 
 # target to generate assembly for a file
-lvgl/tests/lv_test_core/lv_test_core.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/lv_test_core/lv_test_core.c.s
-.PHONY : lvgl/tests/lv_test_core/lv_test_core.c.s
+lvgl/tests/src/lv_test_init.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/src/lv_test_init.c.s
+.PHONY : lvgl/tests/src/lv_test_init.c.s
 
-lvgl/tests/lv_test_core/lv_test_font_loader.o: lvgl/tests/lv_test_core/lv_test_font_loader.c.o
-.PHONY : lvgl/tests/lv_test_core/lv_test_font_loader.o
+lvgl/tests/src/lv_test_main.o: lvgl/tests/src/lv_test_main.c.o
+.PHONY : lvgl/tests/src/lv_test_main.o
 
 # target to build an object file
-lvgl/tests/lv_test_core/lv_test_font_loader.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/lv_test_core/lv_test_font_loader.c.o
-.PHONY : lvgl/tests/lv_test_core/lv_test_font_loader.c.o
+lvgl/tests/src/lv_test_main.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/src/lv_test_main.c.o
+.PHONY : lvgl/tests/src/lv_test_main.c.o
 
-lvgl/tests/lv_test_core/lv_test_font_loader.i: lvgl/tests/lv_test_core/lv_test_font_loader.c.i
-.PHONY : lvgl/tests/lv_test_core/lv_test_font_loader.i
+lvgl/tests/src/lv_test_main.i: lvgl/tests/src/lv_test_main.c.i
+.PHONY : lvgl/tests/src/lv_test_main.i
 
 # target to preprocess a source file
-lvgl/tests/lv_test_core/lv_test_font_loader.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/lv_test_core/lv_test_font_loader.c.i
-.PHONY : lvgl/tests/lv_test_core/lv_test_font_loader.c.i
+lvgl/tests/src/lv_test_main.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/src/lv_test_main.c.i
+.PHONY : lvgl/tests/src/lv_test_main.c.i
 
-lvgl/tests/lv_test_core/lv_test_font_loader.s: lvgl/tests/lv_test_core/lv_test_font_loader.c.s
-.PHONY : lvgl/tests/lv_test_core/lv_test_font_loader.s
+lvgl/tests/src/lv_test_main.s: lvgl/tests/src/lv_test_main.c.s
+.PHONY : lvgl/tests/src/lv_test_main.s
 
 # target to generate assembly for a file
-lvgl/tests/lv_test_core/lv_test_font_loader.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/lv_test_core/lv_test_font_loader.c.s
-.PHONY : lvgl/tests/lv_test_core/lv_test_font_loader.c.s
+lvgl/tests/src/lv_test_main.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/src/lv_test_main.c.s
+.PHONY : lvgl/tests/src/lv_test_main.c.s
 
-lvgl/tests/lv_test_core/lv_test_obj.o: lvgl/tests/lv_test_core/lv_test_obj.c.o
-.PHONY : lvgl/tests/lv_test_core/lv_test_obj.o
+lvgl/tests/src/test_cases/_test_template.o: lvgl/tests/src/test_cases/_test_template.c.o
+.PHONY : lvgl/tests/src/test_cases/_test_template.o
 
 # target to build an object file
-lvgl/tests/lv_test_core/lv_test_obj.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/lv_test_core/lv_test_obj.c.o
-.PHONY : lvgl/tests/lv_test_core/lv_test_obj.c.o
+lvgl/tests/src/test_cases/_test_template.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/src/test_cases/_test_template.c.o
+.PHONY : lvgl/tests/src/test_cases/_test_template.c.o
 
-lvgl/tests/lv_test_core/lv_test_obj.i: lvgl/tests/lv_test_core/lv_test_obj.c.i
-.PHONY : lvgl/tests/lv_test_core/lv_test_obj.i
+lvgl/tests/src/test_cases/_test_template.i: lvgl/tests/src/test_cases/_test_template.c.i
+.PHONY : lvgl/tests/src/test_cases/_test_template.i
 
 # target to preprocess a source file
-lvgl/tests/lv_test_core/lv_test_obj.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/lv_test_core/lv_test_obj.c.i
-.PHONY : lvgl/tests/lv_test_core/lv_test_obj.c.i
+lvgl/tests/src/test_cases/_test_template.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/src/test_cases/_test_template.c.i
+.PHONY : lvgl/tests/src/test_cases/_test_template.c.i
 
-lvgl/tests/lv_test_core/lv_test_obj.s: lvgl/tests/lv_test_core/lv_test_obj.c.s
-.PHONY : lvgl/tests/lv_test_core/lv_test_obj.s
+lvgl/tests/src/test_cases/_test_template.s: lvgl/tests/src/test_cases/_test_template.c.s
+.PHONY : lvgl/tests/src/test_cases/_test_template.s
 
 # target to generate assembly for a file
-lvgl/tests/lv_test_core/lv_test_obj.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/lv_test_core/lv_test_obj.c.s
-.PHONY : lvgl/tests/lv_test_core/lv_test_obj.c.s
+lvgl/tests/src/test_cases/_test_template.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/src/test_cases/_test_template.c.s
+.PHONY : lvgl/tests/src/test_cases/_test_template.c.s
 
-lvgl/tests/lv_test_core/lv_test_style.o: lvgl/tests/lv_test_core/lv_test_style.c.o
-.PHONY : lvgl/tests/lv_test_core/lv_test_style.o
+lvgl/tests/src/test_cases/test_config.o: lvgl/tests/src/test_cases/test_config.c.o
+.PHONY : lvgl/tests/src/test_cases/test_config.o
 
 # target to build an object file
-lvgl/tests/lv_test_core/lv_test_style.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/lv_test_core/lv_test_style.c.o
-.PHONY : lvgl/tests/lv_test_core/lv_test_style.c.o
+lvgl/tests/src/test_cases/test_config.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/src/test_cases/test_config.c.o
+.PHONY : lvgl/tests/src/test_cases/test_config.c.o
 
-lvgl/tests/lv_test_core/lv_test_style.i: lvgl/tests/lv_test_core/lv_test_style.c.i
-.PHONY : lvgl/tests/lv_test_core/lv_test_style.i
+lvgl/tests/src/test_cases/test_config.i: lvgl/tests/src/test_cases/test_config.c.i
+.PHONY : lvgl/tests/src/test_cases/test_config.i
 
 # target to preprocess a source file
-lvgl/tests/lv_test_core/lv_test_style.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/lv_test_core/lv_test_style.c.i
-.PHONY : lvgl/tests/lv_test_core/lv_test_style.c.i
+lvgl/tests/src/test_cases/test_config.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/src/test_cases/test_config.c.i
+.PHONY : lvgl/tests/src/test_cases/test_config.c.i
 
-lvgl/tests/lv_test_core/lv_test_style.s: lvgl/tests/lv_test_core/lv_test_style.c.s
-.PHONY : lvgl/tests/lv_test_core/lv_test_style.s
+lvgl/tests/src/test_cases/test_config.s: lvgl/tests/src/test_cases/test_config.c.s
+.PHONY : lvgl/tests/src/test_cases/test_config.s
 
 # target to generate assembly for a file
-lvgl/tests/lv_test_core/lv_test_style.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/lv_test_core/lv_test_style.c.s
-.PHONY : lvgl/tests/lv_test_core/lv_test_style.c.s
+lvgl/tests/src/test_cases/test_config.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/src/test_cases/test_config.c.s
+.PHONY : lvgl/tests/src/test_cases/test_config.c.s
 
-lvgl/tests/lv_test_fonts/font_1.o: lvgl/tests/lv_test_fonts/font_1.c.o
-.PHONY : lvgl/tests/lv_test_fonts/font_1.o
+lvgl/tests/src/test_cases/test_dropdown.o: lvgl/tests/src/test_cases/test_dropdown.c.o
+.PHONY : lvgl/tests/src/test_cases/test_dropdown.o
 
 # target to build an object file
-lvgl/tests/lv_test_fonts/font_1.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/lv_test_fonts/font_1.c.o
-.PHONY : lvgl/tests/lv_test_fonts/font_1.c.o
+lvgl/tests/src/test_cases/test_dropdown.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/src/test_cases/test_dropdown.c.o
+.PHONY : lvgl/tests/src/test_cases/test_dropdown.c.o
 
-lvgl/tests/lv_test_fonts/font_1.i: lvgl/tests/lv_test_fonts/font_1.c.i
-.PHONY : lvgl/tests/lv_test_fonts/font_1.i
+lvgl/tests/src/test_cases/test_dropdown.i: lvgl/tests/src/test_cases/test_dropdown.c.i
+.PHONY : lvgl/tests/src/test_cases/test_dropdown.i
 
 # target to preprocess a source file
-lvgl/tests/lv_test_fonts/font_1.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/lv_test_fonts/font_1.c.i
-.PHONY : lvgl/tests/lv_test_fonts/font_1.c.i
+lvgl/tests/src/test_cases/test_dropdown.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/src/test_cases/test_dropdown.c.i
+.PHONY : lvgl/tests/src/test_cases/test_dropdown.c.i
 
-lvgl/tests/lv_test_fonts/font_1.s: lvgl/tests/lv_test_fonts/font_1.c.s
-.PHONY : lvgl/tests/lv_test_fonts/font_1.s
+lvgl/tests/src/test_cases/test_dropdown.s: lvgl/tests/src/test_cases/test_dropdown.c.s
+.PHONY : lvgl/tests/src/test_cases/test_dropdown.s
 
 # target to generate assembly for a file
-lvgl/tests/lv_test_fonts/font_1.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/lv_test_fonts/font_1.c.s
-.PHONY : lvgl/tests/lv_test_fonts/font_1.c.s
+lvgl/tests/src/test_cases/test_dropdown.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/src/test_cases/test_dropdown.c.s
+.PHONY : lvgl/tests/src/test_cases/test_dropdown.c.s
 
-lvgl/tests/lv_test_fonts/font_2.o: lvgl/tests/lv_test_fonts/font_2.c.o
-.PHONY : lvgl/tests/lv_test_fonts/font_2.o
+lvgl/tests/src/test_cases/test_font_loader.o: lvgl/tests/src/test_cases/test_font_loader.c.o
+.PHONY : lvgl/tests/src/test_cases/test_font_loader.o
 
 # target to build an object file
-lvgl/tests/lv_test_fonts/font_2.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/lv_test_fonts/font_2.c.o
-.PHONY : lvgl/tests/lv_test_fonts/font_2.c.o
+lvgl/tests/src/test_cases/test_font_loader.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/src/test_cases/test_font_loader.c.o
+.PHONY : lvgl/tests/src/test_cases/test_font_loader.c.o
 
-lvgl/tests/lv_test_fonts/font_2.i: lvgl/tests/lv_test_fonts/font_2.c.i
-.PHONY : lvgl/tests/lv_test_fonts/font_2.i
+lvgl/tests/src/test_cases/test_font_loader.i: lvgl/tests/src/test_cases/test_font_loader.c.i
+.PHONY : lvgl/tests/src/test_cases/test_font_loader.i
 
 # target to preprocess a source file
-lvgl/tests/lv_test_fonts/font_2.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/lv_test_fonts/font_2.c.i
-.PHONY : lvgl/tests/lv_test_fonts/font_2.c.i
+lvgl/tests/src/test_cases/test_font_loader.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/src/test_cases/test_font_loader.c.i
+.PHONY : lvgl/tests/src/test_cases/test_font_loader.c.i
 
-lvgl/tests/lv_test_fonts/font_2.s: lvgl/tests/lv_test_fonts/font_2.c.s
-.PHONY : lvgl/tests/lv_test_fonts/font_2.s
+lvgl/tests/src/test_cases/test_font_loader.s: lvgl/tests/src/test_cases/test_font_loader.c.s
+.PHONY : lvgl/tests/src/test_cases/test_font_loader.s
 
 # target to generate assembly for a file
-lvgl/tests/lv_test_fonts/font_2.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/lv_test_fonts/font_2.c.s
-.PHONY : lvgl/tests/lv_test_fonts/font_2.c.s
+lvgl/tests/src/test_cases/test_font_loader.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/src/test_cases/test_font_loader.c.s
+.PHONY : lvgl/tests/src/test_cases/test_font_loader.c.s
 
-lvgl/tests/lv_test_fonts/font_3.o: lvgl/tests/lv_test_fonts/font_3.c.o
-.PHONY : lvgl/tests/lv_test_fonts/font_3.o
+lvgl/tests/src/test_cases/test_obj_tree.o: lvgl/tests/src/test_cases/test_obj_tree.c.o
+.PHONY : lvgl/tests/src/test_cases/test_obj_tree.o
 
 # target to build an object file
-lvgl/tests/lv_test_fonts/font_3.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/lv_test_fonts/font_3.c.o
-.PHONY : lvgl/tests/lv_test_fonts/font_3.c.o
+lvgl/tests/src/test_cases/test_obj_tree.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/src/test_cases/test_obj_tree.c.o
+.PHONY : lvgl/tests/src/test_cases/test_obj_tree.c.o
 
-lvgl/tests/lv_test_fonts/font_3.i: lvgl/tests/lv_test_fonts/font_3.c.i
-.PHONY : lvgl/tests/lv_test_fonts/font_3.i
+lvgl/tests/src/test_cases/test_obj_tree.i: lvgl/tests/src/test_cases/test_obj_tree.c.i
+.PHONY : lvgl/tests/src/test_cases/test_obj_tree.i
 
 # target to preprocess a source file
-lvgl/tests/lv_test_fonts/font_3.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/lv_test_fonts/font_3.c.i
-.PHONY : lvgl/tests/lv_test_fonts/font_3.c.i
+lvgl/tests/src/test_cases/test_obj_tree.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/src/test_cases/test_obj_tree.c.i
+.PHONY : lvgl/tests/src/test_cases/test_obj_tree.c.i
 
-lvgl/tests/lv_test_fonts/font_3.s: lvgl/tests/lv_test_fonts/font_3.c.s
-.PHONY : lvgl/tests/lv_test_fonts/font_3.s
+lvgl/tests/src/test_cases/test_obj_tree.s: lvgl/tests/src/test_cases/test_obj_tree.c.s
+.PHONY : lvgl/tests/src/test_cases/test_obj_tree.s
 
 # target to generate assembly for a file
-lvgl/tests/lv_test_fonts/font_3.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/lv_test_fonts/font_3.c.s
-.PHONY : lvgl/tests/lv_test_fonts/font_3.c.s
+lvgl/tests/src/test_cases/test_obj_tree.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/src/test_cases/test_obj_tree.c.s
+.PHONY : lvgl/tests/src/test_cases/test_obj_tree.c.s
 
-lvgl/tests/lv_test_main.o: lvgl/tests/lv_test_main.c.o
-.PHONY : lvgl/tests/lv_test_main.o
+lvgl/tests/src/test_cases/test_style.o: lvgl/tests/src/test_cases/test_style.c.o
+.PHONY : lvgl/tests/src/test_cases/test_style.o
 
 # target to build an object file
-lvgl/tests/lv_test_main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/lv_test_main.c.o
-.PHONY : lvgl/tests/lv_test_main.c.o
+lvgl/tests/src/test_cases/test_style.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/src/test_cases/test_style.c.o
+.PHONY : lvgl/tests/src/test_cases/test_style.c.o
 
-lvgl/tests/lv_test_main.i: lvgl/tests/lv_test_main.c.i
-.PHONY : lvgl/tests/lv_test_main.i
+lvgl/tests/src/test_cases/test_style.i: lvgl/tests/src/test_cases/test_style.c.i
+.PHONY : lvgl/tests/src/test_cases/test_style.i
 
 # target to preprocess a source file
-lvgl/tests/lv_test_main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/lv_test_main.c.i
-.PHONY : lvgl/tests/lv_test_main.c.i
+lvgl/tests/src/test_cases/test_style.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/src/test_cases/test_style.c.i
+.PHONY : lvgl/tests/src/test_cases/test_style.c.i
 
-lvgl/tests/lv_test_main.s: lvgl/tests/lv_test_main.c.s
-.PHONY : lvgl/tests/lv_test_main.s
+lvgl/tests/src/test_cases/test_style.s: lvgl/tests/src/test_cases/test_style.c.s
+.PHONY : lvgl/tests/src/test_cases/test_style.s
 
 # target to generate assembly for a file
-lvgl/tests/lv_test_main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/lv_test_main.c.s
-.PHONY : lvgl/tests/lv_test_main.c.s
+lvgl/tests/src/test_cases/test_style.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/src/test_cases/test_style.c.s
+.PHONY : lvgl/tests/src/test_cases/test_style.c.s
 
-lvgl/tests/lv_test_widgets/lv_test_label.o: lvgl/tests/lv_test_widgets/lv_test_label.c.o
-.PHONY : lvgl/tests/lv_test_widgets/lv_test_label.o
+lvgl/tests/src/test_fonts/font_1.o: lvgl/tests/src/test_fonts/font_1.c.o
+.PHONY : lvgl/tests/src/test_fonts/font_1.o
 
 # target to build an object file
-lvgl/tests/lv_test_widgets/lv_test_label.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/lv_test_widgets/lv_test_label.c.o
-.PHONY : lvgl/tests/lv_test_widgets/lv_test_label.c.o
+lvgl/tests/src/test_fonts/font_1.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/src/test_fonts/font_1.c.o
+.PHONY : lvgl/tests/src/test_fonts/font_1.c.o
 
-lvgl/tests/lv_test_widgets/lv_test_label.i: lvgl/tests/lv_test_widgets/lv_test_label.c.i
-.PHONY : lvgl/tests/lv_test_widgets/lv_test_label.i
+lvgl/tests/src/test_fonts/font_1.i: lvgl/tests/src/test_fonts/font_1.c.i
+.PHONY : lvgl/tests/src/test_fonts/font_1.i
 
 # target to preprocess a source file
-lvgl/tests/lv_test_widgets/lv_test_label.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/lv_test_widgets/lv_test_label.c.i
-.PHONY : lvgl/tests/lv_test_widgets/lv_test_label.c.i
+lvgl/tests/src/test_fonts/font_1.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/src/test_fonts/font_1.c.i
+.PHONY : lvgl/tests/src/test_fonts/font_1.c.i
 
-lvgl/tests/lv_test_widgets/lv_test_label.s: lvgl/tests/lv_test_widgets/lv_test_label.c.s
-.PHONY : lvgl/tests/lv_test_widgets/lv_test_label.s
+lvgl/tests/src/test_fonts/font_1.s: lvgl/tests/src/test_fonts/font_1.c.s
+.PHONY : lvgl/tests/src/test_fonts/font_1.s
 
 # target to generate assembly for a file
-lvgl/tests/lv_test_widgets/lv_test_label.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/lv_test_widgets/lv_test_label.c.s
-.PHONY : lvgl/tests/lv_test_widgets/lv_test_label.c.s
+lvgl/tests/src/test_fonts/font_1.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/src/test_fonts/font_1.c.s
+.PHONY : lvgl/tests/src/test_fonts/font_1.c.s
+
+lvgl/tests/src/test_fonts/font_2.o: lvgl/tests/src/test_fonts/font_2.c.o
+.PHONY : lvgl/tests/src/test_fonts/font_2.o
+
+# target to build an object file
+lvgl/tests/src/test_fonts/font_2.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/src/test_fonts/font_2.c.o
+.PHONY : lvgl/tests/src/test_fonts/font_2.c.o
+
+lvgl/tests/src/test_fonts/font_2.i: lvgl/tests/src/test_fonts/font_2.c.i
+.PHONY : lvgl/tests/src/test_fonts/font_2.i
+
+# target to preprocess a source file
+lvgl/tests/src/test_fonts/font_2.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/src/test_fonts/font_2.c.i
+.PHONY : lvgl/tests/src/test_fonts/font_2.c.i
+
+lvgl/tests/src/test_fonts/font_2.s: lvgl/tests/src/test_fonts/font_2.c.s
+.PHONY : lvgl/tests/src/test_fonts/font_2.s
+
+# target to generate assembly for a file
+lvgl/tests/src/test_fonts/font_2.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/src/test_fonts/font_2.c.s
+.PHONY : lvgl/tests/src/test_fonts/font_2.c.s
+
+lvgl/tests/src/test_fonts/font_3.o: lvgl/tests/src/test_fonts/font_3.c.o
+.PHONY : lvgl/tests/src/test_fonts/font_3.o
+
+# target to build an object file
+lvgl/tests/src/test_fonts/font_3.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/src/test_fonts/font_3.c.o
+.PHONY : lvgl/tests/src/test_fonts/font_3.c.o
+
+lvgl/tests/src/test_fonts/font_3.i: lvgl/tests/src/test_fonts/font_3.c.i
+.PHONY : lvgl/tests/src/test_fonts/font_3.i
+
+# target to preprocess a source file
+lvgl/tests/src/test_fonts/font_3.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/src/test_fonts/font_3.c.i
+.PHONY : lvgl/tests/src/test_fonts/font_3.c.i
+
+lvgl/tests/src/test_fonts/font_3.s: lvgl/tests/src/test_fonts/font_3.c.s
+.PHONY : lvgl/tests/src/test_fonts/font_3.s
+
+# target to generate assembly for a file
+lvgl/tests/src/test_fonts/font_3.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/src/test_fonts/font_3.c.s
+.PHONY : lvgl/tests/src/test_fonts/font_3.c.s
+
+lvgl/tests/unity/unity.o: lvgl/tests/unity/unity.c.o
+.PHONY : lvgl/tests/unity/unity.o
+
+# target to build an object file
+lvgl/tests/unity/unity.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/unity/unity.c.o
+.PHONY : lvgl/tests/unity/unity.c.o
+
+lvgl/tests/unity/unity.i: lvgl/tests/unity/unity.c.i
+.PHONY : lvgl/tests/unity/unity.i
+
+# target to preprocess a source file
+lvgl/tests/unity/unity.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/unity/unity.c.i
+.PHONY : lvgl/tests/unity/unity.c.i
+
+lvgl/tests/unity/unity.s: lvgl/tests/unity/unity.c.s
+.PHONY : lvgl/tests/unity/unity.s
+
+# target to generate assembly for a file
+lvgl/tests/unity/unity.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/unity/unity.c.s
+.PHONY : lvgl/tests/unity/unity.c.s
+
+lvgl/tests/unity/unity_support.o: lvgl/tests/unity/unity_support.c.o
+.PHONY : lvgl/tests/unity/unity_support.o
+
+# target to build an object file
+lvgl/tests/unity/unity_support.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/unity/unity_support.c.o
+.PHONY : lvgl/tests/unity/unity_support.c.o
+
+lvgl/tests/unity/unity_support.i: lvgl/tests/unity/unity_support.c.i
+.PHONY : lvgl/tests/unity/unity_support.i
+
+# target to preprocess a source file
+lvgl/tests/unity/unity_support.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/unity/unity_support.c.i
+.PHONY : lvgl/tests/unity/unity_support.c.i
+
+lvgl/tests/unity/unity_support.s: lvgl/tests/unity/unity_support.c.s
+.PHONY : lvgl/tests/unity/unity_support.s
+
+# target to generate assembly for a file
+lvgl/tests/unity/unity_support.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/unity/unity_support.c.s
+.PHONY : lvgl/tests/unity/unity_support.c.s
 
 main.o: main.c.o
 .PHONY : main.o
@@ -9309,36 +9405,48 @@ help:
 	@echo "... lvgl/src/widgets/lv_textarea.o"
 	@echo "... lvgl/src/widgets/lv_textarea.i"
 	@echo "... lvgl/src/widgets/lv_textarea.s"
-	@echo "... lvgl/tests/lv_test_assert.o"
-	@echo "... lvgl/tests/lv_test_assert.i"
-	@echo "... lvgl/tests/lv_test_assert.s"
-	@echo "... lvgl/tests/lv_test_core/lv_test_core.o"
-	@echo "... lvgl/tests/lv_test_core/lv_test_core.i"
-	@echo "... lvgl/tests/lv_test_core/lv_test_core.s"
-	@echo "... lvgl/tests/lv_test_core/lv_test_font_loader.o"
-	@echo "... lvgl/tests/lv_test_core/lv_test_font_loader.i"
-	@echo "... lvgl/tests/lv_test_core/lv_test_font_loader.s"
-	@echo "... lvgl/tests/lv_test_core/lv_test_obj.o"
-	@echo "... lvgl/tests/lv_test_core/lv_test_obj.i"
-	@echo "... lvgl/tests/lv_test_core/lv_test_obj.s"
-	@echo "... lvgl/tests/lv_test_core/lv_test_style.o"
-	@echo "... lvgl/tests/lv_test_core/lv_test_style.i"
-	@echo "... lvgl/tests/lv_test_core/lv_test_style.s"
-	@echo "... lvgl/tests/lv_test_fonts/font_1.o"
-	@echo "... lvgl/tests/lv_test_fonts/font_1.i"
-	@echo "... lvgl/tests/lv_test_fonts/font_1.s"
-	@echo "... lvgl/tests/lv_test_fonts/font_2.o"
-	@echo "... lvgl/tests/lv_test_fonts/font_2.i"
-	@echo "... lvgl/tests/lv_test_fonts/font_2.s"
-	@echo "... lvgl/tests/lv_test_fonts/font_3.o"
-	@echo "... lvgl/tests/lv_test_fonts/font_3.i"
-	@echo "... lvgl/tests/lv_test_fonts/font_3.s"
-	@echo "... lvgl/tests/lv_test_main.o"
-	@echo "... lvgl/tests/lv_test_main.i"
-	@echo "... lvgl/tests/lv_test_main.s"
-	@echo "... lvgl/tests/lv_test_widgets/lv_test_label.o"
-	@echo "... lvgl/tests/lv_test_widgets/lv_test_label.i"
-	@echo "... lvgl/tests/lv_test_widgets/lv_test_label.s"
+	@echo "... lvgl/tests/src/lv_test_indev.o"
+	@echo "... lvgl/tests/src/lv_test_indev.i"
+	@echo "... lvgl/tests/src/lv_test_indev.s"
+	@echo "... lvgl/tests/src/lv_test_init.o"
+	@echo "... lvgl/tests/src/lv_test_init.i"
+	@echo "... lvgl/tests/src/lv_test_init.s"
+	@echo "... lvgl/tests/src/lv_test_main.o"
+	@echo "... lvgl/tests/src/lv_test_main.i"
+	@echo "... lvgl/tests/src/lv_test_main.s"
+	@echo "... lvgl/tests/src/test_cases/_test_template.o"
+	@echo "... lvgl/tests/src/test_cases/_test_template.i"
+	@echo "... lvgl/tests/src/test_cases/_test_template.s"
+	@echo "... lvgl/tests/src/test_cases/test_config.o"
+	@echo "... lvgl/tests/src/test_cases/test_config.i"
+	@echo "... lvgl/tests/src/test_cases/test_config.s"
+	@echo "... lvgl/tests/src/test_cases/test_dropdown.o"
+	@echo "... lvgl/tests/src/test_cases/test_dropdown.i"
+	@echo "... lvgl/tests/src/test_cases/test_dropdown.s"
+	@echo "... lvgl/tests/src/test_cases/test_font_loader.o"
+	@echo "... lvgl/tests/src/test_cases/test_font_loader.i"
+	@echo "... lvgl/tests/src/test_cases/test_font_loader.s"
+	@echo "... lvgl/tests/src/test_cases/test_obj_tree.o"
+	@echo "... lvgl/tests/src/test_cases/test_obj_tree.i"
+	@echo "... lvgl/tests/src/test_cases/test_obj_tree.s"
+	@echo "... lvgl/tests/src/test_cases/test_style.o"
+	@echo "... lvgl/tests/src/test_cases/test_style.i"
+	@echo "... lvgl/tests/src/test_cases/test_style.s"
+	@echo "... lvgl/tests/src/test_fonts/font_1.o"
+	@echo "... lvgl/tests/src/test_fonts/font_1.i"
+	@echo "... lvgl/tests/src/test_fonts/font_1.s"
+	@echo "... lvgl/tests/src/test_fonts/font_2.o"
+	@echo "... lvgl/tests/src/test_fonts/font_2.i"
+	@echo "... lvgl/tests/src/test_fonts/font_2.s"
+	@echo "... lvgl/tests/src/test_fonts/font_3.o"
+	@echo "... lvgl/tests/src/test_fonts/font_3.i"
+	@echo "... lvgl/tests/src/test_fonts/font_3.s"
+	@echo "... lvgl/tests/unity/unity.o"
+	@echo "... lvgl/tests/unity/unity.i"
+	@echo "... lvgl/tests/unity/unity.s"
+	@echo "... lvgl/tests/unity/unity_support.o"
+	@echo "... lvgl/tests/unity/unity_support.i"
+	@echo "... lvgl/tests/unity/unity_support.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
