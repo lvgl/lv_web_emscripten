@@ -681,6 +681,198 @@ lv_drivers/win_drv.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_drivers/win_drv.c.s
 .PHONY : lv_drivers/win_drv.c.s
 
+lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_alpha16.o: lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_alpha16.c.o
+.PHONY : lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_alpha16.o
+
+# target to build an object file
+lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_alpha16.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_alpha16.c.o
+.PHONY : lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_alpha16.c.o
+
+lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_alpha16.i: lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_alpha16.c.i
+.PHONY : lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_alpha16.i
+
+# target to preprocess a source file
+lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_alpha16.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_alpha16.c.i
+.PHONY : lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_alpha16.c.i
+
+lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_alpha16.s: lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_alpha16.c.s
+.PHONY : lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_alpha16.s
+
+# target to generate assembly for a file
+lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_alpha16.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_alpha16.c.s
+.PHONY : lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_alpha16.c.s
+
+lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_argb.o: lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_argb.c.o
+.PHONY : lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_argb.o
+
+# target to build an object file
+lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_argb.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_argb.c.o
+.PHONY : lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_argb.c.o
+
+lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_argb.i: lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_argb.c.i
+.PHONY : lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_argb.i
+
+# target to preprocess a source file
+lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_argb.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_argb.c.i
+.PHONY : lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_argb.c.i
+
+lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_argb.s: lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_argb.c.s
+.PHONY : lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_argb.s
+
+# target to generate assembly for a file
+lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_argb.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_argb.c.s
+.PHONY : lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_argb.c.s
+
+lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_chroma_keyed.o: lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_chroma_keyed.c.o
+.PHONY : lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_chroma_keyed.o
+
+# target to build an object file
+lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_chroma_keyed.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_chroma_keyed.c.o
+.PHONY : lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_chroma_keyed.c.o
+
+lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_chroma_keyed.i: lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_chroma_keyed.c.i
+.PHONY : lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_chroma_keyed.i
+
+# target to preprocess a source file
+lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_chroma_keyed.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_chroma_keyed.c.i
+.PHONY : lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_chroma_keyed.c.i
+
+lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_chroma_keyed.s: lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_chroma_keyed.c.s
+.PHONY : lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_chroma_keyed.s
+
+# target to generate assembly for a file
+lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_chroma_keyed.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_chroma_keyed.c.s
+.PHONY : lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_chroma_keyed.c.s
+
+lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_indexed16.o: lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_indexed16.c.o
+.PHONY : lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_indexed16.o
+
+# target to build an object file
+lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_indexed16.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_indexed16.c.o
+.PHONY : lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_indexed16.c.o
+
+lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_indexed16.i: lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_indexed16.c.i
+.PHONY : lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_indexed16.i
+
+# target to preprocess a source file
+lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_indexed16.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_indexed16.c.i
+.PHONY : lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_indexed16.c.i
+
+lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_indexed16.s: lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_indexed16.c.s
+.PHONY : lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_indexed16.s
+
+# target to generate assembly for a file
+lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_indexed16.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_indexed16.c.s
+.PHONY : lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_indexed16.c.s
+
+lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_rgb.o: lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_rgb.c.o
+.PHONY : lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_rgb.o
+
+# target to build an object file
+lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_rgb.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_rgb.c.o
+.PHONY : lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_rgb.c.o
+
+lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_rgb.i: lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_rgb.c.i
+.PHONY : lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_rgb.i
+
+# target to preprocess a source file
+lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_rgb.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_rgb.c.i
+.PHONY : lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_rgb.c.i
+
+lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_rgb.s: lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_rgb.c.s
+.PHONY : lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_rgb.s
+
+# target to generate assembly for a file
+lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_rgb.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_rgb.c.s
+.PHONY : lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_rgb.c.s
+
+lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_12_compr_az.o: lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_12_compr_az.c.o
+.PHONY : lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_12_compr_az.o
+
+# target to build an object file
+lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_12_compr_az.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_12_compr_az.c.o
+.PHONY : lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_12_compr_az.c.o
+
+lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_12_compr_az.i: lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_12_compr_az.c.i
+.PHONY : lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_12_compr_az.i
+
+# target to preprocess a source file
+lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_12_compr_az.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_12_compr_az.c.i
+.PHONY : lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_12_compr_az.c.i
+
+lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_12_compr_az.s: lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_12_compr_az.c.s
+.PHONY : lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_12_compr_az.s
+
+# target to generate assembly for a file
+lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_12_compr_az.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_12_compr_az.c.s
+.PHONY : lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_12_compr_az.c.s
+
+lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_16_compr_az.o: lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_16_compr_az.c.o
+.PHONY : lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_16_compr_az.o
+
+# target to build an object file
+lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_16_compr_az.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_16_compr_az.c.o
+.PHONY : lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_16_compr_az.c.o
+
+lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_16_compr_az.i: lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_16_compr_az.c.i
+.PHONY : lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_16_compr_az.i
+
+# target to preprocess a source file
+lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_16_compr_az.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_16_compr_az.c.i
+.PHONY : lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_16_compr_az.c.i
+
+lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_16_compr_az.s: lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_16_compr_az.c.s
+.PHONY : lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_16_compr_az.s
+
+# target to generate assembly for a file
+lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_16_compr_az.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_16_compr_az.c.s
+.PHONY : lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_16_compr_az.c.s
+
+lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_28_compr_az.o: lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_28_compr_az.c.o
+.PHONY : lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_28_compr_az.o
+
+# target to build an object file
+lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_28_compr_az.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_28_compr_az.c.o
+.PHONY : lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_28_compr_az.c.o
+
+lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_28_compr_az.i: lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_28_compr_az.c.i
+.PHONY : lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_28_compr_az.i
+
+# target to preprocess a source file
+lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_28_compr_az.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_28_compr_az.c.i
+.PHONY : lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_28_compr_az.c.i
+
+lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_28_compr_az.s: lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_28_compr_az.c.s
+.PHONY : lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_28_compr_az.s
+
+# target to generate assembly for a file
+lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_28_compr_az.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_28_compr_az.c.s
+.PHONY : lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_28_compr_az.c.s
+
 lv_examples/src/lv_demo_benchmark/lv_demo_benchmark.o: lv_examples/src/lv_demo_benchmark/lv_demo_benchmark.c.o
 .PHONY : lv_examples/src/lv_demo_benchmark/lv_demo_benchmark.o
 
@@ -8487,6 +8679,30 @@ help:
 	@echo "... lv_drivers/win_drv.o"
 	@echo "... lv_drivers/win_drv.i"
 	@echo "... lv_drivers/win_drv.s"
+	@echo "... lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_alpha16.o"
+	@echo "... lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_alpha16.i"
+	@echo "... lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_alpha16.s"
+	@echo "... lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_argb.o"
+	@echo "... lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_argb.i"
+	@echo "... lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_argb.s"
+	@echo "... lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_chroma_keyed.o"
+	@echo "... lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_chroma_keyed.i"
+	@echo "... lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_chroma_keyed.s"
+	@echo "... lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_indexed16.o"
+	@echo "... lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_indexed16.i"
+	@echo "... lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_indexed16.s"
+	@echo "... lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_rgb.o"
+	@echo "... lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_rgb.i"
+	@echo "... lv_examples/src/lv_demo_benchmark/assets/img_benchmark_cogwheel_rgb.s"
+	@echo "... lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_12_compr_az.o"
+	@echo "... lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_12_compr_az.i"
+	@echo "... lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_12_compr_az.s"
+	@echo "... lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_16_compr_az.o"
+	@echo "... lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_16_compr_az.i"
+	@echo "... lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_16_compr_az.s"
+	@echo "... lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_28_compr_az.o"
+	@echo "... lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_28_compr_az.i"
+	@echo "... lv_examples/src/lv_demo_benchmark/assets/lv_font_montserrat_28_compr_az.s"
 	@echo "... lv_examples/src/lv_demo_benchmark/lv_demo_benchmark.o"
 	@echo "... lv_examples/src/lv_demo_benchmark/lv_demo_benchmark.i"
 	@echo "... lv_examples/src/lv_demo_benchmark/lv_demo_benchmark.s"
