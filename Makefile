@@ -3105,6 +3105,30 @@ lvgl/examples/layouts/grid/lv_example_grid_6.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/layouts/grid/lv_example_grid_6.c.s
 .PHONY : lvgl/examples/layouts/grid/lv_example_grid_6.c.s
 
+lvgl/examples/others/snapshot/lv_example_snapshot_1.o: lvgl/examples/others/snapshot/lv_example_snapshot_1.c.o
+.PHONY : lvgl/examples/others/snapshot/lv_example_snapshot_1.o
+
+# target to build an object file
+lvgl/examples/others/snapshot/lv_example_snapshot_1.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/others/snapshot/lv_example_snapshot_1.c.o
+.PHONY : lvgl/examples/others/snapshot/lv_example_snapshot_1.c.o
+
+lvgl/examples/others/snapshot/lv_example_snapshot_1.i: lvgl/examples/others/snapshot/lv_example_snapshot_1.c.i
+.PHONY : lvgl/examples/others/snapshot/lv_example_snapshot_1.i
+
+# target to preprocess a source file
+lvgl/examples/others/snapshot/lv_example_snapshot_1.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/others/snapshot/lv_example_snapshot_1.c.i
+.PHONY : lvgl/examples/others/snapshot/lv_example_snapshot_1.c.i
+
+lvgl/examples/others/snapshot/lv_example_snapshot_1.s: lvgl/examples/others/snapshot/lv_example_snapshot_1.c.s
+.PHONY : lvgl/examples/others/snapshot/lv_example_snapshot_1.s
+
+# target to generate assembly for a file
+lvgl/examples/others/snapshot/lv_example_snapshot_1.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/others/snapshot/lv_example_snapshot_1.c.s
+.PHONY : lvgl/examples/others/snapshot/lv_example_snapshot_1.c.s
+
 lvgl/examples/porting/lv_port_disp_template.o: lvgl/examples/porting/lv_port_disp_template.c.o
 .PHONY : lvgl/examples/porting/lv_port_disp_template.o
 
@@ -5984,6 +6008,30 @@ lvgl/src/extra/lv_extra.s: lvgl/src/extra/lv_extra.c.s
 lvgl/src/extra/lv_extra.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/lv_extra.c.s
 .PHONY : lvgl/src/extra/lv_extra.c.s
+
+lvgl/src/extra/others/snapshot/lv_snapshot.o: lvgl/src/extra/others/snapshot/lv_snapshot.c.o
+.PHONY : lvgl/src/extra/others/snapshot/lv_snapshot.o
+
+# target to build an object file
+lvgl/src/extra/others/snapshot/lv_snapshot.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/others/snapshot/lv_snapshot.c.o
+.PHONY : lvgl/src/extra/others/snapshot/lv_snapshot.c.o
+
+lvgl/src/extra/others/snapshot/lv_snapshot.i: lvgl/src/extra/others/snapshot/lv_snapshot.c.i
+.PHONY : lvgl/src/extra/others/snapshot/lv_snapshot.i
+
+# target to preprocess a source file
+lvgl/src/extra/others/snapshot/lv_snapshot.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/others/snapshot/lv_snapshot.c.i
+.PHONY : lvgl/src/extra/others/snapshot/lv_snapshot.c.i
+
+lvgl/src/extra/others/snapshot/lv_snapshot.s: lvgl/src/extra/others/snapshot/lv_snapshot.c.s
+.PHONY : lvgl/src/extra/others/snapshot/lv_snapshot.s
+
+# target to generate assembly for a file
+lvgl/src/extra/others/snapshot/lv_snapshot.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/extra/others/snapshot/lv_snapshot.c.s
+.PHONY : lvgl/src/extra/others/snapshot/lv_snapshot.c.s
 
 lvgl/src/extra/themes/basic/lv_theme_basic.o: lvgl/src/extra/themes/basic/lv_theme_basic.c.o
 .PHONY : lvgl/src/extra/themes/basic/lv_theme_basic.o
@@ -9030,6 +9078,9 @@ help:
 	@echo "... lvgl/examples/layouts/grid/lv_example_grid_6.o"
 	@echo "... lvgl/examples/layouts/grid/lv_example_grid_6.i"
 	@echo "... lvgl/examples/layouts/grid/lv_example_grid_6.s"
+	@echo "... lvgl/examples/others/snapshot/lv_example_snapshot_1.o"
+	@echo "... lvgl/examples/others/snapshot/lv_example_snapshot_1.i"
+	@echo "... lvgl/examples/others/snapshot/lv_example_snapshot_1.s"
 	@echo "... lvgl/examples/porting/lv_port_disp_template.o"
 	@echo "... lvgl/examples/porting/lv_port_disp_template.i"
 	@echo "... lvgl/examples/porting/lv_port_disp_template.s"
@@ -9390,6 +9441,9 @@ help:
 	@echo "... lvgl/src/extra/lv_extra.o"
 	@echo "... lvgl/src/extra/lv_extra.i"
 	@echo "... lvgl/src/extra/lv_extra.s"
+	@echo "... lvgl/src/extra/others/snapshot/lv_snapshot.o"
+	@echo "... lvgl/src/extra/others/snapshot/lv_snapshot.i"
+	@echo "... lvgl/src/extra/others/snapshot/lv_snapshot.s"
 	@echo "... lvgl/src/extra/themes/basic/lv_theme_basic.o"
 	@echo "... lvgl/src/extra/themes/basic/lv_theme_basic.i"
 	@echo "... lvgl/src/extra/themes/basic/lv_theme_basic.s"
