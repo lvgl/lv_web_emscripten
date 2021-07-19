@@ -2289,6 +2289,30 @@ lvgl/examples/anim/lv_example_anim_2.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/anim/lv_example_anim_2.c.s
 .PHONY : lvgl/examples/anim/lv_example_anim_2.c.s
 
+lvgl/examples/anim/lv_example_anim_timeline_1.o: lvgl/examples/anim/lv_example_anim_timeline_1.c.o
+.PHONY : lvgl/examples/anim/lv_example_anim_timeline_1.o
+
+# target to build an object file
+lvgl/examples/anim/lv_example_anim_timeline_1.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/anim/lv_example_anim_timeline_1.c.o
+.PHONY : lvgl/examples/anim/lv_example_anim_timeline_1.c.o
+
+lvgl/examples/anim/lv_example_anim_timeline_1.i: lvgl/examples/anim/lv_example_anim_timeline_1.c.i
+.PHONY : lvgl/examples/anim/lv_example_anim_timeline_1.i
+
+# target to preprocess a source file
+lvgl/examples/anim/lv_example_anim_timeline_1.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/anim/lv_example_anim_timeline_1.c.i
+.PHONY : lvgl/examples/anim/lv_example_anim_timeline_1.c.i
+
+lvgl/examples/anim/lv_example_anim_timeline_1.s: lvgl/examples/anim/lv_example_anim_timeline_1.c.s
+.PHONY : lvgl/examples/anim/lv_example_anim_timeline_1.s
+
+# target to generate assembly for a file
+lvgl/examples/anim/lv_example_anim_timeline_1.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/anim/lv_example_anim_timeline_1.c.s
+.PHONY : lvgl/examples/anim/lv_example_anim_timeline_1.c.s
+
 lvgl/examples/assets/animimg001.o: lvgl/examples/assets/animimg001.c.o
 .PHONY : lvgl/examples/assets/animimg001.o
 
@@ -7377,6 +7401,30 @@ lvgl/src/misc/lv_anim.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_anim.c.s
 .PHONY : lvgl/src/misc/lv_anim.c.s
 
+lvgl/src/misc/lv_anim_timeline.o: lvgl/src/misc/lv_anim_timeline.c.o
+.PHONY : lvgl/src/misc/lv_anim_timeline.o
+
+# target to build an object file
+lvgl/src/misc/lv_anim_timeline.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_anim_timeline.c.o
+.PHONY : lvgl/src/misc/lv_anim_timeline.c.o
+
+lvgl/src/misc/lv_anim_timeline.i: lvgl/src/misc/lv_anim_timeline.c.i
+.PHONY : lvgl/src/misc/lv_anim_timeline.i
+
+# target to preprocess a source file
+lvgl/src/misc/lv_anim_timeline.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_anim_timeline.c.i
+.PHONY : lvgl/src/misc/lv_anim_timeline.c.i
+
+lvgl/src/misc/lv_anim_timeline.s: lvgl/src/misc/lv_anim_timeline.c.s
+.PHONY : lvgl/src/misc/lv_anim_timeline.s
+
+# target to generate assembly for a file
+lvgl/src/misc/lv_anim_timeline.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/src/misc/lv_anim_timeline.c.s
+.PHONY : lvgl/src/misc/lv_anim_timeline.c.s
+
 lvgl/src/misc/lv_area.o: lvgl/src/misc/lv_area.c.o
 .PHONY : lvgl/src/misc/lv_area.o
 
@@ -8880,6 +8928,9 @@ help:
 	@echo "... lvgl/examples/anim/lv_example_anim_2.o"
 	@echo "... lvgl/examples/anim/lv_example_anim_2.i"
 	@echo "... lvgl/examples/anim/lv_example_anim_2.s"
+	@echo "... lvgl/examples/anim/lv_example_anim_timeline_1.o"
+	@echo "... lvgl/examples/anim/lv_example_anim_timeline_1.i"
+	@echo "... lvgl/examples/anim/lv_example_anim_timeline_1.s"
 	@echo "... lvgl/examples/assets/animimg001.o"
 	@echo "... lvgl/examples/assets/animimg001.i"
 	@echo "... lvgl/examples/assets/animimg001.s"
@@ -9516,6 +9567,9 @@ help:
 	@echo "... lvgl/src/misc/lv_anim.o"
 	@echo "... lvgl/src/misc/lv_anim.i"
 	@echo "... lvgl/src/misc/lv_anim.s"
+	@echo "... lvgl/src/misc/lv_anim_timeline.o"
+	@echo "... lvgl/src/misc/lv_anim_timeline.i"
+	@echo "... lvgl/src/misc/lv_anim_timeline.s"
 	@echo "... lvgl/src/misc/lv_area.o"
 	@echo "... lvgl/src/misc/lv_area.i"
 	@echo "... lvgl/src/misc/lv_area.s"
