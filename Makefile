@@ -2289,6 +2289,30 @@ lvgl/examples/anim/lv_example_anim_2.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/anim/lv_example_anim_2.c.s
 .PHONY : lvgl/examples/anim/lv_example_anim_2.c.s
 
+lvgl/examples/anim/lv_example_anim_3.o: lvgl/examples/anim/lv_example_anim_3.c.o
+.PHONY : lvgl/examples/anim/lv_example_anim_3.o
+
+# target to build an object file
+lvgl/examples/anim/lv_example_anim_3.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/anim/lv_example_anim_3.c.o
+.PHONY : lvgl/examples/anim/lv_example_anim_3.c.o
+
+lvgl/examples/anim/lv_example_anim_3.i: lvgl/examples/anim/lv_example_anim_3.c.i
+.PHONY : lvgl/examples/anim/lv_example_anim_3.i
+
+# target to preprocess a source file
+lvgl/examples/anim/lv_example_anim_3.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/anim/lv_example_anim_3.c.i
+.PHONY : lvgl/examples/anim/lv_example_anim_3.c.i
+
+lvgl/examples/anim/lv_example_anim_3.s: lvgl/examples/anim/lv_example_anim_3.c.s
+.PHONY : lvgl/examples/anim/lv_example_anim_3.s
+
+# target to generate assembly for a file
+lvgl/examples/anim/lv_example_anim_3.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/anim/lv_example_anim_3.c.s
+.PHONY : lvgl/examples/anim/lv_example_anim_3.c.s
+
 lvgl/examples/anim/lv_example_anim_timeline_1.o: lvgl/examples/anim/lv_example_anim_timeline_1.c.o
 .PHONY : lvgl/examples/anim/lv_example_anim_timeline_1.o
 
@@ -8976,6 +9000,9 @@ help:
 	@echo "... lvgl/examples/anim/lv_example_anim_2.o"
 	@echo "... lvgl/examples/anim/lv_example_anim_2.i"
 	@echo "... lvgl/examples/anim/lv_example_anim_2.s"
+	@echo "... lvgl/examples/anim/lv_example_anim_3.o"
+	@echo "... lvgl/examples/anim/lv_example_anim_3.i"
+	@echo "... lvgl/examples/anim/lv_example_anim_3.s"
 	@echo "... lvgl/examples/anim/lv_example_anim_timeline_1.o"
 	@echo "... lvgl/examples/anim/lv_example_anim_timeline_1.i"
 	@echo "... lvgl/examples/anim/lv_example_anim_timeline_1.s"
