@@ -4713,6 +4713,30 @@ lvgl/examples/widgets/list/lv_example_list_1.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/list/lv_example_list_1.c.s
 .PHONY : lvgl/examples/widgets/list/lv_example_list_1.c.s
 
+lvgl/examples/widgets/list/lv_example_list_2.o: lvgl/examples/widgets/list/lv_example_list_2.c.o
+.PHONY : lvgl/examples/widgets/list/lv_example_list_2.o
+
+# target to build an object file
+lvgl/examples/widgets/list/lv_example_list_2.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/list/lv_example_list_2.c.o
+.PHONY : lvgl/examples/widgets/list/lv_example_list_2.c.o
+
+lvgl/examples/widgets/list/lv_example_list_2.i: lvgl/examples/widgets/list/lv_example_list_2.c.i
+.PHONY : lvgl/examples/widgets/list/lv_example_list_2.i
+
+# target to preprocess a source file
+lvgl/examples/widgets/list/lv_example_list_2.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/list/lv_example_list_2.c.i
+.PHONY : lvgl/examples/widgets/list/lv_example_list_2.c.i
+
+lvgl/examples/widgets/list/lv_example_list_2.s: lvgl/examples/widgets/list/lv_example_list_2.c.s
+.PHONY : lvgl/examples/widgets/list/lv_example_list_2.s
+
+# target to generate assembly for a file
+lvgl/examples/widgets/list/lv_example_list_2.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/examples/widgets/list/lv_example_list_2.c.s
+.PHONY : lvgl/examples/widgets/list/lv_example_list_2.c.s
+
 lvgl/examples/widgets/meter/lv_example_meter_1.o: lvgl/examples/widgets/meter/lv_example_meter_1.c.o
 .PHONY : lvgl/examples/widgets/meter/lv_example_meter_1.o
 
@@ -9303,6 +9327,9 @@ help:
 	@echo "... lvgl/examples/widgets/list/lv_example_list_1.o"
 	@echo "... lvgl/examples/widgets/list/lv_example_list_1.i"
 	@echo "... lvgl/examples/widgets/list/lv_example_list_1.s"
+	@echo "... lvgl/examples/widgets/list/lv_example_list_2.o"
+	@echo "... lvgl/examples/widgets/list/lv_example_list_2.i"
+	@echo "... lvgl/examples/widgets/list/lv_example_list_2.s"
 	@echo "... lvgl/examples/widgets/meter/lv_example_meter_1.o"
 	@echo "... lvgl/examples/widgets/meter/lv_example_meter_1.i"
 	@echo "... lvgl/examples/widgets/meter/lv_example_meter_1.s"
