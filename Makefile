@@ -8409,30 +8409,6 @@ lvgl/tests/src/lv_test_init.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/src/lv_test_init.c.s
 .PHONY : lvgl/tests/src/lv_test_init.c.s
 
-lvgl/tests/src/lv_test_main.o: lvgl/tests/src/lv_test_main.c.o
-.PHONY : lvgl/tests/src/lv_test_main.o
-
-# target to build an object file
-lvgl/tests/src/lv_test_main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/src/lv_test_main.c.o
-.PHONY : lvgl/tests/src/lv_test_main.c.o
-
-lvgl/tests/src/lv_test_main.i: lvgl/tests/src/lv_test_main.c.i
-.PHONY : lvgl/tests/src/lv_test_main.i
-
-# target to preprocess a source file
-lvgl/tests/src/lv_test_main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/src/lv_test_main.c.i
-.PHONY : lvgl/tests/src/lv_test_main.c.i
-
-lvgl/tests/src/lv_test_main.s: lvgl/tests/src/lv_test_main.c.s
-.PHONY : lvgl/tests/src/lv_test_main.s
-
-# target to generate assembly for a file
-lvgl/tests/src/lv_test_main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/index.dir/build.make CMakeFiles/index.dir/lvgl/tests/src/lv_test_main.c.s
-.PHONY : lvgl/tests/src/lv_test_main.c.s
-
 lvgl/tests/src/test_cases/_test_template.o: lvgl/tests/src/test_cases/_test_template.c.o
 .PHONY : lvgl/tests/src/test_cases/_test_template.o
 
@@ -9789,9 +9765,6 @@ help:
 	@echo "... lvgl/tests/src/lv_test_init.o"
 	@echo "... lvgl/tests/src/lv_test_init.i"
 	@echo "... lvgl/tests/src/lv_test_init.s"
-	@echo "... lvgl/tests/src/lv_test_main.o"
-	@echo "... lvgl/tests/src/lv_test_main.i"
-	@echo "... lvgl/tests/src/lv_test_main.s"
 	@echo "... lvgl/tests/src/test_cases/_test_template.o"
 	@echo "... lvgl/tests/src/test_cases/_test_template.i"
 	@echo "... lvgl/tests/src/test_cases/_test_template.s"
