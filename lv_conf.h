@@ -486,6 +486,38 @@ typedef void * lv_user_data_t;
 #define LV_USE_FLEX     1
 #define LV_USE_GRID     1
 
+/*---------------------
+ * 3rd party libraries
+ *--------------------*/
+
+/*File system interfaces for common APIs
+ *To enable set a driver letter for that API*/
+#define LV_USE_FS_STDIO 'A'        /*Uses fopen, fread, etc*/
+#define LV_USE_FS_POSIX '\0'        /*Uses open, read, etc*/
+#define LV_USE_FS_FATFS '\0'        /*Uses f_open, F_read, etc*/
+
+/*PNG decoder library*/
+#define LV_USE_PNG      1
+
+/*BMP decoder library*/
+#define LV_USE_BMP      1
+
+/* JPG + Split JPG decoder library.
+ * Split JPG is a custom format optimized for embedded systems. */
+#define LV_USE_SJPG     1
+
+/*GIF decoder library*/
+#define LV_USE_GIF      1
+
+/*QR code library*/
+#define LV_USE_QRCODE   1
+
+#define LV_USE_FREETYPE   1
+#if LV_USE_FREETYPE
+/*Memory used by FreeType to cache characters [bytes]*/
+# define LV_FREETYPE_CACHE_SIZE  (16 * 1024)
+#endif
+
 /*==================
 * EXAMPLES
 *==================*/
