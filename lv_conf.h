@@ -512,7 +512,7 @@ typedef void * lv_user_data_t;
 /*QR code library*/
 #define LV_USE_QRCODE   1
 
-#define LV_USE_FREETYPE   1
+#define LV_USE_FREETYPE   0
 #if LV_USE_FREETYPE
 /*Memory used by FreeType to cache characters [bytes]*/
 # define LV_FREETYPE_CACHE_SIZE  (16 * 1024)
