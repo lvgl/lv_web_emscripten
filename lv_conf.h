@@ -518,6 +518,15 @@ typedef void * lv_user_data_t;
 # define LV_FREETYPE_CACHE_SIZE  (16 * 1024)
 #endif
 
+/*-----------
+ * Others
+ *----------*/
+
+/*1: Enable API to take snapshot for object*/
+#define LV_USE_SNAPSHOT 1
+
+/*1: Enable Monkey test*/
+#define LV_USE_MONKEY   1
 /*==================
 * EXAMPLES
 *==================*/
