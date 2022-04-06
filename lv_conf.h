@@ -534,6 +534,9 @@ typedef void * lv_user_data_t;
 /*1: Enable lv_obj fragment*/
 #define LV_USE_FRAGMENT 1
 
+/*1: Enable a published subscriber based messaging system */
+#define LV_USE_MSG 1
+
 /*==================
 * EXAMPLES
 *==================*/
