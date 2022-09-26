@@ -566,6 +566,13 @@ typedef void * lv_user_data_t;
     #define LV_FILE_EXPLORER_QUICK_ACCESS        1
 #endif
 
+/* Built-in TTF decoder */
+#define LV_USE_TINY_TTF 1
+#if LV_USE_TINY_TTF
+    /* Enable loading TTF data from files */
+    #define LV_TINY_TTF_FILE_SUPPORT 0
+#endif
+
 /*==================
 * EXAMPLES
 *==================*/
