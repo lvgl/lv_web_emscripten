@@ -573,6 +573,9 @@ typedef void * lv_user_data_t;
     #define LV_TINY_TTF_FILE_SUPPORT 1
 #endif
 
+/*Barcode code library*/
+#define LV_USE_BARCODE 1
+
 /*==================
 * EXAMPLES
 *==================*/
