@@ -612,6 +612,8 @@ typedef void * lv_user_data_t;
 # define LV_DEMO_MUSIC_AUTO_PLAY    0
 #endif
 
+#define LV_USE_DEMO_FLEX_LAYOUT    1
+
 /*--END OF LV_CONF_H--*/
 
 #endif /*LV_CONF_H*/
