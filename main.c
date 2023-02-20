@@ -13,10 +13,7 @@
 #include <SDL2/SDL.h>
 #include <emscripten.h>
 #include "lvgl/lvgl.h"
-#include "lv_drivers/display/monitor.h"
-#include "lv_drivers/indev/mouse.h"
-#include "lv_drivers/indev/mousewheel.h"
-#include "lv_drivers/indev/keyboard.h"
+#include "lvgl/demos/lv_demos.h"
 
 #include "examplelist.h"
 
@@ -118,12 +115,12 @@ void do_loop(void *arg)
  */
 static void hal_init(void)
 {
-    lv_disp_t * disp = lv_sdl_window_create(hor_res, ver_res)
+    lv_disp_t * disp = lv_sdl_window_create(monitor_hor_res, monitor_ver_res);
 
     lv_group_t * g = lv_group_create();
     lv_group_set_default(g);
 
-    lv_sdl_mosue_create();
-    lv_sdl_mosuewheel_create();
+    lv_sdl_mouse_create();
+    lv_sdl_mousewheel_create();
     lv_sdl_keyboard_create();
 }

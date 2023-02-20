@@ -6,7 +6,6 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O2 -s USE_SDL=2")
 include_directories(${PROJECT_SOURCE_DIR})
 
 add_subdirectory(lvgl)
-add_subdirectory(lv_drivers)
 file(GLOB MY_SOURCES "./*.c")
 set(SOURCES ${MY_SOURCES})
 
@@ -22,6 +21,5 @@ target_link_libraries(index
     lvgl
     lvgl_examples
     lvgl_demos
-    lv_drivers
 )
 set_target_properties(index PROPERTIES LINK_FLAGS "--shell-file ${PROJECT_SOURCE_DIR}/lvgl_shell.html -s SINGLE_FILE=1")
