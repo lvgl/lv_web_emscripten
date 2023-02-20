@@ -454,7 +454,7 @@
 /*Support bidirectional texts. Allows mixing Left-to-Right and Right-to-Left texts.
  *The direction will be processed according to the Unicode Bidirectional Algorithm:
  *https://www.w3.org/International/articles/inline-bidi-markup/uba-basics*/
-#define LV_USE_BIDI 0
+#define LV_USE_BIDI 1
 #if LV_USE_BIDI
     /*Set the default direction. Supported values:
     *`LV_BASE_DIR_LTR` Left-to-Right
@@ -465,7 +465,7 @@
 
 /*Enable Arabic/Persian processing
  *In these languages characters should be replaced with an other form based on their position in the text*/
-#define LV_USE_ARABIC_PERSIAN_CHARS 0
+#define LV_USE_ARABIC_PERSIAN_CHARS 1
 
 /*==================
  * WIDGETS
@@ -783,10 +783,10 @@
 #endif
 
 /*Demonstrate the usage of encoder and keyboard*/
-#define LV_USE_DEMO_KEYPAD_AND_ENCODER 0
+#define LV_USE_DEMO_KEYPAD_AND_ENCODER 1
 
 /*Benchmark your system*/
-#define LV_USE_DEMO_BENCHMARK 0
+#define LV_USE_DEMO_BENCHMARK 1
 #if LV_USE_DEMO_BENCHMARK
     /*Use RGB565A8 images with 16 bit color depth instead of ARGB8565*/
     #define LV_DEMO_BENCHMARK_RGB565A8 0
@@ -796,7 +796,7 @@
 #define LV_USE_DEMO_STRESS 1
 
 /*Music player demo*/
-#define LV_USE_DEMO_MUSIC 0
+#define LV_USE_DEMO_MUSIC 1
 #if LV_USE_DEMO_MUSIC
     #define LV_DEMO_MUSIC_SQUARE    0
     #define LV_DEMO_MUSIC_LANDSCAPE 0
@@ -806,7 +806,7 @@
 #endif
 
 /*Flex layout demo*/
-#define LV_USE_DEMO_FLEX_LAYOUT 0
+#define LV_USE_DEMO_FLEX_LAYOUT 1
 
 /*--END OF LV_CONF_H--*/
 
