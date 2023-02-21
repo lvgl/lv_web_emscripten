@@ -86,14 +86,12 @@ int main(int argc, char ** argv)
     hal_init();
 
     /*Load a demo*/
-/*    if(ex != NULL && ex->fn != NULL) {
+    if(ex != NULL && ex->fn != NULL) {
         ex->fn();
     } else {
         extern void CHOSEN_DEMO(void);
         CHOSEN_DEMO();
-    }*/
-
-    lv_demo_widgets();
+    }
 
     emscripten_set_main_loop_arg(do_loop, NULL, -1, true);
 }
