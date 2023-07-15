@@ -785,6 +785,9 @@
 /*Widget transformation demo*/
 #define LV_USE_DEMO_TRANSFORM       1
 
+/*Demonstrate scroll settings*/
+#define LV_USE_DEMO_SCROLL          1
+
 /*--END OF LV_CONF_H--*/
 
 #endif /*LV_CONF_H*/
