@@ -572,9 +572,8 @@
 /*BMP decoder library*/
 #define LV_USE_BMP 1
 
-/* JPG + split JPG decoder library.
- * Split JPG is a custom format optimized for embedded systems. */
-#define LV_USE_SJPG 1
+/* JPG decoder library.*/
+#define LV_USE_JPG 1
 
 /*GIF decoder library*/
 #define LV_USE_GIF 1
