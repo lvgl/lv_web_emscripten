@@ -42,8 +42,6 @@ static void memory_monitor(lv_timer_t * param);
 /**********************
  *  STATIC VARIABLES
  **********************/
-static lv_disp_t  * disp1;
-
 int monitor_hor_res, monitor_ver_res;
 
 /**********************
@@ -113,7 +111,7 @@ void do_loop(void *arg)
  */
 static void hal_init(void)
 {
-    lv_disp_t * disp = lv_sdl_window_create(monitor_hor_res, monitor_ver_res);
+    lv_display_t * disp = lv_sdl_window_create(monitor_hor_res, monitor_ver_res);
 
     lv_group_t * g = lv_group_create();
     lv_group_set_default(g);
