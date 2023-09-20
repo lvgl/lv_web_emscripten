@@ -573,13 +573,13 @@
 #endif
 
 /*PNG decoder library*/
-#define LV_USE_PNG 1
+#define LV_USE_LODEPNG 1
 
 /*BMP decoder library*/
 #define LV_USE_BMP 1
 
 /* JPG decoder library.*/
-#define LV_USE_JPG 1
+#define LV_USE_TJPGD 1
 
 /*GIF decoder library*/
 #define LV_USE_GIF 1
