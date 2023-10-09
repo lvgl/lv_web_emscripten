@@ -684,6 +684,8 @@
 /*1: Enable a published subscriber based messaging system */
 #define LV_USE_MSG 1
 
+#define LV_USE_OBSERVER 1
+
 /*1: Enable Pinyin input method*/
 /*Requires: lv_keyboard*/
 #define LV_USE_IME_PINYIN 1
