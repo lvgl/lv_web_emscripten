@@ -92,8 +92,6 @@
 /* Max. memory to be used for layers */
 #define  LV_LAYER_MAX_MEMORY_USAGE             150       /*[kB]*/
 
-#define LV_USE_VECTOR_GRAPHIC  1
-
 #define LV_USE_DRAW_SW 1
 #if LV_USE_DRAW_SW == 1
     /* Set the number of draw unit.
@@ -596,8 +594,6 @@
 /*Barcode code library*/
 #define LV_USE_BARCODE 1
 
-#define LV_USE_THORVG_INTERNAL 1
-
 /*FreeType library*/
 #define LV_USE_FREETYPE 0
 #if LV_USE_FREETYPE
@@ -800,8 +796,6 @@
 
 /*Demonstrate scroll settings*/
 #define LV_USE_DEMO_SCROLL          1
-
-#define LV_USE_DEMO_VECTOR_GRAPHIC  1
 
 /*--END OF LV_CONF_H--*/
 
