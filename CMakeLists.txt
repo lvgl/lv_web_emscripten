@@ -3,6 +3,7 @@ project (lv_emscripten)
 
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O2 -s USE_SDL=2")
 
+
 include_directories(${PROJECT_SOURCE_DIR})
 
 add_subdirectory(lvgl)
@@ -22,4 +23,4 @@ target_link_libraries(index
     lvgl_examples
     lvgl_demos
 )
-set_target_properties(index PROPERTIES LINK_FLAGS "--shell-file ${PROJECT_SOURCE_DIR}/lvgl_shell.html -s SINGLE_FILE=1")
+set_target_properties(index PROPERTIES LINK_FLAGS "--shell-file ${PROJECT_SOURCE_DIR}/lvgl_shell.html -s SINGLE_FILE=1 -s ALLOW_MEMORY_GROWTH -sEXPORTED_FUNCTIONS=_add_int -sEXPORTED_RUNTIME_METHODS=ccall,cwrap")

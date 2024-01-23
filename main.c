@@ -57,25 +57,19 @@ void do_loop(void *arg);
 static void lv_example_noop(void) {
 }
 
+#include <stdio.h>
+
+
+int add_int(int a, int b) {
+	return a + b;
+}
+
 int main(int argc, char ** argv)
 {
+    monitor_hor_res = 800;
+    monitor_ver_res = 480;
 
-    extern const struct lv_ci_example lv_ci_example_list[];
-    const struct lv_ci_example *ex = NULL;
-    monitor_hor_res = atoi(argv[1]);
-    monitor_ver_res = atoi(argv[2]);
-    /* Check if a specific example is wanted (not "default") */
-    if(argc >= 4 && strcmp(ex->name, "default")) {
-        for(ex = &lv_ci_example_list[0]; ex->name != NULL; ex++) {
-            if(!strcmp(ex->name, argv[3])) {
-                break;
-            }
-        }
-        if(ex->name == NULL) {
-            fprintf(stderr, "Unable to find requested example\n");
-        }
-    }
-    printf("Starting with screen resolution of %dx%d px\n", monitor_hor_res, monitor_ver_res);
+	printf("asd\n");
 
     /*Initialize LittlevGL*/
     lv_init();
@@ -83,13 +77,9 @@ int main(int argc, char ** argv)
     /*Initialize the HAL (display, input devices, tick) for LittlevGL*/
     hal_init();
 
-    /*Load a demo*/
-    if(ex != NULL && ex->fn != NULL) {
-        ex->fn();
-    } else {
-        extern void CHOSEN_DEMO(void);
-        CHOSEN_DEMO();
-    }
+//    lv_demo_widgets();
+
+	lv_label_create(lv_screen_active());
 
     emscripten_set_main_loop_arg(do_loop, NULL, -1, true);
 }
