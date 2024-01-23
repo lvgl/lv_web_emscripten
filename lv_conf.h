@@ -779,7 +779,7 @@
 #endif
 
 /*1: Enable Monkey test*/
-#define LV_USE_MONKEY 0
+#define LV_USE_MONKEY 1
 
 /*1: Enable grid navigation*/
 #define LV_USE_GRIDNAV 1
