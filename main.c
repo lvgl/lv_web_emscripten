@@ -8,13 +8,13 @@
  *      INCLUDES
  *********************/
 #include <stdlib.h>
+#include <stdio.h>
 #include <unistd.h>
 #define SDL_MAIN_HANDLED        /*To fix SDL's "undefined reference to WinMain" issue*/
 #include <SDL2/SDL.h>
 #include <emscripten.h>
 #include "lvgl/lvgl.h"
 #include "lvgl/demos/lv_demos.h"
-
 #include "examplelist.h"
 
 /*********************
@@ -57,7 +57,6 @@ void do_loop(void *arg);
 static void lv_example_noop(void) {
 }
 
-#include <stdio.h>
 
 
 int add_int(int a, int b) {
@@ -66,10 +65,10 @@ int add_int(int a, int b) {
 
 int main(int argc, char ** argv)
 {
+	printf("Main started\n");
+
     monitor_hor_res = 800;
     monitor_ver_res = 480;
-
-	printf("asd\n");
 
     /*Initialize LittlevGL*/
     lv_init();
