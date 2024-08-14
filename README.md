@@ -44,7 +44,7 @@ More info here: https://kripken.github.io/emscripten-site/docs/getting_started/d
 Example `emcmake cmake .. -DLVGL_CHOSEN_DEMO=lv_demo_widgets`
 
 ### Known issue with Google Chrome browser
-Chrome can't open the generated html file offline. It works if you copy the files to a server. Use Firefox or other browser for offline testing.
+Chrome might not be able to open the generated html file offline. It works if you copy the files to a server. Use Firefox or other browser for offline testing if needed.
 
 ### Known issue with Firefox
-Firefox can't open the generated html file offline unless you go to `about:config` and change `privacy.file_unique_origin` to `false`.
+Firefox cmight no be able to open the generated html file offline unless you go to `about:config` and change `privacy.file_unique_origin` to `false`.
