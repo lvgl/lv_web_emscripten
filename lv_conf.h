@@ -1237,7 +1237,7 @@
 #define LV_USE_DEMO_FLEX_LAYOUT     0
 
 /** Smart-phone like multi-language demo */
-#define LV_USE_DEMO_MULTILANG       0
+#define LV_USE_DEMO_MULTILANG       1
 
 /** Widget transformation demo */
 #define LV_USE_DEMO_TRANSFORM       1
