@@ -112,12 +112,12 @@
     #define LV_OS_CUSTOM_INCLUDE <stdint.h>
 #endif
 #if LV_USE_OS == LV_OS_FREERTOS
-	/*
-	 * Unblocking an RTOS task with a direct notification is 45% faster and uses less RAM
-	 * than unblocking a task using an intermediary object such as a binary semaphore.
-	 * RTOS task notifications can only be used when there is only one task that can be the recipient of the event.
-	 */
-	#define LV_USE_FREERTOS_TASK_NOTIFY 1
+    /*
+     * Unblocking an RTOS task with a direct notification is 45% faster and uses less RAM
+     * than unblocking a task using an intermediary object such as a binary semaphore.
+     * RTOS task notifications can only be used when there is only one task that can be the recipient of the event.
+     */
+    #define LV_USE_FREERTOS_TASK_NOTIFY 1
 #endif
 
 /*========================
@@ -168,10 +168,15 @@
     #define LV_DRAW_SW_SUPPORT_RGB888       1
     #define LV_DRAW_SW_SUPPORT_XRGB8888     1
     #define LV_DRAW_SW_SUPPORT_ARGB8888     1
+    #define LV_DRAW_SW_SUPPORT_ARGB8888_PREMULTIPLIED 1
     #define LV_DRAW_SW_SUPPORT_L8           1
     #define LV_DRAW_SW_SUPPORT_AL88         1
     #define LV_DRAW_SW_SUPPORT_A8           1
     #define LV_DRAW_SW_SUPPORT_I1           1
+
+    /* The threshold of the luminance to consider a pixel as
+     * active in indexed color format */
+    #define LV_DRAW_SW_I1_LUM_THRESHOLD 127
 
     /** Set number of draw units.
      *  - > 1 requires operating system to be enabled in `LV_USE_OS`.
@@ -210,6 +215,7 @@
 
     /** Enable drawing complex gradients in software: linear at an angle, radial or conical */
     #define LV_USE_DRAW_SW_COMPLEX_GRADIENTS    1
+
 #endif
 
 /*Use TSi's aka (Think Silicon) NemaGFX */
@@ -271,6 +277,23 @@
 
     /** Enable PXP asserts. */
     #define LV_USE_PXP_ASSERT 0
+#endif
+
+/** Use NXP's G2D on MPU platforms. */
+#define LV_USE_DRAW_G2D 0
+
+#if LV_USE_DRAW_G2D
+    /** Maximum number of buffers that can be stored for G2D draw unit.
+     *  Includes the frame buffers and assets. */
+    #define LV_G2D_HASH_TABLE_SIZE 50
+
+    #if LV_USE_OS
+        /** Use additional draw thread for G2D processing.*/
+        #define LV_USE_G2D_DRAW_THREAD 1
+    #endif
+
+    /** Enable G2D asserts. */
+    #define LV_USE_G2D_ASSERT 0
 #endif
 
 /** Use Renesas Dave2D on RA  platforms. */
@@ -440,6 +463,9 @@
 /** Add `id` field to `lv_obj_t` */
 #define LV_USE_OBJ_ID           0
 
+/**  Enable support widget names*/
+#define LV_USE_OBJ_NAME         0
+
 /** Automatically assign an ID when obj is created */
 #define LV_OBJ_ID_AUTO_ASSIGN   LV_USE_OBJ_ID
 
@@ -533,7 +559,9 @@
 #define LV_USE_MATRIX           1
 
 /** Include `lvgl_private.h` in `lvgl.h` to access internal data and functions by default */
-#define LV_USE_PRIVATE_API		0
+#ifndef LV_USE_PRIVATE_API
+    #define LV_USE_PRIVATE_API  0
+#endif
 
 /*==================
  *   FONT USAGE
@@ -564,10 +592,12 @@
 #define LV_FONT_MONTSERRAT_48 1
 
 /* Demonstrate special features */
-#define LV_FONT_MONTSERRAT_28_COMPRESSED 1
-#define LV_FONT_DEJAVU_16_PERSIAN_HEBREW 1
-#define LV_FONT_SIMSUN_14_CJK            1
-#define LV_FONT_SIMSUN_16_CJK            1
+#define LV_FONT_MONTSERRAT_28_COMPRESSED    1
+#define LV_FONT_DEJAVU_16_PERSIAN_HEBREW    1
+#define LV_FONT_SIMSUN_14_CJK               0  /**< 1000 most common CJK radicals */
+#define LV_FONT_SIMSUN_16_CJK               0  /**< 1000 most common CJK radicals */
+#define LV_FONT_SOURCE_HAN_SANS_SC_14_CJK   1
+#define LV_FONT_SOURCE_HAN_SANS_SC_16_CJK   1
 
 /** Pixel perfect monospaced fonts */
 #define LV_FONT_UNSCII_8  1
@@ -647,7 +677,7 @@
 /*==================
  * WIDGETS
  *================*/
-/* Documentation for widgets can be found here: https://docs.lvgl.io/latest/en/html/widgets/index.html . */
+/* Documentation for widgets can be found here: https://docs.lvgl.io/master/details/widgets/index.html . */
 
 /** 1: Causes these widgets to be given default values at creation time.
  *  - lv_buttonmatrix_t:  Get default maps:  {"Btn1", "Btn2", "Btn3", "\n", "Btn4", "Btn5", ""}, else map not set.
@@ -747,10 +777,12 @@
 
 #define LV_USE_WIN        1
 
+#define LV_USE_3DTEXTURE  0
+
 /*==================
  * THEMES
  *==================*/
-/* Documentation for themes can be found here: https://docs.lvgl.io/master/overview/style.html#themes . */
+/* Documentation for themes can be found here: https://docs.lvgl.io/master/details/common-widget-features/styles/style.html#themes . */
 
 /** A simple, impressive and very complete theme */
 #define LV_USE_THEME_DEFAULT 1
@@ -774,7 +806,7 @@
 /*==================
  * LAYOUTS
  *==================*/
-/* Documentation for layouts can be found here: https://docs.lvgl.io/master/layouts/index.html . */
+/* Documentation for layouts can be found here: https://docs.lvgl.io/master/details/common-widget-features/layouts/index.html . */
 
 /** A layout similar to Flexbox in CSS. */
 #define LV_USE_FLEX 1
@@ -785,11 +817,13 @@
 /*====================
  * 3RD PARTS LIBRARIES
  *====================*/
-/* Documentation for libraries can be found here: https://docs.lvgl.io/master/libs/index.html . */
+/* Documentation for libraries can be found here: https://docs.lvgl.io/master/details/libs/index.html . */
 
 /* File system interfaces for common APIs */
 
-/** Setting a default driver letter allows skipping the driver prefix in filepaths. */
+/** Setting a default driver letter allows skipping the driver prefix in filepaths.
+ *  Documentation about how to use the below driver-identifier letters can be found at
+ *  https://docs.lvgl.io/master/details/main-modules/fs.html#lv-fs-identifier-letters . */
 #define LV_FS_DEFAULT_DRIVER_LETTER 'A'
 
 /** API for fopen, fread, etc. */
@@ -803,7 +837,7 @@
 /** API for open, read, etc. */
 #define LV_USE_FS_POSIX 0
 #if LV_USE_FS_POSIX
-    #define LV_FS_POSIX_LETTER '\0'     /**< Set an upper cased letter on which the drive will accessible (e.g. 'A') */
+    #define LV_FS_POSIX_LETTER '\0'     /**< Set an upper-case driver-identifier letter for this driver (e.g. 'A'). */
     #define LV_FS_POSIX_PATH ""         /**< Set the working directory. File/directory paths will be appended to it. */
     #define LV_FS_POSIX_CACHE_SIZE 0    /**< >0 to cache this number of bytes in lv_fs_read() */
 #endif
@@ -811,7 +845,7 @@
 /** API for CreateFile, ReadFile, etc. */
 #define LV_USE_FS_WIN32 0
 #if LV_USE_FS_WIN32
-    #define LV_FS_WIN32_LETTER '\0'     /**< Set an upper cased letter on which the drive will accessible (e.g. 'A') */
+    #define LV_FS_WIN32_LETTER '\0'     /**< Set an upper-case driver-identifier letter for this driver (e.g. 'A'). */
     #define LV_FS_WIN32_PATH ""         /**< Set the working directory. File/directory paths will be appended to it. */
     #define LV_FS_WIN32_CACHE_SIZE 0    /**< >0 to cache this number of bytes in lv_fs_read() */
 #endif
@@ -819,7 +853,7 @@
 /** API for FATFS (needs to be added separately). Uses f_open, f_read, etc. */
 #define LV_USE_FS_FATFS 0
 #if LV_USE_FS_FATFS
-    #define LV_FS_FATFS_LETTER '\0'     /**< Set an upper cased letter on which the drive will accessible (e.g. 'A') */
+    #define LV_FS_FATFS_LETTER '\0'     /**< Set an upper-case driver-identifier letter for this driver (e.g. 'A'). */
     #define LV_FS_FATFS_PATH ""         /**< Set the working directory. File/directory paths will be appended to it. */
     #define LV_FS_FATFS_CACHE_SIZE 0    /**< >0 to cache this number of bytes in lv_fs_read() */
 #endif
@@ -833,28 +867,28 @@
 /** API for LittleFs. */
 #define LV_USE_FS_LITTLEFS 0
 #if LV_USE_FS_LITTLEFS
-    #define LV_FS_LITTLEFS_LETTER '\0'  /**< Set an upper cased letter on which the drive will accessible (e.g. 'A') */
-    #define LV_FS_LITTLEFS_PATH ""         /**< Set the working directory. File/directory paths will be appended to it. */
+    #define LV_FS_LITTLEFS_LETTER '\0'  /**< Set an upper-case driver-identifier letter for this driver (e.g. 'A'). */
+    #define LV_FS_LITTLEFS_PATH ""      /**< Set the working directory. File/directory paths will be appended to it. */
 #endif
 
 /** API for Arduino LittleFs. */
 #define LV_USE_FS_ARDUINO_ESP_LITTLEFS 0
 #if LV_USE_FS_ARDUINO_ESP_LITTLEFS
-    #define LV_FS_ARDUINO_ESP_LITTLEFS_LETTER '\0'     /**< Set an upper cased letter on which the drive will accessible (e.g. 'A') */
-    #define LV_FS_ARDUINO_ESP_LITTLEFS_PATH ""         /**< Set the working directory. File/directory paths will be appended to it. */
+    #define LV_FS_ARDUINO_ESP_LITTLEFS_LETTER '\0'  /**< Set an upper-case driver-identifier letter for this driver (e.g. 'A'). */
+    #define LV_FS_ARDUINO_ESP_LITTLEFS_PATH ""      /**< Set the working directory. File/directory paths will be appended to it. */
 #endif
 
 /** API for Arduino Sd. */
 #define LV_USE_FS_ARDUINO_SD 0
 #if LV_USE_FS_ARDUINO_SD
-    #define LV_FS_ARDUINO_SD_LETTER '\0'          /**< Set an upper cased letter on which the drive will accessible (e.g. 'A') */
-    #define LV_FS_ARDUINO_SD_PATH ""         /**< Set the working directory. File/directory paths will be appended to it. */
+    #define LV_FS_ARDUINO_SD_LETTER '\0'  /**< Set an upper-case driver-identifier letter for this driver (e.g. 'A'). */
+    #define LV_FS_ARDUINO_SD_PATH ""      /**< Set the working directory. File/directory paths will be appended to it. */
 #endif
 
 /** API for UEFI */
 #define LV_USE_FS_UEFI 0
 #if LV_USE_FS_UEFI
-    #define LV_FS_UEFI_LETTER '\0'          /**< Set an upper cased letter on which the drive will accessible (e.g. 'A') */
+    #define LV_FS_UEFI_LETTER '\0'      /**< Set an upper-case driver-identifier letter for this driver (e.g. 'A'). */
 #endif
 
 /** LODEPNG decoder library */
@@ -953,7 +987,7 @@
 /*==================
  * OTHERS
  *==================*/
-/* Documentation for several of the below items can be found here: https://docs.lvgl.io/master/others/index.html . */
+/* Documentation for several of the below items can be found here: https://docs.lvgl.io/master/details/auxiliary-modules/index.html . */
 
 /** 1: Enable API to take snapshot for object */
 #define LV_USE_SNAPSHOT 1
@@ -962,7 +996,7 @@
 #define LV_USE_SYSMON   0
 #if LV_USE_SYSMON
     /** Get the idle percentage. E.g. uint32_t my_get_idle(void); */
-    #define LV_SYSMON_GET_IDLE lv_timer_get_idle
+    #define LV_SYSMON_GET_IDLE lv_os_get_idle_percent
 
     /** 1: Show CPU usage and FPS count.
      *  - Requires `LV_USE_SYSMON = 1` */
@@ -1086,8 +1120,7 @@
     #define LV_FILE_EXPLORER_QUICK_ACCESS        1
 #endif
 
-/** 1: Enable freetype font manager
- *  - Requires: LV_USE_FREETYPE */
+/** 1: Enable Font manager */
 #define LV_USE_FONT_MANAGER                     0
 #if LV_USE_FONT_MANAGER
 
@@ -1096,9 +1129,20 @@
 
 #endif
 
-/** Enable loading XML UIs runtime */
-#define LV_USE_XML	1
+/** Enable emulated input devices, time emulation, and screenshot compares. */
+#define LV_USE_TEST 0
+#if LV_USE_TEST
 
+/** Enable `lv_test_screenshot_compare`.
+ * Requires libpng and a few MB of extra RAM. */
+#define LV_USE_TEST_SCREENSHOT_COMPARE 0
+#endif /*LV_USE_TEST*/
+
+/** Enable loading XML UIs runtime */
+#define LV_USE_XML    1
+
+/*1: Enable color filter style*/
+#define LV_USE_COLOR_FILTER     0
 /*==================
  * DEVICES
  *==================*/
@@ -1140,6 +1184,7 @@
     #define LV_LINUX_FBDEV_RENDER_MODE   LV_DISPLAY_RENDER_MODE_PARTIAL
     #define LV_LINUX_FBDEV_BUFFER_COUNT  0
     #define LV_LINUX_FBDEV_BUFFER_SIZE   60
+    #define LV_LINUX_FBDEV_MMAP          1
 #endif
 
 /** Use Nuttx to open window and handle touchscreen */
@@ -1147,6 +1192,9 @@
 
 #if LV_USE_NUTTX
     #define LV_USE_NUTTX_INDEPENDENT_IMAGE_HEAP 0
+
+    /** Use independent image heap for default draw buffer */
+    #define LV_NUTTX_DEFAULT_DRAW_BUF_USE_INDEPENDENT_IMAGE_HEAP    0
 
     #define LV_USE_NUTTX_LIBUV    0
 
@@ -1169,6 +1217,15 @@
 
 /** Driver for /dev/dri/card */
 #define LV_USE_LINUX_DRM        0
+
+#if LV_USE_LINUX_DRM
+
+    /* Use the MESA GBM library to allocate DMA buffers that can be
+     * shared across sub-systems and libraries using the Linux DMA-BUF API.
+     * The GBM library aims to provide a platform independent memory management system
+     * it supports the major GPU vendors - This option requires linking with libgbm */
+    #define LV_LINUX_DRM_GBM_BUFFERS 0
+#endif
 
 /** Interface for TFT_eSPI */
 #define LV_USE_TFT_ESPI         0
@@ -1271,6 +1328,13 @@
     #define LV_DEMO_MUSIC_AUTO_PLAY 0
 #endif
 
+/** Vector graphic demo */
+#define LV_USE_DEMO_VECTOR_GRAPHIC  0
+
+/*---------------------------
+ * Demos from lvgl/lv_demos
+  ---------------------------*/
+
 /** Flex layout demo */
 #define LV_USE_DEMO_FLEX_LAYOUT     1
 
@@ -1283,13 +1347,10 @@
 /** Demonstrate scroll settings */
 #define LV_USE_DEMO_SCROLL          1
 
-/** Vector graphic demo */
-#define LV_USE_DEMO_VECTOR_GRAPHIC  0
-
 /*E-bike demo with Lottie animations (if LV_USE_LOTTIE is enabled)*/
-#define LV_USE_DEMO_EBIKE			1
+#define LV_USE_DEMO_EBIKE           1
 #if LV_USE_DEMO_EBIKE
-	#define LV_DEMO_EBIKE_PORTRAIT  0    /*0: for 480x270..480x320, 1: for 480x800..720x1280*/
+    #define LV_DEMO_EBIKE_PORTRAIT  0    /*0: for 480x270..480x320, 1: for 480x800..720x1280*/
 #endif
 
 /** High-resolution demo */
